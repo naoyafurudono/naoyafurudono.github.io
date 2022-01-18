@@ -1,10 +1,10 @@
 ---
 date: 2022-01-18
-updated: 2022-01-18T23:19
-title: Naoya Furudono
+updated: 2022-01-18T23:23
+title: this is title, defined in `index.md`
 ---
 
-# Naoya Furudono
+# this is heading
 
 Computer science student at Tokyo Tech
 

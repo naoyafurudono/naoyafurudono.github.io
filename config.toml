@@ -1,4 +1,4 @@
 baseURL = 'https://naoyafurudono.github.io'
 languageCode = 'ja-jp'
-title = 'My New Hugo Site'
+title = 'nfurudono'
 theme = 'ananke'

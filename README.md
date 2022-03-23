@@ -1,1 +1,0 @@
-# naoyafurudono.github.io

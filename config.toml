@@ -1,4 +1,7 @@
 baseURL = 'https://naoyafurudono.github.io'
 languageCode = 'ja-jp'
 title = 'nfurudono'
-theme = 'ananke'
+theme = 'noteworthy'
+
+enableGitInfo = true
+hasCJKLanguage = true

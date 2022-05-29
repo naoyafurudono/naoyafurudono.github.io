@@ -1,7 +1,7 @@
 # naoyafurudono.github.io
 
 [ブログ](https://naoyafurudono.github.io/)のソースリポジトリ。
-`hugo`とGitHub Action/Pages におんぶにだっこで実現している。
+HugoとGitHub Action/Pages におんぶにだっこで実現している。
 変更が必要になったらどれかの設定を変えれば良いだろう。
 
 # 記事の追加

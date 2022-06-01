@@ -4,13 +4,17 @@ date: 2022-03-23T14:23:47+09:00
 draft: true
 ---
 
+## Paper
+
+- Open Floating in TFP2022
+  - paper (pdf) : Now preparing. (The submission has been accepted.)
+  - [slide (pdf)](https://drive.google.com/file/d/1oYLtxE0b1AIBbkcotf_YyPST0yLdvbNl/view?usp=sharing)
+  - [12min video (mp4)](https://drive.google.com/file/d/14EBEGQYZDNIGADXyRU7XTsbgUE4XqO1x/view?usp=sharing)
+
 ## Talks
 
 ### 2022
 
-- Open Floating in TFP2022
-  - [slide (pdf)](https://drive.google.com/file/d/1oYLtxE0b1AIBbkcotf_YyPST0yLdvbNl/view?usp=sharing)
-  - [12min video (mp4)](https://drive.google.com/file/d/14EBEGQYZDNIGADXyRU7XTsbgUE4XqO1x/view?usp=sharing)
 - Survey of hygienic macros [slide (pdf)](https://drive.google.com/file/d/1vVI1i__JJH4EPJcx8xZ2gNUR_0wCJ1-p/view?usp=sharing)
 
 ### 2021

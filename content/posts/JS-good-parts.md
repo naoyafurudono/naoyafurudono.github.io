@@ -19,15 +19,16 @@ TSよりも関心はDOMやevent handlerにある。
 
 ## 追記
 
-JSの`let`を勉強している。[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/let)。
+JSの`let`を勉強している。情報源は[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/let)。
 `var`が作るスコープがレキシカルスコープではないことは既に知っている。
 `let`はマシだが、SchemeとかOCamlで期待するような感じにはならない。[MDN 一時的なデットゾーン](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone)で解説されている。
 MDNでも触れられているが、`let`の右側（`let x = <ここ>`）が常にこのletが作るスコープに所属することになる。
-なので、常に束縛する変数と同じ名前は`let`の右側には出現できない（`let x = x.foo`は常にエラー）。
+なので、常に束縛する変数と同じ名前は`let`の右側には出現できない（e.g.,  `let x = x.foo`は常にエラー）。
 その他に、同じブロックに同じ変数に対する`let`を複数回使えない。シャドーイングが不便。
 これらはすべて良くないとは思うが、そんなに大きな問題でも無い気はする。
 
-`let`の仕様によって、JSでブロックを使う意味が生まれた？[^fn] `switch`でそれぞれのブランチのスコープを区切るためにブロックを使うテクニックが紹介されている。
+`let`の仕様によって、JSでブロックを使う意味が生まれた？[^fn]
+`switch`でそれぞれのブランチのスコープを区切るためにブロックを使うテクニックが紹介されている。
 
 [^fn]この疑問符は、他の用法はあったのだろうか、という意図。
 

@@ -7,10 +7,11 @@
 そういう点で読んでよかったと思う。DOMやevent handlerなど、ブラウザ周りの話を知りたい。</p><p>JSがSchemeに近い部分があることを知られて良かったと思う（Schemeのletがあればどんなに幸せだろうと思うけど）。
 JSには偏見しかなかったけど、良い言語に思えてきた。TypeScriptも知りたい。DOMとevent handlerが先だが。
 UIを扱うにはJSが強い？C# with Unityもあるのか？
-TSよりも関心はDOMやevent handlerにある。</p><h2 id=追記>追記</h2><p>JSの<code>let</code>を勉強している。<a href=https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/let>MDN</a>。
+TSよりも関心はDOMやevent handlerにある。</p><h2 id=追記>追記</h2><p>JSの<code>let</code>を勉強している。情報源は<a href=https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/let>MDN</a>。
 <code>var</code>が作るスコープがレキシカルスコープではないことは既に知っている。
 <code>let</code>はマシだが、SchemeとかOCamlで期待するような感じにはならない。<a href=https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone>MDN 一時的なデットゾーン</a>で解説されている。
 MDNでも触れられているが、<code>let</code>の右側（<code>let x = &lt;ここ></code>）が常にこのletが作るスコープに所属することになる。
-なので、常に束縛する変数と同じ名前は<code>let</code>の右側には出現できない（<code>let x = x.foo</code>は常にエラー）。
+なので、常に束縛する変数と同じ名前は<code>let</code>の右側には出現できない（e.g., <code>let x = x.foo</code>は常にエラー）。
 その他に、同じブロックに同じ変数に対する<code>let</code>を複数回使えない。シャドーイングが不便。
-これらはすべて良くないとは思うが、そんなに大きな問題でも無い気はする。</p><p><code>let</code>の仕様によって、JSでブロックを使う意味が生まれた？[^fn] <code>switch</code>でそれぞれのブランチのスコープを区切るためにブロックを使うテクニックが紹介されている。</p><p>[^fn]この疑問符は、他の用法はあったのだろうか、という意図。</p></p></div><div class=page-footer></div></div><footer class=footer-mobile><div class=social-icons></div><div class=footer-mobile-links><p><a href=https://github.com/kimcc/hugo-theme-noteworthy target=_blank rel=noopener>Noteworthy theme</a></p><span class=divider-bar>|</span><p><a href=https://gohugo.io target=_blank rel=noopener>Built with Hugo</a></p></div><script src=https://naoyafurudono.github.io/js/main.min.a7205ef73b078c8daed6fe1b0826e8ba229ffabbb69d299d9446cf41f2c7d8aa.js integrity="sha256-pyBe9zsHjI2u1v4bCCbouiKf+ru2nSmdlEbPQfLH2Ko=" crossorigin=anonymous></script></footer></body></html>
+これらはすべて良くないとは思うが、そんなに大きな問題でも無い気はする。</p><p><code>let</code>の仕様によって、JSでブロックを使う意味が生まれた？[^fn]
+<code>switch</code>でそれぞれのブランチのスコープを区切るためにブロックを使うテクニックが紹介されている。</p><p>[^fn]この疑問符は、他の用法はあったのだろうか、という意図。</p></p></div><div class=page-footer></div></div><footer class=footer-mobile><div class=social-icons></div><div class=footer-mobile-links><p><a href=https://github.com/kimcc/hugo-theme-noteworthy target=_blank rel=noopener>Noteworthy theme</a></p><span class=divider-bar>|</span><p><a href=https://gohugo.io target=_blank rel=noopener>Built with Hugo</a></p></div><script src=https://naoyafurudono.github.io/js/main.min.a7205ef73b078c8daed6fe1b0826e8ba229ffabbb69d299d9446cf41f2c7d8aa.js integrity="sha256-pyBe9zsHjI2u1v4bCCbouiKf+ru2nSmdlEbPQfLH2Ko=" crossorigin=anonymous></script></footer></body></html>

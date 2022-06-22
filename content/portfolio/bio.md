@@ -1,13 +1,13 @@
 ---
 title: "Portfolio"
 date: 2022-03-23T14:23:47+09:00
-draft: true
+draft: false
 ---
 
-## Paper
+## Academic Paper
 
-- Open Floating in TFP2022
-  - paper (pdf) : Now preparing. (The submission has been accepted.)
+- Open Floating in [TFP2022](https://trendsfp.github.io/)
+  - [paper (submitted version, pdf)](https://drive.google.com/file/d/1mhK0yj5fJymBQ6vv1a3UOrO33CmhvFuv/view?usp=sharing): we are preparing the final version
   - [slide (pdf)](https://drive.google.com/file/d/1oYLtxE0b1AIBbkcotf_YyPST0yLdvbNl/view?usp=sharing)
   - [12min video (mp4)](https://drive.google.com/file/d/14EBEGQYZDNIGADXyRU7XTsbgUE4XqO1x/view?usp=sharing)
 

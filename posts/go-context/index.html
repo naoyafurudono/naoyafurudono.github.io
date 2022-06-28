@@ -3,5 +3,5 @@
 基本的には起動したら放置するのだが、ときどきいらないページをスキップしたくなる。このスキップ機能を追加するためにcontextを使った。</p><p>当初は<code>context.WithCancel</code>で良いかと思ったが、同じ<code>ctx</code>に複数回cancelを送信したいので良くない。
 結局<code>context.WithValue</code>で受信チャンネルをもたせた。
 あとはキー入力を受け付けるgoroutineを立てて、良い感じに対応する送信チャンネルから<code>struct{}{}</code>を送れば良い。
-(受信側はもちろんいる。もともとタイムアウトを管理する箇所があったので、そこで<code>timer.After</code>と並行して件のチャンネルを待つ。)</p><p>標準入出力をいろいろな部分から使っているので操作画面がとてもきたない。
+(受信側はもちろんいる。もともとDOS攻撃を避けるために待つ箇所があったので、そこで<code>timer.After</code>と並行して件のチャンネルを待つことにした。)</p><p>標準入出力をいろいろな部分から使っているので操作画面がとてもきたない。
 とはいえ自分で使う分にはストレスなく思ったとおりに動くので道具としては満足。</p></p></div><div class=page-footer></div></div><footer class=footer-mobile><div class=social-icons></div><div class=footer-mobile-links><p><a href=https://github.com/kimcc/hugo-theme-noteworthy target=_blank rel=noopener>Noteworthy theme</a></p><span class=divider-bar>|</span><p><a href=https://gohugo.io target=_blank rel=noopener>Built with Hugo</a></p></div><script src=https://naoyafurudono.github.io/js/main.min.a7205ef73b078c8daed6fe1b0826e8ba229ffabbb69d299d9446cf41f2c7d8aa.js integrity="sha256-pyBe9zsHjI2u1v4bCCbouiKf+ru2nSmdlEbPQfLH2Ko=" crossorigin=anonymous></script></footer></body></html>

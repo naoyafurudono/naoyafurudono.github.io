@@ -3,10 +3,11 @@ languageCode = 'ja-jp'
 title = 'nfurudono'
 theme = 'noteworthy'
 
-twitter = "https://twitter.com/furudono2"
 googleAnalytics = "G-ES42FPF4D5"
 
 enableGitInfo = true
 hasCJKLanguage = true
 
+[Params]
+twitter = "https://twitter.com/furudono2"
 

@@ -11,3 +11,14 @@ hasCJKLanguage = true
 [Params]
 twitter = "https://twitter.com/furudono2"
 
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "algol_nu"
+    tabWidth = 2

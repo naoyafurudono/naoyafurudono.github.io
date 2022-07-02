@@ -4,6 +4,14 @@ date: 2022-03-23T14:23:47+09:00
 draft: false
 ---
 
+I am Naoya Furudono. Thank you for visiting this page.
+
+## Links
+
+- [Twitter (@furudono2)](https://twitter.com/furudono2)
+- [AtCoder](https://atcoder.jp/users/donofuru)
+- [GitHub](https://github.com/naoyafurudono)
+
 ## Academic Paper
 
 - Open Floating in [TFP2022](https://trendsfp.github.io/)
@@ -25,3 +33,4 @@ draft: false
 ### 2020
 
 - Mini-talk about my favorite beer [slide (pdf)](https://drive.google.com/file/d/1kbLvc6hkLwbiL7ouyT-tigIMFOEXoLq4/view?usp=sharing)
+

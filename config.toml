@@ -1,15 +1,28 @@
+# 参考
+# https://github.com/kimcc/hugo-theme-noteworthy/blob/master/exampleSite/config.toml
+
 baseURL = 'https://naoyafurudono.github.io'
 languageCode = 'ja-jp'
 title = 'nfurudono'
 theme = 'noteworthy'
 
+enableRobotsTXT = true
 googleAnalytics = "G-ES42FPF4D5"
 
 enableGitInfo = true
 hasCJKLanguage = true
 
+[taxonomies]
+  tag = "tags"
+
+[author]
+  name = "Naoya Furudono"
+
 [Params]
-twitter = "https://twitter.com/furudono2"
+  description = "Personal blog"
+  twitter = "https://twitter.com/furudono2"
+  github = "https://github.com/naoyafurudono"
+  showReadMore = true
 
 [markup]
   [markup.highlight]
@@ -22,3 +35,10 @@ twitter = "https://twitter.com/furudono2"
     noClasses = true
     style = "algol_nu"
     tabWidth = 2
+
+[[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/portfolio/bio"
+    weight = 1
+

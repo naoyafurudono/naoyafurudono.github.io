@@ -3,7 +3,7 @@
 
 baseURL = 'https://naoyafurudono.github.io'
 languageCode = 'ja-jp'
-title = 'nfurudono'
+title = "Furudono's blog"
 theme = 'noteworthy'
 
 enableRobotsTXT = true

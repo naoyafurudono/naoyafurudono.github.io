@@ -4,15 +4,15 @@ date: 2022-03-23T14:23:47+09:00
 draft: false
 ---
 
-This is Web page of Naoya Furudono, who is master course sutendent of Tokyo Institute of Technology (Graduate Major in Mathematical and Computing Science).
+This is Web page of **Naoya Furudono**, who is master course sutendent of Tokyo Institute of Technology (Graduate Major in Mathematical and Computing Science).
 
 He majors in theory and implementation design of programming language.
 
 ## Links
 
-- [GitHub](https://github.com/naoyafurudono)
-- [Twitter (@furudono2)](https://twitter.com/furudono2)
-- [AtCoder](https://atcoder.jp/users/donofuru)
+- GitHub: [naoyafurudono](https://github.com/naoyafurudono)
+- Twitter: [(@furudono2)](https://twitter.com/furudono2)
+- AtCoder: [(donofuru)](https://atcoder.jp/users/donofuru)
 
 ## Academic Paper
 

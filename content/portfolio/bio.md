@@ -4,15 +4,19 @@ date: 2022-03-23T14:23:47+09:00
 draft: false
 ---
 
-I am Naoya Furudono. Thank you for visiting this page.
+This is Web page of Naoya Furudono, who is master course sutendent of Tokyo Institute of Technology (Graduate Major in Mathematical and Computing Science).
+
+He majors in theory and implementation design of programming language.
 
 ## Links
 
+- [GitHub](https://github.com/naoyafurudono)
 - [Twitter (@furudono2)](https://twitter.com/furudono2)
 - [AtCoder](https://atcoder.jp/users/donofuru)
-- [GitHub](https://github.com/naoyafurudono)
 
 ## Academic Paper
+
+### 2022
 
 - Open Floating in [TFP2022](https://trendsfp.github.io/)
   - [paper (submitted version, pdf)](https://drive.google.com/file/d/1mhK0yj5fJymBQ6vv1a3UOrO33CmhvFuv/view?usp=sharing): we are preparing the final version
@@ -23,6 +27,7 @@ I am Naoya Furudono. Thank you for visiting this page.
 
 ### 2022
 
+- Permissions in Linux [slide (google slides)](https://docs.google.com/presentation/d/18kkR9ew1Si_7SMuMgkct1drntBZZ1YPYcVi9B0lpLCE/edit?usp=sharing)
 - Survey of hygienic macros [slide (pdf)](https://drive.google.com/file/d/1vVI1i__JJH4EPJcx8xZ2gNUR_0wCJ1-p/view?usp=sharing)
 
 ### 2021

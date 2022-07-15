@@ -26,19 +26,26 @@ hasCJKLanguage = true
 
 [markup]
   [markup.highlight]
-    codeFences = true
+    codeFences = false
     guessSyntax = false
     hl_Lines = ""
     lineNoStart = 1
-    lineNos = true
+    lineNos = false
     lineNumbersInTable = false
     noClasses = true
-    style = "algol_nu"
+    # style = "algol_nu"
     tabWidth = 2
 
+menu = ['main', 'footer']
+
 [[menu.main]]
-    identifier = "about"
-    name = "About"
+    identifier = "whoiam"
+    name = "Who I am"
     url = "/portfolio/bio"
     weight = 1
 
+[[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2

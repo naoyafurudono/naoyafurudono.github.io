@@ -1,5 +1,5 @@
 ---
-title: "Syscall"
+title: "UNIXでのパーミッション周りでの振る舞いを調べた"
 date: 2022-07-08T18:15:10+09:00
 author: "Naoya Furudono"
 draft: false
@@ -21,7 +21,7 @@ sudo a.out
 rootとして実行できていないのか、execvが認識するプロセスのユーザidがeidではなく、uidなのか...。
 
 次の実験をした。`sudo` は関係ないようだ。
-sudo su でrootになった。
+sudo su でrootになったあとの様子を切り取っている。
 
 ```
 # ls -l
@@ -59,5 +59,8 @@ hello world
 hello world
 ```
 
-カーネルかファイルシステムの都合だろうか。
+カーネルかファイルシステムの都合でこうしているのだろうか。
+上で登場した `caller.c` と `callee.c` は GitHub で公開している：
+
+https://github.com/naoyafurudono/test-unix-permission
 

@@ -9,6 +9,8 @@ draft: false
 
 Todoアプリを作っている。就活の際に Webアプリの開発経験に関する話をするときの題材が欲しかったから。
 
+GitHub: <https://github.com/naoyafurudono/todo-app>
+
 ## モチベーション
 
 Todoアプリを選んだのは、この手の目的でよく作られているイメージがあるから。FizzBazzみたいな？

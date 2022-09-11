@@ -36,4 +36,14 @@ wip
 
 ## 記事の感想
 
+[Clangに内蔵させた方式がうまく行った](https://dl.acm.org/doi/fullHtml/10.1145/3188720#:~:text=%C2%A0%20Make%20It%20a%20Compiler%20Workflow)
+と書かれている箇所は僕の見立てと同じ方向を向いているかもしれない。
+型に限った話ではないので、ピッタリ同じというわけではないことに注意。論文が学会に投稿されている:
+[Large-Scale Automated Refactoring Using ClangMR](https://research.google/pubs/pub41342/)。
+コンパイラを使う利点も最初のリンク先に書かれているので必要に応じて引用すると良いだろう。
+
+コンパイラによるチェックが満たしたほうが良さげな指標として次があげられている。
+
+> report issues affecting only correctness rather than style or best practices
+
 wip

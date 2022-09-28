@@ -11,8 +11,8 @@ He majors in theory and implementation design of programming language.
 ## Links
 
 - GitHub: [naoyafurudono](https://github.com/naoyafurudono)
-- Twitter: [(@furudono2)](https://twitter.com/furudono2)
-- AtCoder: [(donofuru)](https://atcoder.jp/users/donofuru)
+- Twitter: [(@furudono2)](https://twitter.com/furudono2) (not active, but live)
+<!-- - AtCoder: [(donofuru)](https://atcoder.jp/users/donofuru) (not active) -->
 
 ## Development
 
@@ -24,9 +24,9 @@ He majors in theory and implementation design of programming language.
 ### 2022
 
 - Open Floating in [TFP2022](https://trendsfp.github.io/)
-  - [paper (submitted version, pdf)](https://drive.google.com/file/d/1mhK0yj5fJymBQ6vv1a3UOrO33CmhvFuv/view?usp=sharing): we are preparing the final version
-  - [slide (pdf)](https://drive.google.com/file/d/1oYLtxE0b1AIBbkcotf_YyPST0yLdvbNl/view?usp=sharing)
-  - [12min video (mp4)](https://drive.google.com/file/d/14EBEGQYZDNIGADXyRU7XTsbgUE4XqO1x/view?usp=sharing)
+  - [Paper (submitted version, pdf)](https://drive.google.com/file/d/1mhK0yj5fJymBQ6vv1a3UOrO33CmhvFuv/view?usp=sharing): we are preparing the final version
+  - [Slide (pdf)](https://drive.google.com/file/d/1oYLtxE0b1AIBbkcotf_YyPST0yLdvbNl/view?usp=sharing)
+  - [Talk at TFP2022 (12min, mp4)](https://drive.google.com/file/d/14EBEGQYZDNIGADXyRU7XTsbgUE4XqO1x/view?usp=sharing)
 
 ## Talks
 

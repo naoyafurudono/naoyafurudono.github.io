@@ -17,4 +17,5 @@ UbuntuとAndroidにクライアントを入れてつかってみているのだ�
 おそらくSyncthingも引っかかるので、学校のネットワークでは動作しないように設定しておく。
 
 設定は公式に従ってもよいし、[このブログポスト](https://virment.com/how-to-use-syncthing-for-syncing-local-files/)も参考になる。
+詳しいことは[ArchWiki](https://wiki.archlinux.jp/index.php/Syncthing)が頼りになりそう。
 

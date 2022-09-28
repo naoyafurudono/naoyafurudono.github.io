@@ -14,3 +14,5 @@ LAN内のデバイスとはLAN内で、インターネットの先にいるデ�
 USBのような手軽さはないが、クラウドストレージ越しにファイルのやりとりをするよりは便利そうだ。
 UbuntuとAndroidにクライアントを入れてつかってみているのだけど、今の所いいかんじ。
 
+設定は公式に従ってもよいし、[このブログポスト](https://virment.com/how-to-use-syncthing-for-syncing-local-files/)も参考になる。
+

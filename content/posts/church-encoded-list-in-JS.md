@@ -25,9 +25,12 @@ const car = l => fst(snd(l));
 const cdr = l => snd(snd(l));
 const isnil = l => fst(l);
 
-const foldr = f => b => l => (ite (isnil(l)) (() => b) (() => f(car(l))(foldr(f)(b)(cdr(l)))) ) ();
+const fix = f => (x => f(y => x(x)(y)))((x => f(y => x(x)(y))));
+
+const foldr = fix(folD => f => init => l => (ite (isnil(l)) (() => init) (() => f(car(l))(folD(f)(b)(cdr(l)))) ) ());
 
 const len = l => foldr(elm => b => 1+b)(0)(l);
+const len2 = fix(leN => l => (ite(isnil(l))( () => 0)( () => 1 + leN(cdr(l)) ))() );
 
 const lst = cons(1)(cons(2)(nil));
 len(lst); // -> 2

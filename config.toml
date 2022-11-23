@@ -23,6 +23,7 @@ hasCJKLanguage = true
   twitter = "https://twitter.com/furudono2"
   github = "https://github.com/naoyafurudono"
   showReadMore = true
+  mainSections = ['posts', 'daily']
 
 [markup]
   [markup.highlight]

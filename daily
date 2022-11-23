@@ -1,28 +1,10 @@
 #!/usr/bin/bash
 
-if [ $# = 0 ]; then
-  echo "daily: -h to get usage" 1>&2
-  exit 1
-fi
-
 name="daily/$(date "+%Y-%m-%d")"
-while getopts enh OPT
-do
-  case $OPT in
-    "e") nvim "content/${name}.md" ;;
-    "n") hugo new "${name}.md"&&nvim "content/${name}.md";;
-    "h") cat << EOS
-    daily: 日記ファイルの生成コマンド
-
-    使い方: ./daily -n で記事を生成する。その日のうちに編集したくなったら./daily -eを使う。
-
-
-    オプション:
-
-    -e : 今日の日記を編集
-    -n : 今日の日記を作成
-    -h : このヘルプを表示
-EOS
-  esac
-done
+filename="content/${name}.md"
+if [[ -f $filename ]]; then
+  nvim $filename
+else
+    hugo new "${name}.md"&&nvim "content/${name}.md"
+fi
 

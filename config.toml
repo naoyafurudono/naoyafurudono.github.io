@@ -5,6 +5,7 @@ baseURL = 'https://naoyafurudono.github.io'
 languageCode = 'ja-jp'
 title = "Furudono's blog"
 theme = 'noteworthy'
+copyright = "&copy; {currentYear} Naoya Furudono"
 
 enableRobotsTXT = true
 googleAnalytics = "G-ES42FPF4D5"
@@ -20,6 +21,7 @@ hasCJKLanguage = true
 
 [frontmatter]
   date = [':filename', ':default']
+  lastmod = ["lastmod", "updated", ":git"]
 
 [Params]
   description = "Personal blog"

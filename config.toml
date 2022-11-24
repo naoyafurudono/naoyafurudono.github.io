@@ -18,6 +18,9 @@ hasCJKLanguage = true
 [author]
   name = "Naoya Furudono"
 
+[frontmatter]
+  date = [':filename', ':default']
+
 [Params]
   description = "Personal blog"
   twitter = "https://twitter.com/furudono2"

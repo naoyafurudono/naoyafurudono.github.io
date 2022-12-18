@@ -2,7 +2,7 @@
 title: "git grep で検索して置換"
 date: 2022-12-18T23:20:30+09:00
 author: "Naoya Furudono"
-draft: true
+draft: false
 ---
 
 `git grep`は便利なのだが、置換の機能がない。

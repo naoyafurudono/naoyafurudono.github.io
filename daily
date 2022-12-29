@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 name="daily/$(date "+%Y-%m-%d")"
 filename="content/${name}.md"

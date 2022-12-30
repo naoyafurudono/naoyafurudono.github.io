@@ -6,7 +6,7 @@ draft: false
 
 ![Picture of Naoya Furudono](face.jpg)
 
-This is Web page of **Naoya Furudono**（古殿 直也）, who is master course sutendent of Tokyo Institute of Technology (Graduate Major in Mathematical and Computing Science).
+This is Web page of **Naoya Furudono**（古殿 直也）, who is a master course student of Tokyo Institute of Technology (Graduate Major in Mathematical and Computing Science).
 
 He majors in theory and implementation design of programming language.
 

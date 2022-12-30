@@ -12,9 +12,13 @@ He majors in theory and implementation design of programming language.
 
 ## Contact
 
-Contact me through e-mail.
-My address is `bmFveWFmdXJ1ZG9ub0BnbWFpbC5jb20=`, which encoded to [Base64 format](https://en.wikipedia.org/wiki/Base64).
-You can decode it through cli-tool ([like this](https://manpages.ubuntu.com/manpages/bionic/man1/base64.1.html)), Web-application [(like this)](https://www.base64decode.org/) and so on.
+Contact me through following e-mail address.
+
+{{<email>}}
+{{</email>}}
+
+If you see no address, please wait for 5 seconds.
+I suspend to show the address to avoid spam.
 
 ## SNS
 
@@ -45,4 +49,3 @@ You can decode it through cli-tool ([like this](https://manpages.ubuntu.com/manp
 ### 2020
 
 - Mini-talk about my favorite beer [slide (pdf)](https://drive.google.com/file/d/1kbLvc6hkLwbiL7ouyT-tigIMFOEXoLq4/view?usp=sharing)
-

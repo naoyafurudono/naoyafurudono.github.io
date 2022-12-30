@@ -1,4 +1,14 @@
-<div id="email">
-  {{ .Inner }}
-</div>
+<span id="email">
+  (wait for a few seconds to show)
+</span>
 
+
+<script>
+  (function () {
+    const encEmail = "bmFveWFmdXJ1ZG9ub0BnbWFpbC5jb20=";
+    const handle = document.getElementById("email");
+    setTimeout(() => {
+      handle.innerHTML = atob(encEmail);
+    }, 5000);
+  })();
+</script>

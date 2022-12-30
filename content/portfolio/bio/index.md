@@ -12,13 +12,7 @@ He majors in theory and implementation design of programming language.
 
 ## Contact
 
-Contact me through following e-mail address.
-
-{{<email>}}
-{{</email>}}
-
-If you see no address, please wait for 5 seconds.
-I suspend to show the address to avoid spam.
+Contact me through following e-mail address: {{<email>}}
 
 ## SNS
 

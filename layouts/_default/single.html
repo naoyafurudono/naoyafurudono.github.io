@@ -33,13 +33,4 @@
     {{ end }}
     {{ end }}
 </div>
-{{- if .HasShortcode "email" }}
-<script>
-    const encEmail = "bmFveWFmdXJ1ZG9ub0BnbWFpbC5jb20=";
-    const handle = document.getElementById("email");
-    setTimeout(() => {
-        handle.innerHTML = atob(encEmail);
-    }, 5000);
-</script>
-{{- end }}
 {{end}}

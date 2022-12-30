@@ -10,15 +10,16 @@ This is Web page of **Naoya Furudono**（古殿 直也）, who is master course 
 
 He majors in theory and implementation design of programming language.
 
-## Links
+## Contact
+
+Contact me through e-mail.
+My address is `bmFveWFmdXJ1ZG9ub0BnbWFpbC5jb20=`, which encoded to [Base64 format](https://en.wikipedia.org/wiki/Base64).
+You can decode it through cli-tool ([like this](https://manpages.ubuntu.com/manpages/bionic/man1/base64.1.html)), Web-application [(like this)](https://www.base64decode.org/) and so on.
+
+## SNS
 
 - GitHub: [naoyafurudono](https://github.com/naoyafurudono)
 - Twitter: [(@furudono2)](https://twitter.com/furudono2) (not active, but live)
-
-## Development
-
-- [Todo App](https://github.com/naoyafurudono/todo-app)
-  - Aim to show my code
 
 ## Academic Paper
 

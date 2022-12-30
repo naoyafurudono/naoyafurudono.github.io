@@ -27,6 +27,7 @@ hasCJKLanguage = true
   description = "Personal blog"
   twitter = "https://twitter.com/furudono2"
   github = "https://github.com/naoyafurudono"
+  linkedin = "httPs://www.linkedin.com/in/naoya-furudono"
   showReadMore = true
   mainSections = ['posts', 'daily']
 

@@ -24,6 +24,7 @@ Contact me through following e-mail address: {{<email>}}
 ### 2022
 
 - "Towards Efficient Adjustment of Effect Rows" in [TFP2022](https://trendsfp.github.io/)
+  - [Publication](https://link.springer.com/book/10.1007/978-3-031-21314-4)
   - [Paper (submitted version, pdf)](https://drive.google.com/file/d/1mhK0yj5fJymBQ6vv1a3UOrO33CmhvFuv/view?usp=sharing)
   - [Slide (pdf)](https://drive.google.com/file/d/1oYLtxE0b1AIBbkcotf_YyPST0yLdvbNl/view?usp=sharing)
   - [Talk at TFP2022 (12min, mp4)](https://drive.google.com/file/d/14EBEGQYZDNIGADXyRU7XTsbgUE4XqO1x/view?usp=sharing)

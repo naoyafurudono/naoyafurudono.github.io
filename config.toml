@@ -30,6 +30,7 @@ hasCJKLanguage = true
   linkedin = "https://www.linkedin.com/in/naoya-furudono"
   showReadMore = false
   mainSections = ['posts', 'daily']
+  images = ["images/thumbnail.png"]
 
 [markup]
   [markup.highlight]

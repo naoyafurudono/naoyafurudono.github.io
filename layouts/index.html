@@ -9,13 +9,13 @@
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ range  $pages }}
     <article>
-        <h2>
+        <h1 >
             <a href="{{ .Permalink }}">
                 {{ .Title }}
             </a>
-        </h2>
+        </h1>
         <div>
-            <p>{{ .Summary }}</p>
+            <p>{{ .Content }}</p>
             {{ if (and (.Site.Params.showReadMore) (.Truncated)) }}
             <p><a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a></p>
             {{ end }}

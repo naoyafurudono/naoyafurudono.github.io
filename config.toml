@@ -5,7 +5,7 @@ baseURL = 'https://naoyafurudono.github.io'
 languageCode = 'ja-jp'
 title = "Furudono's blog"
 theme = 'noteworthy'
-copyright = "&copy; {currentYear} Naoya Furudono"
+copyright = "&copy;{currentYear} Naoya Furudono"
 
 enableRobotsTXT = true
 googleAnalytics = "G-ES42FPF4D5"
@@ -28,7 +28,7 @@ hasCJKLanguage = true
   twitter = "https://twitter.com/furudono2"
   github = "https://github.com/naoyafurudono"
   linkedin = "https://www.linkedin.com/in/naoya-furudono"
-  showReadMore = true
+  showReadMore = false
   mainSections = ['posts', 'daily']
 
 [markup]

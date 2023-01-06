@@ -3,6 +3,7 @@ title: "Pythonのジェネレータをyieldで書く例"
 date: 2023-01-06T17:47:42+09:00
 author: "Naoya Furudono"
 draft: false
+tags: ["python"]
 ---
 
 Pythonのジェネレータ（というより`yield`）の挙動を示す例を書いた。

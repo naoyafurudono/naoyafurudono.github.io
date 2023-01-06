@@ -3,6 +3,7 @@ title: "Python のfilter関数が良い"
 date: 2022-08-19T17:32:37+09:00
 author: "Naoya Furudono"
 draft: false
+tags: ["python"]
 ---
 
 [ドキュメント](https://docs.python.org/ja/3/library/functions.html#filter) を読むのが早い。

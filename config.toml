@@ -1,7 +1,7 @@
 # 参考
 # https://github.com/kimcc/hugo-theme-noteworthy/blob/master/exampleSite/config.toml
 
-baseURL = 'https://naoyafurudono.github.io'
+baseURL = 'https://blog.nfurudono.com'
 languageCode = 'ja-jp'
 title = "Furudono's blog"
 theme = 'noteworthy'
@@ -49,7 +49,7 @@ menu = ['main', 'footer']
 [[menu.main]]
     identifier = "whoiam"
     name = "Who I am"
-    url = "/portfolio/bio"
+    url = "/portfolio/bio/"
     weight = 1
 
 [[menu.main]]

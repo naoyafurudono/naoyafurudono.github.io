@@ -6,7 +6,9 @@ Practicalで面白いと伺って、目次を見たら実際そのようだっ�
 3年前にプログラミング in OCamlで入門したのが懐かしい。
 Real World OCamlはOCamlらしいOCamlの書き方を教えてくれている感じがする。
 まだ最初の方なのでレビュはできないが。</p><h2 id=開発環境メモ>開発環境メモ</h2><p>最近出版された本ということもあり、<a href=https://dev.realworldocaml.org/install.html>サポートページ</a>やそれぞれのツールのREADMEに従えばすんなり環境構築できた。
-プラスアルファでduneを使うことにしたのだけど、その使い方が公式ドキュメントを読んでも不思議な感じで苦労したからメモしておく。</p><ul><li><code>dune init project &lt;name></code>でプロジェクトを作成</li><li><code>dune build</code>でmainをコンパイル</li><li>依存を加えたいときは、該当する<code>dune</code>ファイルの<code>libralies</code>フォームに依存ライブラリ名を追加する。そのうえで<code>dune build</code>すると処理してopamファイルを上書きしてくれる。すごい雑なイメージだけど、package.jsonがあちこちに散らばった<code>dune</code>ファイルに対応していて、<code>opam</code>ファイルが<code>package-lock.json</code>に対応するようなイメージで解釈することにした。</li></ul></p></div><div class=post-footer><time>February 15, 2023</time>
+プラスアルファでduneを使うことにしたのだけど、その使い方が公式ドキュメントを読んでも不思議な感じで苦労したからメモしておく。</p><ul><li><code>dune init project &lt;name></code>でプロジェクトを作成</li><li><code>dune build</code>でmainをコンパイル</li><li>依存を加えたいときは、該当する<code>dune</code>ファイルの<code>libralies</code>フォームと、<code>dune-project</code>の<code>depends</code>フォームに依存ライブラリ名を追加する。
+そのうえで<code>dune build</code>すると処理してopamファイルを上書きしてくれる。
+<code>dune-project</code>に追記しなくてもコンパイルはできるが、opamファイルが更新されない。IDEはopamファイルを見ているようなので、linterのお世話になるために<code>dune-project</code>にも書き込む必要がある。</li></ul></p></div><div class=post-footer><time>February 15, 2023</time>
 <a class=tag href=/%20/tags/daily>#daily</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-02-12/>2023-02-12</a></h1><div><p><p>ドメインを取得して、サーバを借りた。
 もちろんムームードメインとロリポップを使っている。</p><p><del>ブログのドメインを独自ドメインに変更したらhttpsが無効になってしまった。
 読むときに怒るブラウザいるかも知れないのが怖いけど、お金がかかるし面倒なのでこのままにしておく。</del>

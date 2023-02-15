@@ -1,9 +1,9 @@
 #!/bin/bash
 
 name="daily/$(date "+%Y-%m-%d")"
-filename="content/${name}.md"
-if [[ -f $filename ]]; then
-  nvim "$filename"
+path="content/${name}.md"
+if [[ -f $path ]]; then
+  nvim "$path"
 else
-  hugo new "${name}.md" && nvim "$filename"
+  hugo new "${name}.md" && nvim "$path"
 fi

@@ -3,8 +3,7 @@
 name="daily/$(date "+%Y-%m-%d")"
 filename="content/${name}.md"
 if [[ -f $filename ]]; then
-  nvim $filename
+  nvim "$filename"
 else
-    hugo new "${name}.md"&&nvim "content/${name}.md"
+  hugo new "${name}.md" && nvim "$filename"
 fi
-

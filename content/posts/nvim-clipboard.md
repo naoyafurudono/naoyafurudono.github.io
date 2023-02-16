@@ -4,7 +4,7 @@ date: 2022-06-12T11:01:45+09:00
 draft: false
 ---
 
-# NeoVimでクリップボードを使う
+# NeoVim でクリップボードを使う
 
 ## TL;DR;
 
@@ -12,7 +12,7 @@ draft: false
 
 ## 長めの説明
 
-Nvimでは（viやvimも）ヤンクやペーストで、nvimが管理するバッファを記憶領域として用いる。
+Nvim では（vi や vim も）ヤンクやペーストで、nvim が管理するバッファを記憶領域として用いる。
 なのでクリップボードとは分離されていて不便なことが多い。
 
 バッファとクリップボードをつなげれば良くて、その設定は上のコマンドで完結するようだ。
@@ -20,7 +20,7 @@ Nvimでは（viやvimも）ヤンクやペーストで、nvimが管理するバ�
 手元の環境では上の１行を追加するだけで良かった。
 
 ```
-:version                                                                                                                                 
+:version
 NVIM v0.6.1
 Build type: Release
 LuaJIT 2.1.0-beta3
@@ -29,6 +29,5 @@ Compiled by team+vim@tracker.debian.org
 
 [該当コミット](https://github.com/naoyafurudono/nvim-config/commit/23b1e25099abd81a096f4719c7c2d11629f725d7)：関係無い変更も同時にコミットしてる...。
 
-複数のnvimプロセス間でクリップボードを共有できる（当然）のが地味に便利。
+複数の nvim プロセス間でクリップボードを共有できる（当然）のが地味に便利。
 （普通は複数プロセス立てない？）
-

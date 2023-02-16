@@ -850,15 +850,15 @@ Zoomから退出して、Ubuntuにログインし直し、ウィンドウシス�
 やはりXが安定なのか。</p><p>Ubuntu22.04で画面共有しようとすると、共有候補にホワイトボードしか表示されなかった。
 <a href=https://support.zoom.us/hc/en-us/articles/6634039380877>Zoomがknown issue</a>として公開していた。
 詳しくはリンク先を読めばよいが、waylandとの相性の問題とのこと。そのうち修正したいと書いてある。</p><p>対応策としては以下が紹介されていた。</p><ul><li>Xorgを使う</li><li>ブラウザ版zoomを使う</li><li>OBSのようなソフトで仮想カメラにキャプチャ画面をつなげて、それをzoomで共有する</li></ul><p>僕は面倒なので、常に全画面を共有するように設定した。これはzoomアプリの画面共有設定から行える。</p></p></div><div class=post-footer><time>June 15, 2022</time>
-<a class=tag href=/%20/tags/ubuntu>#Ubuntu</a></div></article><article><h1><a href=https://blog.nfurudono.com/posts/nvim-clipboard/>NeoVimでクリップボードを使う</a></h1><div><p><h1 id=neovimでクリップボードを使う>NeoVimでクリップボードを使う</h1><h2 id=tldr>TL;DR;</h2><p><code>init.vim</code>に<code>set clipboard+=unnamedplus</code>と追記する。</p><h2 id=長めの説明>長めの説明</h2><p>Nvimでは（viやvimも）ヤンクやペーストで、nvimが管理するバッファを記憶領域として用いる。
+<a class=tag href=/%20/tags/ubuntu>#Ubuntu</a></div></article><article><h1><a href=https://blog.nfurudono.com/posts/nvim-clipboard/>NeoVimでクリップボードを使う</a></h1><div><p><h1 id=neovim-でクリップボードを使う>NeoVim でクリップボードを使う</h1><h2 id=tldr>TL;DR;</h2><p><code>init.vim</code>に<code>set clipboard+=unnamedplus</code>と追記する。</p><h2 id=長めの説明>長めの説明</h2><p>Nvim では（vi や vim も）ヤンクやペーストで、nvim が管理するバッファを記憶領域として用いる。
 なのでクリップボードとは分離されていて不便なことが多い。</p><p>バッファとクリップボードをつなげれば良くて、その設定は上のコマンドで完結するようだ。
 ネットの記事には裏で<code>pbcopy</code>やそれに類するものの設定が必要、みたいなことをいう記事があるが
-手元の環境では上の１行を追加するだけで良かった。</p><pre><code>:version                                                                                                                                 
+手元の環境では上の１行を追加するだけで良かった。</p><pre><code>:version
 NVIM v0.6.1
 Build type: Release
 LuaJIT 2.1.0-beta3
 Compiled by team+vim@tracker.debian.org
-</code></pre><p><a href=https://github.com/naoyafurudono/nvim-config/commit/23b1e25099abd81a096f4719c7c2d11629f725d7>該当コミット</a>：関係無い変更も同時にコミットしてる&mldr;。</p><p>複数のnvimプロセス間でクリップボードを共有できる（当然）のが地味に便利。
+</code></pre><p><a href=https://github.com/naoyafurudono/nvim-config/commit/23b1e25099abd81a096f4719c7c2d11629f725d7>該当コミット</a>：関係無い変更も同時にコミットしてる&mldr;。</p><p>複数の nvim プロセス間でクリップボードを共有できる（当然）のが地味に便利。
 （普通は複数プロセス立てない？）</p></p></div><div class=post-footer><time>June 12, 2022</time></div></article><article><h1><a href=https://blog.nfurudono.com/posts/begin-rust/>Begin Rust</a></h1><div><p><p>Rustを勉強している。やはりライフタイムとか借用のあたりで苦労している。
 所有権やライフタイムはわかるのだが、借用の仕組みがイマイチわからない。
 特に可変な借用が同時に複数あってはならない、という規則で、同時にとは一体？という気持ちになる。

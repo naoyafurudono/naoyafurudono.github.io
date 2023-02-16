@@ -2,8 +2,8 @@
 title: "落し蓋"
 date: 2022-09-19T22:30:13+09:00
 author: "Naoya Furudono"
-draft: true
-tags: ["料理"]
+draft: false
+tags: ["cock"]
 ---
 
 ひじきの煮物をつくったのだけど、あまり上手にできなかった。

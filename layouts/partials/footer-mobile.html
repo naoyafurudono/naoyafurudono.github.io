@@ -2,10 +2,8 @@
 	{{ partial "social.html" . }}
 
 	<div class="footer-mobile-links">
-		<p><a href="https://github.com/naoyafurudono/naoyafurudono.github.io" target="_blank" rel="noopener">source of
+		<p><a href="https://github.com/naoyafurudono/naoyafurudono.github.io" target="_blank" rel="noopener">Source of
 				this site</a></p>
-		<p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">{{ i18n
-				"noteworthy_theme" }}</a></p>
 		<span class="divider-bar">|</span>
 		<p><a href="https://gohugo.io" target="_blank" rel="noopener">{{ i18n "built_with_hugo" }}</a></p>
 		<p>{{ with replace .Site.Copyright "{currentYear}" (.Date.Format "2006" )}}{{ . | markdownify}} {{ end }}</p>

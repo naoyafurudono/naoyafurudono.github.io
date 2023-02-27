@@ -9,6 +9,7 @@ tags: [
     ,"linux"
     ,"gnome"
 ]
+description: "Linux/gnomeでUSキーボードで日本語入力するときの設定方法をまとめる"
 ---
 
 GNOMEというかLinuxというかでよくやる設定を列挙する。

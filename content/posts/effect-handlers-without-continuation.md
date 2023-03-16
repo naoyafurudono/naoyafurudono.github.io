@@ -4,7 +4,7 @@ date: 2023-03-16T10:57:18+09:00
 author: "Naoya Furudono"
 draft: false
 tags: [
-    ,"PL"
+    "PL"
     ,"tech"
     ,"idea"
     ,"tool"

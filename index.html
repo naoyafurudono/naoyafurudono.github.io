@@ -108,7 +108,18 @@ LaTeXやMadokoを使うのは大げさな感じがして、諦めて手書きす
 自作マークダウン拡張（というより処理系）はまれに欲しくなるのでやっても良いだろう。Hugoもそんなに快適じゃないし、Madokoはいじりにくいので。</p><ul><li>自分でコードをいじりやすいこと</li><li>メタな文書処理がしやすいこと<ul><li>識別子や文書の変数への束縛、正規表現やCFGベースのテキスト置換など</li><li>この辺はMadokoが強い</li></ul></li><li>そういえばMadokoはPDFの生成でHTMLを使わずにlatexを使っていたな&mldr;</li></ul><p>ここまで来て、<a href=https://github.com/cognitom/paper-css>Paper CSS</a>という良さげなリポジトリを見つけた。
 Qitaでこのライブラリを使って<a href=https://qiita.com/cognitom/items/d39d5f19054c8c8fd592>帳票を作る例が解説されている</a>。</p><p>まだそれぞれをあまり読んでいないのであとで確認する。
 このあたりの技術に合うように出力することにして、それを生成するマークダウンエンジンを用意すればok?</p><p>やはりしんどい気がする。GUIでなんとかする方法を探すのが楽だろうか。
-あらためて考えよう。</p></p></div><div class=post-footer><time>February 24, 2023</time>
+あらためて考えよう。</p><h3 id=追記-google-docs-api>追記: Google Docs API</h3><p><a href="https://developers.google.com/docs/api/reference/rest?hl=ja">Google Docs API</a>を利用するのはどうだろうか。
+APIはあまりリッチではなくて、create, update, pullができるのみ。
+文書構造の編集はJSONをごりごりいじることで実現する。
+<a href="https://developers.google.com/docs/api/reference/rest/v1/documents?hl=ja">JSONスキーマが定義されている</a>ので、これを見ながら必要な変換を定義すればよい。</p><p>テンプレートをGoogle DocsのGUIで作成して、それをAPIでpullした上で、コンテンツを注入したドキュメントをcreateすれば、やりたかったことを実現できそうだ。
+テンプレートの置き換え箇所の指定方法はどうするのが良いだろうか。</p><p><code>(開始記号)名前(引数リスト)(終了記号)</code>を文書に埋め込む。これがひとかたまりの文書オブジェクトとして認識されることが必要。
+また、これにスタイリングを適用した場合、埋め込み後もそのスタイリングが保たれるようにする。
+引数に他の名前が出現しうることに注意する</p><p>テンプレに埋め込むテキストを定義する側では、埋め込み内容の定義リストを作成する:</p><pre><code class=language-python>def name(args: list[str]) -&gt; str:
+  return f&quot;&quot;&quot;\
+ここに置換後の文字列を書く。
+ここにも埋め込みの出現を許す。
+&quot;&quot;&quot;
+</code></pre><p>埋め込み処理では、JSON形式のテンプレのすべてのテキストについてマクロ展開をすればよい。</p></p></div><div class=post-footer><time>February 24, 2023</time>
 <a class=tag href=/%20/tags/idea>#idea</a>
 <a class=tag href=/%20/tags/tool>#tool</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-02-24/>2023-02-24</a></h1><div><p><p>最近は時間とベーシックな元気が足りない。この時期にやりたいこと/やるべきことがたくさん押し寄せてくるのはどうしてだろう。
 変わり目だからか。これまでぼちぼちやっていたものを、みんなが足並みをそろえて一段落つけようとするから忙しいのだろう。

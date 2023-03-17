@@ -24,7 +24,7 @@ hasCJKLanguage = true
   lastmod = ["lastmod", "updated", ":git"]
 
 [Params]
-  description = "Personal blog"
+  description = "公開メモです"
   twitter = "https://twitter.com/furudono2"
   github = "https://github.com/naoyafurudono"
   linkedin = "https://www.linkedin.com/in/naoya-furudono"

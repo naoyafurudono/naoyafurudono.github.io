@@ -45,7 +45,7 @@ Qitaでこのライブラリを使って[帳票を作る例が解説されてい
 やはりしんどい気がする。GUIでなんとかする方法を探すのが楽だろうか。
 あらためて考えよう。
 
-### 追記: Google Docs API
+## 追記: Google Docs API
 
 [Google Docs API](https://developers.google.com/docs/api/reference/rest?hl=ja)を利用するのはどうだろうか。
 APIはあまりリッチではなくて、create, update, pullができるのみ。

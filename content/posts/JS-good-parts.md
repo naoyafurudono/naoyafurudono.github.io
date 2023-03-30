@@ -17,7 +17,7 @@ JSには偏見しかなかったけど、良い言語に思えてきた。TypeSc
 UIを扱うにはJSが強い？C# with Unityもあるのか？
 TSよりも関心はDOMやevent handlerにある。
 
-## 追記
+# 追記
 
 JSの`let`を勉強している。情報源は[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/let)。
 `var`が作るスコープがレキシカルスコープではないことは既に知っている。

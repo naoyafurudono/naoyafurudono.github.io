@@ -4,7 +4,7 @@ date: 2022-03-23T11:41:44+09:00
 draft: false
 ---
 
-## Hello, Hugo and GitHub Pages
+# Hello, Hugo and GitHub Pages
 
 このサイトはHugoとGitHub Pagesを用いて運用しています。
 これらとGitHub Actionを組み合わせることで、マークダウンで記事を書いてGitHubにpushするだけで更新できるブログを構築しています。

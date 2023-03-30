@@ -16,7 +16,7 @@ draft: false
 最初の一つが`page/2/`みたいなページ生成を抑止して、次の２つがトップページの見た目を変える。
 ページネータを消せば自然に`.Pagenator`を使わないようになるはずだ。
 
-## 参考ドキュメント
+# 参考ドキュメント
 
 - [Hugoは`.Pagenator`の使用をみつけると、`page/2/`みたいなページを生成する](https://gohugo.io/templates/pagination/#configure-pagination)
 

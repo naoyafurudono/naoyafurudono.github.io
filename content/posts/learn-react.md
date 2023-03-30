@@ -18,7 +18,7 @@ Reactの再描画に関するしくみを学ぶ。
 サーバサイドレンダリングとかはどのように関係するか。
 Partial evaluationだと思える？とか。
 
-## 情報収集
+# 情報収集
 
 - 日本語の記事で、[このブログ記事](https://www.asobou.co.jp/blog/web/react-rendering)
   の著者がまじめにReactを使うために学んでその知見を発信している。

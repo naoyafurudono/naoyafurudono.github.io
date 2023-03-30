@@ -15,7 +15,7 @@ description: "Linux/gnomeでUSキーボードで日本語入力するときの�
 GNOMEというかLinuxというかでよくやる設定を列挙する。
 キーボード系が多いと思う。
 
-### gnome-terminal で`ctrl-(shift-)?tab`を有効にする
+## gnome-terminal で`ctrl-(shift-)?tab`を有効にする
 
 以下を実行
 
@@ -26,13 +26,13 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
 
 参考: <https://askubuntu.com/questions/133384/keyboard-shortcut-gnome-terminal-ctrl-tab-and-ctrl-shift-tab-in-12-04>
 
-### `capslock`で英数変換
+## `capslock`で英数変換
 
 [`xremap`](https://github.com/k0kubun/xremap)や[`xkeysnail`](https://github.com/mooz/xkeysnail)を使う
 どちらもそんなに使い心地は変わらないと思う。
 今は`xkeysnail`を使っている。
 
-### `xkeysnail`をsystemdに起動してもらう
+## `xkeysnail`をsystemdに起動してもらう
 
 課題が2つある:
 
@@ -47,11 +47,11 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
     1. sudoなしで`xkesynail`を実行できるようになる
 1. systemdに登録して、ログインくらいのタイミングで有効にする
 
-#### 権限を与える
+### 権限を与える
 
 これの通りにやればよい: <https://github.com/mooz/xkeysnail/issues/64#issuecomment-600380800>
 
-#### systemdに登録する
+### systemdに登録する
 
 1. 設定ファイルを書く <https://github.com/naoyafurudono/configs/blob/main/systemd/user/xkeysnail.service>
 1. `~/.config/systemd/user/`におく
@@ -61,7 +61,7 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
 
 もしうごかなかったら`jounalctl -r`でsystemdのログをみる。
 
-### 起動時に`mozc`の日本語入力を有効にする
+## 起動時に`mozc`の日本語入力を有効にする
 
 <https://github.com/naoyafurudono/configs/blob/main/mozc/ibus_config.textproto>を`~/.config/mozc/`におく。
 

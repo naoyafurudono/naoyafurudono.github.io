@@ -26,7 +26,7 @@ init -> next -> finalの順で呼ぶことになる。それ以外の順番で�
 セッションタイプを似たような概念として聞いたことがある。
 どのように関係があるのだろうか。
 
-### 追記
+## 追記
 
 [Jane Street のテックブログでphantom typeをYaron Minskyが紹介していた](https://blog.janestreet.com/howto-static-access-control-using-phantom-types/)。
 readonly/readwrite/immutableみたいなアクセス制御を実現する方法を例として紹介している。

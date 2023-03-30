@@ -15,7 +15,7 @@ draft: false
 このポストではネットやアカデミアでどんな議論がありそうかをざっと眺める。
 それらの議論の細かいところとか、考察とかは明日以降の意識がはっきりしているときに扱う。
 
-## サーベイ
+# サーベイ
 
 同じことを思ったひとはいるようで、検索すると[2017年のブログ記事](https://danidiaz.medium.com/free-monads-and-effect-handlers-vs-dependency-injection-bca2eb95e580)がヒットした。
 [Hacker Newsのスレ](https://news.ycombinator.com/item?id=20513108)で `chowells`

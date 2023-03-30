@@ -6,11 +6,11 @@ draft: false
 
 # NeoVim でクリップボードを使う
 
-## TL;DR;
+# TL;DR;
 
 `init.vim`に`set clipboard+=unnamedplus`と追記する。
 
-## 長めの説明
+# 長めの説明
 
 Nvim では（vi や vim も）ヤンクやペーストで、nvim が管理するバッファを記憶領域として用いる。
 なのでクリップボードとは分離されていて不便なことが多い。

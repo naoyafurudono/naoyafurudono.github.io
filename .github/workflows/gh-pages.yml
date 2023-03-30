@@ -44,4 +44,5 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
           status: ${{ job.status }}
+          url: https://blog.nfurudono.com
 

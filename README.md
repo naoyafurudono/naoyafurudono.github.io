@@ -1,6 +1,6 @@
 # naoyafurudono.github.io
 
-![Deploy status](https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg)
+![github pages deploy status](https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg)
 
 [ブログ](https://naoyafurudono.github.io/)のソースリポジトリ。
 HugoとGitHub Action/Pages におんぶにだっこで実現している。

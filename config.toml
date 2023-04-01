@@ -48,8 +48,8 @@ menu = ['main', 'footer']
 
 [[menu.main]]
     identifier = "whoiam"
-    name = "Who I am"
-    url = "/portfolio/bio/"
+    name = "Profile"
+    url = "/profile/"
     weight = 1
 
 [[menu.main]]

@@ -2,13 +2,12 @@
 title: "Naoya Furudono"
 date: 2022-03-23T14:23:47+09:00
 draft: false
+aliases:  ['/portfolio/bio/']
 ---
 
 ![Picture of Naoya Furudono](face.jpg)
 
-This is Web page of **Naoya Furudono**（古殿 直也）, who is a master course student of Tokyo Institute of Technology (Graduate Major in Mathematical and Computing Science).
-
-He majors in theory and implementation design of programming language.
+This page is a profile of **Naoya Furudono**（古殿 直也）, who is a software engineer of GMO Pepabo, Inc.
 
 # Contact
 
@@ -18,6 +17,13 @@ Contact me through following e-mail address: {{<email>}}
 
 - GitHub: [naoyafurudono](https://github.com/naoyafurudono)
 - Twitter: [(@furudono2)](https://twitter.com/furudono2) (not active, but live)
+
+# Education
+
+- Master of Science, Tokyo Institute of Technology, Tokyo (2023)
+- Bachelor of Science, Tokyo Institute of Technology, Tokyo (2021)
+
+He majored in theory, implementation, and design of programming languages.
 
 # Academic Paper
 
@@ -44,3 +50,4 @@ Contact me through following e-mail address: {{<email>}}
 ## 2020
 
 - Mini-talk about my favorite beer [slide (pdf)](https://drive.google.com/file/d/1kbLvc6hkLwbiL7ouyT-tigIMFOEXoLq4/view?usp=sharing)
+

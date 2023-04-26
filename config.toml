@@ -26,6 +26,7 @@ hasCJKLanguage = true
 [Params]
   description = "公開メモです"
   twitter = "https://twitter.com/furudono2"
+  instagram = "https://www.instagram.com/donofuru/"
   github = "https://github.com/naoyafurudono"
   linkedin = "https://www.linkedin.com/in/naoya-furudono"
   showReadMore = false

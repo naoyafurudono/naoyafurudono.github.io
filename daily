@@ -1,6 +1,10 @@
 #!/bin/bash
 
-name="daily/$(date "+%Y-%m-%d")"
+if [ $# -ne 0 ]; then
+  name="daily/$1"
+else
+  name="daily/$(date "+%Y-%m-%d")"
+fi
 path="content/${name}.md"
 if [[ -f $path ]]; then
   nvim "$path"

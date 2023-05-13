@@ -58,7 +58,6 @@ impl DailyFile {
                     Err(MyErr {})
                 }
             });
-        println!("{:?}", already_exists);
 
         if already_exists.is_ok() {
             Ok(())
@@ -71,7 +70,6 @@ impl DailyFile {
                     if o.status.success() {
                         return Ok(());
                     } else {
-                        println!["{:?}", o];
                         return Err(MyErr {});
                     }
                 }
@@ -92,28 +90,22 @@ impl MyDate {
         MyDate { date: current }
     }
 
-    // fn force_year(&self, y: i32) -> Option<Self> {
-    //     let m = self.date.month();
-    //     let d = self.date.day();
-    //     NaiveDate::from_ymd_opt(y, m, d).and_then(|nd| Some(MyDate { date: nd }))
-    // }
-
     fn force_month(&self, m: Option<u32>) -> Option<Self> {
         if m.is_none() {
             Some(self.clone())
         } else {
-        let y = self.date.year();
-        let d = self.date.day();
-        NaiveDate::from_ymd_opt(y, m?, d).and_then(|nd| Some(MyDate { date: nd }))
+            let y = self.date.year();
+            let d = self.date.day();
+            NaiveDate::from_ymd_opt(y, m?, d).and_then(|nd| Some(MyDate { date: nd }))
         }
     }
     fn force_day(&self, d: Option<u32>) -> Option<Self> {
         if d.is_none() {
             Some(self.clone())
         } else {
-        let y = self.date.year();
-        let m = self.date.month();
-        NaiveDate::from_ymd_opt(y, m, d?).and_then(|nd| Some(MyDate { date: nd }))
+            let y = self.date.year();
+            let m = self.date.month();
+            NaiveDate::from_ymd_opt(y, m, d?).and_then(|nd| Some(MyDate { date: nd }))
         }
     }
 
@@ -126,55 +118,67 @@ enum Cmd {
     Today,
     Date { date: NaiveDate },
 }
-
-fn run(args: Args) -> Result<(), MyErr> {
-    let cmd = match args.date {
-        Some(date) => {
-            let nd = NaiveDate::parse_from_str(&date, "%Y-%m-%d").or_else(|_| {
-                if date.len() == 2 {
-                    let d = date.parse::<u32>().or_else(|_| Err(MyErr {}))?;
-                    let nd = MyDate::now().force_day(Some(d)).ok_or(MyErr {})?.to_naive_date();
-                    Ok(nd)
-                } else if date.len() == 5 {
-                    let m_d: Vec<&str> = date.split("-").collect();
-                    let m = m_d
-                        .get(0)
-                        .ok_or(MyErr {})?
-                        .parse::<u32>()
-                        .or_else(|_| Err(MyErr {}))?;
-                    let d = m_d
-                        .get(1)
-                        .ok_or(MyErr {})?
-                        .parse::<u32>()
-                        .or_else(|_| Err(MyErr {}))?;
-                    let nd = MyDate::now()
-                        .force_day(Some(d))
-                        .ok_or(MyErr {})?
-                        .force_month(Some(m))
-                        .ok_or(MyErr {})?
-                        .to_naive_date();
-                    Ok(nd)
-                } else {
-                    Err(MyErr {})
-                }
-            })?;
-            Cmd::Date { date: nd }
-        },
-        None => {
-            match (args.month, args.day) {
+impl Cmd {
+    fn new(args: Args) -> Result<Cmd, MyErr> {
+        let cmd = match args.date {
+            None => match (args.month, args.day) {
                 (None, None) => Cmd::Today,
                 _ => {
-                    let nd = MyDate::now().force_month(args.month).ok_or(MyErr {})?.force_day(args.day).ok_or(MyErr {})?.to_naive_date();
+                    let nd = MyDate::now()
+                        .force_month(args.month)
+                        .ok_or(MyErr {})?
+                        .force_day(args.day)
+                        .ok_or(MyErr {})?
+                        .to_naive_date();
                     Cmd::Date { date: nd }
                 }
+            },
+            Some(date) => {
+                let nd = NaiveDate::parse_from_str(&date, "%Y-%m-%d").or_else(|_| {
+                    if date.len() == 2 {
+                        let d = date.parse::<u32>().or_else(|_| Err(MyErr {}))?;
+                        let nd = MyDate::now()
+                            .force_day(Some(d))
+                            .ok_or(MyErr {})?
+                            .to_naive_date();
+                        Ok(nd)
+                    } else if date.len() == 5 {
+                        let m_d: Vec<&str> = date.split("-").collect();
+                        let m = m_d
+                            .get(0)
+                            .ok_or(MyErr {})?
+                            .parse::<u32>()
+                            .or_else(|_| Err(MyErr {}))?;
+                        let d = m_d
+                            .get(1)
+                            .ok_or(MyErr {})?
+                            .parse::<u32>()
+                            .or_else(|_| Err(MyErr {}))?;
+                        let nd = MyDate::now()
+                            .force_day(Some(d))
+                            .ok_or(MyErr {})?
+                            .force_month(Some(m))
+                            .ok_or(MyErr {})?
+                            .to_naive_date();
+                        Ok(nd)
+                    } else {
+                        Err(MyErr {})
+                    }
+                })?;
+                Cmd::Date { date: nd }
             }
-        }
-    };
+        };
+        Ok(cmd)
+    }
+}
+
+fn run(args: Args) -> Result<(), MyErr> {
+    let cmd = Cmd::new(args)?;
     let df = match cmd {
         Cmd::Today => DailyFile::today(),
         Cmd::Date { date } => DailyFile::new(date),
     };
-    let _ = df.ensure_exist();
+    let () = df.ensure_exist()?;
     let filepath = df.filepath().ok_or(MyErr {})?;
     let err = Command::new("nvim").arg(filepath).exec();
     println!("{:?}", err);

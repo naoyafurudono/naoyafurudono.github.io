@@ -130,10 +130,6 @@ enum Cmd {
 fn run(args: Args) -> Result<(), MyErr> {
     let cmd = match args.date {
         Some(date) => {
-            // TODO:
-            //
-            // - Validate the date format
-            // -
             let nd = NaiveDate::parse_from_str(&date, "%Y-%m-%d").or_else(|_| {
                 if date.len() == 2 {
                     let d = date.parse::<u32>().or_else(|_| Err(MyErr {}))?;
@@ -186,11 +182,22 @@ fn run(args: Args) -> Result<(), MyErr> {
 }
 
 #[derive(Parser)]
-#[command(author)]
+#[command(name = "daily")]
+#[command(author = "Naoya Furudono <naoyafurudono@gmail.com>")]
+#[command(about = "Hugoで日記ファイルを生成し、開くためのCLI", long_about = None)]
 struct Args {
+    /// (YYYY-)(mm-)ddd
+    /// 指定しなかった場合は現在の年、月が使われる
+    /// 他とは併用不可
     date: Option<String>,
+
+    /// `mm` | `m`
+    /// dayと併用可
     #[arg(short, long)]
     month: Option<u32>,
+
+    /// `dd` | `d`
+    /// monthと併用可
     #[arg(short, long)]
     day: Option<u32>,
 }

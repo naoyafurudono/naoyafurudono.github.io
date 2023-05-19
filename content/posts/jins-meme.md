@@ -2,7 +2,7 @@
 title: "JINS MEMEを買った"
 date: 2023-05-19T23:07:19+09:00
 author: "Naoya Furudono"
-draft: false
+draft: true
 tags: [
     "daily"
     ,"tech"

@@ -119,8 +119,8 @@ enum Cmd {
     Date { date: NaiveDate },
 }
 impl Cmd {
-    fn new(args: Args) -> Result<Cmd, MyErr> {
-        let cmd = match args.date {
+    fn new(args: &Args) -> Result<Cmd, MyErr> {
+        let cmd = match &args.date {
             None => match (args.month, args.day) {
                 (None, None) => Cmd::Today,
                 _ => {
@@ -173,15 +173,21 @@ impl Cmd {
 }
 
 fn run(args: Args) -> Result<(), MyErr> {
-    let cmd = Cmd::new(args)?;
+    let cmd = Cmd::new(&args)?;
     let df = match cmd {
         Cmd::Today => DailyFile::today(),
         Cmd::Date { date } => DailyFile::new(date),
     };
     let () = df.ensure_exist()?;
     let filepath = df.filepath().ok_or(MyErr {})?;
-    let err = Command::new("nvim").arg(filepath).exec();
-    println!("{:?}", err);
+    if args.remove {
+        let err = Command::new("rm").arg(filepath).exec();
+        println!("{:?}", err);
+        return Ok(());
+    } else {
+        let err = Command::new("nvim").arg(filepath).exec();
+        println!("{:?}", err);
+    }
     Ok(())
 }
 
@@ -204,6 +210,10 @@ struct Args {
     /// monthと併用可
     #[arg(short, long)]
     day: Option<u32>,
+
+    /// 指定した日の日記ファイルを削除する
+    #[arg(short, long, default_value = "true")]
+    remove: bool,
 }
 
 fn main() {

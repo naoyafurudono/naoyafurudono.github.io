@@ -180,6 +180,7 @@ fn run(args: Args) -> Result<(), MyErr> {
     };
     let () = df.ensure_exist()?;
     let filepath = df.filepath().ok_or(MyErr {})?;
+    // ensure no existとか実装して、もっといい感じに条件分岐するといいんじゃないでしょうか？
     if args.remove {
         let err = Command::new("rm").arg(filepath).exec();
         println!("{:?}", err);

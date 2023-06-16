@@ -212,7 +212,7 @@ struct Args {
     day: Option<u32>,
 
     /// 指定した日の日記ファイルを削除する
-    #[arg(short, long, default_value = "true")]
+    #[arg(short, long, default_value = "false")]
     remove: bool,
 }
 

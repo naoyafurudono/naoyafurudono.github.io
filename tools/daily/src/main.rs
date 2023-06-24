@@ -1,3 +1,5 @@
+use std::process;
+
 use clap::Parser;
 use cmd::Cmd;
 
@@ -33,7 +35,10 @@ pub struct Args {
 fn main() {
     let args = Args::parse();
     match Cmd::new(&args).and_then(|c| c.run()) {
-        Ok(_) => (),
-        Err(e) => eprintln!("{}", e),
+        Ok(_) => process::exit(0),
+        Err(e) => {
+            eprintln!("{}", e);
+            process::exit(1)
+        }
     }
 }

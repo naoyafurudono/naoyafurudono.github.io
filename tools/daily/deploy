@@ -1,4 +1,5 @@
 #!/bin/bash
 
-cargo build --release &&\
-cp target/release/daily /home/furudono/blog/
+to_dir=$1
+cargo build --release &&
+    cp target/release/daily "$to_dir"

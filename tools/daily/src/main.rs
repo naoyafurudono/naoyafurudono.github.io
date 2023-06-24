@@ -1,5 +1,6 @@
 use std::fmt::{Debug, Display};
 use std::os::unix::process::CommandExt;
+use std::str::from_utf8;
 use std::{path, process::Command};
 
 use chrono::prelude::Local;
@@ -11,10 +12,12 @@ struct DailyFile {
 }
 
 #[derive(Debug)]
-struct MyErr {}
+struct MyErr {
+    msg: String,
+}
 impl Display for MyErr {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.write_fmt(format_args!("MyErr {}", "hello"))
+        f.write_fmt(format_args!("MyErr {}", self.msg))
     }
 }
 
@@ -44,36 +47,48 @@ impl DailyFile {
     }
 
     fn ensure_exist(&self) -> Result<(), MyErr> {
-        let filepath_str = self.filepath().ok_or(MyErr {})?;
+        let filepath_str = self.filepath().ok_or(MyErr {
+            msg: "fail string conversion".to_string(),
+        })?;
         let already_exists = Command::new("test")
             // 次の２つはこのように別々に渡すのが正解らしい。これはUnixの教養？
             .arg("-f")
             .arg(filepath_str)
             .output()
-            .or_else(|_err| Err(MyErr {}))
+            .or_else(|_err| {
+                Err(MyErr {
+                    msg: "fail to execute test command".to_string(),
+                })
+            })
             .and_then(|o| {
                 if o.status.success() {
-                    Ok(())
+                    Ok(true)
                 } else {
-                    Err(MyErr {})
+                    Ok(false)
                 }
-            });
+            })?;
 
-        if already_exists.is_ok() {
+        if already_exists {
             Ok(())
         } else {
             let hugo_name = self.hugo_name();
-            let hugo_name_str = hugo_name.to_str().ok_or(MyErr {})?;
+            let hugo_name_str = hugo_name.to_str().ok_or(MyErr {
+                msg: "fail string conversion".to_string(),
+            })?;
             let res = Command::new("hugo").arg("new").arg(hugo_name_str).output();
             match res {
                 Ok(o) => {
                     if o.status.success() {
                         return Ok(());
                     } else {
-                        return Err(MyErr {});
+                        return Err(MyErr {
+                            msg: "fail to execute hugo command".to_string(),
+                        });
                     }
                 }
-                Err(_) => Err(MyErr {}),
+                Err(_) => Err(MyErr {
+                    msg: "fail to execute hugo command".to_string(),
+                }),
             }
         }
     }
@@ -126,9 +141,13 @@ impl Cmd {
                 _ => {
                     let nd = MyDate::now()
                         .force_month(args.month)
-                        .ok_or(MyErr {})?
+                        .ok_or(MyErr {
+                            msg: "fail to parse month".to_string(),
+                        })?
                         .force_day(args.day)
-                        .ok_or(MyErr {})?
+                        .ok_or(MyErr {
+                            msg: "fail to parse day".to_string(),
+                        })?
                         .to_naive_date();
                     Cmd::Date { date: nd }
                 }
@@ -136,33 +155,57 @@ impl Cmd {
             Some(date) => {
                 let nd = NaiveDate::parse_from_str(&date, "%Y-%m-%d").or_else(|_| {
                     if date.len() == 2 {
-                        let d = date.parse::<u32>().or_else(|_| Err(MyErr {}))?;
+                        let d = date.parse::<u32>().or_else(|_| {
+                            Err(MyErr {
+                                msg: "fail to parse day".to_string(),
+                            })
+                        })?;
                         let nd = MyDate::now()
                             .force_day(Some(d))
-                            .ok_or(MyErr {})?
+                            .ok_or(MyErr {
+                                msg: "fail to parse day".to_string(),
+                            })?
                             .to_naive_date();
                         Ok(nd)
                     } else if date.len() == 5 {
                         let m_d: Vec<&str> = date.split("-").collect();
                         let m = m_d
                             .get(0)
-                            .ok_or(MyErr {})?
+                            .ok_or(MyErr {
+                                msg: "fail to parse month".to_string(),
+                            })?
                             .parse::<u32>()
-                            .or_else(|_| Err(MyErr {}))?;
+                            .or_else(|_| {
+                                Err(MyErr {
+                                    msg: "fail to parse month".to_string(),
+                                })
+                            })?;
                         let d = m_d
                             .get(1)
-                            .ok_or(MyErr {})?
+                            .ok_or(MyErr {
+                                msg: "fail to parse day".to_string(),
+                            })?
                             .parse::<u32>()
-                            .or_else(|_| Err(MyErr {}))?;
+                            .or_else(|_| {
+                                Err(MyErr {
+                                    msg: "fail to parse day".to_string(),
+                                })
+                            })?;
                         let nd = MyDate::now()
                             .force_day(Some(d))
-                            .ok_or(MyErr {})?
+                            .ok_or(MyErr {
+                                msg: "fail to parse day".to_string(),
+                            })?
                             .force_month(Some(m))
-                            .ok_or(MyErr {})?
+                            .ok_or(MyErr {
+                                msg: "fail to parse month".to_string(),
+                            })?
                             .to_naive_date();
                         Ok(nd)
                     } else {
-                        Err(MyErr {})
+                        Err(MyErr {
+                            msg: "fail to parse date".to_string(),
+                        })
                     }
                 })?;
                 Cmd::Date { date: nd }
@@ -179,7 +222,9 @@ fn run(args: Args) -> Result<(), MyErr> {
         Cmd::Date { date } => DailyFile::new(date),
     };
     let () = df.ensure_exist()?;
-    let filepath = df.filepath().ok_or(MyErr {})?;
+    let filepath = df.filepath().ok_or(MyErr {
+        msg: "fail string conversion".to_string(),
+    })?;
     // ensure no existとか実装して、もっといい感じに条件分岐するといいんじゃないでしょうか？
     if args.remove {
         let err = Command::new("rm").arg(filepath).exec();

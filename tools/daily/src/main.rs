@@ -7,6 +7,8 @@ use chrono::prelude::Local;
 use chrono::{Datelike, NaiveDate};
 use clap::Parser;
 
+type Result<T, E = MyErr> = std::result::Result<T, E>;
+
 struct DailyFile {
     pub date: String,
 }
@@ -17,7 +19,7 @@ struct MyErr {
 }
 impl Display for MyErr {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.write_fmt(format_args!("MyErr {}", self.msg))
+        f.write_fmt(format_args!("error: {}", self.msg))
     }
 }
 
@@ -46,7 +48,7 @@ impl DailyFile {
         path::PathBuf::from(s)
     }
 
-    fn ensure_exist(&self) -> Result<(), MyErr> {
+    fn ensure_exist(&self) -> Result<()> {
         let filepath_str = self.filepath().ok_or(MyErr {
             msg: "fail string conversion".to_string(),
         })?;
@@ -55,17 +57,11 @@ impl DailyFile {
             .arg("-f")
             .arg(filepath_str)
             .output()
-            .or_else(|_err| {
-                Err(MyErr {
-                    msg: "fail to execute test command".to_string(),
-                })
+            .map_err(|_err| MyErr {
+                msg: _err.to_string(),
             })
             .and_then(|o| {
-                if o.status.success() {
-                    Ok(true)
-                } else {
-                    Ok(false)
-                }
+                Ok(o.status.success())
             })?;
 
         if already_exists {
@@ -75,20 +71,23 @@ impl DailyFile {
             let hugo_name_str = hugo_name.to_str().ok_or(MyErr {
                 msg: "fail string conversion".to_string(),
             })?;
-            let res = Command::new("hugo").arg("new").arg(hugo_name_str).output();
-            match res {
-                Ok(o) => {
-                    if o.status.success() {
-                        return Ok(());
-                    } else {
-                        return Err(MyErr {
-                            msg: "fail to execute hugo command".to_string(),
-                        });
-                    }
-                }
-                Err(_) => Err(MyErr {
-                    msg: "fail to execute hugo command".to_string(),
-                }),
+            let res = Command::new("hugo")
+                .arg("new")
+                .arg(hugo_name_str)
+                .output()
+                .map_err(|_err| MyErr {
+                    msg: _err.to_string(),
+                })?;
+            if res.status.success() {
+                Ok(())
+            } else {
+                Err(MyErr {
+                    msg: from_utf8(&res.stdout)
+                        .map_err(|_err| MyErr {
+                            msg: _err.to_string(),
+                        })?
+                        .to_string(),
+                })
             }
         }
     }
@@ -134,7 +133,7 @@ enum Cmd {
     Date { date: NaiveDate },
 }
 impl Cmd {
-    fn new(args: &Args) -> Result<Cmd, MyErr> {
+    fn new(args: &Args) -> Result<Cmd> {
         let cmd = match &args.date {
             None => match (args.month, args.day) {
                 (None, None) => Cmd::Today,
@@ -215,7 +214,7 @@ impl Cmd {
     }
 }
 
-fn run(args: Args) -> Result<(), MyErr> {
+fn run(args: Args) -> Result<()> {
     let cmd = Cmd::new(&args)?;
     let df = match cmd {
         Cmd::Today => DailyFile::today(),

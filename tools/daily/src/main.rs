@@ -1,5 +1,3 @@
-use std::error;
-use std::fmt::{Debug, Display};
 use std::os::unix::process::CommandExt;
 use std::str::from_utf8;
 use std::{path, process::Command};
@@ -8,24 +6,12 @@ use chrono::prelude::Local;
 use chrono::{Datelike, NaiveDate};
 use clap::Parser;
 
-type Result<T> = std::result::Result<T, Box<dyn error::Error>>;
+mod error;
+use error::{MyErr, Result};
 
 struct DailyFile {
     pub date: String,
 }
-
-#[derive(Debug)]
-struct MyErr {
-    msg: String,
-}
-
-impl Display for MyErr {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.write_fmt(format_args!("error: {}", self.msg))
-    }
-}
-
-impl error::Error for MyErr {}
 
 impl DailyFile {
     fn new(date: NaiveDate) -> Self {

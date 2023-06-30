@@ -1,0 +1,5 @@
+#!/bin/bash
+
+to_dir=$1
+cargo build --release &&
+    cp target/release/daily "$to_dir"

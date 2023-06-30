@@ -8,13 +8,14 @@ tags: [
     ,"PL"
     ,"tech"
     ,"ubuntu"
-    ,"alexa"
     ,"book"
     ,"idea"
     ,"python"
+    ,"rust"
     ,"tool"
     ,"cock"
     ,"alcohol"
     ,"food"
+    ,"sport"
 ]
 ---

@@ -71,3 +71,13 @@ def name(args: list[str]) -> str:
 
 埋め込み処理では、JSON形式のテンプレのすべてのテキストについてマクロ展開をすればよい。
 
+## 追記: Web技術で「本」が作れる ...
+
+リブロワークスからCSSで組版するノウハウをまとめた本が[5/12に出るらしい](https://libroworks.co.jp/?p=6956)。
+途中までを[オフィシャルが公開している](https://libroworks.co.jp/csskumihan/viewer/#src=/csskumihan/0_frontmatter.html&f=epubcfi(/4!))。
+Vivliostyleというソフトを使って、MarkdownとCSSで書籍を作るらしい。
+その手のソフトは他にもあるようで、[比較サイト](https://print-css.rocks/lessons)を先の書籍で紹介されていた。
+
+こう思うとmadokoはだいぶ良いものだなと感じる。適用範囲を限定した置換とlatexはなかなか強い。
+latexとcssを完全に理解すればmadokoが最高かもしれない。
+

@@ -23,7 +23,7 @@ Contact me through following e-mail address: {{<email>}}
 - Master of Science, Tokyo Institute of Technology, Tokyo (2023)
 - Bachelor of Science, Tokyo Institute of Technology, Tokyo (2021)
 
-He majored in theory, implementation, and design of programming languages.
+He majored in semntics, implementation, and design of programming languages.
 
 # Academic Paper
 

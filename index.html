@@ -432,7 +432,9 @@ Macのターミナルが重い。今まで使っていた研究室のでも重�
 <a class=tag href=/%20/tags/book>#book</a>
 <a class=tag href=/%20/tags/tool>#tool</a></div></article><article><h1><a href=https://blog.nfurudono.com/posts/notify-github-actions/>GitHub Actionsの実行結果をDiscordに通知</a></h1><div><p><p>このブログはGitHub Actionsでデプロイしているのだが、
 ここしばらくデプロイに失敗したことに気が付かずに放置してしまっていた。</p><p><a href=https://github.com/marketplace/actions/actions-status-discord>Actions Status Discord</a>というアクションを<a href=https://github.com/naoyafurudono/naoyafurudono.github.io/commit/1f7a900b4c8aa166dd735c61ee1667119b23e810>デプロイの最後に叩く</a>ことで、
-いい感じの通知をDiscordにWebhook経由で送れる。</p></p></div><div class=post-footer><time>Thursday, March 30, 2023</time>
+いい感じの通知をDiscordにWebhook経由で送れる。</p><p><a href=https://github.com/naoyafurudono/naoyafurudono.github.io/blob/3943f0fbf808d0ec880b3e7b9c901d0909eb35bd/.github/workflows/gh-pages.yml#L44>こんな感じに</a>実行条件を指定しないと、
+デプロイが失敗したときに通知が実行されないことに注意。
+デフォルトでは <code>if ${{ success() }}</code> が指定されたものとみなされるとのこと。</p></p></div><div class=post-footer><time>Thursday, March 30, 2023</time>
 <a class=tag href=/%20/tags/daily>#daily</a>
 <a class=tag href=/%20/tags/tool>#tool</a></div></article><article><h1><a href=https://blog.nfurudono.com/posts/custom-markdown-translation-with-hugo/>Hugoのマークダウン処理をカスタム</a></h1><div><p><h2><a href=#%e8%83%8c%e6%99%af id=背景 class=anchor aria-hidden=true>背景</a></h2><p>HTML文書のheading要素の周りには<code>id</code>がついていてほしいし、
 それへのリンクは手軽にコピーできて欲しい。

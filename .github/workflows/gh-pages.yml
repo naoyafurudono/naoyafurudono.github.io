@@ -41,6 +41,7 @@ jobs:
           cname: blog.nfurudono.com
       - name: Notify
         uses: sarisia/actions-status-discord@v1
+        if: ${{ always() }}
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
           status: ${{ job.status }}

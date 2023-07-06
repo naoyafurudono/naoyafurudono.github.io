@@ -6,4 +6,4 @@
 	url = https://github.com/dashdashzako/hugo-journal.git
 [submodule "themes/noteworthy"]
 	path = themes/noteworthy
-	url = git@github.com:kimcc/hugo-theme-noteworthy.git
+	url = https://github.com/kimcc/hugo-theme-noteworthy

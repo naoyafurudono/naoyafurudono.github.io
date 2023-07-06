@@ -2,7 +2,7 @@
 
 {{ define "main" }}
     <h1 class="not-found-title">404: Not found</h1>
-    <h2>お探しのURLは公開されていません。以下の要因が考えられます。</h2>
+    <h2>お探しのURLではコンテンツが公開されていません。以下の要因が考えられます。</h2>
     <ul>
       <li>URLが間違っている</li>
       <li>著者によって記事が非公開に変更されている</li>
@@ -11,6 +11,7 @@
           <li>このサイトは記事の配信にGitHub Pagesを使っており、更新から配信まで時間がかかります</li>
         </ul>
       </li>
+      <li>バグ</li>
     </ul>
     <a href="{{ "/" | relLangURL }}">Go back home</a>
 {{ end }}

@@ -13,6 +13,7 @@ draft: false
 (注意: 好奇心でアフィリエイトを試しています。アマゾンへのリンクはアフィリエイトを有効にしています。)
 
 - C言語: [The C Programming Language](https://amzn.to/3E9NSqi)
+    - [低レイヤを知りたい人のためのCコンパイラ作成入門](https://www.sigbus.info/compilerbook) も面白い
 - Go言語: [プログラミング言語Go](https://amzn.to/3lBC21x)
 - OCaml: [Real World OCaml: Functional Programming for the Masses](https://amzn.to/3xIzdPf)
     - [ここで公式が無料でHTML版](https://dev.realworldocaml.org/toc.html)を公開している。

@@ -3,7 +3,7 @@
 
 baseURL = 'https://blog.nfurudono.com'
 languageCode = 'ja-jp'
-title = "星影のメモランダム"
+title = "furudonoの日記"
 theme = 'noteworthy'
 copyright = "&copy;{currentYear} Naoya Furudono"
 
@@ -24,7 +24,6 @@ hasCJKLanguage = true
   lastmod = ["lastmod", "updated", ":git"]
 
 [Params]
-  description = "キラキラ上弦の月が見守る心の手記"
   twitter = "https://twitter.com/furudono2"
   instagram = "https://www.instagram.com/donofuru/"
   github = "https://github.com/naoyafurudono"

@@ -9,7 +9,8 @@
 自分で定義した関数がある程度ちゃんと呼べるようになった。</p><p>まだ型が<code>long</code>しかないので道は長い。</p></p></div><div class=post-footer><time>Wednesday, July 19, 2023</time>
 <a class=tag href=/tags/daily>#daily</a>
 <a class=tag href=/tags/pl>#PL</a>
-<a class=tag href=/tags/tech>#tech</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-07-17/>2023-07-17</a></h1><div><p><p>Cコンパイラをarm macで実装しているのだけど、<code>a=b=0; return b;"みたいなコードがセグメント違反で落ちる。 lldbで調べてみると、main関数は正しい値を</code>w0<code>にセットして</code>ret`できていそうなんだけどその後の動的リンクされたコードでエラーが発生しているみたい。設定する値を変えるとエラーにならずに実行が終了する。謎である。</p><p>ABIを守っていないのが悪さをしているかも。</p><h2><a href=#%e4%b8%89%e9%80%a3%e4%bc%91 id=三連休 class=anchor aria-hidden=true>三連休</a></h2><p>土曜日はパソコンしてた。お昼頃に連絡が来ていたことに気がついて、翌日の約束をした。</p><p>勢いで日曜日は丹沢に行くことになって、卒業ぶりに会った友達と2時間くらいの登山をしてきた。
+<a class=tag href=/tags/tech>#tech</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-07-17/>2023-07-17</a></h1><div><p><p>Cコンパイラをarm macで実装しているのだけど、<code>a=b=0; return b;"</code>みたいなコードがセグメント違反で落ちる。
+lldbで調べてみると、main関数は正しい値を<code>w0</code>にセットして<code>ret</code>できていそうなんだけどその後の動的リンクされたコードでエラーが発生しているみたい。設定する値を変えるとエラーにならずに実行が終了する。謎である。</p><p>ABIを守っていないのが悪さをしているかも。</p><h2><a href=#%e4%b8%89%e9%80%a3%e4%bc%91 id=三連休 class=anchor aria-hidden=true>三連休</a></h2><p>土曜日はパソコンしてた。お昼頃に連絡が来ていたことに気がついて、翌日の約束をした。</p><p>勢いで日曜日は丹沢に行くことになって、卒業ぶりに会った友達と2時間くらいの登山をしてきた。
 コースタイムが4時間だったのでいいペースだった。最近登山をしておらずペースタイム通りの時間でいく想定をしてしまっており、思ったよりもあっさりと終わってしまった。
 友達の靴が下山した後の道で壊れてしまったのでサンダルを貸して歩くことに。
 風呂に入ってからはま寿司で3時間くらいお茶を飲んで帰宅した。</p><p>日曜日は海の日なので海を目指して部活の後輩と走った。天王洲アイルが海の近くだったのでそこまで行ったのだが、思ったよりも海っぽくなかったのが残念。久しぶりに走ったので走り始めがだいぶ辛かった。</p><p>久しぶりの人と会うと時間の流れを感じる。</p></p></div><div class=post-footer><time>Monday, July 17, 2023</time>

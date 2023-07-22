@@ -17,6 +17,7 @@ O2くらいの速さになってる感じかな。
 O3では何が早くなってるんだろう。気が向いたら調べるか、実装するかしたい。</p></p></div><div class=post-footer><time>Saturday, July 22, 2023</time>
 <a class=tag href=/tags/daily>#daily</a>
 <a class=tag href=/tags/pl>#PL</a>
+<a class=tag href=/tags/comp>#comp</a>
 <a class=tag href=/tags/tech>#tech</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-07-21/>2023-07-21</a></h1><div><p><h2><a href=#%e8%87%aa%e4%bd%9cc%e3%82%b3%e3%83%b3%e3%83%91%e3%82%a4%e3%83%a9%e3%81%ae%e9%80%b2%e6%8d%97 id=自作cコンパイラの進捗 class=anchor aria-hidden=true>自作Cコンパイラの進捗</a></h2><p><a href=https://github.com/naoyafurudono/comp>https://github.com/naoyafurudono/comp</a></p><p>早いもので作り始めてから2週間たったみたい。
 もっとサクサク進むと思っていたのだけど、しばらく楽しめそう。</p><p>自作CコンパイラでCのプログラムの一部をコンパイルできるようになった。
 これまでは変数宣言をできなかったので型宣言のあるmain関数を読めなかったが、
@@ -141,12 +142,14 @@ _main:
 </code></pre></p></div><div class=post-footer><time>Friday, July 21, 2023</time>
 <a class=tag href=/tags/daily>#daily</a>
 <a class=tag href=/tags/pl>#PL</a>
+<a class=tag href=/tags/comp>#comp</a>
 <a class=tag href=/tags/tech>#tech</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-07-19/>2023-07-19</a></h1><div><p><p><a href=https://github.com/naoyafurudono/naoyafurudono.github.io>実装しているCコンパイラ</a>
 で関数定義をできるようになった🎉。
 今までも既存のコンパイラで作ったオブジェクトファイルとリンクすれば呼び出すことはできていたが、
 自分で定義した関数がある程度ちゃんと呼べるようになった。</p><p>まだ型が<code>long</code>しかないので道は長い。</p><h2><a href=#fzf%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e3%81%82%e3%82%8c%e3%81%93%e3%82%8c id=fzfを使ったあれこれ class=anchor aria-hidden=true>fzfを使ったあれこれ</a></h2><p><a href=https://github.com/atweiden/fzf-extras>https://github.com/atweiden/fzf-extras</a> ここが良さげ。</p></p></div><div class=post-footer><time>Wednesday, July 19, 2023</time>
 <a class=tag href=/tags/daily>#daily</a>
 <a class=tag href=/tags/pl>#PL</a>
+<a class=tag href=/tags/comp>#comp</a>
 <a class=tag href=/tags/tech>#tech</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-07-17/>2023-07-17</a></h1><div><p><p>Cコンパイラをarm macで実装しているのだけど、<code>a=b=0; return b;"</code>みたいなコードがセグメント違反で落ちる。
 lldbで調べてみると、main関数は正しい値を<code>w0</code>にセットして<code>ret</code>できていそうなんだけどその後の動的リンクされたコードでエラーが発生しているみたい。設定する値を変えるとエラーにならずに実行が終了する。謎である。</p><p>ABIを守っていないのが悪さをしているかも。</p><h2><a href=#%e4%b8%89%e9%80%a3%e4%bc%91 id=三連休 class=anchor aria-hidden=true>三連休</a></h2><p>土曜日はパソコンしてた。お昼頃に連絡が来ていたことに気がついて、翌日の約束をした。</p><p>勢いで日曜日は丹沢に行くことになって、卒業ぶりに会った友達と2時間くらいの登山をしてきた。
 コースタイムが4時間だったのでいいペースだった。最近登山をしておらずペースタイム通りの時間でいく想定をしてしまっており、思ったよりもあっさりと終わってしまった。
@@ -154,6 +157,7 @@ lldbで調べてみると、main関数は正しい値を<code>w0</code>にセッ
 風呂に入ってからはま寿司で3時間くらいお茶を飲んで帰宅した。</p><p>日曜日は海の日なので海を目指して部活の後輩と走った。天王洲アイルが海の近くだったのでそこまで行ったのだが、思ったよりも海っぽくなかったのが残念。久しぶりに走ったので走り始めがだいぶ辛かった。</p><p>久しぶりの人と会うと時間の流れを感じる。</p></p></div><div class=post-footer><time>Monday, July 17, 2023</time>
 <a class=tag href=/tags/daily>#daily</a>
 <a class=tag href=/tags/pl>#PL</a>
+<a class=tag href=/tags/comp>#comp</a>
 <a class=tag href=/tags/tech>#tech</a></div></article><article><h1><a href=https://blog.nfurudono.com/posts/arm64/>arm64のメモ</a></h1><div><p><p><a href=https://github.com/naoyafurudono/comp>Cコンパイラを実装する</a>ためにarm64のことを調べている。
 この記事はそのメモ。</p><h2><a href=#%e5%85%ac%e5%bc%8f%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88 id=公式ドキュメント class=anchor aria-hidden=true>公式ドキュメント</a></h2><p>よくあるソフトウェアのライブラリについているドキュメントとは毛色が違う。</p><ul><li><a href=https://developer.arm.com/documentation/den0024/a/An-Introduction-to-the-ARMv8-Instruction-Sets>Armv8-A Instruction Set Architecture</a>が優しい<ul><li><a href="https://developer.arm.com/-/media/Arm%20Developer%20Community/PDF/Learn%20the%20Architecture/Armv8-A%20Instruction%20Set%20Architecture.pdf?revision=ebf53406-04fd-4c67-a485-1b329febfb3e">PDF版もある</a>。
 空白多めのシングルカラム39ページなのでサクッと読める。
@@ -164,6 +168,7 @@ arm64は秩序がある程度あるように感じている。まだ深淵を覗
 汎用レジスタの名前が簡単なことが大きいかもしれない。</p></p></div><div class=post-footer><time>Saturday, July 15, 2023</time>
 <a class=tag href=/tags/daily>#daily</a>
 <a class=tag href=/tags/pl>#PL</a>
+<a class=tag href=/tags/comp>#comp</a>
 <a class=tag href=/tags/tech>#tech</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-07-08/>2023-07-08</a></h1><div><p><h2><a href=#%e3%83%8e%e3%83%bc%e3%83%88%e3%83%91%e3%82%bd%e3%82%b3%e3%83%b3%e3%81%ae%e6%81%a9%e6%81%b5 id=ノートパソコンの恩恵 class=anchor aria-hidden=true>ノートパソコンの恩恵</a></h2><p>椅子に座るほどの元気がなくてもパソコン座れるので楽しい。
 気軽にコーディングできる。</p><h2><a href=#c%e3%82%b3%e3%83%b3%e3%83%91%e3%82%a4%e3%83%a9%e3%81%ae%e9%80%94%e4%b8%ad%e7%b5%8c%e9%81%8e id=cコンパイラの途中経過 class=anchor aria-hidden=true>Cコンパイラの途中経過</a></h2><p>cコンパイラ実装するやつは、今からローカル変数の定義に入るところ。
 ここまでで、四則演算と比較をコンパイルできるようになった。
@@ -198,6 +203,7 @@ x29にSPをmovするだめみたい。x29以外にしたらどうだろうと思
 ところでフロムザバレルは甘い。干し芋っぽい風味がする。</p><h2><a href=#%e9%9b%91%e8%ab%87 id=雑談 class=anchor aria-hidden=true>雑談</a></h2><p>明日はランニングしよう。午前中に走ってみる。</p></p></div><div class=post-footer><time>Saturday, July 8, 2023</time>
 <a class=tag href=/tags/daily>#daily</a>
 <a class=tag href=/tags/pl>#PL</a>
+<a class=tag href=/tags/comp>#comp</a>
 <a class=tag href=/tags/tech>#tech</a>
 <a class=tag href=/tags/alcohol>#alcohol</a></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-07-06/>2023-07-06</a></h1><div><p><h2><a href=#%e3%81%9d%e3%81%86%e3%81%84%e3%81%88%e3%81%b0%e5%a4%a7%e4%ba%ba%e3%81%ab%e3%81%aa%e3%81%a3%e3%81%9f id=そういえば大人になった class=anchor aria-hidden=true>そういえば大人になった</a></h2><p>そういえば <em>社会人</em> になったわけで、
 そろそろ子供の頃に思い描いていた大人（僕はまだ自分のことを子供だと思っているのだがここでは5歳くらいの意味で）になったはず。

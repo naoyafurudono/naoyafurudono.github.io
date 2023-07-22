@@ -22,7 +22,12 @@ strcmpがboolを返すと思い込むやつをやって時間を溶かした。
 ASTに型を行き渡らせたので難しくはないはず。</p><p>買い物ではズボンを買いに行った。涼しい長ズボンが欲しかったので。
 初めて買う感じのやつを変えて満足している。
 サンダルも欲しかったけど、僕の期待が矛盾していることに気がついたので断念。
-来年は期待を変えられることを願って今年はスニーカを履き続ける。</p></p></div><div class=post-footer><time>July 22, 2023</time></div></article><article><h2><a href=https://blog.nfurudono.com/daily/2023-07-21/>2023-07-21</a></h2><div><p><h2><a href=#%e8%87%aa%e4%bd%9cc%e3%82%b3%e3%83%b3%e3%83%91%e3%82%a4%e3%83%a9%e3%81%ae%e9%80%b2%e6%8d%97 id=自作cコンパイラの進捗 class=anchor aria-hidden=true>自作Cコンパイラの進捗</a></h2><p><a href=https://github.com/naoyafurudono/comp>https://github.com/naoyafurudono/comp</a></p><p>早いもので作り始めてから2週間たったみたい。
+来年は期待を変えられることを願って今年はスニーカを履き続ける。</p><h2><a href=#%e5%8b%95%e7%9a%84%e6%9d%9f%e7%b8%9b%e3%81%8c%e6%ac%b2%e3%81%97%e3%81%84 id=動的束縛が欲しい class=anchor aria-hidden=true>動的束縛が欲しい</a></h2><p>Cとかその辺の関数型言語を使っていると欲しくなる言語機能第1位は動的束縛だという説を提唱したい。
+代数的エフェクトほどのことを普段使いに人類は求めているとは僕には思えなくて
+（普段使いと言ったのは、凝った仕組みを作る場合はのぞきたい気持ちの表れ）
+<a href=https://docs.racket-lang.org/guide/parameterize.html>動的束縛</a>が欲しいんじゃないだろうか。
+オブジェクト指向でインスタンス変数を使うのもこの用途が多いんじゃないかと勝手に思っているんだけどどうだろう。</p><p>とにかく、動的束縛が欲しい。
+動的束縛はいいぞの会を結成するまである。</p></p></div><div class=post-footer><time>July 22, 2023</time></div></article><article><h2><a href=https://blog.nfurudono.com/daily/2023-07-21/>2023-07-21</a></h2><div><p><h2><a href=#%e8%87%aa%e4%bd%9cc%e3%82%b3%e3%83%b3%e3%83%91%e3%82%a4%e3%83%a9%e3%81%ae%e9%80%b2%e6%8d%97 id=自作cコンパイラの進捗 class=anchor aria-hidden=true>自作Cコンパイラの進捗</a></h2><p><a href=https://github.com/naoyafurudono/comp>https://github.com/naoyafurudono/comp</a></p><p>早いもので作り始めてから2週間たったみたい。
 もっとサクサク進むと思っていたのだけど、しばらく楽しめそう。</p><p>自作CコンパイラでCのプログラムの一部をコンパイルできるようになった。
 これまでは変数宣言をできなかったので型宣言のあるmain関数を読めなかったが、
 intだけ許容するようになったので、初めてCのプログラムをコンパイラが受け付けたことになる。</p><p>こんなコードをコンパイルすると、</p><pre><code class=language-c>int main()

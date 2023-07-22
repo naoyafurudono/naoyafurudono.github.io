@@ -6,6 +6,7 @@ draft: true
 tags: [
     "daily"
     ,"PL"
+    ,"comp"
     ,"tech"
     ,"ubuntu"
     ,"book"

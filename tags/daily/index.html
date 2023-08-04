@@ -27,7 +27,7 @@
 頑張りの良し悪しはわからないけど、頑張れたこと自体は良かったと思っているので感謝していることは見当違いではないはず。
 歌ってみたとかボカロ、高音ボーカルにハマったのはまふまふさんが始まりな気がする。
 話を戻してなんでまふまふさんのライブのバイトを思い出したかというと、co shu nieのライブに申し込んだから。人生始めてのライブ。前から気になってはいたけど、ついに人生初のライブに申し込んでしまった。
-ライブの設営は何回かやったのに、観客として参加するのは初めて。来月末が楽しみ。</p></p></div><div class=post-footer><time>August 4, 2023</time></div></article><article><h2><a href=https://blog.nfurudono.com/daily/2023-07-29/>2023-07-29</a></h2><div><p><p>ARM64でいろんなサイズの整数の足し算をする方法を整理する。
+ライブの設営は何回かやったのに、観客として参加するのは初めて。来月末が楽しみ。</p><p>今気がついたのだけど、音楽ってでかい音で鳴らすと楽しいな？</p></p></div><div class=post-footer><time>August 4, 2023</time></div></article><article><h2><a href=https://blog.nfurudono.com/daily/2023-07-29/>2023-07-29</a></h2><div><p><p>ARM64でいろんなサイズの整数の足し算をする方法を整理する。
 サイズごとに演算が用意されているわけではなく、レジスタの指定方法（x,wの使い分け）や、
 レジスタのコンテンツをいい感じにすることで、
 byte, half, word, double wordの足し算を実現する（と思ってよさそう）。</p><ul><li>レジスタどうしの足し算では、destinationとその他の二つのsourceレジスタのサイズが同じじゃないといけない。結果のサイズがdouble wordならXnを使えばいいし、word以下ならWnを使う。</li><li>レジスタのコンテンツをいい感じにする方法は二つありそう<ul><li>適当なマスクとandを取る</li><li>専用の命令を使う。二種類観測した。<ul><li><a href="https://developer.arm.com/-/media/Arm%20Developer%20Community/PDF/Learn%20the%20Architecture/Armv8-A%20Instruction%20Set%20Architecture.pdf?revision=ebf53406-04fd-4c67-a485-1b329febfb3e">Armv8-A Instruction Set Architecture</a>が優しい。7.4節Extension and saturationに説明がある</li><li>一つ目は拡張命令を使う方法。符号{あり,なし}と拡張前のサイズについて、それぞれ定義された拡張命令を使うと、destinationレジスタにsourceレジスタを拡張したビット列がセットされる。</li><li>二つ目は足し算で追加の引数として拡張方法を指定する方法。拡張命令と似たような感じのenumが定義されていて、それをadd命令のsourceレジスタの後にしていすると第二sourceレジスタを指定した方法で拡張した上で足し算する。</li></ul></li></ul></li></ul><h2><a href=#%e3%81%94%e9%a3%af id=ご飯 class=anchor aria-hidden=true>ご飯</a></h2><p>朝はお茶漬けを久しぶりに食べた。朝にお米を食べようと思うと、やっぱりお茶漬けがいい。

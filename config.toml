@@ -31,6 +31,8 @@ hasCJKLanguage = true
   showReadMore = false
   mainSections = ['posts', 'daily']
   images = ["images/thumbnail.png"]
+  listPageDateFormat = "2006-01-02 MST"
+  singlePageDateFormat = "2006-01-02 15:04:05 MST"
 
 [markup]
   [markup.highlight]

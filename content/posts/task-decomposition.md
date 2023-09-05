@@ -3,11 +3,9 @@ title: "タスク分解と見積もり"
 date: 2023-08-31T20:58:00+09:00
 author: "Naoya Furudono"
 draft: false
-tags: [
-    "daily"
-    ,"idea"
-    ,"alcohol"
-]
+tags:
+  - "idea"
+  - "alcohol"
 ---
 
 # 見積もりと目標

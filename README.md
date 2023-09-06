@@ -1,7 +1,13 @@
 # naoyafurudono.github.io
 
-<a target="_blank" rel="noopener noreferrer" href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions">
-<img src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg" alt="github pages deploy status" style="max-width: 100%;">
+<a
+  target="_blank"
+  rel="noopener noreferrer"
+  href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions">
+  <img
+    src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg"
+    alt="github pages deploy status"
+    style="max-width: 100%;">
 </a>
 
 [ブログ](https://naoyafurudono.github.io/)のソースリポジトリ。

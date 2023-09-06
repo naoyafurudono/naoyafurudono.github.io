@@ -132,10 +132,6 @@ a>svg {
     transition: 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-a:visited {
-    color: $gray-dark;
-}
-
 .color-link {
     text-decoration: none;
     color: $teal;
@@ -159,10 +155,6 @@ a:visited {
     margin-right: 0.75em;
     margin-bottom: 1em;
     line-height: 1.75em;
-    color: $gray-light;
-}
-
-.tag:visited {
     color: $gray-light;
 }
 
@@ -492,7 +484,7 @@ footer {
     font-size: 0.95rem;
     color: $gray-light;
 
-    a:visited {
+    a {
         color: $gray-light;
     }
 

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "ブログを分割したい"
 date: 2023-09-06T21:06:05+09:00
 author: "Naoya Furudono"
 draft: false

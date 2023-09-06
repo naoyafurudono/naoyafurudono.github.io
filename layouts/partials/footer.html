@@ -1,14 +1,18 @@
 <footer class="footer">
 	{{ partial "social.html" . }}
 
-	<p><a href="https://github.com/naoyafurudono/naoyafurudono.github.io" target="_blank" rel="noopener">source of this site</a></p>
+	<p><a href="https://github.com/naoyafurudono/naoyafurudono.github.io" target="_blank" rel="noopener">source of this
+			site</a></p>
 	<p><a href="https://gohugo.io" target="_blank" rel="noopener">{{ i18n "built_with_hugo" }}</a></p>
 	<p>{{ with replace .Site.Copyright "{currentYear}" (.Date.Format "2006" )}}{{ . | markdownify}} {{ end }}</p>
 
 	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
 	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}
 		crossorigin="anonymous"></script>
-  <img src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg"/>
-  <p><a href="https://www.amazon.jp/hz/wishlist/ls/1JBRXP4JZZ21T?ref_=wl_share">欲しい本リスト</a></p>
-  <p><a href="https://www.amazon.jp/hz/wishlist/ls/3TT5GR81VZPHP?ref_=wl_share">欲しいものリスト</a></p>
+	<a target="_blank" rel="noopener noreferrer" href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions">
+		<img src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg"
+			alt="github pages deploy status" style="max-width: 100%;">
+	</a>
+	<p><a href="https://www.amazon.jp/hz/wishlist/ls/1JBRXP4JZZ21T?ref_=wl_share">欲しい本リスト</a></p>
+	<p><a href="https://www.amazon.jp/hz/wishlist/ls/3TT5GR81VZPHP?ref_=wl_share">欲しいものリスト</a></p>
 </footer>

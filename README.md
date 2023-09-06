@@ -1,6 +1,8 @@
 # naoyafurudono.github.io
 
-![[github pages deploy status](https://github.com/naoyafurudono/naoyafurudono.github.io/actions)](https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg)
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions">
+<img src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg" alt="github pages deploy status" style="max-width: 100%;">
+</a>
 
 [ブログ](https://naoyafurudono.github.io/)のソースリポジトリ。
 [HugoとGitHub Actions/Pages におんぶにだっこで実現している](https://blog.nfurudono.com/posts/2022/march/my-first-post/)。
@@ -45,4 +47,3 @@ draft: false
 
 - [ ] `dev` を `blog` から切り出す
   - このサイトを日記、新しい方を開発関係にする
-

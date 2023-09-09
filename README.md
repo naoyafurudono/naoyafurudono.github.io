@@ -1,6 +1,14 @@
 # naoyafurudono.github.io
 
-![github pages deploy status](https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg)
+<a
+  target="_blank"
+  rel="noopener noreferrer"
+  href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions">
+  <img
+    src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg"
+    alt="github pages deploy status"
+    style="max-width: 100%;">
+</a>
 
 [ブログ](https://naoyafurudono.github.io/)のソースリポジトリ。
 [HugoとGitHub Actions/Pages におんぶにだっこで実現している](https://blog.nfurudono.com/posts/2022/march/my-first-post/)。
@@ -24,7 +32,8 @@ hugo new posts/nice-title.md
 
 #### 追記
 
-- 2023-05-13: [rustで書き直してみた](https://github.com/naoyafurudono/naoyafurudono.github.io/commit/5dffad6d10406fa83c4d9dd8eaa91a3c769a553f)。機能も追加してもっと便利になりました！ Try `./gen_daily && ./daily -h` !
+- 2023-05-13: [rustで書き直してみた](https://github.com/naoyafurudono/naoyafurudono.github.io/commit/5dffad6d10406fa83c4d9dd8eaa91a3c769a553f)。
+機能も追加してもっと便利になりました！ Try `./gen_daily && ./daily -h` !
 
 ## 公開
 
@@ -40,7 +49,7 @@ draft: false
 ---
 ```
 
-# 今後のこと
+## todos
 
-あったら便利な機能はたくさんあるけど気張らず行こう。記事が何より大切。
-
+- [ ] `dev` を `blog` から切り出す
+  - このサイトを日記、新しい方を開発関係にする

@@ -1,10 +1,10 @@
 {{ define "main" }}
   <h1 class="post-title">{{ .Title }}</h1>
   {{ if .Date }}
-    <time>{{ .Date.Format "Monday, January 2, 2006" }}</time>
+    <time>{{ .PublishDate.Format .Site.Params.singlePageDateFormat }}</time>
   {{ end }}
-  {{ if and .Lastmod (ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
-    <time>updated: {{ .Lastmod.Format "Monday, January 2, 2006" }}</time>
+  {{ if and .Lastmod (ne (.PublishDate.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
+    <time>updated: {{ .Lastmod.Format .Site.Params.singlePageDateFormat }}</time>
   {{ end }}
   <div>
       <p>

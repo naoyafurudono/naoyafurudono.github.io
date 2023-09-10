@@ -96,20 +96,16 @@ impl Cmd {
         };
         let is_exist = df.ensure_exist()?;
         let filepath = df.filepath()?;
-        // ensure no existとか実装して、もっといい感じに条件分岐するといいんじゃないでしょうか？
-        if self.remove {
-            let err = Command::new("rm").arg(filepath).exec();
-            println!("{:?}", err);
-            return Ok(());
+        let err = if self.remove {
+            Command::new("rm").arg(filepath).exec()
         } else {
             let mut cmd = Command::new("nvim");
             cmd.arg(filepath);
             if !is_exist {
                 cmd.arg("+");
             }
-            let err = cmd.exec();
-            println!("{:?}", err);
-        }
-        Ok(())
+            cmd.exec()
+        };
+        Err(Box::new(err))
     }
 }

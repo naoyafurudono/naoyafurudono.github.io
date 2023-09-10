@@ -85,7 +85,7 @@ impl Cmd {
             Spec::Today => DailyFile::today(),
             Spec::Date { date } => DailyFile::new(date),
         };
-        let () = df.ensure_exist()?;
+        let is_exist = df.ensure_exist()?;
         let filepath = df.filepath()?;
         // ensure no existとか実装して、もっといい感じに条件分岐するといいんじゃないでしょうか？
         if self.remove {
@@ -93,7 +93,12 @@ impl Cmd {
             println!("{:?}", err);
             return Ok(());
         } else {
-            let err = Command::new("nvim").arg(filepath).exec();
+            let mut cmd = Command::new("nvim");
+            cmd.arg(filepath);
+            if !is_exist {
+                cmd.arg("+");
+            }
+            let err = cmd.exec();
             println!("{:?}", err);
         }
         Ok(())

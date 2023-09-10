@@ -37,7 +37,7 @@ impl DailyFile {
         path::PathBuf::from(s)
     }
 
-    pub fn ensure_exist(&self) -> Result<()> {
+    pub fn ensure_exist(&self) -> Result<bool> {
         let filepath_str = self.filepath()?;
         let already_exists = Command::new("test")
             // 次の２つはこのように別々に渡すのが正解らしい。これはUnixの教養？
@@ -47,9 +47,7 @@ impl DailyFile {
             .status
             .success();
 
-        if already_exists {
-            Ok(())
-        } else {
+        if !already_exists {
             let hugo_name = self.hugo_name();
             let hugo_name_str = hugo_name.to_str().ok_or(MyErr {
                 msg: "fail string conversion".to_string(),
@@ -58,19 +56,19 @@ impl DailyFile {
                 .arg("new")
                 .arg(hugo_name_str)
                 .output()?;
-            if res.status.success() {
-                Ok(())
-            } else {
-                Err(MyErr {
+            if !res.status.success() {
+                return Err(MyErr {
                     msg: from_utf8(&res.stdout)
                         .map_err(|_err| MyErr {
                             msg: _err.to_string(),
                         })?
                         .to_string(),
                 }
-                .into())
+                .into());
             }
         }
+
+        Ok(already_exists)
     }
 }
 

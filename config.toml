@@ -3,7 +3,7 @@
 
 baseURL = 'https://blog.nfurudono.com'
 languageCode = 'ja-jp'
-title = "tweetするには長すぎる"
+title = "ツイートするには長すぎる"
 theme = 'noteworthy'
 copyright = "&copy;{currentYear} Naoya Furudono"
 
@@ -59,3 +59,10 @@ menu = ['main', 'footer']
     name = "Tags"
     url = "/tags/"
     weight = 2
+
+
+[[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 3

@@ -16,15 +16,6 @@ pub struct Cmd {
 
 impl Cmd {
     pub fn new(args: &Args) -> Result<Cmd> {
-        match (&args.date, &args.month, args.day) {
-            (Some(_), None, None) => (),
-            (None, Some(_), Some(_)) => (),
-            _ => {
-                return Err(Box::new(MyErr {
-                    msg: "invalid argument. Date argument can used with neither --day nor --month.".to_string(),
-                }));
-            }
-        }
         let spec = match &args.date {
             None => match (args.month, args.day) {
                 (None, None) => Spec::Today,
@@ -36,6 +27,15 @@ impl Cmd {
                 }
             },
             Some(date) => {
+                match (args.month, args.day) {
+                    (None, None) => (),
+                    _ => {
+                        return Err(Box::new(MyErr {
+                            msg: "invalid argument. Date argument can used with neither --day nor --month.".to_string(),
+                        }));
+                    }
+                }
+
                 let nd = NaiveDate::parse_from_str(&date, "%Y-%m-%d").or_else(
                     |_| -> Result<NaiveDate> {
                         if date.len() == 2 {

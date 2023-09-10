@@ -34,7 +34,9 @@ G |- lam x: t1. e: t1 -&gt; t2 | r
 </code></pre><p>そしてreturn式はこんな感じだ。</p><pre><code>G |- e: r | r
 --------------------- (return)
 G |- return e: t | r
-</code></pre><p>書いてみると意外と単純だった。
+</code></pre><p>こうすることで、returnに任意の型をつけられるので、
+フランクにブランチの末尾でreturnできる。
+任意の型ではなくてユニット型とかを不用意につけるとearly returnをしにくくなったりしそう。</p><p>書いてみると意外と単純だった。
 本当にこれでうまくいくかは知らないけれど。</p></p></div><div class=post-footer><time>September 10, 2023</time></div></article><article><h2><a href=https://blog.nfurudono.com/daily/2023-06-17/>2023-06-17</a></h2><div><p><h2><a href=#%e3%83%ab%e3%83%b3%e3%83%90%e5%b0%8e%e5%85%a5 id=ルンバ導入 class=anchor aria-hidden=true>ルンバ導入</a></h2><p>ルンバをレンタルして今日から使い始めた。
 結構細かく動いてくれて僕より掃除がうまい気がする。
 7時/19時で掃除するようにしたので、目覚まし代わりになるはずだし、

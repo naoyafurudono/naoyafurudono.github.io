@@ -34,7 +34,9 @@ G |- lam x: t1. e: t1 -&gt; t2 | r
 </code></pre><p>そしてreturn式はこんな感じだ。</p><pre><code>G |- e: r | r
 --------------------- (return)
 G |- return e: t | r
-</code></pre><p>書いてみると意外と単純だった。
+</code></pre><p>こうすることで、returnに任意の型をつけられるので、
+フランクにブランチの末尾でreturnできる。
+任意の型ではなくてユニット型とかを不用意につけるとearly returnをしにくくなったりしそう。</p><p>書いてみると意外と単純だった。
 本当にこれでうまくいくかは知らないけれど。</p></p></div><div class=post-footer><p><a class=tag href=/%20tags/daily>#daily</a>
 <a class=tag href=/%20tags/sport>#sport</a></p><p><time>2023-09-10 +0900</time></p></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-09-09/>2023-09-09</a></h1><div><p><h2><a href=#%e8%a8%ad%e5%ae%9a%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%afjson%e6%b4%be id=設定ファイルはjson派 class=anchor aria-hidden=true>設定ファイルはjson派</a></h2><p>tomlもyamlも難しいので、みんなjsonを書けばいいのにと思う。
 Goとか静的型付け言語とかが流行って、読みやすさの意義が重要視されている時代なはずなのに、

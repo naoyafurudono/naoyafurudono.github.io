@@ -1,6 +1,6 @@
 use crate::error::{MyErr, Result};
 use chrono::{prelude::Local, Datelike, NaiveDate};
-use std::{path, process::Command, str::from_utf8};
+use std::{os::unix::process::CommandExt, path, process::Command};
 
 pub struct DailyFile {
     pub date: String,
@@ -52,20 +52,8 @@ impl DailyFile {
             let hugo_name_str = hugo_name.to_str().ok_or(MyErr {
                 msg: "fail string conversion".to_string(),
             })?;
-            let res = Command::new("hugo")
-                .arg("new")
-                .arg(hugo_name_str)
-                .output()?;
-            if !res.status.success() {
-                return Err(MyErr {
-                    msg: from_utf8(&res.stdout)
-                        .map_err(|_err| MyErr {
-                            msg: _err.to_string(),
-                        })?
-                        .to_string(),
-                }
-                .into());
-            }
+            let err = Command::new("hugo").arg("new").arg(hugo_name_str).exec();
+            return Err(Box::new(err));
         }
 
         Ok(already_exists)
@@ -83,8 +71,11 @@ impl MyDate {
         MyDate { date: current }
     }
 
-    pub fn force(&self, y: Option<i32>, m: Option<u32>, d: Option<u32>) -> Result<Self> {
-        let y = y.unwrap_or(self.date.year());
+    pub fn force(&self, y: Option<u32>, m: Option<u32>, d: Option<u32>) -> Result<Self> {
+        let y = match y {
+            None => self.date.year(),
+            Some(y) => y as i32,
+        };
         let m = m.unwrap_or(self.date.month());
         let d = d.unwrap_or(self.date.day());
 
@@ -96,10 +87,6 @@ impl MyDate {
             }
             .into()),
         }
-    }
-
-    pub fn force_day(&self, d: u32) -> Result<Self> {
-        self.force(None, None, Some(d))
     }
 
     pub fn to_naive_date(&self) -> NaiveDate {

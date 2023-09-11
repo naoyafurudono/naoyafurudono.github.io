@@ -4,6 +4,7 @@ use crate::Args;
 use chrono::NaiveDate;
 use std::os::unix::process::CommandExt;
 use std::process::Command;
+use std::iter;
 
 enum Spec {
     Today,
@@ -27,6 +28,7 @@ impl Cmd {
                 }
             },
             Some(date) => {
+                // check args
                 match (args.month, args.day) {
                     (None, None) => (),
                     _ => {
@@ -36,50 +38,7 @@ impl Cmd {
                     }
                 }
 
-                let nd = NaiveDate::parse_from_str(&date, "%Y-%m-%d").or_else(
-                    |_| -> Result<NaiveDate> {
-                        if date.len() == 2 {
-                            let d = date.parse::<u32>().or_else(|_| {
-                                Err(MyErr {
-                                    msg: "fail to parse day".to_string(),
-                                })
-                            })?;
-                            let nd = MyDate::now().force_day(d)?.to_naive_date();
-                            Ok(nd)
-                        } else if date.len() == 5 {
-                            let m_d: Vec<&str> = date.split("-").collect();
-                            let m = m_d
-                                .get(0)
-                                .ok_or(MyErr {
-                                    msg: "fail to parse month".to_string(),
-                                })?
-                                .parse::<u32>()
-                                .or_else(|_| {
-                                    Err(MyErr {
-                                        msg: "fail to parse month".to_string(),
-                                    })
-                                })?;
-                            let d = m_d
-                                .get(1)
-                                .ok_or(MyErr {
-                                    msg: "fail to parse day".to_string(),
-                                })?
-                                .parse::<u32>()
-                                .or_else(|_| {
-                                    Err(MyErr {
-                                        msg: "fail to parse day".to_string(),
-                                    })
-                                })?;
-                            let nd = MyDate::now().force(None, Some(m), Some(d))?.to_naive_date();
-                            Ok(nd)
-                        } else {
-                            Err(MyErr {
-                                msg: "fail to parse date".to_string(),
-                            }
-                            .into())
-                        }
-                    },
-                )?;
+                let nd = parse_naive_date(&date)?;
                 Spec::Date { date: nd }
             }
         };
@@ -108,4 +67,31 @@ impl Cmd {
         };
         Err(Box::new(err))
     }
+}
+
+fn ensure_length<A: Copy>(v: Vec<A>, len: usize) -> Vec<Option<A>> {
+    if v.len() > len {
+        v[0..len].iter().map(|&x| Some(x)).collect()
+    } else {
+        v.iter()
+            .map(|&x| Some(x))
+            .chain(iter::repeat(None))
+            .take(len)
+            .collect()
+    }
+}
+fn parse_naive_date(s: &str) -> Result<NaiveDate> {
+    let ss = s.split('-').rev();
+    let mut us = Vec::new();
+    for ds in ss {
+        let d = ds.parse::<u32>().or_else(|_| {
+            Err(MyErr {
+                msg: "fail to parse day".to_string(),
+            })
+        })?;
+        us.push(d);
+    }
+
+    let us = ensure_length(us, 3);
+    Ok(MyDate::now().force(us[0], us[1], us[2])?.to_naive_date())
 }

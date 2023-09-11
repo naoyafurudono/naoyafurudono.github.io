@@ -57,15 +57,15 @@ impl DailyFile {
             let hugo_name_str = hugo_name.to_str().ok_or(MyErr {
                 msg: "fail string conversion".to_string(),
             })?;
-            let err = Command::new("hugo")
+            let output = Command::new("hugo")
                 .arg("new")
                 .arg(hugo_name_str)
                 .output()?;
-            return Err(Box::new(MyErr {
-                msg: format!["hugo new failed: {}", err.status.code().unwrap_or(1)],
-            }));
-        }
 
+            if !output.status.success() {
+                return Err(Box::new(MyErr {msg: "s".to_string()}));
+            }
+        }
         Ok(already_exists)
     }
 }

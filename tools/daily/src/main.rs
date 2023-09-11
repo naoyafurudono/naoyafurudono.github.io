@@ -30,6 +30,9 @@ pub struct Args {
     /// 指定した日の日記ファイルを削除する
     #[arg(short, long, default_value = "false")]
     remove: bool,
+
+    #[arg(short, long, default_value = "false")]
+    yesterday: bool,
 }
 
 fn main() {

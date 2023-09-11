@@ -1,6 +1,6 @@
 use crate::error::{MyErr, Result};
 use chrono::{prelude::Local, Datelike, NaiveDate};
-use std::{os::unix::process::CommandExt, path, process::Command};
+use std::{path, process::Command};
 
 pub struct DailyFile {
     pub date: String,
@@ -16,6 +16,11 @@ impl DailyFile {
     pub fn today() -> Self {
         let today = Local::now().date_naive();
         Self::new(today)
+    }
+
+    pub fn yesterday() -> Self {
+        let yesterday = Local::now().date_naive() - chrono::Duration::days(1);
+        Self::new(yesterday)
     }
 
     pub fn filepath(&self) -> Result<String> {
@@ -52,8 +57,13 @@ impl DailyFile {
             let hugo_name_str = hugo_name.to_str().ok_or(MyErr {
                 msg: "fail string conversion".to_string(),
             })?;
-            let err = Command::new("hugo").arg("new").arg(hugo_name_str).exec();
-            return Err(Box::new(err));
+            let err = Command::new("hugo")
+                .arg("new")
+                .arg(hugo_name_str)
+                .output()?;
+            return Err(Box::new(MyErr {
+                msg: format!["hugo new failed: {}", err.status.code().unwrap_or(1)],
+            }));
         }
 
         Ok(already_exists)

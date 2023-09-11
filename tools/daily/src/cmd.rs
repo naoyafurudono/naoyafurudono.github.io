@@ -8,6 +8,7 @@ use std::process::Command;
 
 enum Spec {
     Today,
+    Yesterday,
     Date { date: NaiveDate },
 }
 pub struct Cmd {
@@ -17,22 +18,26 @@ pub struct Cmd {
 
 impl Cmd {
     pub fn new(args: &Args) -> Result<Cmd> {
-        let spec = match (&args.date, &args.month, &args.day) {
-            (None, None, None) => Spec::Today,
-            (Some(date), None, None) => {
-                let nd = parse_naive_date(&date)?;
-                Spec::Date { date: nd }
-            }
-            (None, _, _) => {
-                let nd = MyDate::now()
-                    .force(None, args.month, args.day)?
-                    .to_naive_date();
-                Spec::Date { date: nd }
-            }
-            _ => {
-                return Err(Box::new(MyErr {
+        let spec = if args.yesterday {
+            Spec::Yesterday
+        } else {
+            match (&args.date, &args.month, &args.day) {
+                (None, None, None) => Spec::Today,
+                (Some(date), None, None) => {
+                    let nd = parse_naive_date(&date)?;
+                    Spec::Date { date: nd }
+                }
+                (None, _, _) => {
+                    let nd = MyDate::now()
+                        .force(None, args.month, args.day)?
+                        .to_naive_date();
+                    Spec::Date { date: nd }
+                }
+                _ => {
+                    return Err(Box::new(MyErr {
                     msg: "invalid argument. Date argument can used with neither --day nor --month.".to_string(),
                 }));
+                }
             }
         };
 
@@ -45,6 +50,7 @@ impl Cmd {
         // let cmd = Cmd::new(&args)?;
         let df = match self.spec {
             Spec::Today => DailyFile::today(),
+            Spec::Yesterday => DailyFile::yesterday(),
             Spec::Date { date } => DailyFile::new(date),
         };
         let is_exist = df.ensure_exist()?;

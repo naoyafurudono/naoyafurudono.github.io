@@ -2,9 +2,9 @@ use crate::control::{DailyFile, MyDate};
 use crate::error::{MyErr, Result};
 use crate::Args;
 use chrono::NaiveDate;
+use std::iter;
 use std::os::unix::process::CommandExt;
 use std::process::Command;
-use std::iter;
 
 enum Spec {
     Today,
@@ -17,31 +17,25 @@ pub struct Cmd {
 
 impl Cmd {
     pub fn new(args: &Args) -> Result<Cmd> {
-        let spec = match &args.date {
-            None => match (args.month, args.day) {
-                (None, None) => Spec::Today,
-                _ => {
-                    let nd = MyDate::now()
-                        .force(None, args.month, args.day)?
-                        .to_naive_date();
-                    Spec::Date { date: nd }
-                }
-            },
-            Some(date) => {
-                // check args
-                match (args.month, args.day) {
-                    (None, None) => (),
-                    _ => {
-                        return Err(Box::new(MyErr {
-                            msg: "invalid argument. Date argument can used with neither --day nor --month.".to_string(),
-                        }));
-                    }
-                }
-
+        let spec = match (&args.date, &args.month, &args.day) {
+            (None, None, None) => Spec::Today,
+            (Some(date), None, None) => {
                 let nd = parse_naive_date(&date)?;
                 Spec::Date { date: nd }
             }
+            (None, _, _) => {
+                let nd = MyDate::now()
+                    .force(None, args.month, args.day)?
+                    .to_naive_date();
+                Spec::Date { date: nd }
+            }
+            _ => {
+                return Err(Box::new(MyErr {
+                    msg: "invalid argument. Date argument can used with neither --day nor --month.".to_string(),
+                }));
+            }
         };
+
         Ok(Cmd {
             spec,
             remove: args.remove,

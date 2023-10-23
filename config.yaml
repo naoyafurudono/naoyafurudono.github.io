@@ -33,6 +33,11 @@ Params:
   listPageDateFormat: 2006-01-02 MST
   singlePageDateFormat: 2006-01-02 15:04:05 MST
 markup:
+  goldmark:
+    extensions:
+      cjk:
+        enable: true
+        eastAsianLineBreaks: true
   highlight:
     codeFences: false
     guessSyntax: false

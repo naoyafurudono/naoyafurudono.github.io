@@ -11,8 +11,7 @@ Distributor ID:	Ubuntu
 Description:	Ubuntu 22.04 LTS
 Release:	22.04
 Codename:	jammy
-</code></pre><p>xremapの作者の方が公開している設定を参考にした。</p><p><a href=https://github.com/k0kubun/xremap/blob/6e8e1f21285ecedfa7ac88d703ad80d25a2699dd/examples/systemd/xremap.service>https://github.com/k0kubun/xremap/blob/6e8e1f21285ecedfa7ac88d703ad80d25a2699dd/examples/systemd/xremap.service</a></p><p>依存先が僕の環境では存在しないと怒られたので、<code>default.target</code> を指定した。
-この設定ファイルを <code>~/.config/systemd/user</code> において、<code>systemctl --user enable xremap</code> を呼びだす。すると次回のsystemdが起動するときに、xremap を呼んでくれるようになる。</p><pre><code>[Unit]
+</code></pre><p>xremapの作者の方が公開している設定を参考にした。</p><p><a href=https://github.com/k0kubun/xremap/blob/6e8e1f21285ecedfa7ac88d703ad80d25a2699dd/examples/systemd/xremap.service>https://github.com/k0kubun/xremap/blob/6e8e1f21285ecedfa7ac88d703ad80d25a2699dd/examples/systemd/xremap.service</a></p><p>依存先が僕の環境では存在しないと怒られたので、<code>default.target</code> を指定した。この設定ファイルを <code>~/.config/systemd/user</code> において、<code>systemctl --user enable xremap</code> を呼びだす。すると次回のsystemdが起動するときに、xremap を呼んでくれるようになる。</p><pre><code>[Unit]
 Description=xremap
 
 [Service]

@@ -9,10 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     steps:
-      - name: Skip Action unless specified in commit message
-        if: !contains(github.event.head_commit.message, 'deploy')
-        run: exit 78
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v4
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)

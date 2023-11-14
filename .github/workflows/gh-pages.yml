@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
@@ -35,4 +35,3 @@ jobs:
           webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
           status: ${{ job.status }}
           url: https://blog.nfurudono.com
-

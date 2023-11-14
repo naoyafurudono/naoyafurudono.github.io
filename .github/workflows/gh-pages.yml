@@ -3,14 +3,17 @@ name: GitHub Pages Deployment
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
-  pull_request:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - name: Skip Action unless specified in commit message
+        if: !contains(github.event.head_commit.message, 'deploy')
+        run: exit 78
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
@@ -19,12 +22,6 @@ jobs:
         with:
           hugo-version: latest
           extended: true
-      - uses: actions/cache@v2
-        with:
-          path: /tmp/hugo_cache
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
       - name: Build
         run: hugo --minify
       - name: Deploy

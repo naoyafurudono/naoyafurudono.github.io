@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '**'  # すべてのパスを無視するデフォルトの設定
 
 jobs:
   deploy:

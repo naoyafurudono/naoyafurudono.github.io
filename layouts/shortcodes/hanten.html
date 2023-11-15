@@ -1,0 +1,13 @@
+<div class="hanten">
+  {{- .Inner -}}
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hantenClassname = 'hanten';
+    const elements = document.getElementsByClassName(hantenClassname);
+    Array.from(elements).forEach(function(element) {
+      const bgColor = window.getComputedStyle(element, null).getPropertyValue('background-color');
+      element.style.color = bgColor; // 背景色をテキストの色として設定
+    });
+  });
+</script>

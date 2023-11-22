@@ -12,7 +12,7 @@ mod error;
 #[command(author = "Naoya Furudono <naoyafurudono@gmail.com>")]
 #[command(about = "Hugoで日記ファイルを生成し、開くためのCLI", long_about = None)]
 pub struct Args {
-    /// (YYYY-)(mm-)ddd
+    /// (YYYY-)(mm-)dd
     /// 指定しなかった場合は現在の年、月が使われる
     /// 他とは併用不可
     date: Option<String>,

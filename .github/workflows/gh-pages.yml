@@ -3,33 +3,27 @@ name: GitHub Pages Deployment
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
-  pull_request:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    if: startsWith(github.event.commits[0].message, 'deploy')
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: latest
           extended: true
-      - uses: actions/cache@v2
-        with:
-          path: /tmp/hugo_cache
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
       - name: Build
         run: hugo --minify
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
@@ -41,4 +35,3 @@ jobs:
           webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
           status: ${{ job.status }}
           url: https://blog.nfurudono.com
-

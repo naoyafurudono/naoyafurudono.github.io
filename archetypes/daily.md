@@ -8,14 +8,13 @@ tags:
     - "PL"
     - "comp"
     - "tech"
-    - "ubuntu"
     - "book"
     - "idea"
-    - "python"
-    - "rust"
     - "tool"
     - "cock"
     - "alcohol"
     - "food"
     - "sport"
+    - "home"
 ---
+

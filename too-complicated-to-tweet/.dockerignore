@@ -3,3 +3,4 @@ node_modules
 .git
 .gitingore
 readme.md
+k8s/

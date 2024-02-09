@@ -4,3 +4,4 @@ node_modules
 .gitingore
 readme.md
 k8s/
+.next/

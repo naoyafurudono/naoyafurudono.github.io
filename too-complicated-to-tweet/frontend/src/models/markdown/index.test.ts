@@ -14,8 +14,7 @@ const sample: Markdown = [
   },
   {
     type: "paragraph",
-    text: `このブログは開発中ではあるのですが、まあぼちぼち運用もしていきます。単にテスト用のコンテンツを並べるだけではなく、記事も書いていきたいと思っているのです。
-    とはいえ見やすさの考慮は全くしませんし、コンテンツの品質も保証しません。まあ、そんな感じでお楽しみください。`
+    text: "このブログは開発中ではあるのですが、まあぼちぼち運用もしていきます。単にテスト用のコンテンツを並べるだけではなく、記事も書いていきたいと思っているのです。とはいえ見やすさの考慮は全くしませんし、コンテンツの品質も保証しません。まあ、そんな感じでお楽しみください。"
   },
   {
     type: "paragraph",
@@ -23,20 +22,19 @@ const sample: Markdown = [
   }
 ]
 
-const sampleText = `
+const sampleText = `\
 # ツイートするにはこんがらがらがらがっている
 
 ## こんにちは
 
-このブログは開発中ではあるのですが、まあぼちぼち運用もしていきます。単にテスト用のコンテンツを並べるだけではなく、記事も書いていきたいと思っているのです。
-とはいえ見やすさの考慮は全くしませんし、コンテンツの品質も保証しません。まあ、そんな感じでお楽しみください。
+このブログは開発中ではあるのですが、まあぼちぼち運用もしていきます。単にテスト用のコンテンツを並べるだけではなく、記事も書いていきたいと思っているのです。とはいえ見やすさの考慮は全くしませんし、コンテンツの品質も保証しません。まあ、そんな感じでお楽しみください。
 
-たまにChatGPTやCopilotが書いた文章も混じるでしょう。細かいことは気にしてはいけません。それではまた。
+たまにChatGPTやCopilotが書いた文章も混じるでしょう。細かいことは気にしてはいけません。それではまた。\
 `
 
-// test("fromText", () => {
-//   expect(fromText(sampleText)).toEqual(sample)
-// })
+test("fromText", () => {
+  expect(fromText(sampleText)).toEqual(sample)
+})
 
 test("simple text", () => {
   const text = "hello"
@@ -56,5 +54,16 @@ test("double paragraph", () => {
   expect(fromText(text)).toEqual([
     { type: "paragraph", text: "春は曙" },
     { type: "paragraph", text: "夏は宵" }
+  ])
+})
+
+test("double heading", () => {
+  const text = `\
+# 春は曙
+
+## 夏は宵`
+  expect(fromText(text)).toEqual([
+    { type: "heading", level: 1, text: "春は曙" },
+    { type: "heading", level: 2, text: "夏は宵" }
   ])
 })

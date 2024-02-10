@@ -47,3 +47,14 @@ test("simple heading", () => {
   const text = "# hello"
   expect(fromText(text)).toEqual([{ type: "heading", level: 1, text: "hello" }])
 })
+
+test("double paragraph", () => {
+  const text = `\
+春は曙
+
+夏は宵`
+  expect(fromText(text)).toEqual([
+    { type: "paragraph", text: "春は曙" },
+    { type: "paragraph", text: "夏は宵" }
+  ])
+})

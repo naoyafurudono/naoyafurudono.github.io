@@ -13,13 +13,13 @@ export async function POST(req: NextRequest) {
   try {
     await prisma.user.create({
       data: {
-        userID: id,
+        userId: id,
       },
     })
   } catch (err) {
     return NextResponse.json({
       status: 400,
-      body: { message: "User not created" },
+      body: { message: "User not created", error: err.message },
     });
   }
   return NextResponse.json({

@@ -17,12 +17,12 @@ model Post {
   title     String   @db.VarChar(255)
   content   String
   published Boolean  @default(false)
-  author    User     @relation(fields: [authorId], references: [systemID])
+  author    User     @relation(fields: [authorId], references: [systemId])
   authorId  Int
 }
 
 model User {
-  systemID Int    @id @default(autoincrement())
-  userID   String @unique @db.VarChar(255)
+  systemId Int    @id @default(autoincrement())
+  userId   String @unique @db.VarChar(255)
   posts    Post[]
 }

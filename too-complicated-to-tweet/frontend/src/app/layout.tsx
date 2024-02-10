@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <AppRouterCacheProvider >
         <ThemeProvider theme={theme}>
           <body>{children}</body>

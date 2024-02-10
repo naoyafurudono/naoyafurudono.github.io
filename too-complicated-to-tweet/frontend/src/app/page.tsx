@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Landing() {
   return (
-    <main className={styles.main}>
+    <main>
       こんにちは！
       <Image src="/thumbnail.png" width={100} height={100} alt="ちんあなごロゴでござる"></Image>
       <div>

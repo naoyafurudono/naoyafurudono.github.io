@@ -3,13 +3,13 @@
 export type Markdown = Array<Component>
 type Component = Heading | Paragraph
 
-type Heading = {
+export type Heading = {
   type: "heading"
   level: number
   text: string
 }
 
-type Paragraph = {
+export type Paragraph = {
   type: "paragraph"
   text: string
 }

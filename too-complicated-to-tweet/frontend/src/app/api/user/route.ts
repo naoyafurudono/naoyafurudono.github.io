@@ -3,12 +3,17 @@ import { NextRequest, NextResponse } from "next/server";
 const prisma = new PrismaClient()
 
 export async function POST(req: NextRequest) {
-  const { name, email }: { name: string, email: string } = await req.json();
+  const { id } = await req.json();
+  if (!id || typeof id !== "string") {
+    return NextResponse.json({
+      status: 400,
+      body: { message: "User not created" },
+    });
+  }
   try {
     await prisma.user.create({
       data: {
-        name,
-        email,
+        userID: id,
       },
     })
   } catch (err) {
@@ -19,6 +24,6 @@ export async function POST(req: NextRequest) {
   }
   return NextResponse.json({
     status: 200,
-    body: { message: "User created" },
+    body: { message: "User created", id: id },
   });
 }

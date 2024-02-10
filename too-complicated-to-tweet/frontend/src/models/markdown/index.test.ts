@@ -42,3 +42,8 @@ test("simple text", () => {
   const text = "hello"
   expect(fromText(text)).toEqual([{ type: "paragraph", text }])
 })
+
+test("simple heading", () => {
+  const text = "# hello"
+  expect(fromText(text)).toEqual([{ type: "heading", level: 1, text: "hello" }])
+})

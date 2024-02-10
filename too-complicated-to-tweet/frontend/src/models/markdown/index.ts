@@ -15,10 +15,30 @@ type Paragraph = {
 }
 
 export const fromText = (text: string): Markdown => {
+  if (text.startsWith("#")) {
+    const level = text.match(/#+/)?.[0].length
+    const heading = text.replace(/#+/, "").trim()
+    if (!level) {
+      throw new MarkdownError("Invalid heading")
+    }
+    return [
+      {
+        type: "heading",
+        level: level || 1,
+        text: heading
+      }
+    ]
+  }
   return [
     {
       type: "paragraph",
       text
     }
   ]
+}
+
+class MarkdownError extends Error {
+  static {
+    this.prototype.name = "MarkdownError"
+  }
 }

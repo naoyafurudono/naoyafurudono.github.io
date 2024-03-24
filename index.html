@@ -452,22 +452,26 @@ anyhowを使ってみたい気持ちが湧いたけど、まずは基本的な�
 Rustの型推論の割り切り方に慣れていない。</p></p></div><div class=post-footer><p><a class=tag href=/%20tags/daily>#daily</a>
 <a class=tag href=/%20tags/pl>#PL</a>
 <a class=tag href=/%20tags/tech>#tech</a>
-<a class=tag href=/%20tags/tool>#tool</a></p><p><time>2023-06-24 +0900</time></p></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-06-23/>2023-06-23</a></h1><div><p><h2><a href=#%e7%92%b0%e5%a2%83%e6%a7%8b%e7%af%89 id=環境構築 class=anchor aria-hidden=true>環境構築</a></h2><p>macを買って環境構築をしているのでメモしていく。</p><ul><li>capslock -> eisu toggle<ul><li>システム環境設定 > キーボード > テキスト入力 > 入力ソース > Caps LockキーでABC入力モードに切り替える</li><li>最近のmacは組み込みの設定で変更できるようになった</li></ul></li><li>1Password<ul><li><a href=https://support.1password.com/secret-key/>最新のドキュメント</a>を参考にしてsecret keyを探し出す</li></ul></li><li>CLIツール: 以下の順で入れると良い。気が向いたらインストールスクリプトを書こう<ul><li>brew</li><li>fish</li><li>nvim</li><li>.config</li><li>その他</li></ul></li><li>gitでsshを使うための設定: この投稿のおまけを参考に<ul><li>鍵を生成</li><li>githubに公開鍵を登録</li><li>.ssh/configを書く</li></ul></li></ul><h3><a href=#%e3%81%8a%e3%81%be%e3%81%91 id=おまけ class=anchor aria-hidden=true>おまけ</a></h3><h4><a href=#ssh-keygen%e3%82%92%e4%be%bf%e5%88%a9%e3%81%ab id=ssh-keygenを便利に class=anchor aria-hidden=true>ssh-keygenを便利に</a></h4><pre><code class=language-fish>function _ssh-keygen
+<a class=tag href=/%20tags/tool>#tool</a></p><p><time>2023-06-24 +0900</time></p></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-06-23/>2023-06-23</a></h1><div><p><h2><a href=#%e7%92%b0%e5%a2%83%e6%a7%8b%e7%af%89 id=環境構築 class=anchor aria-hidden=true>環境構築</a></h2><p>macを買って環境構築をしているのでメモしていく。</p><ul><li>capslock -> eisu toggle<ul><li>システム環境設定 > キーボード > テキスト入力 > 入力ソース > Caps LockキーでABC入力モードに切り替える</li><li>最近のmacは組み込みの設定で変更できるようになった</li></ul></li><li>1Password<ul><li><a href=https://support.1password.com/secret-key/>最新のドキュメント</a>を参考にしてsecret keyを探し出す</li></ul></li><li>CLIツール: 以下の順で入れると良い。気が向いたらインストールスクリプトを書こう<ul><li>brew</li><li>fish</li><li>nvim</li><li>.config</li><li>その他</li></ul></li><li>gitでsshを使うための設定: この投稿のおまけを参考に<ul><li>鍵を生成</li><li>githubに公開鍵を登録</li><li>.ssh/configを書く</li></ul></li></ul><h3><a href=#%e3%81%8a%e3%81%be%e3%81%91 id=おまけ class=anchor aria-hidden=true>おまけ</a></h3><h4><a href=#ssh-keygen%e3%82%92%e4%be%bf%e5%88%a9%e3%81%ab id=ssh-keygenを便利に class=anchor aria-hidden=true>ssh-keygenを便利に</a></h4><p>個人メモ：<a href=https://github.com/naoyafurudono/dotfiles/blob/main/fish/functions/_ssh-keygen.fish>dotiflilesに書いてある</a>のでコピペは不要。</p><pre><code class=language-fish># for fish
+function _ssh-keygen
   set name $argv[1]
   mkdir -p &quot;$HOME/.ssh/$name&quot;
   ssh-keygen -t ed25519 -f &quot;$HOME/.ssh/$name/id_ed25519&quot;
+  chmod 600 &quot;$HOME/.ssh/$name/id_ed25519&quot;
 end
 </code></pre><pre><code class=language-bash>#!/bin/bash
 
 name=$1
 mkdir -p &quot;$HOME/.ssh/$name&quot;
 ssh-keygen -t ed25519 -f &quot;$HOME/.ssh/$name/id_ed25519&quot;
+chmod 600 &quot;$HOME/.ssh/$name/id_ed25519&quot;
 </code></pre><h4><a href=#sshconfig%e3%81%ae%e4%be%8b id=sshconfigの例 class=anchor aria-hidden=true>.ssh/configの例</a></h4><pre><code class=language-config>Host github.com
   User git
-  IdentityFile /Users/naoyafurudono/.ssh/git/id_ed25519
+  IdentityFile /Users/naoyafurudono/.ssh/github/id_ed25519
 </code></pre><h3><a href=#%e3%81%be%e3%81%a8%e3%82%81 id=まとめ class=anchor aria-hidden=true>まとめ</a></h3><p>Terraformでローカル環境の管理とかできないだろうか？</p></p></div><div class=post-footer><p><a class=tag href=/%20tags/daily>#daily</a>
 <a class=tag href=/%20tags/tech>#tech</a>
-<a class=tag href=/%20tags/tool>#tool</a></p><p><time>2023-06-23 -0700</time></p></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-06-17/>2023-06-17</a></h1><div><p><h2><a href=#%e3%83%ab%e3%83%b3%e3%83%90%e5%b0%8e%e5%85%a5 id=ルンバ導入 class=anchor aria-hidden=true>ルンバ導入</a></h2><p>ルンバをレンタルして今日から使い始めた。結構細かく動いてくれて僕より掃除がうまい気がする。
+<a class=tag href=/%20tags/tool>#tool</a></p><p><time>2023-06-23 -0700</time>
+lastmod: <time>2024-03-24 +0900</time></p></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-06-17/>2023-06-17</a></h1><div><p><h2><a href=#%e3%83%ab%e3%83%b3%e3%83%90%e5%b0%8e%e5%85%a5 id=ルンバ導入 class=anchor aria-hidden=true>ルンバ導入</a></h2><p>ルンバをレンタルして今日から使い始めた。結構細かく動いてくれて僕より掃除がうまい気がする。
 7時/19時で掃除するようにしたので、目覚まし代わりになるはずだし、寝る前と出勤前に床を片付ける習慣がつきそうで期待してる。</p><h2><a href=#%e6%97%a5%e4%b8%ad%e3%81%ae%e9%81%8b%e5%8b%95 id=日中の運動 class=anchor aria-hidden=true>日中の運動</a></h2><p>日中に運動するとその日の体力とやる気を使い果たして何もできなくなる。やはり夜に運動するのが性に合っていそうだ。</p></p></div><div class=post-footer><p><a class=tag href=/%20tags/daily>#daily</a>
 <a class=tag href=/%20tags/tool>#tool</a>
 <a class=tag href=/%20tags/sport>#sport</a></p><p><time>2023-06-17 +0900</time></p></div></article><article><h1><a href=https://blog.nfurudono.com/daily/2023-06-16/>2023-06-16</a></h1><div><p><h2><a href=#%e6%ac%b2%e6%9c%9b%e3%81%ae%e8%a6%8b%e3%81%a4%e3%81%91%e6%96%b9%e3%82%92%e8%aa%ad%e3%82%93%e3%81%a7%e3%82%8b id=欲望の見つけ方を読んでる class=anchor aria-hidden=true>欲望の見つけ方を読んでる</a></h2><p>話題だったので読んでみている。手塚治虫っぽい印象を受けてる。</p><h3><a href=#%e8%bf%bd%e8%a8%98 id=追記 class=anchor aria-hidden=true>追記</a></h3><p>ある程度目を通したけど、村上春樹の小説のような例え話が実用書で延々と続いて途中で読むのをやめてしまった。たまに話題にでてきていた模倣理論とかは気になるので、そっちを調べてみようかしら。</p></p></div><div class=post-footer><p><a class=tag href=/%20tags/daily>#daily</a>

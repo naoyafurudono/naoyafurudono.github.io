@@ -18,12 +18,20 @@ Contact me through following e-mail address: {{<email>}}
 - GitHub: [naoyafurudono](https://github.com/naoyafurudono)
 - Twitter: [(@furudono2)](https://twitter.com/furudono2) (not active, but live)
 
+# Job
+
+- Software Engineer, GMO Pepabo, Inc. (2023-04 - current)
+
 # Education
 
 - Master of Science, Tokyo Institute of Technology, Tokyo (2023)
 - Bachelor of Science, Tokyo Institute of Technology, Tokyo (2021)
 
 He majored in semntics, implementation, and design of programming languages.
+
+# Blog Post
+
+- [Pepabo Tech Portal](https://tech.pepabo.com/authors/donokun/): my entry published in our company.
 
 # Academic Paper
 

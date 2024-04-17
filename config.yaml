@@ -1,5 +1,13 @@
 baseURL: https://blog.nfurudono.com
 languageCode: ja-jp
+defaultContentLanguage: ja
+languages:
+  en:
+    languageName: English
+    weight: 10
+    title: hello
+  ja:
+    languageName: Japanese
 title: ツイートするには長すぎる
 theme: noteworthy
 copyright: '&copy;{currentYear} Naoya Furudono'

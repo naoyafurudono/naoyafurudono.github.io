@@ -6,13 +6,15 @@
 				this site</a></p>
 		<span class="divider-bar">|</span>
 		<p><a href="https://gohugo.io" target="_blank" rel="noopener">{{ i18n "built_with_hugo" }}</a></p>
-		<p>{{ with replace .Site.Copyright "{currentYear}" (.Date.Format "2006" )}}{{ . | markdownify}} {{ end }}</p>
+		<p>{{ with replace .Site.Copyright "{currentYear}" (now.Format "2006") }}{{ . |
+			markdownify}} {{ end }}</p>
 	</div>
 
 	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
 	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}
 		crossorigin="anonymous"></script>
-	<a target="_blank" rel="noopener noreferrer" href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions">
+	<a target="_blank" rel="noopener noreferrer"
+		href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions">
 		<img src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg"
 			alt="github pages deploy status" style="max-width: 100%;">
 	</a>

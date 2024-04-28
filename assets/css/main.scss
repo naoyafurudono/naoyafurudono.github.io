@@ -403,13 +403,25 @@ a.footnote-ref {
     border-bottom: 0px solid;
 }
 
+.page-header {
+    padding: 1.5em 0em 2em 0em;
+    font-size: 0.95rem;
+    color: $gray-light;
+
+    text-decoration: none;
+}
+
+.header-divider {
+    color: $gray-lightest;
+    margin-bottom: 1.5em;
+}
+
 .page-footer {
     padding: 1.5em 0em 2em 0em;
     font-size: 0.95rem;
     color: $gray-light;
 
     text-decoration: none;
-    color: $gray-light;
 }
 
 .footer-divider {

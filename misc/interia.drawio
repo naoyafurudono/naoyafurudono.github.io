@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-28T19:15:18.126Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="ZpC45VdK-uFmskQzz_pf" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-28T19:17:21.156Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="lK9BJ_8gN6Sn5lKhnbsZ" version="24.3.1" type="github">
   <diagram name="ページ1" id="chXOTAfTKkLmFm23G31K">
-    <mxGraphModel dx="3060" dy="2939" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2040" dy="2432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -274,7 +274,7 @@
         <mxCell id="T-ZdzPedB-VomCAbVOpk-100" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.workstation;shadow=0;flipV=1;rotation=90;" vertex="1" parent="1">
           <mxGeometry x="968.7499999999999" y="732.39" width="50" height="43.75" as="geometry" />
         </mxCell>
-        <mxCell id="T-ZdzPedB-VomCAbVOpk-102" value="2.85" style="shape=dimension;whiteSpace=wrap;html=1;align=center;points=[];verticalAlign=bottom;spacingBottom=3;labelBackgroundColor=none;" vertex="1" parent="1">
+        <mxCell id="T-ZdzPedB-VomCAbVOpk-102" value="2850" style="shape=dimension;whiteSpace=wrap;html=1;align=center;points=[];verticalAlign=bottom;spacingBottom=3;labelBackgroundColor=none;" vertex="1" parent="1">
           <mxGeometry x="945.25" y="212" width="390" height="40" as="geometry" />
         </mxCell>
         <mxCell id="T-ZdzPedB-VomCAbVOpk-104" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.office_chair;shadow=0;rotation=-90;" vertex="1" parent="1">

@@ -7,7 +7,7 @@
     {{ end }}
     <!-- Range over the pages and only include the ones that are a post type -->
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-    {{ range $pages }}
+    {{ range where $pages "Params.index" "!=" "false" }}
     <article>
         <h1>
             <a href="{{ .Permalink }}">

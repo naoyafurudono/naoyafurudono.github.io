@@ -35,4 +35,5 @@ tags:
 
 とりあえず今の間取りを書き出してみた。
 
+{{< svg src="current.svg" title="今の間取り" >}}
 

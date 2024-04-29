@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-29T05:17:02.403Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="9FiP0rr9ek1L3C0jSgNU" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-29T05:25:45.944Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="8LhQZ0Hm3s7YEWWatoLp" version="24.3.1" type="github">
   <diagram name="ページ1" id="chXOTAfTKkLmFm23G31K">
     <mxGraphModel dx="2460" dy="3064" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -19,8 +19,8 @@
         <mxCell id="T-ZdzPedB-VomCAbVOpk-120" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.bookcase;rotation=90;" parent="1" vertex="1">
           <mxGeometry x="345.25" y="658.43" width="108.8" height="53.15" as="geometry" />
         </mxCell>
-        <mxCell id="T-ZdzPedB-VomCAbVOpk-103" value="" style="shape=rect;shadow=0;html=1;rotation=-90;" parent="1" vertex="1">
-          <mxGeometry x="893.1199999999999" y="750" width="188.13" height="70" as="geometry" />
+        <mxCell id="T-ZdzPedB-VomCAbVOpk-103" value="" style="shape=rect;shadow=0;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="1062.7199999999998" y="691" width="188.13" height="70" as="geometry" />
         </mxCell>
         <mxCell id="T-ZdzPedB-VomCAbVOpk-36" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="670" y="360" width="100" height="250" as="geometry" />
@@ -271,11 +271,11 @@
         <mxCell id="T-ZdzPedB-VomCAbVOpk-97" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.bathtub2;rotation=-180;" parent="1" vertex="1">
           <mxGeometry x="1490.75" y="1110" width="180" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="T-ZdzPedB-VomCAbVOpk-98" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.office_chair;shadow=0;rotation=89;" parent="1" vertex="1">
-          <mxGeometry x="1042.6299999999999" y="738.12" width="65.25" height="65.39" as="geometry" />
+        <mxCell id="T-ZdzPedB-VomCAbVOpk-98" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.office_chair;shadow=0;rotation=-180;" parent="1" vertex="1">
+          <mxGeometry x="1109.9999999999998" y="772.3600000000001" width="65.25" height="65.39" as="geometry" />
         </mxCell>
-        <mxCell id="T-ZdzPedB-VomCAbVOpk-100" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.workstation;shadow=0;flipV=1;rotation=90;" parent="1" vertex="1">
-          <mxGeometry x="968.7499999999999" y="732.39" width="50" height="43.75" as="geometry" />
+        <mxCell id="T-ZdzPedB-VomCAbVOpk-100" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.workstation;shadow=0;flipV=1;rotation=-180;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="696.25" width="50" height="43.75" as="geometry" />
         </mxCell>
         <mxCell id="T-ZdzPedB-VomCAbVOpk-102" value="2850" style="shape=dimension;whiteSpace=wrap;html=1;align=center;points=[];verticalAlign=bottom;spacingBottom=3;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="945.25" y="212" width="390" height="40" as="geometry" />
@@ -304,8 +304,8 @@
         <mxCell id="T-ZdzPedB-VomCAbVOpk-118" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="47.5" y="512" width="70" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="T-ZdzPedB-VomCAbVOpk-119" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="952.19" y="890" width="70" height="90" as="geometry" />
+        <mxCell id="T-ZdzPedB-VomCAbVOpk-119" value="" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="963.75" y="687.75" width="70" height="90" as="geometry" />
         </mxCell>
         <mxCell id="SYsUSptG4BRRySlDiPQe-7" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="41" y="626" width="132.5" height="260" as="geometry" />

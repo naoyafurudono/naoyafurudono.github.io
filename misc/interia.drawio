@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2024-04-29T05:11:42.159Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="stqQpLNVsP0-734nG6gM" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-29T05:17:02.403Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="9FiP0rr9ek1L3C0jSgNU" version="24.3.1" type="github">
   <diagram name="ページ1" id="chXOTAfTKkLmFm23G31K">
     <mxGraphModel dx="2460" dy="3064" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="SYsUSptG4BRRySlDiPQe-6" value="" style="group;flipH=0;rotation=90;" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1137" y="93.00000000000004" width="132.5" height="260" as="geometry" />
+          <mxGeometry x="1130" y="90.00000000000004" width="132.5" height="260" as="geometry" />
         </mxCell>
         <mxCell id="T-ZdzPedB-VomCAbVOpk-54" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.bed_single;rotation=90;" parent="SYsUSptG4BRRySlDiPQe-6" vertex="1">
           <mxGeometry width="132.5" height="260" as="geometry" />

@@ -6,6 +6,14 @@
   {{ if and .Lastmod (ne (.PublishDate.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
     <time>updated: {{ .Lastmod.Format .Site.Params.singlePageDateFormat }}</time>
   {{ end }}
+  <div class="page-header">
+    {{if .Params.tags}}
+      {{ range .Params.tags }}
+        <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
+      {{ end }}
+    {{ end }}
+    <hr class="header-divider">
+  </div>
   <div>
       <p>
           {{ .Content }}
@@ -14,22 +22,11 @@
   {{ template "_internal/disqus.html" . }}
 
   {{ if .Site.Params.enableKofi }}
-
     <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
     <script type='text/javascript'>
         const kofiId = '{{ .Site.Params.Kofi }}';
         kofiwidget2.init('Support Me on Ko-fi', '#29abe0', kofiId);
         kofiwidget2.draw();
     </script>
-
   {{ end }}
-
-  <div class="page-footer">
-      {{if .Params.tags}}
-        <hr class="footer-divider">
-        {{ range .Params.tags }}
-          <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
-        {{ end }}
-      {{ end }}
-  </div>
 {{end}}

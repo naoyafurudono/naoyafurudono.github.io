@@ -1,0 +1,10 @@
+name: Sync theme submod
+
+on:
+  repository_dispatch:
+    type: [update]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    step

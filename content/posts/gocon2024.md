@@ -59,4 +59,5 @@ Openingから全ての時間帯で参加した。
 # メモ
 
 - [GoConference2024の資料が集まるスレ](https://zenn.dev/miyataka/scraps/cc37aa7918944f)
+- [gomockの発表中のツイートに発表者の方に返信していただいた](https://blog.utgw.net/entry/2024/06/08/181746)。なるほど確かにというかんじ。発表者に反応してもらえるの、やっぱり嬉しいな。
 

@@ -56,3 +56,7 @@ Openingから全ての時間帯で参加した。
 `go` の `-race` オプションとslogの導入はシュッと活用できそう。gomockもかな。
 他もじんわり効いてきそうで知見〜という感じ。
 
+# メモ
+
+- [GoConference2024の資料が集まるスレ](https://zenn.dev/miyataka/scraps/cc37aa7918944f)
+

@@ -42,6 +42,9 @@ Params:
   singlePageDateFormat: 2006-01-02 MST
 markup:
   goldmark:
+    renderer:
+      # to render iframe
+      unsafe: true
     extensions:
       cjk:
         enable: true

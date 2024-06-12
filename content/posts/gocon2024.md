@@ -2,12 +2,14 @@
 title: "Go Conference 2024に参加した"
 date: 2024-06-08T15:14:03+09:00
 author: "Naoya Furudono"
-draft: false
+draft: true
 tags:
     - "daily"
     - "PL"
     - "tech"
 ---
+
+割とぐちゃぐちゃなので一旦非公開にする
 
 # 参加セッション
  

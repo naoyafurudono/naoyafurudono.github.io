@@ -42,6 +42,9 @@ Params:
   singlePageDateFormat: 2006-01-02 MST
 markup:
   goldmark:
+    renderer:
+      # to render iframe
+      unsafe: true
     extensions:
       cjk:
         enable: true
@@ -72,4 +75,8 @@ menu:
       name: about
       url: /about/
       weight: 3
+        # module:
+        #   imports:
+        #     - path: 'github.com/hugomods/images'
+        #       disable: false
 

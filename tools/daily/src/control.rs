@@ -52,21 +52,24 @@ impl DailyFile {
             .status
             .success();
 
-        if !already_exists {
-            let hugo_name = self.hugo_name();
-            let hugo_name_str = hugo_name.to_str().ok_or(MyErr {
-                msg: "fail string conversion".to_string(),
-            })?;
-            let output = Command::new("hugo")
-                .arg("new")
-                .arg(hugo_name_str)
-                .output()?;
-
-            if !output.status.success() {
-                return Err(Box::new(MyErr {msg: "s".to_string()}));
-            }
+        if already_exists {
+            return Ok(true)
         }
-        Ok(already_exists)
+        let hugo_name = self.hugo_name();
+        let hugo_name_str = hugo_name.to_str().ok_or(MyErr {
+            msg: "fail string conversion".to_string(),
+        })?;
+        let output = Command::new("hugo")
+            .arg("new")
+            .arg(hugo_name_str)
+            .output()?;
+
+        if !output.status.success() {
+            return Err(Box::new(MyErr {
+                msg: "s".to_string(),
+            }));
+        }
+        return Ok(false)
     }
 }
 

@@ -66,7 +66,7 @@ impl DailyFile {
 
         if !output.status.success() {
             return Err(Box::new(MyErr {
-                msg: "s".to_string(),
+                msg: format!("failed to exec hugo: {}", String::from_utf8(output.stdout).expect("failed to convert")),
             }));
         }
         return Ok(false)

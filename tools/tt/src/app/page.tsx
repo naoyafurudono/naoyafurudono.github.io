@@ -1,4 +1,5 @@
 import { type Article, listArticles } from "@/lib/gateway";
+
 import { render } from "@/lib/render";
 import type { NextPage } from "next";
 
@@ -31,7 +32,7 @@ const ArticleSummary = async ({ article }: SummaryProps) => {
 			<h1>
 				<a href={`/posts/${article.id}`}>{res.title}</a>
 			</h1>
-  	  <time>{res.date}</time>
+			<time>{res.date}</time>
 		</article>
 	);
 };

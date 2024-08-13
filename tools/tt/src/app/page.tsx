@@ -11,7 +11,6 @@ type Props = {
 const Home: NextPage<Props> = async () => {
 	return (
 		<>
-			<h1>ツイートするには長すぎる</h1>
 			<div>
 				{listArticles().map((article) => (
 					<ArticleSummary article={article} key={article.id} />

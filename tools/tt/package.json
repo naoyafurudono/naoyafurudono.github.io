@@ -9,15 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/unist": "^3.0.2",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
     "rehype-stringify": "^10.0.0",
+    "remark-extract-frontmatter": "^3.2.0",
     "remark-frontmatter": "^5.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
-    "remark-stringify": "^11.0.0",
-    "unified": "^11.0.5"
+    "unified": "^11.0.5",
+    "yaml": "^2.5.0"
   },
   "devDependencies": {
     "@types/node": "^20",

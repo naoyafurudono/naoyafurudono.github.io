@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "check": "biome check --write --unsafe src/**/*"
   },
   "dependencies": {
     "@types/unist": "^3.0.2",
@@ -22,6 +22,7 @@
     "yaml": "^2.5.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

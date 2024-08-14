@@ -1,6 +1,4 @@
-import { type Article, listArticles } from "@/lib/gateway";
-
-import { render } from "@/lib/render";
+import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import type { NextPage } from "next";
 
 type Props = {
@@ -10,28 +8,27 @@ type Props = {
 };
 const Home: NextPage<Props> = async () => {
 	return (
-		<>
-			<div>
-				{listArticles().map((article) => (
-					<ArticleSummary article={article} key={article.id} />
-				))}
-			</div>
-		</>
+		<ol>
+			{listArticles().map((article) => (
+				<li key={article.id}>
+					<ArticleSummary article={article} />
+				</li>
+			))}
+		</ol>
 	);
 };
 export default Home;
 
 type SummaryProps = {
-	article: Article;
+	article: ArticleMeta;
 };
 const ArticleSummary = async ({ article }: SummaryProps) => {
-	const res = await render(article);
 	return (
 		<article>
-			<h1>
-				<a href={`/posts/${article.id}`}>{res.title}</a>
-			</h1>
-			<time>{res.date}</time>
+			<div>
+				<a href={`/posts/${article.id}`}>{article.title}</a>
+			</div>
+			<time>{article.date}</time>
 		</article>
 	);
 };

@@ -1,19 +1,46 @@
 // 一覧を返す
 import fs from "node:fs";
+import path from "node:path";
 
+const articleDirectoryPaths = process.env.ARTICLE_DIRECTORY_PATHS?.split(
+	",",
+) || [path.join(process.cwd(), "article")];
+
+export type ArticleMeta = {
+	id: string;
+	path: string;
+	date: string;
+	title: string;
+};
 export type Article = {
 	content: Buffer;
-	id: string;
-};
-export function listArticles(): Array<Article> {
-	const filepath = "article/2023-09-24.md";
-	const content = fs.readFileSync(filepath);
-	const id = "2023-09-24";
-	return [{ content, id }];
+} & ArticleMeta;
+export function listArticles(): Array<ArticleMeta> {
+	return articleDirectoryPaths.flatMap((directoryPath) => {
+		return fs.readdirSync(directoryPath).map((filename) => {
+			const fpath = path.join(directoryPath, filename);
+			const name = path.parse(filename).name;
+			return {
+				id: name,
+				path: fpath,
+				title: "todo: title",
+				date: "todo: date",
+			};
+		});
+	});
 }
 
-export function getArticle({ articleId }: { articleId: string }): Article {
-	const filepath = `article/${articleId}.md`;
-	const content = fs.readFileSync(filepath);
-	return { content, id: articleId };
+export function findArticle({
+	articleId,
+}: {
+	articleId: string;
+}): Article | null {
+	const m = listArticles().find((v) => {
+		return v.id === articleId;
+	});
+	if (!m) {
+		return null;
+	}
+	const content = fs.readFileSync(m.path);
+	return { ...m, content };
 }

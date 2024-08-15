@@ -14,6 +14,8 @@
   "dependencies": {
     "@types/unist": "^3.0.2",
     "glob": "^11.0.0",
+    "mdast": "^3.0.0",
+    "mdast-util-find-and-replace": "^3.0.1",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
@@ -23,6 +25,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
     "unified": "^11.0.5",
+    "vfile": "^6.0.2",
     "yaml": "^2.5.0"
   },
   "devDependencies": {
@@ -30,6 +33,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^2.0.5"
   }
 }

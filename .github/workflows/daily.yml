@@ -10,19 +10,20 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    defaults:
+      run:
+        working-directory: tools/daily
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version-file: tools/tt/package.json
+          node-version-file: package.json
       - name: setup
         run: npm install
-        working-directory: tools/tt
       - name: build
         run: npm run build
-        working-directory: tools/tt
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy
+          command: pages deploy out

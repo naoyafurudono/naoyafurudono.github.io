@@ -17,8 +17,10 @@ jobs:
           node-version-file: tools/tt/package.json
       - name: setup
         run: npm install
+        working-directory: tools/tt
       - name: build
         run: npm run build
+        working-directory: tools/tt
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:

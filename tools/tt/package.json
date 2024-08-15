@@ -8,6 +8,9 @@
     "start": "next start",
     "check": "biome check --write --unsafe src/**/*"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@types/unist": "^3.0.2",
     "glob": "^11.0.0",

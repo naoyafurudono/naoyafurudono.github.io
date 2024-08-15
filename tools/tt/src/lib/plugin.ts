@@ -7,7 +7,7 @@ import { Root } from "mdast";
 
 export const print: (depth: number) => unified.Plugin =
   (depth: number) => () => {
-    return (tree: Root, file: VFileCompatible) => {
+    return (tree: Node, file: VFileCompatible) => {
       console.log(JSON.stringify(tree, null, depth));
     };
   };

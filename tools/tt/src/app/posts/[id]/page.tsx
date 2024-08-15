@@ -9,7 +9,10 @@ type Props = {
 };
 const Post: NextPage<Props> = async ({ params }) => {
 	const { id } = params;
-	const a = findArticle({ articleId: id });
+	const a = await findArticle({ articleId: id });
+	if (!a) {
+		throw new Error("Not found");
+	}
 	const rendered: RenderResult = await render(a);
 
 	return (
@@ -28,14 +31,15 @@ const Post: NextPage<Props> = async ({ params }) => {
 
 export default Post;
 export async function generateStaticParams() {
-	return listArticles().map((a) => ({
+	const as = await listArticles();
+	return as.map((a) => ({
 		id: a.id,
 	}));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { id } = params;
-	const a = findArticle({ articleId: id });
+	const a = await findArticle({ articleId: id });
 	if (!a) {
 		throw new Error("Not found");
 	}

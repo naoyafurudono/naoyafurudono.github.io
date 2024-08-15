@@ -1,6 +1,7 @@
 // 一覧を返す
 import fs from "node:fs";
 import path from "node:path";
+import { render } from "./render";
 
 const articleDirectoryPaths = process.env.ARTICLE_DIRECTORY_PATHS?.split(
 	",",
@@ -15,29 +16,36 @@ export type ArticleMeta = {
 export type Article = {
 	content: Buffer;
 } & ArticleMeta;
-export function listArticles(): Array<ArticleMeta> {
-	return articleDirectoryPaths.flatMap((directoryPath) => {
-		return fs.readdirSync(directoryPath).map((filename) => {
+
+export async function listArticles(): Promise<Array<Article>> {
+	const a = articleDirectoryPaths.flatMap((directoryPath) => {
+		return fs.readdirSync(directoryPath).map(async (filename) => {
 			const fpath = path.join(directoryPath, filename);
 			const name = path.parse(filename).name;
+			const content = fs.readFileSync(fpath);
+			const r = await render({ content });
 			return {
 				id: name,
 				path: fpath,
-				title: "todo: title",
-				date: "todo: date",
+				title: r.title,
+				date: r.date,
+				content: content,
 			};
 		});
 	});
+	return Promise.all(a);
 }
 
-export function findArticle({
+export async function findArticle({
 	articleId,
 }: {
 	articleId: string;
-}): Article | null {
-	const m = listArticles().find((v) => {
-		return v.id === articleId;
-	});
+}): Promise<Article | null> {
+	const m = await listArticles().then((as) =>
+		as.find((v) => {
+			return v.id === articleId;
+		}),
+	);
 	if (!m) {
 		return null;
 	}

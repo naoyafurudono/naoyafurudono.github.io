@@ -5,7 +5,6 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
-import type { Article } from "./gateway";
 
 export type RenderResult = {
 	rawBody: string;
@@ -13,7 +12,11 @@ export type RenderResult = {
 	title: string;
 };
 
-export async function render(a: Article): Promise<RenderResult> {
+export async function render({
+	content,
+}: {
+	content: Buffer;
+}): Promise<RenderResult> {
 	const frontmatter: Node | null = null;
 	const result = await unified()
 		.use(remarkParse)
@@ -21,7 +24,7 @@ export async function render(a: Article): Promise<RenderResult> {
 		.use(remarkExtractFrontmatter, { yaml: yaml.parse })
 		.use(remarkRehype)
 		.use(rehypeStringify)
-		.process(a.content);
+		.process(content);
 	return {
 		rawBody: result.toString(),
 		date: result.data.date as string,

@@ -7,9 +7,10 @@ type Props = {
 	};
 };
 const Home: NextPage<Props> = async () => {
+	const as = await listArticles();
 	return (
 		<ol>
-			{listArticles().map((article) => (
+			{as.map((article) => (
 				<li key={article.id}>
 					<ArticleSummary article={article} />
 				</li>

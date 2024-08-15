@@ -4,51 +4,60 @@ import path from "node:path";
 import { render } from "./render";
 
 const articleDirectoryPaths = process.env.ARTICLE_DIRECTORY_PATHS?.split(
-	",",
+  ",",
 ) || [path.join(process.cwd(), "article")];
 
 export type ArticleMeta = {
-	id: string;
-	path: string;
-	date: string;
-	title: string;
+  id: string;
+  path: string;
+  date: string;
+  title: string;
 };
 export type Article = {
-	content: Buffer;
+  content: Buffer;
 } & ArticleMeta;
 
 export async function listArticles(): Promise<Array<Article>> {
-	const a = articleDirectoryPaths.flatMap((directoryPath) => {
-		return fs.readdirSync(directoryPath).map(async (filename) => {
-			const fpath = path.join(directoryPath, filename);
-			const name = path.parse(filename).name;
-			const content = fs.readFileSync(fpath);
-			const r = await render({ content });
-			return {
-				id: name,
-				path: fpath,
-				title: r.title,
-				date: r.date,
-				content: content,
-			};
-		});
-	});
-	return Promise.all(a);
+  const a = articleDirectoryPaths.flatMap((directoryPath) => {
+    return fs
+      .readdirSync(directoryPath, { withFileTypes: true })
+      .filter((de) => de.isFile() && de.name.endsWith(".md"))
+      .map((de) => de.name)
+      .map(async (filename) => {
+        const fpath = path.join(directoryPath, filename);
+        const name = path.parse(filename).name;
+        let content = Buffer.from("");
+        try {
+          content = fs.readFileSync(fpath);
+        } catch (e) {
+          console.error(`failed to do op: ${fpath}`);
+        }
+        const r = await render({ content });
+        return {
+          id: name,
+          path: fpath,
+          title: r.title,
+          date: r.date,
+          content: content,
+        };
+      });
+  });
+  return Promise.all(a);
 }
 
 export async function findArticle({
-	articleId,
+  articleId,
 }: {
-	articleId: string;
+  articleId: string;
 }): Promise<Article | null> {
-	const m = await listArticles().then((as) =>
-		as.find((v) => {
-			return v.id === articleId;
-		}),
-	);
-	if (!m) {
-		return null;
-	}
-	const content = fs.readFileSync(m.path);
-	return { ...m, content };
+  const m = await listArticles().then((as) =>
+    as.find((v) => {
+      return v.id === articleId;
+    }),
+  );
+  if (!m) {
+    return null;
+  }
+  const content = fs.readFileSync(m.path);
+  return { ...m, content };
 }

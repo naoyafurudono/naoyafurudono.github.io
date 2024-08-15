@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { id } = params;
 	const a = await findArticle({ articleId: id });
 	if (!a) {
-		throw new Error("Not found");
+		throw new Error(`Not found: ${id}`);
 	}
 	const r = await render(a);
 	return {

@@ -17,7 +17,7 @@ export default function RootLayout({
 				<header>
 					<nav>
 						<p>
-							<Link href="/">blog.nfurudono.com</Link>
+							<Link href="/">diary.nfurudono.com</Link>
 						</p>
 					</nav>
 				</header>

@@ -2,7 +2,6 @@ import { test, expect } from "vitest";
 import { render } from "./render";
 
 test("改行は取り除かれる", async () => {
-  expect(1).toBe(1);
   const content = `
 ---
 title: Hello, world!

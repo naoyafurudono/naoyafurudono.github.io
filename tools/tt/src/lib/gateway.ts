@@ -17,7 +17,11 @@ export type Article = {
   content: Buffer;
 } & ArticleMeta;
 
+let memo: Promise<Array<Article>>;
 export async function listArticles(): Promise<Array<Article>> {
+  if (memo) {
+    return memo;
+  }
   const a = articleDirectoryPaths.flatMap((directoryPath) => {
     return fs
       .readdirSync(directoryPath, { withFileTypes: true })
@@ -42,7 +46,8 @@ export async function listArticles(): Promise<Array<Article>> {
         };
       });
   });
-  return Promise.all(a);
+  memo = Promise.all(a);
+  return memo;
 }
 
 export async function findArticle({

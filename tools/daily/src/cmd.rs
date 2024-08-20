@@ -5,6 +5,7 @@ use chrono::NaiveDate;
 use std::iter;
 use std::os::unix::process::CommandExt;
 use std::process::Command;
+use std::env;
 
 enum Spec {
     Today,
@@ -55,10 +56,11 @@ impl Cmd {
         };
         let is_exist = df.ensure_exist()?;
         let filepath = df.filepath()?;
+        let editor_name = env::var("EDITOR").unwrap_or("nvim".to_string());
         let err = if self.remove {
             Command::new("rm").arg(filepath).exec()
         } else {
-            let mut cmd = Command::new("nvim");
+            let mut cmd = Command::new(editor_name);
             cmd.arg(filepath);
             if !is_exist {
                 cmd.arg("+");

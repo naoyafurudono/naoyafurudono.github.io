@@ -23,6 +23,7 @@ jobs:
         with:
           node-version-file: tools/tt/package.json
           cache: 'npm'
+          cache-dependency-path: tools/tt/package-lock.json
       - name: setup
         run: npm install
       - name: build

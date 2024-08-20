@@ -54,7 +54,7 @@ impl Cmd {
             Spec::Yesterday => DailyFile::yesterday(),
             Spec::Date { date } => DailyFile::new(date),
         };
-        let is_exist = df.ensure_exist()?;
+        let _ = df.ensure_exist()?;
         let filepath = df.filepath()?;
         let editor_name = env::var("EDITOR").unwrap_or("nvim".to_string());
         let err = if self.remove {
@@ -62,9 +62,6 @@ impl Cmd {
         } else {
             let mut cmd = Command::new(editor_name);
             cmd.arg(filepath);
-            if !is_exist {
-                cmd.arg("+");
-            }
             cmd.exec()
         };
         Err(Box::new(err))

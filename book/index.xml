@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Books on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/book/</link><description>Recent content in Books on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sun, 31 Dec 2023 23:56:56 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/book/index.xml" rel="self" type="application/rss+xml"/><item><title>読書メモ - eBPF入門</title><link>https://blog.nfurudono.com/book/ebpf-abc/</link><pubDate>Sun, 31 Dec 2023 23:25:26 +0900</pubDate><guid>https://blog.nfurudono.com/book/ebpf-abc/</guid><description>動機 eBPF面白そうだったので。その目的とかユースケースを知りたかったり、周辺ツールがどういう具合に整備されて使われているかも知りたかった。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Books on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/book/</link><description>Recent content in Books on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sun, 31 Dec 2023 23:56:56 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/book/index.xml" rel="self" type="application/rss+xml"/><item><title>読書メモ - eBPF入門</title><link>https://blog.nfurudono.com/book/ebpf-abc/</link><pubDate>Sun, 31 Dec 2023 23:25:26 +0900</pubDate><guid>https://blog.nfurudono.com/book/ebpf-abc/</guid><description>&lt;h2>
+&lt;a href="#%e5%8b%95%e6%a9%9f" id="動機" class="anchor" aria-hidden="true">動機&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>eBPF面白そうだったので。その目的とかユースケースを知りたかったり、周辺ツールがどういう具合に整備されて使われているかも知りたかった。&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#%e9%9d%a2%e7%99%bd%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88" id="面白ポイント" class="anchor" aria-hidden="true">面白ポイント&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>コンテナ横断で情報を取れるのはなるほどなって感じ&lt;/li>
+&lt;li>hello worldいつやろうか迷う
+&lt;ul>
+&lt;li>limaでやるのはつらいのかなと想像しつつ手を動かしていない&lt;/li>
+&lt;li>帰省していてlinuxマシンが手元にない&lt;/li>
+&lt;li>本で紹介されている方法は本番ではお勧めできないとか今の所書いてあるし&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#%e5%be%97%e3%81%9f%e7%9f%a5%e8%ad%98%e3%81%ae%e4%bd%bf%e3%81%84%e9%81%93" id="得た知識の使い道" class="anchor" aria-hidden="true">得た知識の使い道&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>コンテナ環境をホストするなら監視で使えるかも。いかがわかっていない
+&lt;ul>
+&lt;li>何を監視したいのか&lt;/li>
+&lt;li>何を監視できるのか&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#%e7%96%91%e5%95%8f" id="疑問" class="anchor" aria-hidden="true">疑問&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>プログラムのサイズを制限しているのは何が目的なんだろう&lt;/li>
+&lt;/ul></description></item></channel></rss>

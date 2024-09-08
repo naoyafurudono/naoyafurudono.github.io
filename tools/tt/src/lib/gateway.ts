@@ -44,7 +44,7 @@ export async function listArticles(): Promise<Array<Article>> {
 				let content = Buffer.from("");
 				try {
 					content = fs.readFileSync(fpath);
-				} catch (e) {
+				} catch (_e) {
 					console.error(`failed to do op: ${fpath}`);
 				}
 				const r = await render({ content });

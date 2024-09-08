@@ -19,7 +19,6 @@ export type RenderResult = {
 export async function render({
 	content,
 }: { content: Buffer }): Promise<RenderResult> {
-	const frontmatter: Node | null = null;
 	const result = await unified()
 		.use(remarkParse)
 		.use(remarkFrontmatter)

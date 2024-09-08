@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daily on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/daily/</link><description>Recent content in Daily on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sat, 31 Aug 2024 21:44:53 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>Goのanalysisとtypesに入門する</title><link>https://blog.nfurudono.com/posts/go-static-analysis/</link><pubDate>Sat, 31 Aug 2024 15:02:41 +0900</pubDate><guid>https://blog.nfurudono.com/posts/go-static-analysis/</guid><description>&lt;h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daily on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/daily/</link><description>Recent content in Daily on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sun, 08 Sep 2024 16:02:12 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-09-08</title><link>https://blog.nfurudono.com/daily/2024-09-08/</link><pubDate>Sun, 08 Sep 2024 15:39:11 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-08/</guid><description>&lt;p>代々木公園で会社の人たちとランニングをしたいのだけど、荷物をどうするかとかが悩ましい。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.1010.or.jp/map/item/item-cnt-355">銭湯&lt;/a>に預ける&lt;/li>
+&lt;li>会社に置いていく
+&lt;ul>
+&lt;li>社員証を持って走ることになるのと、会社内をランニングの格好でうろつくことになるのがネック&lt;/li>
+&lt;li>あと目立ちやすい&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>会社のジムに置いていく
+&lt;ul>
+&lt;li>走った後にシャワーを使えるのがいいところ。社員証を持って走ることになるのと、会社内をランニングの格好でうろつくことになるのがネック&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>こう思うとジムで走る人の気持ちがわかってくる。あれはランニングの品質を犠牲にする代わりに着替えとかの便利を手に入れているのだろう。部室って偉大だったんだな。あと（地元の）オリエンティアが色々ガサツで公園でてきとうに着替えて荷物はその辺に置いておくスタイルだったので気が付かなかった。&lt;/p></description></item><item><title>Goのanalysisとtypesに入門する</title><link>https://blog.nfurudono.com/posts/go-static-analysis/</link><pubDate>Sat, 31 Aug 2024 15:02:41 +0900</pubDate><guid>https://blog.nfurudono.com/posts/go-static-analysis/</guid><description>&lt;h2>
 &lt;a href="#%e6%a6%82%e8%a6%81" id="概要" class="anchor" aria-hidden="true">概要&lt;/a>
 &lt;/h2>
 &lt;p>Goで静的解析してリンターを実装したい。具体的には、あるT1インターフェース型の変数がスコープにあるときは、T1よりゆるい任意の型の使用を禁止する、みたいな制約を入れたい。その辺に転がっている記事ではASTを覗いてみたり、SSAを覗いてみたりするようだけど、ASTとその型をまともに扱っていつつ、いい感じに静的解析ツールとして仕上げる記事を見つけられなかった。&lt;/p></description></item><item><title>2024-08-21</title><link>https://blog.nfurudono.com/daily/2024-08-21/</link><pubDate>Wed, 21 Aug 2024 00:48:04 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-21/</guid><description>&lt;h2>

@@ -32,7 +32,9 @@ export default function RootLayout({
 									</li>
 								);
 							})}
-							<Link href="https://twitter.com/furudono2">書いてる人のTwitter</Link>
+							<Link href="https://twitter.com/furudono2">
+								書いてる人のTwitter
+							</Link>
 						</ul>
 					</nav>
 				</footer>

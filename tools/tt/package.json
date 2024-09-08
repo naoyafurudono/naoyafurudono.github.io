@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "biome check --write --unsafe src/**/*"
+    "check": "biome check --write --unsafe src/**/*",
+    "test": "vitest run"
   },
   "engines": {
     "node": "22.x"

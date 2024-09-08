@@ -35,7 +35,7 @@ Params:
   showReadMore: false
   mainSections:
     - posts
-    - daily
+    # - daily 
   images:
     - images/thumbnail.png
   listPageDateFormat: 2006-01-02 MST

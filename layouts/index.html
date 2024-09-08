@@ -1,5 +1,8 @@
 {{ define "main" }}
 <div class="article-content">
+    <div>
+        日記は移転します。今はトップページからの動線を消しているだけで、このサイトでもホスティングしてはいます。おそらくそのうちホスティングしなくなります。移転先は <a href="https://diary-nfurudono.pages.dev">https://diary-nfurudono.pages.dev</a> です。
+    </div>
     {{ if isset .Site.Params "description" }}
     <div class="description">
         <p>{{ .Site.Params.Description | markdownify }}</p>

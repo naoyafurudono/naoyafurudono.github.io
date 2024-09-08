@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: "ブログです",
+	title: "ブログ",
 	description: "ブログです",
 };
 
@@ -25,16 +25,19 @@ export default function RootLayout({
 				<footer>
 					<nav>
 						<ul>
-							{[{ path: "/", text: "ホーム" }].map(({ path, text }) => {
+							{[
+								{ href: "/", text: "ホーム" },
+								{
+									href: "https://twitter.com/furudono2",
+									text: "書いてる人のTwitter",
+								},
+							].map(({ href, text }) => {
 								return (
-									<li key={path}>
-										<Link href={path}>{text}</Link>
+									<li key={href}>
+										<Link href={href}>{text}</Link>
 									</li>
 								);
 							})}
-							<Link href="https://twitter.com/furudono2">
-								書いてる人のTwitter
-							</Link>
 						</ul>
 					</nav>
 				</footer>

@@ -4,6 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
 	title: "ブログ",
 	description: "ブログです",
+	authors: [
+		{
+			name: "Naoya Furudono",
+			url: "https://blog.nfurudono.com/profile/",
+		},
+	],
 };
 
 export default function RootLayout({

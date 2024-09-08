@@ -46,5 +46,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const r = await render(a);
 	return {
 		title: r.title,
+		description: r.desc,
 	};
 }

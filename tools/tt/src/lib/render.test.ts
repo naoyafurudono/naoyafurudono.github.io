@@ -47,3 +47,18 @@ date: "2024-08-15"
 	const r = await render({ content: Buffer.from(content) });
 	expect(r.draft).toBeFalsy;
 });
+
+test("最初の段落がdescとして取れる", async () => {
+	const content = `
+ ---
+ title: Hello, world!
+ date: "2024-08-15"
+ ---
+ # Hello, world!
+ 
+ これはあいさつです。
+ こんにちは。
+     `;
+	const r = await render({ content: Buffer.from(content) });
+	expect(r.desc).include("こんにちは");
+});

@@ -13,6 +13,7 @@ export type ArticleMeta = {
 	date: string;
 	title: string;
 	draft: boolean;
+	desc: string;
 };
 export type Article = {
 	content: Buffer;
@@ -54,6 +55,7 @@ export async function listArticles(): Promise<Array<Article>> {
 					date: r.date,
 					content: content,
 					draft: r.draft,
+					desc: r.desc,
 				};
 			});
 	});

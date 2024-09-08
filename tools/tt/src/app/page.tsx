@@ -30,6 +30,7 @@ const ArticleSummary = async ({ article }: SummaryProps) => {
 		<article>
 			<div>
 				<a href={`/posts/${article.id}`}>{article.title}</a>
+				<p>{article.desc}</p>
 			</div>
 		</article>
 	);

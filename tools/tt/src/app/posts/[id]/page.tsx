@@ -1,4 +1,4 @@
-import { findArticle, listArticles } from "@/lib/gateway";
+import { findArticle, listPublishedArticles } from "@/lib/gateway";
 import { type RenderResult, render } from "@/lib/render";
 import type { Metadata, NextPage } from "next";
 
@@ -31,7 +31,7 @@ const Post: NextPage<Props> = async ({ params }) => {
 
 export default Post;
 export async function generateStaticParams() {
-	const as = await listArticles();
+	const as = await listPublishedArticles();
 	return as.map((a) => ({
 		id: a.id,
 	}));
@@ -46,5 +46,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const r = await render(a);
 	return {
 		title: r.title,
+		description: r.desc,
 	};
 }

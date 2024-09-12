@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "biome check --write --unsafe src/**/*"
+    "check": "biome check --write --unsafe src/**/*",
+    "test": "vitest run"
   },
   "engines": {
     "node": "22.x"
@@ -19,6 +20,7 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
+    "rehype-extract-excerpt": "^0.3.1",
     "rehype-stringify": "^10.0.0",
     "remark-extract-frontmatter": "^3.2.0",
     "remark-frontmatter": "^5.0.0",

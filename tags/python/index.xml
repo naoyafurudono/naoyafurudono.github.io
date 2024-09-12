@@ -14,4 +14,27 @@
 &lt;p>昔聴いていた音楽を久しぶりに聞きたくなったのだがSpotifyで配信されていなかった。ローカルにデータがあったのでそこからSpotifyかVLCとかで使えるようにしようと思ったのだが、ローカルデータのファイルフォーマットが変だったりディレクトリ構成がイマイチで体験が良くない。&lt;/p></description></item><item><title>2022-12-28</title><link>https://blog.nfurudono.com/daily/2022-12-28/</link><pubDate>Wed, 28 Dec 2022 19:35:00 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2022-12-28/</guid><description>&lt;h2>
 &lt;a href="#%e5%b9%b4%e6%9c%ab%e7%b7%8f%e4%bc%9a" id="年末総会" class="anchor" aria-hidden="true">年末総会&lt;/a>
 &lt;/h2>
-&lt;p>就職先のイベントに参加してきた。想像以上にたくさんの方に認識していただいていた。僕が初めて認識した方や、ネットで認識していた方、面接などでお世話になった方から、たくさんお話をうかがえて楽しい時間だった。みなさん、ありがとうございました。&lt;/p></description></item><item><title>2022-12-21</title><link>https://blog.nfurudono.com/daily/2022-12-21/</link><pubDate>Wed, 21 Dec 2022 20:44:28 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2022-12-21/</guid><description>&lt;p>最近ちいさな言語処理系(検証器)をPythonで実装している。学校の講義でそういう講義があって、好きに言語を選んでよいということだった。参加者の間で関数型言語がメジャーな感じではなかったのこともあり、怖いもの見たさでPythonを選んでみた。ちなみに今回の実装は性能を問題にしておらず、動くことが大切。&lt;/p></description></item><item><title>Python のfilter関数が良い</title><link>https://blog.nfurudono.com/posts/python-filter/</link><pubDate>Fri, 19 Aug 2022 17:32:37 +0900</pubDate><guid>https://blog.nfurudono.com/posts/python-filter/</guid><description>&lt;p>&lt;a href="https://docs.python.org/ja/3/library/functions.html#filter">ドキュメント&lt;/a> を読むのが早い。&lt;/p></description></item></channel></rss>
+&lt;p>就職先のイベントに参加してきた。想像以上にたくさんの方に認識していただいていた。僕が初めて認識した方や、ネットで認識していた方、面接などでお世話になった方から、たくさんお話をうかがえて楽しい時間だった。みなさん、ありがとうございました。&lt;/p></description></item><item><title>2022-12-21</title><link>https://blog.nfurudono.com/daily/2022-12-21/</link><pubDate>Wed, 21 Dec 2022 20:44:28 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2022-12-21/</guid><description>&lt;p>最近ちいさな言語処理系(検証器)をPythonで実装している。学校の講義でそういう講義があって、好きに言語を選んでよいということだった。参加者の間で関数型言語がメジャーな感じではなかったのこともあり、怖いもの見たさでPythonを選んでみた。ちなみに今回の実装は性能を問題にしておらず、動くことが大切。&lt;/p></description></item><item><title>Python のfilter関数が良い</title><link>https://blog.nfurudono.com/posts/python-filter/</link><pubDate>Fri, 19 Aug 2022 17:32:37 +0900</pubDate><guid>https://blog.nfurudono.com/posts/python-filter/</guid><description>&lt;p>&lt;a href="https://docs.python.org/ja/3/library/functions.html#filter">ドキュメント&lt;/a> を読むのが早い。&lt;/p>
+&lt;p>こういうことができる。&lt;/p>
+&lt;pre>&lt;code class="language-sh">$ cat map-none.py 17:34
+def f(x):
+ if x &amp;lt; 0:
+ return x
+
+for i in filter(f, map(lambda a: a-10, range(100) ) ):
+ print(i)
+
+$ python3 map-none.py 17:34
+-10
+-9
+-8
+-7
+-6
+-5
+-4
+-3
+-2
+-1
+&lt;/code>&lt;/pre>
+&lt;p>静的型つき言語では &lt;code>f&lt;/code> が &lt;code>maybe&lt;/code> を返すようにして、&lt;code>filter&lt;/code> の代わりに &lt;a href="https://hackage.haskell.org/package/base-4.17.0.0/docs/Data-Maybe.html#v:mapMaybe">&lt;code>mapMaybe&lt;/code>&lt;/a> のような関数を使うところだ。
+Python のおしいところは、&lt;code>filter&lt;/code> という名前でよぶところか。&lt;/p></description></item></channel></rss>

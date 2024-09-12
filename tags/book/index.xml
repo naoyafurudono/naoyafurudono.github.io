@@ -1,7 +1,88 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Book on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/book/</link><description>Recent content in Book on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Thu, 15 Aug 2024 15:15:32 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/book/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-07-06</title><link>https://blog.nfurudono.com/daily/2024-07-06/</link><pubDate>Sat, 06 Jul 2024 23:45:10 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-07-06/</guid><description>&lt;h2>
 &lt;a href="#%e6%9c%ac%e6%a3%9a%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%84%e3%82%8b" id="本棚を作っている" class="anchor" aria-hidden="true">本棚を作っている&lt;/a>
 &lt;/h2>
-&lt;p>先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。&lt;/p></description></item><item><title>2024-06-25</title><link>https://blog.nfurudono.com/daily/2024-06-25/</link><pubDate>Tue, 25 Jun 2024 01:24:44 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-25/</guid><description>&lt;p>本棚を自作する。&lt;a href="https://www.todaproduction.com/books/bkshelf/bkfrm.htm">清く正しい本棚の作り方&lt;/a>が参考になりそうなので通読する。&lt;/p></description></item><item><title>読書メモ - eBPF入門</title><link>https://blog.nfurudono.com/book/ebpf-abc/</link><pubDate>Sun, 31 Dec 2023 23:25:26 +0900</pubDate><guid>https://blog.nfurudono.com/book/ebpf-abc/</guid><description>&lt;h2>
+&lt;p>先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。&lt;/p></description></item><item><title>2024-06-25</title><link>https://blog.nfurudono.com/daily/2024-06-25/</link><pubDate>Tue, 25 Jun 2024 01:24:44 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-25/</guid><description>&lt;p>本棚を自作する。&lt;a href="https://www.todaproduction.com/books/bkshelf/bkfrm.htm">清く正しい本棚の作り方&lt;/a>が参考になりそうなので通読する。&lt;/p>
+&lt;p>通読した。以下の手順かな。今度ホームセンター行こう。&lt;/p>
+&lt;ul>
+&lt;li>材料の検討をつける
+&lt;ul>
+&lt;li>21mm以上の厚さでカット可能でそれなりのサイズの板が必要&lt;/li>
+&lt;li>パイン集製剤はよさそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>設計する
+&lt;ul>
+&lt;li>自分の本のサイズとその量を見積もるかな&lt;/li>
+&lt;li>僕の場合は専門書が3サイズ（A5?,A4?,教科書？）あるのと小説と漫画がある。それぞれのサイズを計り量を見積もる&lt;/li>
+&lt;li>その上で高さ180cmくらいかなのものを一旦設計して、入手できる材料のサイズを鑑みて調整する&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>材料を調達する
+&lt;ul>
+&lt;li>購入・裁断・運び入れが課題&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>組み立て
+&lt;ul>
+&lt;li>補助線の書き込みと穴あけ、ねじ止めとボンドでの固定がやること&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>研磨
+&lt;ul>
+&lt;li>エッジの処理とかはこのタイミングで一度やる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>塗装
+&lt;ul>
+&lt;li>材料によるがニスとかでいいかな&lt;/li>
+&lt;li>蜜蝋とか油は本への影響がありそうでちょっと怖い&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>乾かす
+&lt;ul>
+&lt;li>塗料が乾くまで外で乾かす。天気が大切&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>研磨
+&lt;ul>
+&lt;li>最後にシュッとやれるとよさそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!--
+# モノレポの話
+
+## 一個め
+
+- 開発環境一発で立ち上げたいのは本当にそう
+- codeownerとsentryを連携するとかもあるとのこと。運用にモノレポを効かせられる
+- gradleのビルドキャッシュをCIサーバからローカルに落とせる。テストもそこに含める。テストの単位ってどうなっているんだろう
+- ドメイン境界でモジュールを分割して依存関係を作り上げるなるほど
+- 依存関係のグラフを見るのはやってみて良さそう
+- ドメイン境界を見つけるために試行錯誤で変化するための基盤としてのモノレポなるほど
+
+## カミナシ
+
+- 管理者のWeb (React)
+- ユーザのモバイル (React Natibe)j
+
+- `node_modules` を共有してて辛い
+ - ここを分離できてればカミナシでもいけたかも
+- 依存関係の管理がうまく行ってなかった。
+- Webとモバイルを一緒にリリースしていて細かくリリースできなかったとのこと
+- `api_packages` (openAPI定義)をクライアントでしか使ってなかった。これをサーバに移した
+ - gitのsubtree mergeを使った
+ - npmパッケージをサーバでのopenAPI定義の更新の度にデプロイするようにした
+
+## アソビュー
+
+- https://www.google.com/search?q=advantages+and+disadvantages+of+a+monorithic+repo&amp;oq=advantages+and+disadvantages+of+a+monorithic+repo&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE2NzgwajBqN6gCALACAA&amp;sourceid=chrome&amp;ie=UTF-8
+- 認知負荷の低下をメリットとして挙げがち
+- 技術的課題というより文化の問題は確かに
+- 移行のために haraban/tomonoを使った
+- feature flagや自動テスト足した
+ - feature flagの使い方きのさんな
+--></description></item><item><title>読書メモ - eBPF入門</title><link>https://blog.nfurudono.com/book/ebpf-abc/</link><pubDate>Sun, 31 Dec 2023 23:25:26 +0900</pubDate><guid>https://blog.nfurudono.com/book/ebpf-abc/</guid><description>&lt;h2>
 &lt;a href="#%e5%8b%95%e6%a9%9f" id="動機" class="anchor" aria-hidden="true">動機&lt;/a>
 &lt;/h2>
 &lt;ul>
@@ -44,7 +125,11 @@
 callerのcallerから渡されたものをそのまま渡す点で特徴的だ。レジスタマシンではcallerのスタック領域をcalleeが上書きして使うことに対応するのだろう。こういうcall命令はどのくらい実用されているのだろうか。&lt;/p></description></item><item><title>2023-06-16</title><link>https://blog.nfurudono.com/daily/2023-06-16/</link><pubDate>Fri, 16 Jun 2023 21:51:28 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-06-16/</guid><description>&lt;h2>
 &lt;a href="#%e6%ac%b2%e6%9c%9b%e3%81%ae%e8%a6%8b%e3%81%a4%e3%81%91%e6%96%b9%e3%82%92%e8%aa%ad%e3%82%93%e3%81%a7%e3%82%8b" id="欲望の見つけ方を読んでる" class="anchor" aria-hidden="true">欲望の見つけ方を読んでる&lt;/a>
 &lt;/h2>
-&lt;p>話題だったので読んでみている。手塚治虫っぽい印象を受けてる。&lt;/p></description></item><item><title>2023-06-10</title><link>https://blog.nfurudono.com/daily/2023-06-10/</link><pubDate>Sat, 10 Jun 2023 14:04:45 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-06-10/</guid><description>&lt;h2>
+&lt;p>話題だったので読んでみている。手塚治虫っぽい印象を受けてる。&lt;/p>
+&lt;h3>
+&lt;a href="#%e8%bf%bd%e8%a8%98" id="追記" class="anchor" aria-hidden="true">追記&lt;/a>
+&lt;/h3>
+&lt;p>ある程度目を通したけど、村上春樹の小説のような例え話が実用書で延々と続いて途中で読むのをやめてしまった。たまに話題にでてきていた模倣理論とかは気になるので、そっちを調べてみようかしら。&lt;/p></description></item><item><title>2023-06-10</title><link>https://blog.nfurudono.com/daily/2023-06-10/</link><pubDate>Sat, 10 Jun 2023 14:04:45 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-06-10/</guid><description>&lt;h2>
 &lt;a href="#%e3%81%93%e3%81%ae%e3%81%82%e3%81%84%e3%81%a0%e9%87%8e%e5%b4%8e%e3%81%be%e3%81%a9%e3%81%ae%e3%82%bf%e3%82%a4%e3%82%bf%e3%83%b3%e3%82%92%e8%aa%ad%e3%82%93%e3%81%a0" id="このあいだ野崎まどのタイタンを読んだ" class="anchor" aria-hidden="true">このあいだ野崎まどのタイタンを読んだ。&lt;/a>
 &lt;/h2>
 &lt;p>共感できるところが多かったし、なるほどなと思うところもあった。なにより読んでて楽しかったので読んでよかった。&lt;/p></description></item><item><title>2023-05-31</title><link>https://blog.nfurudono.com/daily/2023-05-31/</link><pubDate>Wed, 31 May 2023 19:42:53 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-05-31/</guid><description>&lt;h2>

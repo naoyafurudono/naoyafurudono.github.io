@@ -1,10 +1,93 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/home/</link><description>Recent content in Home on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sun, 07 Jul 2024 01:06:24 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/home/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-07-06</title><link>https://blog.nfurudono.com/daily/2024-07-06/</link><pubDate>Sat, 06 Jul 2024 23:45:10 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-07-06/</guid><description>&lt;h2>
 &lt;a href="#%e6%9c%ac%e6%a3%9a%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%84%e3%82%8b" id="本棚を作っている" class="anchor" aria-hidden="true">本棚を作っている&lt;/a>
 &lt;/h2>
-&lt;p>先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。&lt;/p></description></item><item><title>2024-06-25</title><link>https://blog.nfurudono.com/daily/2024-06-25/</link><pubDate>Tue, 25 Jun 2024 01:24:44 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-25/</guid><description>&lt;p>本棚を自作する。&lt;a href="https://www.todaproduction.com/books/bkshelf/bkfrm.htm">清く正しい本棚の作り方&lt;/a>が参考になりそうなので通読する。&lt;/p></description></item><item><title>インテリア</title><link>https://blog.nfurudono.com/posts/interia/</link><pubDate>Mon, 29 Apr 2024 00:42:38 +0900</pubDate><guid>https://blog.nfurudono.com/posts/interia/</guid><description>&lt;h2>
+&lt;p>先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。&lt;/p></description></item><item><title>2024-06-25</title><link>https://blog.nfurudono.com/daily/2024-06-25/</link><pubDate>Tue, 25 Jun 2024 01:24:44 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-25/</guid><description>&lt;p>本棚を自作する。&lt;a href="https://www.todaproduction.com/books/bkshelf/bkfrm.htm">清く正しい本棚の作り方&lt;/a>が参考になりそうなので通読する。&lt;/p>
+&lt;p>通読した。以下の手順かな。今度ホームセンター行こう。&lt;/p>
+&lt;ul>
+&lt;li>材料の検討をつける
+&lt;ul>
+&lt;li>21mm以上の厚さでカット可能でそれなりのサイズの板が必要&lt;/li>
+&lt;li>パイン集製剤はよさそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>設計する
+&lt;ul>
+&lt;li>自分の本のサイズとその量を見積もるかな&lt;/li>
+&lt;li>僕の場合は専門書が3サイズ（A5?,A4?,教科書？）あるのと小説と漫画がある。それぞれのサイズを計り量を見積もる&lt;/li>
+&lt;li>その上で高さ180cmくらいかなのものを一旦設計して、入手できる材料のサイズを鑑みて調整する&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>材料を調達する
+&lt;ul>
+&lt;li>購入・裁断・運び入れが課題&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>組み立て
+&lt;ul>
+&lt;li>補助線の書き込みと穴あけ、ねじ止めとボンドでの固定がやること&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>研磨
+&lt;ul>
+&lt;li>エッジの処理とかはこのタイミングで一度やる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>塗装
+&lt;ul>
+&lt;li>材料によるがニスとかでいいかな&lt;/li>
+&lt;li>蜜蝋とか油は本への影響がありそうでちょっと怖い&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>乾かす
+&lt;ul>
+&lt;li>塗料が乾くまで外で乾かす。天気が大切&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>研磨
+&lt;ul>
+&lt;li>最後にシュッとやれるとよさそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!--
+# モノレポの話
+
+## 一個め
+
+- 開発環境一発で立ち上げたいのは本当にそう
+- codeownerとsentryを連携するとかもあるとのこと。運用にモノレポを効かせられる
+- gradleのビルドキャッシュをCIサーバからローカルに落とせる。テストもそこに含める。テストの単位ってどうなっているんだろう
+- ドメイン境界でモジュールを分割して依存関係を作り上げるなるほど
+- 依存関係のグラフを見るのはやってみて良さそう
+- ドメイン境界を見つけるために試行錯誤で変化するための基盤としてのモノレポなるほど
+
+## カミナシ
+
+- 管理者のWeb (React)
+- ユーザのモバイル (React Natibe)j
+
+- `node_modules` を共有してて辛い
+ - ここを分離できてればカミナシでもいけたかも
+- 依存関係の管理がうまく行ってなかった。
+- Webとモバイルを一緒にリリースしていて細かくリリースできなかったとのこと
+- `api_packages` (openAPI定義)をクライアントでしか使ってなかった。これをサーバに移した
+ - gitのsubtree mergeを使った
+ - npmパッケージをサーバでのopenAPI定義の更新の度にデプロイするようにした
+
+## アソビュー
+
+- https://www.google.com/search?q=advantages+and+disadvantages+of+a+monorithic+repo&amp;oq=advantages+and+disadvantages+of+a+monorithic+repo&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE2NzgwajBqN6gCALACAA&amp;sourceid=chrome&amp;ie=UTF-8
+- 認知負荷の低下をメリットとして挙げがち
+- 技術的課題というより文化の問題は確かに
+- 移行のために haraban/tomonoを使った
+- feature flagや自動テスト足した
+ - feature flagの使い方きのさんな
+--></description></item><item><title>インテリア</title><link>https://blog.nfurudono.com/posts/interia/</link><pubDate>Mon, 29 Apr 2024 00:42:38 +0900</pubDate><guid>https://blog.nfurudono.com/posts/interia/</guid><description>&lt;h2>
 &lt;a href="#2024-04-29" id="2024-04-29" class="anchor" aria-hidden="true">2024-04-29&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://blog.nfurudono.com/daily/2024-02-12/#家のインテリア">以前インテリアについて書いた&lt;/a>続きを不定期でやっている。前回は以下のように書いていた。&lt;/p></description></item><item><title>2024-03-22</title><link>https://blog.nfurudono.com/daily/2024-03-22/</link><pubDate>Fri, 22 Mar 2024 21:52:53 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-22/</guid><description>&lt;p>2年間くらい不在だったフライパンのふたの取手をさっきリニューアルした。取手の穴に割り箸を差し込む運用からついに解放される。&lt;/p>
+&lt;p>&lt;a href="https://blog.nfurudono.com/daily/2024-02-12/#家のインテリア">以前インテリアについて書いた&lt;/a>続きを不定期でやっている。前回は以下のように書いていた。&lt;/p>
+&lt;blockquote>
+&lt;p>今日たくさん寝て軽くランニングしたらなかなか幸せな時間を過ごせた。ただいまはそのクオリティが持続していない。夕食の目処が立っていないこととか部屋がちょっと寒いこと、姿勢が微妙なことが原因だろう。軽く座って作業する空間はやはり欲しい。机にがっつり向かうか後傾でノートパソコンを叩くか、床で作業するかの三択でQOLっぽい作業時間を過ごす空間がない。コメダで作業する姿勢を家でも取れるようにしたいイメージ。やはりベンチソファだと思うんだよな。僕のユースケースだとソファだけでなく机も欲しいことに気がついたのが今週末の成果。&lt;/p></description></item><item><title>2024-03-22</title><link>https://blog.nfurudono.com/daily/2024-03-22/</link><pubDate>Fri, 22 Mar 2024 21:52:53 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-22/</guid><description>&lt;p>2年間くらい不在だったフライパンのふたの取手をさっきリニューアルした。取手の穴に割り箸を差し込む運用からついに解放される。&lt;/p>
 &lt;p>ふたを掃除するときに取手を外したら、乾かしている間にネジがどこかに行ってしまったのだった。それから2年間ネジを探し続けてきている（まだ諦めてないぞ）のだけど、イオンで取手だけ売ってたので衝動買いしてしまった。多分今年のベストバイ。&lt;/p></description></item><item><title>2024-02-27</title><link>https://blog.nfurudono.com/daily/2024-02-27/</link><pubDate>Tue, 27 Feb 2024 00:15:35 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-27/</guid><description>&lt;h2>
 &lt;a href="#%e6%96%b0%e5%b1%85%e3%81%ae%e4%b8%8d%e6%ba%80" id="新居の不満" class="anchor" aria-hidden="true">新居の不満&lt;/a>
 &lt;/h2>

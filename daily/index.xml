@@ -5,7 +5,8 @@
 &lt;a href="#zed%e3%81%8c%e8%89%af%e3%81%84" id="zedが良い" class="anchor" aria-hidden="true">Zedが良い&lt;/a>
 &lt;/h2>
 &lt;p>Zedエディタをずっと使っている。nvimを使う機会は無くなったと思う。ぼくにとってnvimを使うのは起動が爆速なvimモードで編集できるエディタであることだけがモチベーションだった。
-Zedがそれをほぼカバーしているので、慣れとか不満をまとめることを目的としてZedを使うことにした。&lt;/p></description></item><item><title>2024-08-15</title><link>https://blog.nfurudono.com/daily/2024-08-15/</link><pubDate>Thu, 15 Aug 2024 15:04:52 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-15/</guid><description>&lt;p>日記をnextjsでビルドして、cloudflare pagesにデプロイするようにした。cnameの設定が効くようになれば、&lt;a href="https://diary.nfurudono.com">https://diary.nfurudono.com&lt;/a>から見えるようになるはず。&lt;/p></description></item><item><title>2024-08-12</title><link>https://blog.nfurudono.com/daily/2024-08-12/</link><pubDate>Mon, 12 Aug 2024 22:51:04 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-12/</guid><description>&lt;p>vimの &lt;code>sort&lt;/code> コマンドを知った。設定ファイル書くときとかの、気持ち並び替えておきたいところに使えて便利。&lt;/p>
+Zedがそれをほぼカバーしているので、慣れとか不満をまとめることを目的としてZedを使うことにした。&lt;/p></description></item><item><title>2024-08-15</title><link>https://blog.nfurudono.com/daily/2024-08-15/</link><pubDate>Thu, 15 Aug 2024 15:04:52 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-15/</guid><description>&lt;p>日記をnextjsでビルドして、cloudflare pagesにデプロイするようにした。cnameの設定が効くようになれば、&lt;a href="https://diary.nfurudono.com">https://diary.nfurudono.com&lt;/a>から見えるようになるはず。&lt;/p>
+&lt;p>cloudflareのアカウントを初めて作って設定したが、体験よかった。デプロイとか周りの開発のためにCLIツールやそれのgithub actionsバインディングが提供されていて、サクッとデプロイできた。記念すべき初デプロイの成功をメモしておく&lt;a href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/runs/10399555684/job/28798614059">https://github.com/naoyafurudono/naoyafurudono.github.io/actions/runs/10399555684/job/28798614059&lt;/a>&lt;/p></description></item><item><title>2024-08-12</title><link>https://blog.nfurudono.com/daily/2024-08-12/</link><pubDate>Mon, 12 Aug 2024 22:51:04 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-12/</guid><description>&lt;p>vimの &lt;code>sort&lt;/code> コマンドを知った。設定ファイル書くときとかの、気持ち並び替えておきたいところに使えて便利。&lt;/p>
 &lt;p>週末は帰省して、さらに親の実家に行き親戚に会ってきた。いとこの子供にジュースをたかられて甘やかす体験を初めてした。あんなに食べて大丈夫かと思うほどよく食べる。&lt;/p></description></item><item><title>2024-08-03</title><link>https://blog.nfurudono.com/daily/2024-08-03/</link><pubDate>Sat, 03 Aug 2024 12:14:16 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-03/</guid><description>&lt;h2>
 &lt;a href="#%e4%ba%8b%e6%a5%ad%e3%81%a7%e4%bd%bf%e3%81%86%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%92%e8%a8%ad%e8%a8%88%e3%81%99%e3%82%8b%e3%81%a8%e3%81%8d%e3%81%ae%e8%a9%b1" id="事業で使うシステムを設計するときの話" class="anchor" aria-hidden="true">事業で使うシステムを設計するときの話&lt;/a>
 &lt;/h2>
@@ -14,7 +15,88 @@ Expression probremは必ずしも解決しなくてよいと思っていて、�
 &lt;p>猫と犬を飼ってこころを通わせることを一瞬夢見たけど、ふとしたタイミングでそう思ってるのは自分だけであって彼らは自分に依存するしかない生活を送っているのだから都合よく振舞っているだけなのではないか、とか思いそうなのでやっぱりいやと思ったのだった。&lt;/p></description></item><item><title>2024-07-06</title><link>https://blog.nfurudono.com/daily/2024-07-06/</link><pubDate>Sat, 06 Jul 2024 23:45:10 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-07-06/</guid><description>&lt;h2>
 &lt;a href="#%e6%9c%ac%e6%a3%9a%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%84%e3%82%8b" id="本棚を作っている" class="anchor" aria-hidden="true">本棚を作っている&lt;/a>
 &lt;/h2>
-&lt;p>先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。&lt;/p></description></item><item><title>2024-06-25</title><link>https://blog.nfurudono.com/daily/2024-06-25/</link><pubDate>Tue, 25 Jun 2024 01:24:44 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-25/</guid><description>&lt;p>本棚を自作する。&lt;a href="https://www.todaproduction.com/books/bkshelf/bkfrm.htm">清く正しい本棚の作り方&lt;/a>が参考になりそうなので通読する。&lt;/p></description></item><item><title>2024-06-08</title><link>https://blog.nfurudono.com/daily/2024-06-08/</link><pubDate>Sat, 08 Jun 2024 23:59:32 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-08/</guid><description>&lt;p>goconに行ったりscala matsuriで知ってる人が登壇してるのをみて、発信する人になるのが楽しいのだなと心に刻んだ。発信に対するフィードバックをもらえたり、自分を認識してもらった上で質問してコミュニケーションできるのは強い。&lt;/p></description></item><item><title>2024-06-05</title><link>https://blog.nfurudono.com/daily/2024-06-05/</link><pubDate>Wed, 05 Jun 2024 00:08:07 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-05/</guid><description>&lt;p>&lt;a href="https://www.kikumasamune.shop/c/notseisyu/whisky/nz971">https://www.kikumasamune.shop/c/notseisyu/whisky/nz971&lt;/a> これすごくおいしかったので買い足そうと思ったら売り切れてた。大事に飲もう。&lt;/p>
+&lt;p>先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。&lt;/p></description></item><item><title>2024-06-25</title><link>https://blog.nfurudono.com/daily/2024-06-25/</link><pubDate>Tue, 25 Jun 2024 01:24:44 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-25/</guid><description>&lt;p>本棚を自作する。&lt;a href="https://www.todaproduction.com/books/bkshelf/bkfrm.htm">清く正しい本棚の作り方&lt;/a>が参考になりそうなので通読する。&lt;/p>
+&lt;p>通読した。以下の手順かな。今度ホームセンター行こう。&lt;/p>
+&lt;ul>
+&lt;li>材料の検討をつける
+&lt;ul>
+&lt;li>21mm以上の厚さでカット可能でそれなりのサイズの板が必要&lt;/li>
+&lt;li>パイン集製剤はよさそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>設計する
+&lt;ul>
+&lt;li>自分の本のサイズとその量を見積もるかな&lt;/li>
+&lt;li>僕の場合は専門書が3サイズ（A5?,A4?,教科書？）あるのと小説と漫画がある。それぞれのサイズを計り量を見積もる&lt;/li>
+&lt;li>その上で高さ180cmくらいかなのものを一旦設計して、入手できる材料のサイズを鑑みて調整する&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>材料を調達する
+&lt;ul>
+&lt;li>購入・裁断・運び入れが課題&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>組み立て
+&lt;ul>
+&lt;li>補助線の書き込みと穴あけ、ねじ止めとボンドでの固定がやること&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>研磨
+&lt;ul>
+&lt;li>エッジの処理とかはこのタイミングで一度やる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>塗装
+&lt;ul>
+&lt;li>材料によるがニスとかでいいかな&lt;/li>
+&lt;li>蜜蝋とか油は本への影響がありそうでちょっと怖い&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>乾かす
+&lt;ul>
+&lt;li>塗料が乾くまで外で乾かす。天気が大切&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>研磨
+&lt;ul>
+&lt;li>最後にシュッとやれるとよさそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!--
+# モノレポの話
+
+## 一個め
+
+- 開発環境一発で立ち上げたいのは本当にそう
+- codeownerとsentryを連携するとかもあるとのこと。運用にモノレポを効かせられる
+- gradleのビルドキャッシュをCIサーバからローカルに落とせる。テストもそこに含める。テストの単位ってどうなっているんだろう
+- ドメイン境界でモジュールを分割して依存関係を作り上げるなるほど
+- 依存関係のグラフを見るのはやってみて良さそう
+- ドメイン境界を見つけるために試行錯誤で変化するための基盤としてのモノレポなるほど
+
+## カミナシ
+
+- 管理者のWeb (React)
+- ユーザのモバイル (React Natibe)j
+
+- `node_modules` を共有してて辛い
+ - ここを分離できてればカミナシでもいけたかも
+- 依存関係の管理がうまく行ってなかった。
+- Webとモバイルを一緒にリリースしていて細かくリリースできなかったとのこと
+- `api_packages` (openAPI定義)をクライアントでしか使ってなかった。これをサーバに移した
+ - gitのsubtree mergeを使った
+ - npmパッケージをサーバでのopenAPI定義の更新の度にデプロイするようにした
+
+## アソビュー
+
+- https://www.google.com/search?q=advantages+and+disadvantages+of+a+monorithic+repo&amp;oq=advantages+and+disadvantages+of+a+monorithic+repo&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE2NzgwajBqN6gCALACAA&amp;sourceid=chrome&amp;ie=UTF-8
+- 認知負荷の低下をメリットとして挙げがち
+- 技術的課題というより文化の問題は確かに
+- 移行のために haraban/tomonoを使った
+- feature flagや自動テスト足した
+ - feature flagの使い方きのさんな
+--></description></item><item><title>2024-06-08</title><link>https://blog.nfurudono.com/daily/2024-06-08/</link><pubDate>Sat, 08 Jun 2024 23:59:32 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-08/</guid><description>&lt;p>goconに行ったりscala matsuriで知ってる人が登壇してるのをみて、発信する人になるのが楽しいのだなと心に刻んだ。発信に対するフィードバックをもらえたり、自分を認識してもらった上で質問してコミュニケーションできるのは強い。&lt;/p></description></item><item><title>2024-06-05</title><link>https://blog.nfurudono.com/daily/2024-06-05/</link><pubDate>Wed, 05 Jun 2024 00:08:07 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-05/</guid><description>&lt;p>&lt;a href="https://www.kikumasamune.shop/c/notseisyu/whisky/nz971">https://www.kikumasamune.shop/c/notseisyu/whisky/nz971&lt;/a> これすごくおいしかったので買い足そうと思ったら売り切れてた。大事に飲もう。&lt;/p>
 &lt;p>フロムザバレルと似たものを感じる&lt;/p>
 &lt;p>&lt;a href="https://www.kikumasamune.shop/c/seisyu/daiginjyou/nk220?top_pickup">https://www.kikumasamune.shop/c/seisyu/daiginjyou/nk220?top_pickup&lt;/a>
 これはその逆かな。&lt;/p></description></item><item><title>2024-05-23</title><link>https://blog.nfurudono.com/daily/2024-05-23/</link><pubDate>Thu, 23 May 2024 00:19:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-05-23/</guid><description>&lt;p>&lt;a href="https://youtu.be/hCuMWrfXG4E?si=Viiw626EEgkaP7p5">https://youtu.be/hCuMWrfXG4E?si=Viiw626EEgkaP7p5&lt;/a>
@@ -42,7 +124,8 @@ Webアプリは雰囲気で変更したいはずで（ソフトウェアって�
 &lt;/ul></description></item><item><title>2024-03-09</title><link>https://blog.nfurudono.com/daily/2024-03-09/</link><pubDate>Sat, 09 Mar 2024 00:12:39 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-09/</guid><description>&lt;h2>
 &lt;a href="#web%e3%83%95%e3%83%ad%e3%83%b3%e3%83%88%e3%82%a8%e3%83%b3%e3%83%89%e5%a4%a7%e5%a4%89%e3%81%9d%e3%81%86" id="webフロントエンド大変そう" class="anchor" aria-hidden="true">Webフロントエンド大変そう&lt;/a>
 &lt;/h2>
-&lt;p>フロントエンドのモデルとRPCについて考えてみたい。&lt;/p></description></item><item><title>2024-03-07</title><link>https://blog.nfurudono.com/daily/2024-03-07/</link><pubDate>Thu, 07 Mar 2024 23:40:54 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-07/</guid><description>&lt;p>昔はIPAが好きだったのだけど今はハイネケンが好き。理由は今も昔もなんか甘い気がするからで、味を認知してからそれを好みと判定するところは変わってないけど味覚を認知するところが変わったのだろうと思う。&lt;/p></description></item><item><title>2024-03-02</title><link>https://blog.nfurudono.com/daily/2024-03-02/</link><pubDate>Sat, 02 Mar 2024 10:44:06 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-02/</guid><description>&lt;p>&lt;code>op inject&lt;/code> が欲しいやつだった。テンプレートに1passのURLぽいやつを書いてコマンドに渡すと、そこを埋めたファイルを出力してくれる。埋め込むときに環境変数を読んで、URL内での参照を置換した上で1passのレコードを参照することもできる。&lt;/p></description></item><item><title>2024-02-27</title><link>https://blog.nfurudono.com/daily/2024-02-27/</link><pubDate>Tue, 27 Feb 2024 00:15:35 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-27/</guid><description>&lt;h2>
+&lt;p>フロントエンドのモデルとRPCについて考えてみたい。&lt;/p>
+&lt;p>Webアプリケーションのフロントエンドがリッチなときに、テストをどんな感じで書こうかとか、そもそもアプリケーションをどんな感じで書こうかと悩む。僕は悩んでいる。&lt;/p></description></item><item><title>2024-03-07</title><link>https://blog.nfurudono.com/daily/2024-03-07/</link><pubDate>Thu, 07 Mar 2024 23:40:54 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-07/</guid><description>&lt;p>昔はIPAが好きだったのだけど今はハイネケンが好き。理由は今も昔もなんか甘い気がするからで、味を認知してからそれを好みと判定するところは変わってないけど味覚を認知するところが変わったのだろうと思う。&lt;/p></description></item><item><title>2024-03-02</title><link>https://blog.nfurudono.com/daily/2024-03-02/</link><pubDate>Sat, 02 Mar 2024 10:44:06 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-02/</guid><description>&lt;p>&lt;code>op inject&lt;/code> が欲しいやつだった。テンプレートに1passのURLぽいやつを書いてコマンドに渡すと、そこを埋めたファイルを出力してくれる。埋め込むときに環境変数を読んで、URL内での参照を置換した上で1passのレコードを参照することもできる。&lt;/p></description></item><item><title>2024-02-27</title><link>https://blog.nfurudono.com/daily/2024-02-27/</link><pubDate>Tue, 27 Feb 2024 00:15:35 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-27/</guid><description>&lt;h2>
 &lt;a href="#%e6%96%b0%e5%b1%85%e3%81%ae%e4%b8%8d%e6%ba%80" id="新居の不満" class="anchor" aria-hidden="true">新居の不満&lt;/a>
 &lt;/h2>
 &lt;ul>
@@ -79,7 +162,8 @@ Webアプリは雰囲気で変更したいはずで（ソフトウェアって�
 &lt;/ul></description></item><item><title>2024-02-26</title><link>https://blog.nfurudono.com/daily/2024-02-26/</link><pubDate>Mon, 26 Feb 2024 23:41:32 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-26/</guid><description>&lt;h2>
 &lt;a href="#%e5%8f%a9%e3%81%8d%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%9f%e4%ba%ba%e3%81%8c%e5%81%89%e3%81%84%e8%a9%b1" id="叩きを作った人が偉い話" class="anchor" aria-hidden="true">叩きを作った人が偉い話&lt;/a>
 &lt;/h2>
-&lt;p>人間失格の主人公はそんな失格っていうほどやばい人には思えないというのはあるあるだと思っていて、そういう感想を抱いたことで自分を許せるようになったと思う。そういう人も結構いるんだろうと思う。&lt;/p></description></item><item><title>2024-02-18</title><link>https://blog.nfurudono.com/daily/2024-02-18/</link><pubDate>Sun, 18 Feb 2024 18:32:36 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-18/</guid><description>&lt;p>今の家に初めて人を呼んだ。酒を飲んでタバコを吸い、餃子と焼きそばを作って食べた。どれもうまかったけど寝起きにタバコとコーヒーを一緒に摂取したことでキャパオーバーしてしまった。&lt;/p></description></item><item><title>2024-02-17</title><link>https://blog.nfurudono.com/daily/2024-02-17/</link><pubDate>Sat, 17 Feb 2024 17:55:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-17/</guid><description>&lt;p>glangに&lt;a href="https://github.com/golang/go/issues/61405">generaterを入れようというプロポーザル&lt;/a>があって、試験的に実装されているみたい。いくつかのパターンがあるけど、&lt;a href="https://go.dev/play/p/93W3jTQjBk0?v=gotip">だいたいこんな感じで使える (The Go Playground)&lt;/a>。&lt;/p></description></item><item><title>2024-02-13</title><link>https://blog.nfurudono.com/daily/2024-02-13/</link><pubDate>Tue, 13 Feb 2024 18:16:15 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-13/</guid><description>&lt;p>今日1on1で教えてもらった。ロールモデルとして追っていく。&lt;a href="https://scrapbox.io/kawasima/%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AB">https://scrapbox.io/kawasima/%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AB&lt;/a>&lt;/p></description></item><item><title>2024-02-12</title><link>https://blog.nfurudono.com/daily/2024-02-12/</link><pubDate>Mon, 12 Feb 2024 16:54:41 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-12/</guid><description>&lt;h2>
+&lt;p>人間失格の主人公はそんな失格っていうほどやばい人には思えないというのはあるあるだと思っていて、そういう感想を抱いたことで自分を許せるようになったと思う。そういう人も結構いるんだろうと思う。&lt;/p></description></item><item><title>2024-02-18</title><link>https://blog.nfurudono.com/daily/2024-02-18/</link><pubDate>Sun, 18 Feb 2024 18:32:36 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-18/</guid><description>&lt;p>今の家に初めて人を呼んだ。酒を飲んでタバコを吸い、餃子と焼きそばを作って食べた。どれもうまかったけど寝起きにタバコとコーヒーを一緒に摂取したことでキャパオーバーしてしまった。&lt;/p></description></item><item><title>2024-02-17</title><link>https://blog.nfurudono.com/daily/2024-02-17/</link><pubDate>Sat, 17 Feb 2024 17:55:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-17/</guid><description>&lt;p>glangに&lt;a href="https://github.com/golang/go/issues/61405">generaterを入れようというプロポーザル&lt;/a>があって、試験的に実装されているみたい。いくつかのパターンがあるけど、&lt;a href="https://go.dev/play/p/93W3jTQjBk0?v=gotip">だいたいこんな感じで使える (The Go Playground)&lt;/a>。&lt;/p>
+&lt;p>ジェネレータとして使われる関数は定義の段階では普通の関数と区別がつかないような構文定義をされている。コンパイラやランタイムの実装が気になるし、静的解析ツールが大変なことにならないかが心配。&lt;/p></description></item><item><title>2024-02-13</title><link>https://blog.nfurudono.com/daily/2024-02-13/</link><pubDate>Tue, 13 Feb 2024 18:16:15 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-13/</guid><description>&lt;p>今日1on1で教えてもらった。ロールモデルとして追っていく。&lt;a href="https://scrapbox.io/kawasima/%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AB">https://scrapbox.io/kawasima/%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AB&lt;/a>&lt;/p></description></item><item><title>2024-02-12</title><link>https://blog.nfurudono.com/daily/2024-02-12/</link><pubDate>Mon, 12 Feb 2024 16:54:41 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-12/</guid><description>&lt;h2>
 &lt;a href="#web%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e5%ae%9f%e8%a3%85%e6%96%b9%e9%87%9d%e3%82%92%e8%80%83%e3%81%88%e3%81%a6%e3%81%bf%e3%81%9f%e3%83%a1%e3%83%a2" id="webアプリケーションの実装方針を考えてみたメモ" class="anchor" aria-hidden="true">Webアプリケーションの実装方針を考えてみたメモ&lt;/a>
 &lt;/h2>
 &lt;p>管理画面の設計について考えてみる。
@@ -97,19 +181,121 @@ Webアプリケーションでもろもろを設定する際のUI設計を考え
 &lt;h3>
 &lt;a href="#%e5%88%86%e9%87%8f" id="分量" class="anchor" aria-hidden="true">分量&lt;/a>
 &lt;/h3>
-&lt;p>質量ベース。&lt;/p></description></item><item><title>2023-12-26</title><link>https://blog.nfurudono.com/daily/2023-12-26/</link><pubDate>Tue, 26 Dec 2023 20:15:27 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-12-26/</guid><description>&lt;h2>
+&lt;p>質量ベース。&lt;/p>
+&lt;ul>
+&lt;li>あずき: 1&lt;/li>
+&lt;li>砂糖: 0.5&lt;/li>
+&lt;li>水: 4&lt;/li>
+&lt;/ul>
+&lt;h3>
+&lt;a href="#%e6%89%8b%e9%a0%86" id="手順" class="anchor" aria-hidden="true">手順&lt;/a>
+&lt;/h3>
+&lt;ol>
+&lt;li>渋抜き: 茹でてタンニンとかを抜く
+&lt;ol>
+&lt;li>水から茹でる。沸騰してから20min蓋をして火を止める。&lt;/li>
+&lt;li>煮汁を捨てる&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>煮込み: 柔らかくしたり味をつけたりする
+&lt;ol>
+&lt;li>45-75min煮る: 豆の4-5倍の水を用いる。指で潰せるようになったらok&lt;/li>
+&lt;li>30min蒸らす。加熱むらをなくす&lt;/li>
+&lt;li>汁を捨てたり水を加えたりしてバランスを整える&lt;/li>
+&lt;li>火をかけつつ砂糖を加える。沸騰後5minで火を止める&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h2>
+&lt;a href="#2023%e6%8c%af%e3%82%8a%e8%bf%94%e3%82%8a" id="2023振り返り" class="anchor" aria-hidden="true">2023振り返り&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>修論を提出して卒業した&lt;/li>
+&lt;li>入社した。7月までずっと研修をしていた。&lt;/li>
+&lt;li>7月末からOJTを始める。12月末までずっと。
+&lt;ul>
+&lt;li>かっこいい先輩たちのかっこよさをたくさん見れたのが良かった&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>インカレの運営で演出のパートチーフをやる
+&lt;ul>
+&lt;li>多方面に迷惑をかけつつ、仕事を人に丸投げすることを覚えた&lt;/li>
+&lt;li>しっかり進めるのは僕より得意な人がたくさんいるので基本人に任せる方がコミュニケーションコストを込みにしても早い&lt;/li>
+&lt;li>自分がやった方が早いことは特に思いつかないのが寂しいところ。仕事を説明したのが偉かったのだと思うことにすると幸せになれる？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>同期が人生を進めているのも印象的&lt;/li>
+&lt;li>お金の自由が効くようになった
+&lt;ul>
+&lt;li>引越ししちゃった&lt;/li>
+&lt;li>行動範囲が劇的に広がったかというとそんなことはない。店入る頻度が増えたとかそういう程度。生活水準が微増した感じ。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>出社の影響で運動が減った。8時間も働くと疲れちゃうので。翌日のことを考えて0時に走り出すのを恐れるのも要因だと思う。&lt;/li>
+&lt;li>学習時間はどうだろう。仕事で学習するからなんともか。自分の意思で選んだコンテンツを学ぶことは減った。&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#2024%e5%b9%b4%e3%81%ae%e7%9b%ae%e6%a8%99" id="2024年の目標" class="anchor" aria-hidden="true">2024年の目標&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>人生をやるぞ
+&lt;ul>
+&lt;li>お金の自由が増えた分はここで生かす&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>走る。サブ3を達成する。マラソン大会を探そう。
+&lt;ul>
+&lt;li>これとかで力量を試して11月とかの大会で達成する？ &lt;a href="https://www.sportsentry.ne.jp/event/t/93823">https://www.sportsentry.ne.jp/event/t/93823&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>自炊を増やす
+&lt;ul>
+&lt;li>夕飯の少なくとも一品は自分で作ったものにしよう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>技術の話はまた別途&lt;/li>
+&lt;/ul>
+&lt;!--
+- アプリケーション開発の基盤となる技術を一つ深掘りする。応用を見据えたい気持ちがある。
+ - 期限をどう切ろうかね
+ - 1ヶ月本気で取り組んでみよう。表現したい対象を自在に表現できるエディタを作ることを目標にする。VSCodeを作りたいわけではない。例えばmermaidをサクサクかけるエディタとかを作りたい。
+ - 身につけたい・自分で理解して実装したい技術をあらかじめ整理しよう
+ - キーボード入力
+ - ファイルの編集
+ - コマンド操作
+ - エディタの高速化・効率化
+ - 拡張性
+ - 一旦置いておくこと
+ - レンダリング: reactを書くことは許容する
+ - あまり便利なライブラリは使いたくないけど
+ - 文に波線を引く実装は自分で行いたいけど、波線の形を自分で指定したくはない。
+ - 必要ならやるけど。できればしたくない
+ - ウィンドウの実装
+ - どの技術を選ぶかがネック。それをいつになったら決められるかがわからない。
+ - どれなら熱中できそうか
+ - 表現の幅を広げること、実装の幅を広げること、実現する機能の幅を広げることなら楽しいか
+ - 例えばVueを勉強することはそんなに幅を広げない。すでにReactをある程度知っているので物の捉え方の幅は広がっても実現できる対象の幅は広がらないだろう
+ - ピアノをマスターすれば幅は広がる（技術の幅が広がるかは微妙なのでやらないけど）
+ - データモデリングとDB設計とか？でも全く知らない話ではないな。割とノリで色々こなせはする。そのあたりの運用はあまり知らない。アプリケーションをどう動かすか、開発し続けるか見たいなのは手薄になっている。
+ - エディタとlang serverはどうだろう。lang serverクライアントとして一定の機能を提供するエディタを実装する。キーボード入力をいい感じに受け取る。ショートカットも受け付ける。それをmacで実装しよう。最適化も楽しそうだしネイティブアプリは作り方が想像つかない。快適にその中で暮らせるようなUXをシステムとして実装する技術を身につける。IMEとかでもいいか。vimとかvscodeの応答速度に不満があるのでどうにかしたい。
+ - どれなら今後継続して楽しめそうか、効いてきそうか
+
+better wordpressしたい。
+--></description></item><item><title>2023-12-26</title><link>https://blog.nfurudono.com/daily/2023-12-26/</link><pubDate>Tue, 26 Dec 2023 20:15:27 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-12-26/</guid><description>&lt;h2>
 &lt;a href="#%e3%83%a1%e3%83%a2" id="メモ" class="anchor" aria-hidden="true">メモ&lt;/a>
 &lt;/h2>
 &lt;p>ついったで同僚が &lt;code>panicIndex&lt;/code> と言っていて、なんだそれと思ったので調べた。golangの文脈だったので想像はある程度ついて、golangのランタイムの一部として？実装されている関数でインデックスに関するパニックを投げる関数だった。&lt;/p></description></item><item><title>2023-12-21</title><link>https://blog.nfurudono.com/daily/2023-12-21/</link><pubDate>Thu, 21 Dec 2023 22:35:26 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-12-21/</guid><description>&lt;p>ターミナルのプロンプトを &lt;code>❯&lt;/code> に一瞬変えたのだけど、心が荒みそうになったのですぐに &lt;code>🐧&lt;/code> に戻した。&lt;/p></description></item><item><title>2023-11-25</title><link>https://blog.nfurudono.com/daily/2023-11-25/</link><pubDate>Sat, 25 Nov 2023 02:10:46 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-25/</guid><description>&lt;h2>
 &lt;a href="#%e4%be%9d%e5%ad%98%e6%80%a7%e9%80%86%e8%bb%a2" id="依存性逆転" class="anchor" aria-hidden="true">依存性逆転&lt;/a>
 &lt;/h2>
-&lt;p>依存性逆転の原則の何が嬉しいか思い出せなくなったので考えてみる。&lt;/p></description></item><item><title>2023-11-22</title><link>https://blog.nfurudono.com/daily/2023-11-22/</link><pubDate>Wed, 22 Nov 2023 22:56:59 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-22/</guid><description>&lt;h2>
+&lt;p>依存性逆転の原則の何が嬉しいか思い出せなくなったので考えてみる。&lt;/p>
+&lt;p>ぼくが今思い出せる依存性逆転の原則は、抽象度の高いロジックを表現するのにそれを実現するために必要な部分問題の解決があるとき、抽象度の高いロジックが部分問題の解決方法に依存しなくなることが嬉しい。&lt;/p></description></item><item><title>2023-11-22</title><link>https://blog.nfurudono.com/daily/2023-11-22/</link><pubDate>Wed, 22 Nov 2023 22:56:59 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-22/</guid><description>&lt;h2>
 &lt;a href="#%e8%87%aa%e5%88%86%e6%8e%a2%e3%81%97%e3%81%ae%e6%8c%af%e3%82%8a%e8%bf%94%e3%82%8a" id="自分探しの振り返り" class="anchor" aria-hidden="true">自分探しの振り返り&lt;/a>
 &lt;/h2>
 &lt;p>高校生の頃、進路を考えるにあたって自分は何を求めているかを真剣に考えて幸せになることだと行き着いた。幸せにも色々あるはずで、僕の幸せはなんだろうかと思った結果、いろんなことに理解を深めることかなと思い至って進路を決めた（理学部に進学した）。大学で少し考えを変えて色々うまくできるようになることに重きを置くようになった。その中で理解することに重きをおいてはいるけど。&lt;/p></description></item><item><title>2023-11-16</title><link>https://blog.nfurudono.com/daily/2023-11-16/</link><pubDate>Thu, 16 Nov 2023 00:06:25 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-16/</guid><description>&lt;h2>
 &lt;a href="#%e5%92%8c%e9%a2%a8%e3%81%aa%e3%83%86%e3%82%a4%e3%82%b9%e3%83%88" id="和風なテイスト" class="anchor" aria-hidden="true">和風なテイスト&lt;/a>
 &lt;/h2>
-&lt;p>家ごとにホコリに傾向があるんじゃないだろうか。家人の髪やシーツ、カーテンなどホコリを左右するファクタは多そうで、ホコリは家の特徴を切り取っていそう。猫の味は分かるか知らないが、猫のいる家はホコリを見ればわかる。味覚ではなし得ないテイスティングをホコリで実現できるのだ。&lt;/p></description></item><item><title>2023-11-14</title><link>https://blog.nfurudono.com/daily/2023-11-14/</link><pubDate>Tue, 14 Nov 2023 23:03:59 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-14/</guid><description>&lt;p>このブログのデプロイに使っているgithub action workflowを読んでいたら、外部リポジトリにデプロイするのも簡単なことに気がついた。&lt;a href="https://github.com/peaceiris/actions-gh-pages/tree/v3/#%EF%B8%8F-deploy-to-external-repository-external_repository">https://github.com/peaceiris/actions-gh-pages/tree/v3/#%EF%B8%8F-deploy-to-external-repository-external_repository&lt;/a>&lt;/p></description></item><item><title>2023-11-07</title><link>https://blog.nfurudono.com/daily/2023-11-07/</link><pubDate>Tue, 07 Nov 2023 20:53:43 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-07/</guid><description>&lt;p>ドキュメントを読むときに参考文献が適切に使われていないと辛い。ドキュメントには2種類あると思っている。&lt;/p>
+&lt;p>家ごとにホコリに傾向があるんじゃないだろうか。家人の髪やシーツ、カーテンなどホコリを左右するファクタは多そうで、ホコリは家の特徴を切り取っていそう。猫の味は分かるか知らないが、猫のいる家はホコリを見ればわかる。味覚ではなし得ないテイスティングをホコリで実現できるのだ。&lt;/p></description></item><item><title>2023-11-14</title><link>https://blog.nfurudono.com/daily/2023-11-14/</link><pubDate>Tue, 14 Nov 2023 23:03:59 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-14/</guid><description>&lt;p>このブログのデプロイに使っているgithub action workflowを読んでいたら、外部リポジトリにデプロイするのも簡単なことに気がついた。&lt;a href="https://github.com/peaceiris/actions-gh-pages/tree/v3/#%EF%B8%8F-deploy-to-external-repository-external_repository">https://github.com/peaceiris/actions-gh-pages/tree/v3/#%EF%B8%8F-deploy-to-external-repository-external_repository&lt;/a>&lt;/p>
+&lt;p>たとえばプライベートリポジトリでマークダウンを管理して、公開したいアセットだけを今のリポジトリに置く運用を実現できる。公開したくない文言はどこにも書かない運用にしているのだけど、限界はたまに感じるので移行しても良いかも。とはいえ情報はできるだけオープンにしたい信仰があるのも確かなので悩ましい。&lt;/p></description></item><item><title>2023-11-07</title><link>https://blog.nfurudono.com/daily/2023-11-07/</link><pubDate>Tue, 07 Nov 2023 20:53:43 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-07/</guid><description>&lt;p>ドキュメントを読むときに参考文献が適切に使われていないと辛い。ドキュメントには2種類あると思っている。&lt;/p>
 &lt;ol>
 &lt;li>水先案内&lt;/li>
 &lt;li>主張をするドキュメント&lt;/li>
@@ -130,14 +316,23 @@ hugoではそのオプションを活用しないでいたみたい。&lt;/p></d
 &lt;p>仕事とか技術っぽい話をするときに背景が揃っていて欲しいと思う。議論や質問、ミーティングでは背景を合わせることを大事にしていく。背景がわからないとモヤモヤしてときにはイラっとするし、見当違いな方向に話が進んだりするので。&lt;/p></description></item><item><title>2023-09-21</title><link>https://blog.nfurudono.com/daily/2023-09-21/</link><pubDate>Thu, 21 Sep 2023 21:18:11 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-21/</guid><description>&lt;h2>
 &lt;a href="#%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88%e3%83%8f%e3%83%83%e3%82%b7%e3%83%a5%e3%81%8b%e3%82%89pr%e3%82%92%e7%89%b9%e5%ae%9a%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" id="コミットハッシュからprを特定する方法" class="anchor" aria-hidden="true">コミットハッシュからPRを特定する方法&lt;/a>
 &lt;/h2>
-&lt;p>&lt;code>gh&lt;/code> コマンドを使うとPRの番号とタイトルを取得できる。&lt;/p></description></item><item><title>2023-09-19</title><link>https://blog.nfurudono.com/daily/2023-09-19/</link><pubDate>Tue, 19 Sep 2023 19:33:14 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-19/</guid><description>&lt;p>ドキュメントを読むときにパッと見で読んだ気になってしまったので反省。とはいえドキュメントを使うときに理解しきるまで常に頑張るのもどうかと思うので難しい。&lt;/p></description></item><item><title>2023-09-13</title><link>https://blog.nfurudono.com/daily/2023-09-13/</link><pubDate>Wed, 13 Sep 2023 23:22:32 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-13/</guid><description>&lt;h2>
+&lt;p>&lt;code>gh&lt;/code> コマンドを使うとPRの番号とタイトルを取得できる。&lt;/p>
+&lt;pre>&lt;code class="language-sh">gh pr list --search &amp;quot;&amp;lt;SHA&amp;gt;&amp;quot; --state merged`
+&lt;/code>&lt;/pre>
+&lt;p>&lt;a href="https://cli.github.com/manual/gh_pr_list">https://cli.github.com/manual/gh_pr_list&lt;/a>&lt;/p></description></item><item><title>2023-09-19</title><link>https://blog.nfurudono.com/daily/2023-09-19/</link><pubDate>Tue, 19 Sep 2023 19:33:14 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-19/</guid><description>&lt;p>ドキュメントを読むときにパッと見で読んだ気になってしまったので反省。とはいえドキュメントを使うときに理解しきるまで常に頑張るのもどうかと思うので難しい。&lt;/p></description></item><item><title>2023-09-13</title><link>https://blog.nfurudono.com/daily/2023-09-13/</link><pubDate>Wed, 13 Sep 2023 23:22:32 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-13/</guid><description>&lt;h2>
 &lt;a href="#%e6%b0%97%e3%81%a5%e3%81%8d" id="気づき" class="anchor" aria-hidden="true">気づき&lt;/a>
 &lt;/h2>
 &lt;p>今家のトイレで気がついてんですが、冷蔵庫と自分の体にはどんな落書きしても人に迷惑かけないので落書きし放題です！！
 何書こうかな&amp;hellip;。&lt;/p></description></item><item><title>2023-09-12</title><link>https://blog.nfurudono.com/daily/2023-09-12/</link><pubDate>Tue, 12 Sep 2023 01:20:35 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-12/</guid><description>&lt;h2>
 &lt;a href="#rust%e9%9b%a3%e3%81%97%e3%81%84" id="rust難しい" class="anchor" aria-hidden="true">rust難しい&lt;/a>
 &lt;/h2>
-&lt;p>以下のあたりを完全に理解したらだいぶ楽になる気がする。&lt;/p></description></item><item><title>2023-09-10</title><link>https://blog.nfurudono.com/daily/2023-09-10/</link><pubDate>Sun, 10 Sep 2023 16:48:32 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-10/</guid><description>&lt;h2>
+&lt;p>以下のあたりを完全に理解したらだいぶ楽になる気がする。&lt;/p>
+&lt;ul>
+&lt;li>エラー処理&lt;/li>
+&lt;li>イテレータ&lt;/li>
+&lt;li>借用とcopy&lt;/li>
+&lt;/ul>
+&lt;p>エラー処理やイテレータの周りはrustに限らずどの言語でも乗り越える一つの壁な気がする。例えばpythonに入門したときは、フランクにExceptionを継承したクラスを定義して、それを投げたりキャッチしたりすることを覚えたり、ジェネレータやリスト内包表記を覚えたりしたときに楽になった。そのほかはモジュールとかパッケージ周りの仕組みが新しく言語を学ぶときの障壁だと思っている。&lt;/p></description></item><item><title>2023-09-10</title><link>https://blog.nfurudono.com/daily/2023-09-10/</link><pubDate>Sun, 10 Sep 2023 16:48:32 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-10/</guid><description>&lt;h2>
 &lt;a href="#%e7%96%b2%e3%82%8c%e3%81%ae%e8%87%aa%e8%a6%9a" id="疲れの自覚" class="anchor" aria-hidden="true">疲れの自覚&lt;/a>
 &lt;/h2>
 &lt;p>昨日は大会運営の準備で一日外にいた。楽しいので後悔はないのだけど、だいぶ疲れて今日の夕方になったのにまだ疲れてぐたっとしている。&lt;/p></description></item><item><title>2023-09-09</title><link>https://blog.nfurudono.com/daily/2023-09-09/</link><pubDate>Sat, 09 Sep 2023 22:52:30 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-09/</guid><description>&lt;h2>
@@ -253,7 +448,11 @@ anyhowを使ってみたい気持ちが湧いたけど、まずは基本的な�
 7時/19時で掃除するようにしたので、目覚まし代わりになるはずだし、寝る前と出勤前に床を片付ける習慣がつきそうで期待してる。&lt;/p></description></item><item><title>2023-06-16</title><link>https://blog.nfurudono.com/daily/2023-06-16/</link><pubDate>Fri, 16 Jun 2023 21:51:28 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-06-16/</guid><description>&lt;h2>
 &lt;a href="#%e6%ac%b2%e6%9c%9b%e3%81%ae%e8%a6%8b%e3%81%a4%e3%81%91%e6%96%b9%e3%82%92%e8%aa%ad%e3%82%93%e3%81%a7%e3%82%8b" id="欲望の見つけ方を読んでる" class="anchor" aria-hidden="true">欲望の見つけ方を読んでる&lt;/a>
 &lt;/h2>
-&lt;p>話題だったので読んでみている。手塚治虫っぽい印象を受けてる。&lt;/p></description></item><item><title>2023-06-11</title><link>https://blog.nfurudono.com/daily/2023-06-11/</link><pubDate>Sun, 11 Jun 2023 15:31:11 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-06-11/</guid><description>&lt;h2>
+&lt;p>話題だったので読んでみている。手塚治虫っぽい印象を受けてる。&lt;/p>
+&lt;h3>
+&lt;a href="#%e8%bf%bd%e8%a8%98" id="追記" class="anchor" aria-hidden="true">追記&lt;/a>
+&lt;/h3>
+&lt;p>ある程度目を通したけど、村上春樹の小説のような例え話が実用書で延々と続いて途中で読むのをやめてしまった。たまに話題にでてきていた模倣理論とかは気になるので、そっちを調べてみようかしら。&lt;/p></description></item><item><title>2023-06-11</title><link>https://blog.nfurudono.com/daily/2023-06-11/</link><pubDate>Sun, 11 Jun 2023 15:31:11 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-06-11/</guid><description>&lt;h2>
 &lt;a href="#%e5%a5%bd%e3%81%8d%e3%81%aa%e3%82%b3%e3%83%bc%e3%83%92%e3%83%bc%e3%81%ae%e5%91%b3" id="好きなコーヒーの味" class="anchor" aria-hidden="true">好きなコーヒーの味&lt;/a>
 &lt;/h2>
 &lt;p>舌の奥の方や、先端よりも少し奥、中央くらいで味わううまみやとろっとした感じが好き。苦味とか酸味にはなれてしまってあまり感じなくなったみたい。&lt;/p></description></item><item><title>2023-06-10</title><link>https://blog.nfurudono.com/daily/2023-06-10/</link><pubDate>Sat, 10 Jun 2023 14:04:45 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-06-10/</guid><description>&lt;h2>
@@ -282,7 +481,9 @@ anyhowを使ってみたい気持ちが湧いたけど、まずは基本的な�
 &lt;p>日曜はトレランして昨日は筋トレ、今日は走った。えらい。明日は夜に髪を切ってもらうのでおやすみ。今日は丸子橋で引き返した。退勤後はこれくらいがちょうどいい。&lt;/p></description></item><item><title>2023-05-14</title><link>https://blog.nfurudono.com/daily/2023-05-14/</link><pubDate>Sun, 14 May 2023 00:28:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-05-14/</guid><description>&lt;h2>
 &lt;a href="#%e4%b9%85%e3%81%97%e3%81%b6%e3%82%8a%e3%81%ae%e3%83%88%e3%83%ac%e3%83%a9%e3%83%b3" id="久しぶりのトレラン" class="anchor" aria-hidden="true">久しぶりのトレラン&lt;/a>
 &lt;/h2>
-&lt;p>高尾山で走ってきた&lt;a href="https://www.strava.com/activities/9067106161">(strava)&lt;/a>。雨が降ったりやんだりしていて、濡れながら走った。僕ともう一人しか集まらなかったので二人でいったが、楽しかった。向こうにペースをだいぶ合わせてもらった。今回は高尾山の山頂を迂回して、小仏峠、景信山まで行った。陣馬山までいくことも考えはしていたけど、帰れるか不安だったので引き返すことにした。&lt;/p></description></item><item><title>2023-05-13</title><link>https://blog.nfurudono.com/daily/2023-05-13/</link><pubDate>Sat, 13 May 2023 20:38:25 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-05-13/</guid><description>&lt;h2>
+&lt;p>高尾山で走ってきた&lt;a href="https://www.strava.com/activities/9067106161">(strava)&lt;/a>。雨が降ったりやんだりしていて、濡れながら走った。僕ともう一人しか集まらなかったので二人でいったが、楽しかった。向こうにペースをだいぶ合わせてもらった。今回は高尾山の山頂を迂回して、小仏峠、景信山まで行った。陣馬山までいくことも考えはしていたけど、帰れるか不安だったので引き返すことにした。&lt;/p>
+&lt;p>景信山で持参した&lt;a href="https://www.ginbis.co.jp/product/13002.html">たべっ子水族館&lt;/a>を食べて帰ってきた。会社の先輩が猛プッシュしていて気になったので持っていったのだった。おいしかったけど、シルエットが崩壊していて、どれが何なのかは全然わからなかった。水族館の生き物を山の上に連れて行ったのがまずかったかもしれない。&lt;/p>
+&lt;p>二人トレランはなかなか楽しかった。お風呂に入ってご飯を食べて帰宅。今日はからっぽになってしまった。ガッツリ運動したあとはなにもできないことを思い出した。近場のトレランだと明るいうちに帰ってこれるのでなんでもできる気になるがそんなことはない。ほわほわしてても楽しめることをあらかじめ用意しておかないともどかしい気持ちになってしまう。&lt;/p></description></item><item><title>2023-05-13</title><link>https://blog.nfurudono.com/daily/2023-05-13/</link><pubDate>Sat, 13 May 2023 20:38:25 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-05-13/</guid><description>&lt;h2>
 &lt;a href="#%e4%bb%8a%e6%97%a5%e3%81%afrust%e3%82%92%e5%b0%91%e3%81%97%e5%8b%89%e5%bc%b7%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b" id="今日はrustを少し勉強している" class="anchor" aria-hidden="true">今日はRustを少し勉強している&lt;/a>
 &lt;/h2>
 &lt;p>もともと&lt;code>bash&lt;/code>で書いていたスクリプトを拡張したくなって、普段ならPythonで書くところを今日は新しいことをしてみようということでRustをつかってみることにした。&lt;/p></description></item><item><title>2023-05-09</title><link>https://blog.nfurudono.com/daily/2023-05-09/</link><pubDate>Tue, 09 May 2023 18:15:40 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-05-09/</guid><description>&lt;h2>
@@ -312,7 +513,11 @@ APIを提供しているように見えない機関はどうやって対応し�
 RPA的なものを使うのがうまかったり、営業を頑張ったりしている感じな気はする。なかなか便利。&lt;/p></description></item><item><title>2023-04-28</title><link>https://blog.nfurudono.com/daily/2023-04-28/</link><pubDate>Fri, 28 Apr 2023 00:34:21 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-04-28/</guid><description>&lt;h2>
 &lt;a href="#%e6%84%8f%e5%91%b3%e8%ab%96%e3%81%ae%e8%a9%b1" id="意味論の話" class="anchor" aria-hidden="true">意味論の話&lt;/a>
 &lt;/h2>
-&lt;p>今日は意味論の直感が少し生えたので機嫌がいい。寝て起きたらもう少しまじめに考えよう。&lt;/p></description></item><item><title>2023-04-27</title><link>https://blog.nfurudono.com/daily/2023-04-27/</link><pubDate>Thu, 27 Apr 2023 23:32:18 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-04-27/</guid><description>&lt;h2>
+&lt;p>今日は意味論の直感が少し生えたので機嫌がいい。寝て起きたらもう少しまじめに考えよう。&lt;/p>
+&lt;h3>
+&lt;a href="#%e8%bf%bd%e8%a8%98" id="追記" class="anchor" aria-hidden="true">追記&lt;/a>
+&lt;/h3>
+&lt;p>完全に忘れていた。一回捨てた継続渡しスタイルで考えるのがやはり良いだろうという直感のもとでの考えだった。細かいことは忘れてしまったが、少し考えれば再現できる程度だったと思う。継続フレームを生むときと、式を評価するタイミングを明示的にわけるとか、反対にそういうくくりで共通化することでこれまで見えていなかったアスペクトが表面化していい感じになりそう、みたいな直感だった気がする。&lt;/p></description></item><item><title>2023-04-27</title><link>https://blog.nfurudono.com/daily/2023-04-27/</link><pubDate>Thu, 27 Apr 2023 23:32:18 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-04-27/</guid><description>&lt;h2>
 &lt;a href="#%e6%a5%bd%e3%81%97%e3%81%95" id="楽しさ" class="anchor" aria-hidden="true">楽しさ&lt;/a>
 &lt;/h2>
 &lt;p>人と語るわけでもなければ、熱狂的に推すわけでもないのに、僕はなにのためにアニメを見たり、小説を読んだり、音楽を聞いたりするのだろうか。アニメはほぼ毎日みるし、小説は人並み以上に読むと思う。漫画もそれなりに読むし、音楽もなんやかんや毎日聞いている。これまでそういう作品の良さをまともに語ったことはないし、積極的に人と共有したりもしない。物語のキャラクターを推したいと思ったこともない。アーティストを好きになることはあっても、エッセイを読みたいとはあまり思わなくて、あくまでその人の作品が好きだからアーティストを好きになっているように思う。&lt;/p></description></item><item><title>2023-04-26</title><link>https://blog.nfurudono.com/daily/2023-04-26/</link><pubDate>Wed, 26 Apr 2023 16:49:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-04-26/</guid><description>&lt;p>おいしいご飯を食べたら感想を残すことにする。お昼に会社近くのご飯屋さんに行く機会が多くなりそうなので、その話が多くなりそう。
@@ -337,7 +542,11 @@ GDBを使って大きなソフトウェアの振る舞いを理解する方法�
 &lt;/h2>
 &lt;p>今日はアルバイト先のキャディの方々に送別会を開いていただいた。一年弱お世話になった。あのころはいろんなプログラミングの経験を積みたくて入社し、結果としてキャディのあの部署（秘密なわけじゃないけど、名前がよく変わるので明言しない）
 じゃないと積まなかっただろう経験を積ませて頂いたと思っている。僕はだいぶ一緒に働いた方々に恵まれていて、こんなにぼくに都合の良い環境でいいのだろうかとなんど思ったかわからない。機会があれば（つくれれば）また一緒にぜひとも働きたいと思っている。それまではいわゆる大学で教わる「お行儀のよいプログラミング」しかしらなかったのだが、仕事を通じてどのように僕の仕事に価値をつけるかを意識するようになった。&lt;/p></description></item><item><title>2023-03-21</title><link>https://blog.nfurudono.com/daily/2023-03-21/</link><pubDate>Tue, 21 Mar 2023 22:30:23 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-03-21/</guid><description>&lt;p>今日は久しぶりに自転車をいじった。しばらく乗っていなかったのでタイヤとチューブを交換して、移動のために外していたリアディレーラを取り付けた。チェーンオイルを注せばある程度の遠乗りはできるだろう。&lt;/p></description></item><item><title>2023-03-19</title><link>https://blog.nfurudono.com/daily/2023-03-19/</link><pubDate>Sun, 19 Mar 2023 10:46:59 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-03-19/</guid><description>&lt;p>最近AIが流行っていて、精度がすごいと話題で、生活が多かれ少なかれ変わっていくのだろうなという感じがする。ああいう機械学習ベースのAIは学習で直感を鍛えて、それに基づく出力をするものだと僕は解釈している。人間が頭を使うときには直感を論理とか議論で検証して、主張の穴を見つけて改善するサイクルを回すはずだ。今の機械学習っぽいAIは直感で得た主張を論理で解釈しないだろう（&lt;a href="https://www.nec.com/en/global/rd/technologies/201807/index.html">NECがそういうことを考えていそう&lt;/a>。それができればAIはもっとつよくなるはずだし、そういうAIを見てみたい。&lt;/p></description></item><item><title>2023-03-17</title><link>https://blog.nfurudono.com/daily/2023-03-17/</link><pubDate>Fri, 17 Mar 2023 19:16:57 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-03-17/</guid><description>&lt;p>ホットクックで鶏大根を作った。大根に火がうまく通っていて本領発揮を感じた。&lt;/p>
-&lt;p>注文していた&lt;a href="https://bigpeat.com/">Big Peat&lt;/a>が届いたので、走ってから飲もうと思う。楽しみ。&lt;/p></description></item><item><title>2023-03-14</title><link>https://blog.nfurudono.com/daily/2023-03-14/</link><pubDate>Tue, 14 Mar 2023 18:08:07 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-03-14/</guid><description>&lt;p>TODO: 割と眠いときに書いたのでまとまっていない。気が向いたら書き直す。&lt;/p>
+&lt;p>注文していた&lt;a href="https://bigpeat.com/">Big Peat&lt;/a>が届いたので、走ってから飲もうと思う。楽しみ。&lt;/p>
+&lt;h2>
+&lt;a href="#%e3%82%af%e3%83%a9%e3%82%b9%e6%8c%87%e5%90%91%e3%81%aeoop%e3%81%8c%e3%82%8f%e3%81%8b%e3%82%89%e3%81%aa%e3%81%84" id="クラス指向のoopがわからない" class="anchor" aria-hidden="true">クラス指向のOOPがわからない&lt;/a>
+&lt;/h2>
+&lt;p>クラス指向のOOPがわからない。クラスを作ってそのインスタンスを量産するようなプログラムを書いた経験がないからだろう。&lt;/p></description></item><item><title>2023-03-14</title><link>https://blog.nfurudono.com/daily/2023-03-14/</link><pubDate>Tue, 14 Mar 2023 18:08:07 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-03-14/</guid><description>&lt;p>TODO: 割と眠いときに書いたのでまとまっていない。気が向いたら書き直す。&lt;/p>
 &lt;p>日常のおしゃべりではなくて、仕事や練習、議論の場でどれくらい「優しく」するべきかは悩ましい。真剣に、最短でコミュニケーションするといわゆる優しさが欠けがちなのだが、いわゆる優しさを優先してコミュニケーションしていると本来の目的が疎かになる。&lt;/p></description></item><item><title>2023-03-09</title><link>https://blog.nfurudono.com/daily/2023-03-09/</link><pubDate>Thu, 09 Mar 2023 15:53:59 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-03-09/</guid><description>&lt;p>昨日PPLから帰ってきた。初めて対面で学会に参加した。対面だと変な疲れ方しないし、コミュニケーションを取りやすいのがいい。ポスター発表が特に楽しかった。&lt;/p></description></item><item><title>2023-02-27</title><link>https://blog.nfurudono.com/daily/2023-02-27/</link><pubDate>Mon, 27 Feb 2023 18:56:50 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-02-27/</guid><description>&lt;p>Gentooが入った。基本的に待っているだけではあるのだけど、それがなかなか大変。パッケージを一瞬でインストールできる幸せに気がついた。割とすぐにUbuntuに戻るかもしれない。今はnodejsとtexliveをコンパイルしている。未だかつてなくCPUが仕事をしている。かわいそうに。とはいえportageに触れるのはなかなか楽しい。&lt;/p></description></item><item><title>2023-02-26</title><link>https://blog.nfurudono.com/daily/2023-02-26/</link><pubDate>Sun, 26 Feb 2023 03:39:26 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-02-26/</guid><description>&lt;p>Golangをすごく久しぶりに書いた結果、構造体の要素がコピーされることを忘れておりデバッグに時間を溶かした（コピーした構造体のフィールドを書き換えて、コピー元に変化が起きると思い込んでいた）。最近はPythonやTSか、関数型言語ばかり書いていて、Cっぽい構造体の扱いをしていなかったので忘れてしまっていたのだろう。忘れていたけど、CやGoのように構造体の要素をコピーする意味論は好き。直感的というか、明示的にポインタを表現することが好きなのだろうか。&lt;/p></description></item><item><title>2023-02-24</title><link>https://blog.nfurudono.com/daily/2023-02-24/</link><pubDate>Fri, 24 Feb 2023 19:17:14 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-02-24/</guid><description>&lt;p>最近は時間とベーシックな元気が足りない。この時期にやりたいこと/やるべきことがたくさん押し寄せてくるのはどうしてだろう。変わり目だからか。これまでぼちぼちやっていたものを、みんなが足並みをそろえて一段落つけようとするから忙しいのだろう。意識的に間引く必要があるかな。&lt;/p></description></item><item><title>2023-02-21</title><link>https://blog.nfurudono.com/daily/2023-02-21/</link><pubDate>Tue, 21 Feb 2023 12:54:38 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-02-21/</guid><description>&lt;p>昨日まで4日連続で人とご飯を食べた。いろんな人と話せて楽しかった。今日は研究室に行くし、昨日はオンラインでのコミュニケーションで別のコミュニティの人と話したので、社会性週間だ。てんやわんやしている。（追記）研究室ではお土産を持ってきてくれた人がいて、お茶した。だいぶ話し込んでしまった。&lt;/p></description></item><item><title>2023-02-16</title><link>https://blog.nfurudono.com/daily/2023-02-16/</link><pubDate>Thu, 16 Feb 2023 00:57:27 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-02-16/</guid><description>&lt;p>&lt;a href="https://blog.janestreet.com/the-joy-of-expect-tests/">Jane Streatのテックブログで単体テストの書き方が紹介されていた&lt;/a>。記事ではその手法をexpect testと呼んでいて、プログラムを書いてその結果を確認してokだったら受け入れる、というものだ。受け入れた結果はソースファイルに保存されて、その後は単体テストとして機能する。&lt;/p></description></item><item><title>2023-02-15</title><link>https://blog.nfurudono.com/daily/2023-02-15/</link><pubDate>Wed, 15 Feb 2023 00:12:54 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-02-15/</guid><description>&lt;p>&lt;a href="https://dev.realworldocaml.org/index.html">Real World OCaml FUNCTIONAL PROGRAMMING FOR THE MASSES&lt;/a>を読み始めた。
 Practicalで面白いと伺って、目次を見たら実際そのようだったので読んでいる。
 3年前にプログラミング in OCamlで入門したのが懐かしい。

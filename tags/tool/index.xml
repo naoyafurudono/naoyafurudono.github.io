@@ -5,7 +5,8 @@
 &lt;a href="#zed%e3%81%8c%e8%89%af%e3%81%84" id="zedが良い" class="anchor" aria-hidden="true">Zedが良い&lt;/a>
 &lt;/h2>
 &lt;p>Zedエディタをずっと使っている。nvimを使う機会は無くなったと思う。ぼくにとってnvimを使うのは起動が爆速なvimモードで編集できるエディタであることだけがモチベーションだった。
-Zedがそれをほぼカバーしているので、慣れとか不満をまとめることを目的としてZedを使うことにした。&lt;/p></description></item><item><title>2024-08-15</title><link>https://blog.nfurudono.com/daily/2024-08-15/</link><pubDate>Thu, 15 Aug 2024 15:04:52 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-15/</guid><description>&lt;p>日記をnextjsでビルドして、cloudflare pagesにデプロイするようにした。cnameの設定が効くようになれば、&lt;a href="https://diary.nfurudono.com">https://diary.nfurudono.com&lt;/a>から見えるようになるはず。&lt;/p></description></item><item><title>Neovimにlazyを入れてプラグイン管理することにした</title><link>https://blog.nfurudono.com/posts/lazy-nvim/</link><pubDate>Tue, 13 Aug 2024 12:27:07 +0900</pubDate><guid>https://blog.nfurudono.com/posts/lazy-nvim/</guid><description>&lt;p>これまで特にプラグインを使っていなかった（それくらいで済む用途にしか使っていなかった）のだけど、カラースキームを指定したくなったのでプラグインマネージャを入れた。&lt;/p></description></item><item><title>2024-08-12</title><link>https://blog.nfurudono.com/daily/2024-08-12/</link><pubDate>Mon, 12 Aug 2024 22:51:04 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-12/</guid><description>&lt;p>vimの &lt;code>sort&lt;/code> コマンドを知った。設定ファイル書くときとかの、気持ち並び替えておきたいところに使えて便利。&lt;/p>
+Zedがそれをほぼカバーしているので、慣れとか不満をまとめることを目的としてZedを使うことにした。&lt;/p></description></item><item><title>2024-08-15</title><link>https://blog.nfurudono.com/daily/2024-08-15/</link><pubDate>Thu, 15 Aug 2024 15:04:52 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-15/</guid><description>&lt;p>日記をnextjsでビルドして、cloudflare pagesにデプロイするようにした。cnameの設定が効くようになれば、&lt;a href="https://diary.nfurudono.com">https://diary.nfurudono.com&lt;/a>から見えるようになるはず。&lt;/p>
+&lt;p>cloudflareのアカウントを初めて作って設定したが、体験よかった。デプロイとか周りの開発のためにCLIツールやそれのgithub actionsバインディングが提供されていて、サクッとデプロイできた。記念すべき初デプロイの成功をメモしておく&lt;a href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/runs/10399555684/job/28798614059">https://github.com/naoyafurudono/naoyafurudono.github.io/actions/runs/10399555684/job/28798614059&lt;/a>&lt;/p></description></item><item><title>Neovimにlazyを入れてプラグイン管理することにした</title><link>https://blog.nfurudono.com/posts/lazy-nvim/</link><pubDate>Tue, 13 Aug 2024 12:27:07 +0900</pubDate><guid>https://blog.nfurudono.com/posts/lazy-nvim/</guid><description>&lt;p>これまで特にプラグインを使っていなかった（それくらいで済む用途にしか使っていなかった）のだけど、カラースキームを指定したくなったのでプラグインマネージャを入れた。&lt;/p></description></item><item><title>2024-08-12</title><link>https://blog.nfurudono.com/daily/2024-08-12/</link><pubDate>Mon, 12 Aug 2024 22:51:04 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-12/</guid><description>&lt;p>vimの &lt;code>sort&lt;/code> コマンドを知った。設定ファイル書くときとかの、気持ち並び替えておきたいところに使えて便利。&lt;/p>
 &lt;p>週末は帰省して、さらに親の実家に行き親戚に会ってきた。いとこの子供にジュースをたかられて甘やかす体験を初めてした。あんなに食べて大丈夫かと思うほどよく食べる。&lt;/p></description></item><item><title>AHK入門</title><link>https://blog.nfurudono.com/posts/ahk/</link><pubDate>Sun, 28 Jul 2024 01:41:34 +0900</pubDate><guid>https://blog.nfurudono.com/posts/ahk/</guid><description>&lt;p>Windowsマシンでキーボード操作が不便なので導入する。悪態をつきながらも使っている人を知っているので内容を理解していないが期待している。&lt;/p>
 &lt;h2>
 &lt;a href="#%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" id="インストール" class="anchor" aria-hidden="true">インストール&lt;/a>
@@ -13,7 +14,88 @@ Zedがそれをほぼカバーしているので、慣れとか不満をまと�
 &lt;p>&lt;a href="https://www.autohotkey.com/">https://www.autohotkey.com/&lt;/a> 公式ページからバイナリを落とせる。インストールするとwelcome画面が開いたのだが、そこに「コンパイルする」ボタンがあって、ちょっと不安になる。僕はプログラムをボタンを押してコンパイルしないといけない？&lt;/p></description></item><item><title>2024-07-06</title><link>https://blog.nfurudono.com/daily/2024-07-06/</link><pubDate>Sat, 06 Jul 2024 23:45:10 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-07-06/</guid><description>&lt;h2>
 &lt;a href="#%e6%9c%ac%e6%a3%9a%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%84%e3%82%8b" id="本棚を作っている" class="anchor" aria-hidden="true">本棚を作っている&lt;/a>
 &lt;/h2>
-&lt;p>先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。&lt;/p></description></item><item><title>2024-06-25</title><link>https://blog.nfurudono.com/daily/2024-06-25/</link><pubDate>Tue, 25 Jun 2024 01:24:44 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-25/</guid><description>&lt;p>本棚を自作する。&lt;a href="https://www.todaproduction.com/books/bkshelf/bkfrm.htm">清く正しい本棚の作り方&lt;/a>が参考になりそうなので通読する。&lt;/p></description></item><item><title>RubyKaigi2024参加メモ</title><link>https://blog.nfurudono.com/posts/rubykaigi2024/</link><pubDate>Sat, 18 May 2024 18:51:00 +0900</pubDate><guid>https://blog.nfurudono.com/posts/rubykaigi2024/</guid><description>&lt;p>RubyKaigi2024に参加したので、思ったことをメモしておきます。&lt;/p>
+&lt;p>先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。&lt;/p></description></item><item><title>2024-06-25</title><link>https://blog.nfurudono.com/daily/2024-06-25/</link><pubDate>Tue, 25 Jun 2024 01:24:44 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-06-25/</guid><description>&lt;p>本棚を自作する。&lt;a href="https://www.todaproduction.com/books/bkshelf/bkfrm.htm">清く正しい本棚の作り方&lt;/a>が参考になりそうなので通読する。&lt;/p>
+&lt;p>通読した。以下の手順かな。今度ホームセンター行こう。&lt;/p>
+&lt;ul>
+&lt;li>材料の検討をつける
+&lt;ul>
+&lt;li>21mm以上の厚さでカット可能でそれなりのサイズの板が必要&lt;/li>
+&lt;li>パイン集製剤はよさそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>設計する
+&lt;ul>
+&lt;li>自分の本のサイズとその量を見積もるかな&lt;/li>
+&lt;li>僕の場合は専門書が3サイズ（A5?,A4?,教科書？）あるのと小説と漫画がある。それぞれのサイズを計り量を見積もる&lt;/li>
+&lt;li>その上で高さ180cmくらいかなのものを一旦設計して、入手できる材料のサイズを鑑みて調整する&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>材料を調達する
+&lt;ul>
+&lt;li>購入・裁断・運び入れが課題&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>組み立て
+&lt;ul>
+&lt;li>補助線の書き込みと穴あけ、ねじ止めとボンドでの固定がやること&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>研磨
+&lt;ul>
+&lt;li>エッジの処理とかはこのタイミングで一度やる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>塗装
+&lt;ul>
+&lt;li>材料によるがニスとかでいいかな&lt;/li>
+&lt;li>蜜蝋とか油は本への影響がありそうでちょっと怖い&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>乾かす
+&lt;ul>
+&lt;li>塗料が乾くまで外で乾かす。天気が大切&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>研磨
+&lt;ul>
+&lt;li>最後にシュッとやれるとよさそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!--
+# モノレポの話
+
+## 一個め
+
+- 開発環境一発で立ち上げたいのは本当にそう
+- codeownerとsentryを連携するとかもあるとのこと。運用にモノレポを効かせられる
+- gradleのビルドキャッシュをCIサーバからローカルに落とせる。テストもそこに含める。テストの単位ってどうなっているんだろう
+- ドメイン境界でモジュールを分割して依存関係を作り上げるなるほど
+- 依存関係のグラフを見るのはやってみて良さそう
+- ドメイン境界を見つけるために試行錯誤で変化するための基盤としてのモノレポなるほど
+
+## カミナシ
+
+- 管理者のWeb (React)
+- ユーザのモバイル (React Natibe)j
+
+- `node_modules` を共有してて辛い
+ - ここを分離できてればカミナシでもいけたかも
+- 依存関係の管理がうまく行ってなかった。
+- Webとモバイルを一緒にリリースしていて細かくリリースできなかったとのこと
+- `api_packages` (openAPI定義)をクライアントでしか使ってなかった。これをサーバに移した
+ - gitのsubtree mergeを使った
+ - npmパッケージをサーバでのopenAPI定義の更新の度にデプロイするようにした
+
+## アソビュー
+
+- https://www.google.com/search?q=advantages+and+disadvantages+of+a+monorithic+repo&amp;oq=advantages+and+disadvantages+of+a+monorithic+repo&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE2NzgwajBqN6gCALACAA&amp;sourceid=chrome&amp;ie=UTF-8
+- 認知負荷の低下をメリットとして挙げがち
+- 技術的課題というより文化の問題は確かに
+- 移行のために haraban/tomonoを使った
+- feature flagや自動テスト足した
+ - feature flagの使い方きのさんな
+--></description></item><item><title>RubyKaigi2024参加メモ</title><link>https://blog.nfurudono.com/posts/rubykaigi2024/</link><pubDate>Sat, 18 May 2024 18:51:00 +0900</pubDate><guid>https://blog.nfurudono.com/posts/rubykaigi2024/</guid><description>&lt;p>RubyKaigi2024に参加したので、思ったことをメモしておきます。&lt;/p>
 &lt;p>参加したセッションはこちら: &lt;a href="https://rubykaigi.smarthr.co.jp/2024/plans/d2350276-c631-4bdc-ad75-49e446e798a3">https://rubykaigi.smarthr.co.jp/2024/plans/d2350276-c631-4bdc-ad75-49e446e798a3&lt;/a>&lt;/p>
 &lt;h2>
 &lt;a href="#shopify%e3%81%8c%e3%81%99%e3%81%94%e3%81%84" id="shopifyがすごい" class="anchor" aria-hidden="true">shopifyがすごい&lt;/a>
@@ -25,7 +107,12 @@ ShopifyのRuby周りのチームはまさにそれを地で行っていると今
 &lt;a href="#%e3%82%84%e3%81%a3%e3%81%9f%e3%81%93%e3%81%a8" id="やったこと" class="anchor" aria-hidden="true">やったこと&lt;/a>
 &lt;/h2>
 &lt;p>&lt;a href="https://github.com/naoyafurudono/timer/pull/1">https://github.com/naoyafurudono/timer/pull/1&lt;/a>&lt;/p>
-&lt;p>このプルリクエストで頑張った。コミットメッセージにやったことは書いてある。&lt;/p></description></item><item><title>2024-03-02</title><link>https://blog.nfurudono.com/daily/2024-03-02/</link><pubDate>Sat, 02 Mar 2024 10:44:06 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-02/</guid><description>&lt;p>&lt;code>op inject&lt;/code> が欲しいやつだった。テンプレートに1passのURLぽいやつを書いてコマンドに渡すと、そこを埋めたファイルを出力してくれる。埋め込むときに環境変数を読んで、URL内での参照を置換した上で1passのレコードを参照することもできる。&lt;/p></description></item><item><title>2024-02-17</title><link>https://blog.nfurudono.com/daily/2024-02-17/</link><pubDate>Sat, 17 Feb 2024 17:55:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-17/</guid><description>&lt;p>glangに&lt;a href="https://github.com/golang/go/issues/61405">generaterを入れようというプロポーザル&lt;/a>があって、試験的に実装されているみたい。いくつかのパターンがあるけど、&lt;a href="https://go.dev/play/p/93W3jTQjBk0?v=gotip">だいたいこんな感じで使える (The Go Playground)&lt;/a>。&lt;/p></description></item><item><title>読書メモ - eBPF入門</title><link>https://blog.nfurudono.com/book/ebpf-abc/</link><pubDate>Sun, 31 Dec 2023 23:25:26 +0900</pubDate><guid>https://blog.nfurudono.com/book/ebpf-abc/</guid><description>&lt;h2>
+&lt;p>このプルリクエストで頑張った。コミットメッセージにやったことは書いてある。&lt;/p>
+&lt;h2>
+&lt;a href="#%e5%8f%82%e8%80%83" id="参考" class="anchor" aria-hidden="true">参考&lt;/a>
+&lt;/h2>
+&lt;p>公式ドキュメントがしっかりしてそう。storybookが内部で使っているwebpackが&lt;code>@&lt;/code> インポートを読めないみたいで、プラグインを入れる必要があった。&lt;/p></description></item><item><title>2024-03-02</title><link>https://blog.nfurudono.com/daily/2024-03-02/</link><pubDate>Sat, 02 Mar 2024 10:44:06 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-03-02/</guid><description>&lt;p>&lt;code>op inject&lt;/code> が欲しいやつだった。テンプレートに1passのURLぽいやつを書いてコマンドに渡すと、そこを埋めたファイルを出力してくれる。埋め込むときに環境変数を読んで、URL内での参照を置換した上で1passのレコードを参照することもできる。&lt;/p></description></item><item><title>2024-02-17</title><link>https://blog.nfurudono.com/daily/2024-02-17/</link><pubDate>Sat, 17 Feb 2024 17:55:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-02-17/</guid><description>&lt;p>glangに&lt;a href="https://github.com/golang/go/issues/61405">generaterを入れようというプロポーザル&lt;/a>があって、試験的に実装されているみたい。いくつかのパターンがあるけど、&lt;a href="https://go.dev/play/p/93W3jTQjBk0?v=gotip">だいたいこんな感じで使える (The Go Playground)&lt;/a>。&lt;/p>
+&lt;p>ジェネレータとして使われる関数は定義の段階では普通の関数と区別がつかないような構文定義をされている。コンパイラやランタイムの実装が気になるし、静的解析ツールが大変なことにならないかが心配。&lt;/p></description></item><item><title>読書メモ - eBPF入門</title><link>https://blog.nfurudono.com/book/ebpf-abc/</link><pubDate>Sun, 31 Dec 2023 23:25:26 +0900</pubDate><guid>https://blog.nfurudono.com/book/ebpf-abc/</guid><description>&lt;h2>
 &lt;a href="#%e5%8b%95%e6%a9%9f" id="動機" class="anchor" aria-hidden="true">動機&lt;/a>
 &lt;/h2>
 &lt;ul>
@@ -60,7 +147,8 @@ ShopifyのRuby周りのチームはまさにそれを地で行っていると今
 &lt;/h2>
 &lt;ul>
 &lt;li>プログラムのサイズを制限しているのは何が目的なんだろう&lt;/li>
-&lt;/ul></description></item><item><title>2023-11-14</title><link>https://blog.nfurudono.com/daily/2023-11-14/</link><pubDate>Tue, 14 Nov 2023 23:03:59 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-14/</guid><description>&lt;p>このブログのデプロイに使っているgithub action workflowを読んでいたら、外部リポジトリにデプロイするのも簡単なことに気がついた。&lt;a href="https://github.com/peaceiris/actions-gh-pages/tree/v3/#%EF%B8%8F-deploy-to-external-repository-external_repository">https://github.com/peaceiris/actions-gh-pages/tree/v3/#%EF%B8%8F-deploy-to-external-repository-external_repository&lt;/a>&lt;/p></description></item><item><title>2023-10-24</title><link>https://blog.nfurudono.com/daily/2023-10-24/</link><pubDate>Tue, 24 Oct 2023 00:13:41 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-10-24/</guid><description>&lt;h2>
+&lt;/ul></description></item><item><title>2023-11-14</title><link>https://blog.nfurudono.com/daily/2023-11-14/</link><pubDate>Tue, 14 Nov 2023 23:03:59 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-11-14/</guid><description>&lt;p>このブログのデプロイに使っているgithub action workflowを読んでいたら、外部リポジトリにデプロイするのも簡単なことに気がついた。&lt;a href="https://github.com/peaceiris/actions-gh-pages/tree/v3/#%EF%B8%8F-deploy-to-external-repository-external_repository">https://github.com/peaceiris/actions-gh-pages/tree/v3/#%EF%B8%8F-deploy-to-external-repository-external_repository&lt;/a>&lt;/p>
+&lt;p>たとえばプライベートリポジトリでマークダウンを管理して、公開したいアセットだけを今のリポジトリに置く運用を実現できる。公開したくない文言はどこにも書かない運用にしているのだけど、限界はたまに感じるので移行しても良いかも。とはいえ情報はできるだけオープンにしたい信仰があるのも確かなので悩ましい。&lt;/p></description></item><item><title>2023-10-24</title><link>https://blog.nfurudono.com/daily/2023-10-24/</link><pubDate>Tue, 24 Oct 2023 00:13:41 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-10-24/</guid><description>&lt;h2>
 &lt;a href="#hugo%e3%81%8c%e8%89%af%e3%81%8f%e3%81%aa%e3%81%a3%e3%81%a6%e5%ac%89%e3%81%97%e3%81%84" id="hugoが良くなって嬉しい" class="anchor" aria-hidden="true">hugoが良くなって嬉しい&lt;/a>
 &lt;/h2>
 &lt;p>hugoでCJKの文章で改行を無視できるようになった。
@@ -74,10 +162,14 @@ hugoではそのオプションを活用しないでいたみたい。&lt;/p></d
 | |
 | {{住所}} |
 +--------------------------------+
-&lt;/code>&lt;/pr</description></item><item><title>2023-09-21</title><link>https://blog.nfurudono.com/daily/2023-09-21/</link><pubDate>Thu, 21 Sep 2023 21:18:11 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-21/</guid><description>&lt;h2>
+&lt;/code>&lt;/pre>
+&lt;p>みたいなスライドを作って、&lt;/p></description></item><item><title>2023-09-21</title><link>https://blog.nfurudono.com/daily/2023-09-21/</link><pubDate>Thu, 21 Sep 2023 21:18:11 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-09-21/</guid><description>&lt;h2>
 &lt;a href="#%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88%e3%83%8f%e3%83%83%e3%82%b7%e3%83%a5%e3%81%8b%e3%82%89pr%e3%82%92%e7%89%b9%e5%ae%9a%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" id="コミットハッシュからprを特定する方法" class="anchor" aria-hidden="true">コミットハッシュからPRを特定する方法&lt;/a>
 &lt;/h2>
-&lt;p>&lt;code>gh&lt;/code> コマンドを使うとPRの番号とタイトルを取得できる。&lt;/p></description></item><item><title>ベストバイ</title><link>https://blog.nfurudono.com/posts/2023-09-bestbuy/</link><pubDate>Wed, 13 Sep 2023 22:49:06 +0900</pubDate><guid>https://blog.nfurudono.com/posts/2023-09-bestbuy/</guid><description>&lt;p>酔っていて興が乗ったので「しばらくの間で買って良かったもの」N選をやります！！&lt;/p>
+&lt;p>&lt;code>gh&lt;/code> コマンドを使うとPRの番号とタイトルを取得できる。&lt;/p>
+&lt;pre>&lt;code class="language-sh">gh pr list --search &amp;quot;&amp;lt;SHA&amp;gt;&amp;quot; --state merged`
+&lt;/code>&lt;/pre>
+&lt;p>&lt;a href="https://cli.github.com/manual/gh_pr_list">https://cli.github.com/manual/gh_pr_list&lt;/a>&lt;/p></description></item><item><title>ベストバイ</title><link>https://blog.nfurudono.com/posts/2023-09-bestbuy/</link><pubDate>Wed, 13 Sep 2023 22:49:06 +0900</pubDate><guid>https://blog.nfurudono.com/posts/2023-09-bestbuy/</guid><description>&lt;p>酔っていて興が乗ったので「しばらくの間で買って良かったもの」N選をやります！！&lt;/p>
 &lt;h2>
 &lt;a href="#%e6%9c%ac%e6%a3%9a" id="本棚" class="anchor" aria-hidden="true">本棚&lt;/a>
 &lt;/h2>
@@ -104,7 +196,15 @@ jsonがナウいんじゃないかと思うし、好みとしてもjsonがいい
 &lt;p>dotfileを整備して、シェルの設定を複数のマシンで共有していると、あるコマンドがインストールされている場合にのみ、有効にしたい設定が出てくる。僕が今回遭遇したのは、k8sのcontextをプロンプトに表示する設定をなんとかしたいという欲求。いい感じに表示するコマンドが入っていれば、プロンプトに反映したいけど、入っていなければ別に表示しないのもありで、無理して全てのマシンにコマンドをインストールしたくはない。&lt;/p></description></item><item><title>dotfilesのセットアップスクリプトを書いた</title><link>https://blog.nfurudono.com/posts/dotfiles-setup/</link><pubDate>Thu, 17 Aug 2023 01:15:56 +0900</pubDate><guid>https://blog.nfurudono.com/posts/dotfiles-setup/</guid><description>&lt;h2>
 &lt;a href="#%e5%8b%95%e6%a9%9f" id="動機" class="anchor" aria-hidden="true">動機&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://github.com/naoyafurudono/dotfiles/tree/main">dotfiles&lt;/a>をGitHubで管理しているのだが、今までは設定ファイルの管理だけで、インストールは手動で行なっていた。設定ファイルを使いまわせるだけでだいぶ便利なんだけど、コンテナ環境の中で作業したくなると、手動インストールに耐えられなくなる。そこで重い腰を上げてセットアップを自動化した。&lt;/p></description></item><item><title>2023-07-01</title><link>https://blog.nfurudono.com/daily/2023-07-01/</link><pubDate>Sat, 01 Jul 2023 01:07:45 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-07-01/</guid><description>&lt;h2>
+&lt;p>&lt;a href="https://github.com/naoyafurudono/dotfiles/tree/main">dotfiles&lt;/a>をGitHubで管理しているのだが、今までは設定ファイルの管理だけで、インストールは手動で行なっていた。設定ファイルを使いまわせるだけでだいぶ便利なんだけど、コンテナ環境の中で作業したくなると、手動インストールに耐えられなくなる。そこで重い腰を上げてセットアップを自動化した。&lt;/p>
+&lt;h2>
+&lt;a href="#%e3%82%84%e3%81%a3%e3%81%9f%e3%81%93%e3%81%a8" id="やったこと" class="anchor" aria-hidden="true">やったこと&lt;/a>
+&lt;/h2>
+&lt;h3>
+&lt;a href="#cli%e7%92%b0%e5%a2%83%e3%81%ae%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%82%92%e7%b0%a1%e5%8d%98%e3%81%ab%e3%81%97%e3%81%9f" id="cli環境のセットアップを簡単にした" class="anchor" aria-hidden="true">CLI環境のセットアップを簡単にした&lt;/a>
+&lt;/h3>
+&lt;p>&lt;code>git&lt;/code> のインストールと以下の実行でok。
+nvimとかfishとかcargoとかが入る。&lt;/p></description></item><item><title>2023-07-01</title><link>https://blog.nfurudono.com/daily/2023-07-01/</link><pubDate>Sat, 01 Jul 2023 01:07:45 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2023-07-01/</guid><description>&lt;h2>
 &lt;a href="#envsubst%e3%82%92%e7%9f%a5%e3%81%a3%e3%81%9f" id="envsubstを知った" class="anchor" aria-hidden="true">&lt;code>envsubst&lt;/code>を知った&lt;/a>
 &lt;/h2>
 &lt;p>&lt;code>envsubst&lt;/code>を使うと標準入力の環境変数の参照っぽいところに環境変数の値を埋め込んだテキストを吐ける。

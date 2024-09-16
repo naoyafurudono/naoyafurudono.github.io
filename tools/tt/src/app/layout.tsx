@@ -24,6 +24,7 @@ export default function RootLayout({
 					<nav>
 						<p>
 							<Link href="/">diary.nfurudono.com</Link>
+							<Link href="/todos">todos</Link>
 						</p>
 					</nav>
 				</header>

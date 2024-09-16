@@ -101,6 +101,6 @@ date: "2024-08-15"
     `;
 	const root = unified().use(remarkParse).use(remarkFrontmatter).parse(content);
 
-	const s = await renderMdAst( root );
+	const s = await renderMdAst(root);
 	expect(s).toContain("<h1>Hello, world!</h1>");
 });

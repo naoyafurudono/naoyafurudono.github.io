@@ -24,7 +24,6 @@ export default function RootLayout({
 					<nav>
 						<p>
 							<Link href="/">diary.nfurudono.com</Link>
-							<Link href="/todos">todos</Link>
 						</p>
 					</nav>
 				</header>
@@ -37,6 +36,10 @@ export default function RootLayout({
 								{
 									href: "https://twitter.com/furudono2",
 									text: "書いてる人のTwitter",
+								},
+								{
+									href: "/todos",
+									text: "todos",
 								},
 							].map(({ href, text }) => {
 								return (

@@ -49,9 +49,8 @@ const TodoSummary = async ({ article }: SummaryProps) => {
 			<a href={paths.posts(article.id)}>
 				<h2>{article.title}</h2>
 			</a>
-			記事の一部がここに渡るだけなのでok
 			<div
-				// biome-ignore lint/security/noDangerouslySetInnerHtml:
+				// biome-ignore lint/security/noDangerouslySetInnerHtml: 記事の一部がここに渡るだけなのでok
 				dangerouslySetInnerHTML={{ __html: todohtml }}
 			/>
 		</div>

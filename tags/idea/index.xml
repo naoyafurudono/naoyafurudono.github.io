@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Idea on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/idea/</link><description>Recent content in Idea on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Thu, 22 Aug 2024 17:27:15 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/idea/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-08-15</title><link>https://blog.nfurudono.com/daily/2024-08-15/</link><pubDate>Thu, 15 Aug 2024 15:04:52 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-15/</guid><description>&lt;p>日記をnextjsでビルドして、cloudflare pagesにデプロイするようにした。cnameの設定が効くようになれば、&lt;a href="https://diary.nfurudono.com">https://diary.nfurudono.com&lt;/a>から見えるようになるはず。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Idea on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/idea/</link><description>Recent content in Idea on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Mon, 16 Sep 2024 16:42:00 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/idea/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-09-16</title><link>https://blog.nfurudono.com/daily/2024-09-16/</link><pubDate>Mon, 16 Sep 2024 02:20:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-16/</guid><description>&lt;h2>
+&lt;a href="#%e4%bb%8a%e6%97%a5%e3%82%84%e3%82%8b%e3%81%93%e3%81%a8" id="今日やること" class="anchor" aria-hidden="true">今日やること&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 掃除&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 外出
+&lt;ul>
+&lt;li>電車乗るくらいの外出をする。秋物出たかな。あるいは外で使うと幸せになれるグッツを買うか。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>本読む。k8sのあれ。あとは認証の技術気になるので学ぶ。認可も気になる。
+&lt;ul>
+&lt;li>SSL&lt;/li>
+&lt;li>ドメイン&lt;/li>
+&lt;li>k8sのRBAC&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> todoをリストアップする拡張の実装&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#todo%e3%82%92%e3%83%aa%e3%82%b9%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%82%92%e5%ae%9f%e8%a3%85%e3%81%97%e3%81%9f" id="todoをリストアップするページを実装した" class="anchor" aria-hidden="true">todoをリストアップするページを実装した&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://diary.nfurudono.com/todos/">https://diary.nfurudono.com/todos/&lt;/a>に実装した。これでもう過去のtodoを忘れない。&lt;/p></description></item><item><title>2024-08-15</title><link>https://blog.nfurudono.com/daily/2024-08-15/</link><pubDate>Thu, 15 Aug 2024 15:04:52 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-15/</guid><description>&lt;p>日記をnextjsでビルドして、cloudflare pagesにデプロイするようにした。cnameの設定が効くようになれば、&lt;a href="https://diary.nfurudono.com">https://diary.nfurudono.com&lt;/a>から見えるようになるはず。&lt;/p>
 &lt;p>cloudflareのアカウントを初めて作って設定したが、体験よかった。デプロイとか周りの開発のためにCLIツールやそれのgithub actionsバインディングが提供されていて、サクッとデプロイできた。記念すべき初デプロイの成功をメモしておく&lt;a href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/runs/10399555684/job/28798614059">https://github.com/naoyafurudono/naoyafurudono.github.io/actions/runs/10399555684/job/28798614059&lt;/a>&lt;/p></description></item><item><title>2024-08-03</title><link>https://blog.nfurudono.com/daily/2024-08-03/</link><pubDate>Sat, 03 Aug 2024 12:14:16 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-08-03/</guid><description>&lt;h2>
 &lt;a href="#%e4%ba%8b%e6%a5%ad%e3%81%a7%e4%bd%bf%e3%81%86%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%92%e8%a8%ad%e8%a8%88%e3%81%99%e3%82%8b%e3%81%a8%e3%81%8d%e3%81%ae%e8%a9%b1" id="事業で使うシステムを設計するときの話" class="anchor" aria-hidden="true">事業で使うシステムを設計するときの話&lt;/a>
 &lt;/h2>

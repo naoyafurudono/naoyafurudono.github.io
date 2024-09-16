@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tool on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/tool/</link><description>Recent content in Tool on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Mon, 16 Sep 2024 13:43:47 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/tool/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-09-15</title><link>https://blog.nfurudono.com/daily/2024-09-15/</link><pubDate>Sun, 15 Sep 2024 16:37:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-15/</guid><description>&lt;h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tool on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/tool/</link><description>Recent content in Tool on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Mon, 16 Sep 2024 16:42:00 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/tool/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-09-16</title><link>https://blog.nfurudono.com/daily/2024-09-16/</link><pubDate>Mon, 16 Sep 2024 02:20:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-16/</guid><description>&lt;h2>
+&lt;a href="#%e4%bb%8a%e6%97%a5%e3%82%84%e3%82%8b%e3%81%93%e3%81%a8" id="今日やること" class="anchor" aria-hidden="true">今日やること&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 掃除&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 外出
+&lt;ul>
+&lt;li>電車乗るくらいの外出をする。秋物出たかな。あるいは外で使うと幸せになれるグッツを買うか。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>本読む。k8sのあれ。あとは認証の技術気になるので学ぶ。認可も気になる。
+&lt;ul>
+&lt;li>SSL&lt;/li>
+&lt;li>ドメイン&lt;/li>
+&lt;li>k8sのRBAC&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> todoをリストアップする拡張の実装&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#todo%e3%82%92%e3%83%aa%e3%82%b9%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%82%92%e5%ae%9f%e8%a3%85%e3%81%97%e3%81%9f" id="todoをリストアップするページを実装した" class="anchor" aria-hidden="true">todoをリストアップするページを実装した&lt;/a>
+&lt;/h2>
+&lt;p>&lt;a href="https://diary.nfurudono.com/todos/">https://diary.nfurudono.com/todos/&lt;/a>に実装した。これでもう過去のtodoを忘れない。&lt;/p></description></item><item><title>2024-09-15</title><link>https://blog.nfurudono.com/daily/2024-09-15/</link><pubDate>Sun, 15 Sep 2024 16:37:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-15/</guid><description>&lt;h2>
 &lt;a href="#%e8%87%aa%e4%bd%9c%e6%9c%ac%e6%a3%9a2%e6%9c%ac%e7%9b%ae" id="自作本棚2本目" class="anchor" aria-hidden="true">自作本棚2本目&lt;/a>
 &lt;/h2>
 &lt;p>本棚を作った。2本目だけどすでに飽きてきた。慣れから余裕が出てきたことである程度精度が悪くても問題ないことに気がついてしまったところで敗北していて、「はいはい大体こんな感じでしょ」って作業になったのであまり楽しくなかった。今もさっさと油乾かないかなとか考えてる。改善の余地はあるのだろうが、前回作ったものが問題なく動いている（本棚なので動かないけど）し、物に満足しているのでまあこれでいいでしょとなってる。おかげで作業速度は改善していて、多分倍速くらいになった。でも幸せかというとなかなか&amp;hellip;。&lt;/p></description></item><item><title>Goのanalysisとtypesに入門する</title><link>https://blog.nfurudono.com/posts/go-static-analysis/</link><pubDate>Sat, 31 Aug 2024 15:02:41 +0900</pubDate><guid>https://blog.nfurudono.com/posts/go-static-analysis/</guid><description>&lt;h2>

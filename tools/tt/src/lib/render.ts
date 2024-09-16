@@ -1,12 +1,14 @@
+import type { ListItem } from "mdast";
 import rehypeExtractExcerpt from "rehype-extract-excerpt";
 import rehypeStringify from "rehype-stringify";
 import remarkExtractFrontmatter from "remark-extract-frontmatter";
 import remarkFrontmatter from "remark-frontmatter";
+import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
-import { ignoreNewLine } from "./plugin";
+import { ignoreNewLine, unchecked } from "./plugin";
 
 export type RenderResult = {
 	rawBody: string;
@@ -14,6 +16,7 @@ export type RenderResult = {
 	title: string;
 	draft: boolean;
 	desc: string;
+	unchecked: ListItem[];
 };
 
 export async function render({
@@ -23,7 +26,9 @@ export async function render({
 		.use(remarkParse)
 		.use(remarkFrontmatter)
 		.use(remarkExtractFrontmatter, { yaml: yaml.parse })
+		.use(remarkGfm)
 		.use(ignoreNewLine)
+		.use(unchecked)
 		.use(remarkRehype)
 		.use(rehypeExtractExcerpt)
 		.use(rehypeStringify)
@@ -38,5 +43,8 @@ export async function render({
 
 		// by rehypeExtractExcerpt
 		desc: result.data.excerpt as string,
+
+		// by unchecked
+		unchecked: result.data.unchecked as ListItem[],
 	};
 }

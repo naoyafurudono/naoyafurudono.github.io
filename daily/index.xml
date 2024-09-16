@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Mon, 16 Sep 2024 17:30:37 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-09-16</title><link>https://blog.nfurudono.com/daily/2024-09-16/</link><pubDate>Mon, 16 Sep 2024 02:20:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-16/</guid><description>&lt;h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Mon, 16 Sep 2024 17:32:33 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-09-16</title><link>https://blog.nfurudono.com/daily/2024-09-16/</link><pubDate>Mon, 16 Sep 2024 02:20:29 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-16/</guid><description>&lt;h2>
 &lt;a href="#%e4%bb%8a%e6%97%a5%e3%82%84%e3%82%8b%e3%81%93%e3%81%a8" id="今日やること" class="anchor" aria-hidden="true">今日やること&lt;/a>
 &lt;/h2>
 &lt;ul>
@@ -21,11 +21,12 @@
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> todoをリストアップする拡張の実装&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> todoの拡張、出先でチェック入れたくなりそうなので、githubでの編集へのリンクをつけたい&lt;/li>
 &lt;/ul>
 &lt;h2>
 &lt;a href="#todo%e3%82%92%e3%83%aa%e3%82%b9%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%81%99%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e3%82%92%e5%ae%9f%e8%a3%85%e3%81%97%e3%81%9f" id="todoをリストアップするページを実装した" class="anchor" aria-hidden="true">todoをリストアップするページを実装した&lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://diary.nfurudono.com/todos/">https://diary.nfurudono.com/todos/&lt;/a>に実装した。これでもう過去のtodoを忘れない。&lt;/p></description></item><item><title>2024-09-15</title><link>https://blog.nfurudono.com/daily/2024-09-15/</link><pubDate>Sun, 15 Sep 2024 16:37:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-15/</guid><description>&lt;h2>
+&lt;p>&lt;a href="https://diary.nfurudono.com/todos/">https://diary.nfurudono.com/todos/&lt;/a>に実装した。これでもう過去のtodoを忘れない。収集とレンダリングの両方が必要でだるかった。特にレンダリングはunifiedのアーキテクチャを理解してなくて手間取った。今の実装がunifiedのアーキテクチャに沿っているか自信がない。&lt;/p></description></item><item><title>2024-09-15</title><link>https://blog.nfurudono.com/daily/2024-09-15/</link><pubDate>Sun, 15 Sep 2024 16:37:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-15/</guid><description>&lt;h2>
 &lt;a href="#%e8%87%aa%e4%bd%9c%e6%9c%ac%e6%a3%9a2%e6%9c%ac%e7%9b%ae" id="自作本棚2本目" class="anchor" aria-hidden="true">自作本棚2本目&lt;/a>
 &lt;/h2>
 &lt;p>本棚を作った。2本目だけどすでに飽きてきた。慣れから余裕が出てきたことである程度精度が悪くても問題ないことに気がついてしまったところで敗北していて、「はいはい大体こんな感じでしょ」って作業になったのであまり楽しくなかった。今もさっさと油乾かないかなとか考えてる。改善の余地はあるのだろうが、前回作ったものが問題なく動いている（本棚なので動かないけど）し、物に満足しているのでまあこれでいいでしょとなってる。おかげで作業速度は改善していて、多分倍速くらいになった。でも幸せかというとなかなか&amp;hellip;。&lt;/p></description></item><item><title>2024-09-13</title><link>https://blog.nfurudono.com/daily/2024-09-13/</link><pubDate>Fri, 13 Sep 2024 00:18:37 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-09-13/</guid><description>&lt;p>今日は（昨日は）会社の人とunrailedをやった。はじめてちゃんと一緒にゲームをしたのだけど楽しかった。またやりたいな。&lt;/p>

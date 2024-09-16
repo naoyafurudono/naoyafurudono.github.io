@@ -1,6 +1,6 @@
 import { type ArticleMeta, listPublishedArticles } from "@/lib/gateway";
-import * as paths from "@/lib/paths";
 import { renderMdAst } from "@/lib/render";
+import * as util from "@/lib/util";
 import type { List, ListItem, Root, RootContent } from "mdast";
 import type { NextPage } from "next";
 
@@ -12,7 +12,7 @@ const Home: NextPage = async () => {
 			<ol>
 				{as
 					.filter((article) => article.unchecked.length > 0)
-					.toSorted((a, b) => -lexOrder(a.date, b.date))
+					.toSorted((a, b) => -util.lexOrder(a.date, b.date))
 					.map((article) => (
 						<li key={article.id}>
 							<TodoSummary article={article} />
@@ -46,7 +46,7 @@ const TodoSummary = async ({ article }: SummaryProps) => {
 	const todohtml = await renderMdAst(root);
 	return (
 		<div>
-			<a href={paths.posts(article.id)}>
+			<a href={util.postPath(article.id)}>
 				<h2>{article.title}</h2>
 			</a>
 			<div
@@ -56,7 +56,3 @@ const TodoSummary = async ({ article }: SummaryProps) => {
 		</div>
 	);
 };
-
-function lexOrder(a: string, b: string): number {
-	return a < b ? -1 : a > b ? 1 : 0;
-}

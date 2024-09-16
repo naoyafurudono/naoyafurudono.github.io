@@ -2,13 +2,12 @@ import { type ArticleMeta, listPublishedArticles } from "@/lib/gateway";
 import { renderMdAst } from "@/lib/render";
 import * as util from "@/lib/util";
 import type { List, ListItem, Root, RootContent } from "mdast";
-import type { NextPage } from "next";
+import type { Metadata, NextPage } from "next";
 
 const Home: NextPage = async () => {
 	const as: Array<ArticleMeta> = await listPublishedArticles();
 	return (
 		<>
-			<h1>残ったtodo</h1>
 			<ol>
 				{as
 					.filter((article) => article.unchecked.length > 0)
@@ -45,14 +44,19 @@ const TodoSummary = async ({ article }: SummaryProps) => {
 	const root = newRoot([newUL(article.unchecked)]);
 	const todohtml = await renderMdAst(root);
 	return (
-		<div>
-			<a href={util.postPath(article.id)}>
-				<h2>{article.title}</h2>
-			</a>
+		<>
+			<a href={util.postPath(article.id)}>{article.title}</a>
 			<div
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: 記事の一部がここに渡るだけなのでok
 				dangerouslySetInnerHTML={{ __html: todohtml }}
 			/>
-		</div>
+		</>
 	);
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+	return {
+		title: "todos",
+		description: "未消化のtodo一覧です",
+	};
+}

@@ -27,6 +27,7 @@
     "remark-gfm": "^4.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
+    "remark-stringify": "^11.0.0",
     "unified": "^11.0.5",
     "vfile": "^6.0.2",
     "yaml": "^2.5.0"

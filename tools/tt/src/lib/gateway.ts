@@ -1,6 +1,7 @@
 // 一覧を返す
 import fs from "node:fs";
 import path from "node:path";
+import type { ListItem } from "mdast";
 import { render } from "./render";
 
 const articleDirectoryPaths = process.env.ARTICLE_DIRECTORY_PATHS?.split(
@@ -14,6 +15,7 @@ export type ArticleMeta = {
 	title: string;
 	draft: boolean;
 	desc: string;
+	unchecked: ListItem[];
 };
 export type Article = {
 	content: Buffer;
@@ -56,6 +58,7 @@ export async function listArticles(): Promise<Array<Article>> {
 					content: content,
 					draft: r.draft,
 					desc: r.desc,
+					unchecked: r.unchecked,
 				};
 			});
 	});

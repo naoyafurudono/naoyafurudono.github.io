@@ -13,9 +13,9 @@
     "node": "22.x"
   },
   "dependencies": {
+    "@types/mdast": "^4.0.4",
     "@types/unist": "^3.0.2",
     "glob": "^11.0.0",
-    "mdast": "^3.0.0",
     "mdast-util-find-and-replace": "^3.0.1",
     "next": "14.2.5",
     "react": "^18",

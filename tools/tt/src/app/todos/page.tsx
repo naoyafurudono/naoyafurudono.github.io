@@ -10,7 +10,7 @@ const Home: NextPage = async () => {
 		<>
 			<ol>
 				{as
-					.filter((article) => article.unchecked.length > 0)
+					.filter((article) => hasToDo(article))
 					.toSorted((a, b) => -util.lexOrder(a.date, b.date))
 					.map((article) => (
 						<li key={article.id}>
@@ -22,6 +22,10 @@ const Home: NextPage = async () => {
 	);
 };
 export default Home;
+
+export function hasToDo(a: ArticleMeta): boolean {
+	return a.unchecked.length > 0;
+}
 
 function newRoot(data: RootContent[]): Root {
 	return {

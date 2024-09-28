@@ -21,7 +21,7 @@ export type Article = {
 	content: Buffer;
 } & ArticleMeta;
 
-export function isDraft(a: Article): boolean {
+export function isDraft(a: ArticleMeta): boolean {
 	return a.draft;
 }
 

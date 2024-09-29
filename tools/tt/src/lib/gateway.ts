@@ -4,7 +4,7 @@ import path from "node:path";
 import type { ListItem } from "mdast";
 import { render } from "./render";
 
-const articleDirectoryPaths = process.env.ARTICLE_DIRECTORY_PATHS?.split(
+const articleDirectoryPaths: string[] = process.env.ARTICLE_DIRECTORY_PATHS?.split(
 	",",
 ) || [path.join(process.cwd(), "article")];
 
@@ -25,13 +25,13 @@ export function isDraft(a: ArticleMeta): boolean {
 	return a.draft;
 }
 
-export async function listPublishedArticles(): Promise<Array<Article>> {
+export async function listPublishedArticles(): Promise<Article[]> {
 	const a = await listArticles();
 	return a.filter((a) => !isDraft(a));
 }
 
-let memo: Promise<Array<Article>>;
-export async function listArticles(): Promise<Array<Article>> {
+let memo: Promise<Article[]>;
+export async function listArticles(): Promise<Article[]> {
 	if (memo) {
 		return memo;
 	}

@@ -8,7 +8,7 @@ type Props = {
 	};
 };
 const Home: NextPage<Props> = async () => {
-	const as: Array<ArticleMeta> = await listPublishedArticles();
+	const as: ArticleMeta[] = await listPublishedArticles();
 	return (
 		<ol>
 			{as

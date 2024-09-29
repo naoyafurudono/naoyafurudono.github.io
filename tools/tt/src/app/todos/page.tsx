@@ -5,7 +5,7 @@ import type { List, ListItem, Root, RootContent } from "mdast";
 import type { Metadata, NextPage } from "next";
 
 const Home: NextPage = async () => {
-	const as: Array<ArticleMeta> = await listPublishedArticles();
+	const as: ArticleMeta[] = await listPublishedArticles();
 	return (
 		<>
 			<ol>
@@ -23,7 +23,7 @@ const Home: NextPage = async () => {
 };
 export default Home;
 
-export function hasToDo(a: ArticleMeta): boolean {
+function hasToDo(a: ArticleMeta): boolean {
 	return a.unchecked.length > 0;
 }
 

@@ -50,7 +50,7 @@ export const putIDOn = (className: string) => {
 
 						const hash = hashContent(content);
 						const linkSVG = createLinkSVG(hash);
-						node.children.push(linkSVG);
+						node.children.unshift(linkSVG);
 					}
 				}
 			});

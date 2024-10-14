@@ -61,3 +61,26 @@ export function hashContent(content: string): string {
 	const h = crypto.createHash("sha256").update(content).digest();
 	return h.toString("base64url");
 }
+
+// idを持つ要素のURLをクリップボードにコピーするプラグイン
+export function rehypeCopyElementURL() {
+	return (tree: Root) => {
+		visit(tree, "element", (node: Element) => {
+			// `id` 属性を持つすべての要素に対して処理を行う
+			if (node.properties?.id) {
+				// 現在のページURLを取得して、そのidを含むURLを生成する
+				const onclick = `
+          event.preventDefault();
+          const url = window.location.origin + window.location.pathname + '#' + this.id;
+          navigator.clipboard.writeText(url).then(_ => {
+            window.location.href = url;
+          })
+        `;
+				node.properties.onclick = onclick;
+				// カーソルをポインタにする
+				node.properties.style = node.properties.style || "";
+				node.properties.style += "cursor: pointer;";
+			}
+		});
+	};
+}

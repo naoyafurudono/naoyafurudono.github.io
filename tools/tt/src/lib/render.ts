@@ -8,7 +8,12 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
-import { ignoreNewLine, putIDOn, unchecked } from "./plugin";
+import {
+	ignoreNewLine,
+	putIDOn,
+	rehypeCopyElementURL,
+	unchecked,
+} from "./plugin";
 
 export type RenderResult = {
 	rawBody: string;
@@ -21,9 +26,7 @@ export type RenderResult = {
 
 export async function render({
 	content,
-}: {
-	content: Buffer;
-}): Promise<RenderResult> {
+}: { content: Buffer }): Promise<RenderResult> {
 	const result = await unified()
 		.use(remarkParse)
 		.use(remarkFrontmatter)
@@ -33,6 +36,7 @@ export async function render({
 		.use(unchecked)
 		.use(remarkRehype)
 		.use(putIDOn("task-list-item"))
+		.use(rehypeCopyElementURL)
 		.use(rehypeExtractExcerpt) // 概要をとるやつ。
 		.use(rehypeStringify)
 		.process(content);

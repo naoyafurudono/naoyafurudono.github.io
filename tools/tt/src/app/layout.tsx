@@ -61,7 +61,7 @@ export default function RootLayout({
 									text: "書いてる人のTwitter",
 								},
 								{
-									href: "/todos",
+									href: "/todos/",
 									text: "todos",
 								},
 							].map(({ href, text }) => {

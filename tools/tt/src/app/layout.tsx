@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: "ブログ",
-	description: "ブログです",
+	title: "日記",
+	description: "これは日記です",
 	authors: [
 		{
 			name: "Naoya Furudono",

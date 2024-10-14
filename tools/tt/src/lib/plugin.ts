@@ -57,7 +57,7 @@ export const putIDOn = (className: string) => {
 	};
 };
 
-function hashContent(content: string): string {
+export function hashContent(content: string): string {
 	const h = crypto.createHash("sha256").update(content).digest();
 	return h.toString("base64url");
 }

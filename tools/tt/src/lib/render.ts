@@ -8,7 +8,7 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
-import { ignoreNewLine, unchecked, print } from "./plugin";
+import { ignoreNewLine, putIDOn, unchecked } from "./plugin";
 
 export type RenderResult = {
 	rawBody: string;
@@ -31,9 +31,9 @@ export async function render({
 		.use(remarkGfm)
 		.use(ignoreNewLine)
 		.use(unchecked)
-		.use(print(4))
 		.use(remarkRehype)
-		.use(rehypeExtractExcerpt)
+		.use(putIDOn("task-list-item"))
+		.use(rehypeExtractExcerpt) // 概要をとるやつ。
 		.use(rehypeStringify)
 		.process(content);
 	return {

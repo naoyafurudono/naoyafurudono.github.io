@@ -4,9 +4,10 @@ import path from "node:path";
 import type { ListItem } from "mdast";
 import { render } from "./render";
 
-const articleDirectoryPaths: string[] = process.env.ARTICLE_DIRECTORY_PATHS?.split(
-	",",
-) || [path.join(process.cwd(), "article")];
+const articleDirectoryPaths: string[] =
+	process.env.ARTICLE_DIRECTORY_PATHS?.split(",") || [
+		path.join(process.cwd(), "article"),
+	];
 
 export type ArticleMeta = {
 	id: string;

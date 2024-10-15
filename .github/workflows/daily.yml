@@ -24,14 +24,16 @@ jobs:
           node-version-file: tools/tt/package.json
           cache: 'npm'
           cache-dependency-path: tools/tt/package-lock.json
-      - name: setup
+      - name: Install dependencies
         run: npm install
-      - name: build
+      - name: Test
+        run: npm run test
+      - name: Build
         run: npm run build
         env:
           ARTICLE_DIRECTORY_PATHS: "../../content/daily"
-      - name: Deploy
+      - name: Deploy to pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy tools/tt/out --project-name diary-nfurudono 
+          command: pages deploy tools/tt/out --commit-darty=true --project-name diary-nfurudono

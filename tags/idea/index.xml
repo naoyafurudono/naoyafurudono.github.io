@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Idea on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/idea/</link><description>Recent content in Idea on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Thu, 10 Oct 2024 19:31:18 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/idea/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-10-10</title><link>https://blog.nfurudono.com/daily/2024-10-10/</link><pubDate>Thu, 10 Oct 2024 19:29:06 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-10/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Idea on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/idea/</link><description>Recent content in Idea on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Wed, 16 Oct 2024 01:25:17 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/idea/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-10-16</title><link>https://blog.nfurudono.com/daily/2024-10-16/</link><pubDate>Wed, 16 Oct 2024 01:15:45 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-16/</guid><description>&lt;h2>
+&lt;a href="#%e8%aa%ad%e6%9b%b8%e3%83%a1%e3%83%a2" id="読書メモ" class="anchor" aria-hidden="true">読書メモ&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://browser.engineering/intro.html#browser-code-concepts">https://browser.engineering/intro.html#browser-code-concepts&lt;/a> 以前まで読んだ。このセクションから再開する。&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#%e3%83%96%e3%83%ad%e3%82%b0%e9%96%8b%e7%99%ba%e3%82%a2%e3%82%a4%e3%83%87%e3%82%a2" id="ブログ開発アイデア" class="anchor" aria-hidden="true">ブログ開発アイデア&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> トピックをセクションのタイトル (hN要素) で宣言して、それを集約したページを勝手に生成するようにしたい。
+&lt;ul>
+&lt;li>&lt;code>about:&amp;lt;TOPIC_NAME&amp;gt; &amp;lt;TEXT&amp;gt;&lt;/code> という名前のタイトルをヘッダにつけたら、&lt;code>/topic/&amp;lt;TOPIC_NAME&amp;gt;&lt;/code> というページを生成して、　　そこに &lt;code>&amp;lt;TEXT&amp;gt; - &amp;lt;DATE&amp;gt;&lt;/code> みたいな名前のセクションを埋め込みたい。元記事へのパーマリンクも添えておくと良さそう。&lt;/li>
+&lt;li>読書記録に使えそう&lt;/li>
+&lt;li>その他にも普通のブログではタグを記事につけるようなノリで使うのも可能。記事の単位だとタグによる分類は不便に思うのだけど、セクションくらいの粒度ならつけるときも読む時もちょうど良いだろうと思う&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>2024-10-10</title><link>https://blog.nfurudono.com/daily/2024-10-10/</link><pubDate>Thu, 10 Oct 2024 19:29:06 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-10/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> protobufとかsqlcでファイル生成をするツールを使ってチーム開発をしているとすごくコンフリクトして辛い。生成するファイルを分割して、例えばrpcとかmessage単位にファイル（パッケージではない！）を分ければgitのコンフリクトは避けられる。パッケージも一緒なので振る舞いには影響しない。&lt;/li>
 &lt;/ul></description></item><item><title>2024-10-06</title><link>https://blog.nfurudono.com/daily/2024-10-06/</link><pubDate>Sun, 06 Oct 2024 14:07:24 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-06/</guid><description>&lt;h2>
 &lt;a href="#llm-%e3%82%92%e5%b0%82%e9%96%80%e5%ae%b6%e3%81%a0%e3%81%a8%e6%80%9d%e3%81%88%e3%81%aa%e3%81%84" id="llm-を専門家だと思えない" class="anchor" aria-hidden="true">LLM を専門家だと思えない&lt;/a>

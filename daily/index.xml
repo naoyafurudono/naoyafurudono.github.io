@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 15 Oct 2024 23:44:24 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-10-15</title><link>https://blog.nfurudono.com/daily/2024-10-15/</link><pubDate>Tue, 15 Oct 2024 00:40:12 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-15/</guid><description>&lt;h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Wed, 16 Oct 2024 01:25:17 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-10-16</title><link>https://blog.nfurudono.com/daily/2024-10-16/</link><pubDate>Wed, 16 Oct 2024 01:15:45 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-16/</guid><description>&lt;h2>
+&lt;a href="#%e8%aa%ad%e6%9b%b8%e3%83%a1%e3%83%a2" id="読書メモ" class="anchor" aria-hidden="true">読書メモ&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://browser.engineering/intro.html#browser-code-concepts">https://browser.engineering/intro.html#browser-code-concepts&lt;/a> 以前まで読んだ。このセクションから再開する。&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#%e3%83%96%e3%83%ad%e3%82%b0%e9%96%8b%e7%99%ba%e3%82%a2%e3%82%a4%e3%83%87%e3%82%a2" id="ブログ開発アイデア" class="anchor" aria-hidden="true">ブログ開発アイデア&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> トピックをセクションのタイトル (hN要素) で宣言して、それを集約したページを勝手に生成するようにしたい。
+&lt;ul>
+&lt;li>&lt;code>about:&amp;lt;TOPIC_NAME&amp;gt; &amp;lt;TEXT&amp;gt;&lt;/code> という名前のタイトルをヘッダにつけたら、&lt;code>/topic/&amp;lt;TOPIC_NAME&amp;gt;&lt;/code> というページを生成して、　　そこに &lt;code>&amp;lt;TEXT&amp;gt; - &amp;lt;DATE&amp;gt;&lt;/code> みたいな名前のセクションを埋め込みたい。元記事へのパーマリンクも添えておくと良さそう。&lt;/li>
+&lt;li>読書記録に使えそう&lt;/li>
+&lt;li>その他にも普通のブログではタグを記事につけるようなノリで使うのも可能。記事の単位だとタグによる分類は不便に思うのだけど、セクションくらいの粒度ならつけるときも読む時もちょうど良いだろうと思う&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>2024-10-15</title><link>https://blog.nfurudono.com/daily/2024-10-15/</link><pubDate>Tue, 15 Oct 2024 00:40:12 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-15/</guid><description>&lt;h2>
 &lt;a href="#%e8%a6%8b%e5%87%ba%e3%81%97%e3%81%abid" id="見出しにid" class="anchor" aria-hidden="true">見出しにid&lt;/a>
 &lt;/h2>
 &lt;p>見出しにidを振るようにした。

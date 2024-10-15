@@ -13,7 +13,7 @@ const Home: NextPage = async () => {
 					.filter((article) => hasToDo(article))
 					.toSorted((a, b) => -util.lexOrder(a.date, b.date))
 					.map((article) => (
-  					// TODO summary はそれ自体がlist item
+						// TODO summary はそれ自体がlist item
 						<TodoSummary article={article} key={article.id} />
 					))}
 			</ol>

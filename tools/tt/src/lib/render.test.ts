@@ -88,7 +88,7 @@ date: "2024-08-15"
 	expect(JSON.stringify(second)).toContain("todoです");
 });
 
-test("レンダリングする", async () => {
+test("idをつける", async () => {
 	const content = `\
 ---
 title: Hello, world!
@@ -98,9 +98,10 @@ date: "2024-08-15"
 
 これはあいさつです。
 こんにちは。
-    `;
-	const root = unified().use(remarkParse).use(remarkFrontmatter).parse(content);
 
-	const s = await renderMdAst(root);
-	expect(s).toContain("<h1>Hello, world!</h1>");
+## 日本語でも遊ぶ
+    `;
+  const r = await render({ content: Buffer.from(content) })
+	expect(r.rawBody).toContain('<h1 id="hello-world"');
+	expect(r.rawBody).toContain('<h2 id="日本語でも遊ぶ"')
 });

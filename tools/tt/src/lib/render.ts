@@ -9,6 +9,7 @@ import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
 import {
+	addHeadingIds,
 	ignoreNewLine,
 	putIDOn,
 	rehypeCopyElementURL,
@@ -33,6 +34,7 @@ export async function render({
 		.use(remarkExtractFrontmatter, { yaml: yaml.parse })
 		.use(remarkGfm)
 		.use(ignoreNewLine)
+		.use(addHeadingIds)
 		.use(unchecked)
 		.use(remarkRehype)
 		.use(putIDOn("task-list-item"))

@@ -1,7 +1,8 @@
 import * as crypto from "node:crypto";
 import type { Element } from "hast";
-import type { ListItem, Root } from "mdast";
+import type { Heading, ListItem, PhrasingContent, Root } from "mdast";
 import { findAndReplace } from "mdast-util-find-and-replace";
+import slugify from "slugify";
 import type unified from "unified";
 import type { Node } from "unist";
 import { visit } from "unist-util-visit";
@@ -110,3 +111,29 @@ export function rehypeCopyElementURL() {
 		});
 	};
 }
+
+// 見出しのidを追加するプラグイン
+export const addHeadingIds = () => {
+	return (tree: Node) => {
+		visit(tree, "heading", (node: Heading) => {
+			// 見出しのテキストを取得
+			const text = node.children
+				.filter(
+					(child: PhrasingContent) =>
+						child.type === "text" || child.type === "inlineCode",
+				)
+				.map((child) => child.value)
+				.join(" ");
+
+			const id = slugify(text, {
+				lower: true,
+				strict: false,
+				remove: /[^\p{L}\p{N}\s]/gu, // Unicodeの文字や数字以外を取り除く（日本語対応）
+			});
+
+			if (!node.data) node.data = {};
+			if (!node.data.hProperties) node.data.hProperties = {};
+			node.data.hProperties.id = id;
+		});
+	};
+};

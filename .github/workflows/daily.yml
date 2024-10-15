@@ -36,4 +36,4 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy tools/tt/out --commit-darty=true --project-name diary-nfurudono
+          command: pages deploy tools/tt/out --commit-dirty=true --project-name diary-nfurudono

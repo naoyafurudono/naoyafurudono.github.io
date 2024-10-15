@@ -1,9 +1,6 @@
 import type { ListItem } from "mdast";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkParse from "remark-parse";
-import { unified } from "unified";
 import { expect, test } from "vitest";
-import { render, renderMdAst } from "./render";
+import { render } from "./render";
 
 test("改行は取り除かれる", async () => {
 	const content = `
@@ -101,7 +98,7 @@ date: "2024-08-15"
 
 ## 日本語でも遊ぶ
     `;
-  const r = await render({ content: Buffer.from(content) })
+	const r = await render({ content: Buffer.from(content) });
 	expect(r.rawBody).toContain('<h1 id="hello-world"');
-	expect(r.rawBody).toContain('<h2 id="日本語でも遊ぶ"')
+	expect(r.rawBody).toContain('<h2 id="日本語でも遊ぶ"');
 });

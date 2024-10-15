@@ -41,37 +41,39 @@ export default function RootLayout({
 			</style>
 			<body>
 				<header>
-					<nav>
-						<p>
-							<Link href="/">diary.nfurudono.com</Link>
-						</p>
-					</nav>
+					<Nav />
 				</header>
 				<main>{children}</main>
 				<footer>
-					<nav>
-						<ul>
-							{[
-								{ href: "/", text: "ホーム" },
-								{
-									href: "https://twitter.com/furudono2",
-									text: "書いてる人のTwitter",
-								},
-								{
-									href: "/todos/",
-									text: "todos",
-								},
-							].map(({ href, text }) => {
-								return (
-									<li key={href}>
-										<Link href={href}>{text}</Link>
-									</li>
-								);
-							})}
-						</ul>
-					</nav>
+					<Nav />
 				</footer>
 			</body>
 		</html>
 	);
 }
+
+const Nav = () => {
+	return (
+		<nav>
+			<ul>
+				{[
+					{ href: "/", text: "diary.nfurudono.com" },
+					{
+						href: "/todos/",
+						text: "todos",
+					},
+					{
+						href: "https://twitter.com/furudono2",
+						text: "書いてる人のTwitter",
+					},
+				].map(({ href, text }) => {
+					return (
+						<li key={href}>
+							<Link href={href}>{text}</Link>
+						</li>
+					);
+				})}
+			</ul>
+		</nav>
+	);
+};

@@ -21,21 +21,18 @@ export default function RootLayout({
 		<html lang="ja">
 			<style>
 				{`
-/* 基本スタイル */
 [id] {
   border: 2px solid transparent; /* 初期のボーダー */
   transition: all 0.3s ease; /* トランジション効果 */
   cursor: pointer; /* カーソルをポインタにする */
 }
 
-/* ホバー時のスタイル */
 [id]:hover {
   background-color: #f0f0f0; /* 背景色を変更 */
   border-color: #007bff; /* ボーダーの色を変更 */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* シャドウを追加 */
 }
 
-/* フォーカス時のスタイル */
 [id]:focus {
   outline: none; /* デフォルトのアウトラインを消す */
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* フォーカス時の影を追加 */

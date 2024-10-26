@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sat, 26 Oct 2024 22:07:26 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-10-21</title><link>https://blog.nfurudono.com/daily/2024-10-21/</link><pubDate>Mon, 21 Oct 2024 15:41:30 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-21/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sat, 26 Oct 2024 23:59:56 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-10-26</title><link>https://blog.nfurudono.com/daily/2024-10-26/</link><pubDate>Sat, 26 Oct 2024 22:50:25 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-26/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> aboutページの収取をするプラグインを実装して組み込んだ。あとはそれをいい感じに表示する必要がある&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 今度人の結婚式に出るので身だしなみとか常識を身につける・髪切るとか服を用意する計画を立てる
+&lt;ul>
+&lt;li>受付やるらしいのでちゃんとした方が良さそう&lt;/li>
+&lt;li>礼服着れるか確認しておくか&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> helm完全に理解する。リリースとか意味わからん。installって何？kubectl applyとの関係は？&lt;/li>
+&lt;/ul></description></item><item><title>2024-10-21</title><link>https://blog.nfurudono.com/daily/2024-10-21/</link><pubDate>Mon, 21 Oct 2024 15:41:30 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-10-21/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 年末調整に必要な書類申請の準備をする&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> booleanを避けて2要素のenumを使おうという記事を書く&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 契約とプログラミングに関する記事を書く。

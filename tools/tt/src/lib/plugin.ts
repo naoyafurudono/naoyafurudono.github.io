@@ -137,3 +137,42 @@ export const addHeadingIds = () => {
 		});
 	};
 };
+
+import type { Plugin } from "unified";
+
+export type AboutSections = {
+	[key: string]: Node[];
+};
+
+export const extractAboutSections: Plugin<[], Root> = () => {
+	return (tree, file) => {
+		const sections: AboutSections = {};
+		let currentSectionName: string | null = null;
+		let currentSectionDepth: number | null = null;
+
+		visit(tree, (node) => {
+			// about: で始まる heading を見つけたら、セクションを開始
+			if (
+				node.type === "heading" &&
+				node.children[0].type === "text" &&
+				node.children[0].value.startsWith("about: ")
+			) {
+				currentSectionName = node.children[0].value.slice(6).trim();
+				currentSectionDepth = node.depth; // depth を保持
+				sections[currentSectionName] = [];
+			} else if (currentSectionName && node.type === "heading") {
+				// 同じ depth の heading が出現したら、セクションの終了
+				if (node.depth === currentSectionDepth) {
+					currentSectionName = null;
+					currentSectionDepth = null;
+				}
+			} else if (currentSectionName) {
+				// 現在のセクションにノードを追加（入れ子も含む）
+				sections[currentSectionName].push(node);
+			}
+		});
+
+		// 結果を file.data に保存
+		file.data.about = sections;
+	};
+};

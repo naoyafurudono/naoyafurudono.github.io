@@ -85,6 +85,39 @@ date: "2024-08-15"
 	expect(JSON.stringify(second)).toContain("todoです");
 });
 
+test("aboutセクションを抽出する", async () => {
+	const content = `\
+---
+title: Hello, world!
+date: "2024-08-15"
+---
+
+# about: HelloWorld
+
+- [ ] これはあいさつです。
+- [x] doneです
+- [ ] todoです
+
+## ビール
+
+こんにちは。
+
+# about: 日本語でも遊ぶ
+
+私はビールが好きです。
+`;
+	const r = await render({ content: Buffer.from(content) });
+	expect(JSON.stringify(r)).toContain("これはあいさつです。");
+	expect(JSON.stringify(r)).toContain("こんにちは。");
+
+	const hello = JSON.stringify(r.about.HelloWorld);
+	expect(hello).toContain("ビール");
+	expect(hello).not.toContain("ビールが好き");
+	const jap = JSON.stringify(r.about.日本語でも遊ぶ);
+	expect(jap).not.toContain("Hello");
+	expect(jap).toContain("ビールが好き");
+});
+
 test("idをつける", async () => {
 	const content = `\
 ---

@@ -1,7 +1,8 @@
-// 一覧を返す
 import fs from "node:fs";
 import path from "node:path";
-import type { ListItem } from "mdast";
+// 一覧を返す
+import type { ListItem, Node } from "mdast";
+import type { AboutSections } from "./plugin";
 import { render } from "./render";
 
 const articleDirectoryPaths: string[] =
@@ -17,6 +18,7 @@ export type ArticleMeta = {
 	draft: boolean;
 	desc: string;
 	unchecked: ListItem[];
+	about: AboutSections;
 };
 export type Article = {
 	content: Buffer;
@@ -60,6 +62,7 @@ export async function listArticles(): Promise<Article[]> {
 					draft: r.draft,
 					desc: r.desc,
 					unchecked: r.unchecked,
+					about: r.about,
 				};
 			});
 	});
@@ -80,4 +83,27 @@ export async function findArticle({
 	}
 	const content = fs.readFileSync(m.path);
 	return { ...m, content };
+}
+
+export async function listAspects(): Promise<Article[]> {
+	const as = await listArticles();
+	const aspects: Record<string, Node[]> = {};
+	for (const a of as) {
+		const about = a.about;
+		for (const [key, value] of Object.entries(about)) {
+			aspects[key].push(...value);
+		}
+	}
+	return Object.entries(aspects).map(([key, value]) => {
+		return {
+			id: key,
+			title: key,
+			content: Buffer.from(value),
+			unchecked: value,
+		};
+	});
+	// 	draft: r.draft,
+	// 	desc: r.desc,
+	// 	unchecked: r.unchecked,
+	// };
 }

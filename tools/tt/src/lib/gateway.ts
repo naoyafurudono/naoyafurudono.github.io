@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 // 一覧を返す
-import type { ListItem, Node } from "mdast";
+import type { ListItem } from "mdast";
 import type { AboutSections } from "./plugin";
 import { render } from "./render";
 
@@ -85,25 +85,25 @@ export async function findArticle({
 	return { ...m, content };
 }
 
-export async function listAspects(): Promise<Article[]> {
-	const as = await listArticles();
-	const aspects: Record<string, Node[]> = {};
-	for (const a of as) {
-		const about = a.about;
-		for (const [key, value] of Object.entries(about)) {
-			aspects[key].push(...value);
-		}
-	}
-	return Object.entries(aspects).map(([key, value]) => {
-		return {
-			id: key,
-			title: key,
-			content: Buffer.from(value),
-			unchecked: value,
-		};
-	});
-	// 	draft: r.draft,
-	// 	desc: r.desc,
-	// 	unchecked: r.unchecked,
-	// };
-}
+// export async function listAspects(): Promise<Article[]> {
+// 	const as = await listArticles();
+// 	const aspects: Record<string, Node[]> = {};
+// 	for (const a of as) {
+// 		const about = a.about;
+// 		for (const [key, value] of Object.entries(about)) {
+// 			aspects[key].push(...value);
+// 		}
+// 	}
+// 	return Object.entries(aspects).map(([key, value]) => {
+// 		return {
+// 			id: key,
+// 			title: key,
+// 			content: Buffer.from(value),
+// 			unchecked: value,
+// 		};
+// 	});
+// 	// 	draft: r.draft,
+// 	// 	desc: r.desc,
+// 	// 	unchecked: r.unchecked,
+// 	// };
+// }

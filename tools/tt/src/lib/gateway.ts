@@ -2,7 +2,6 @@ import fs from "node:fs";
 import path from "node:path";
 // 一覧を返す
 import type { ListItem } from "mdast";
-import type { AboutSections } from "./plugin";
 import { render } from "./render";
 
 const articleDirectoryPaths: string[] =
@@ -18,7 +17,7 @@ export type ArticleMeta = {
 	draft: boolean;
 	desc: string;
 	unchecked: ListItem[];
-	about: AboutSections;
+	// about: AboutSections;
 };
 export type Article = {
 	content: Buffer;
@@ -62,7 +61,7 @@ export async function listArticles(): Promise<Article[]> {
 					draft: r.draft,
 					desc: r.desc,
 					unchecked: r.unchecked,
-					about: r.about,
+					// about: r.about,
 				};
 			});
 	});

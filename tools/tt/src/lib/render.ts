@@ -9,9 +9,7 @@ import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
 import {
-	type AboutSections,
 	addHeadingIds,
-	extractAboutSections,
 	ignoreNewLine,
 	putIDOn,
 	rehypeCopyElementURL,
@@ -25,7 +23,7 @@ export type RenderResult = {
 	draft: boolean;
 	desc: string;
 	unchecked: ListItem[];
-	about: AboutSections;
+	// about: AboutSections;
 };
 
 export async function render({
@@ -39,7 +37,7 @@ export async function render({
 		.use(ignoreNewLine)
 		.use(addHeadingIds)
 		.use(unchecked)
-		.use(extractAboutSections)
+		// .use(extractAboutSections)
 		.use(remarkRehype)
 		.use(putIDOn("task-list-item"))
 		.use(rehypeCopyElementURL)
@@ -59,7 +57,7 @@ export async function render({
 
 		// by unchecked
 		unchecked: result.data.unchecked as ListItem[],
-		about: result.data.about as AboutSections,
+		// about: result.data.about as AboutSections,
 	};
 }
 

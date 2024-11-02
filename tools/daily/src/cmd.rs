@@ -24,10 +24,9 @@ impl Cmd {
         } else {
             match (&args.date, &args.month, &args.day) {
                 (None, None, None) => Spec::Today,
-                (Some(date), None, None) => {
-                    let nd = parse_naive_date(&date)?;
-                    Spec::Date { date: nd }
-                }
+                (Some(date), None, None) => Spec::Date {
+                    date: parse_naive_date(&date)?,
+                },
                 (None, _, _) => {
                     let nd = MyDate::now()
                         .force(None, args.month, args.day)?
@@ -91,6 +90,7 @@ fn parse_naive_date(s: &str) -> Result<NaiveDate> {
         us.push(d);
     }
 
-    let us = ensure_length(us, 3);
+    let mut us = ensure_length(us, 3);
+    us.reverse();
     Ok(MyDate::now().force(us[0], us[1], us[2])?.to_naive_date())
 }

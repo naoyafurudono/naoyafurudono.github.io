@@ -96,7 +96,7 @@ impl MyDate {
             Some(nd) => Ok(MyDate { date: nd }),
             None => Err(MyErr {
                 // TODO formatを使う
-                msg: "cannot create date".to_string(),
+                msg: format!("y-m-d: {:?}-{:?}-{:?}", y, m, d )
             }
             .into()),
         }

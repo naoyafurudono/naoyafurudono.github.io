@@ -23,6 +23,7 @@
     "react-dom": "^18",
     "rehype-extract-excerpt": "^0.3.1",
     "rehype-stringify": "^10.0.0",
+    "remark-behead": "^3.1.0",
     "remark-extract-frontmatter": "^3.2.0",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",

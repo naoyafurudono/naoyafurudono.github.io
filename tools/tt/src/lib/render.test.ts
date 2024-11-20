@@ -136,8 +136,8 @@ date: "2024-08-15"
 	expect(r.rawBody).toContain('id="日本語でも遊ぶ"');
 });
 
-test("h2から始める", async ()=> {
-  const content = `\
+test("h2から始める", async () => {
+	const content = `\
  ---
  title: Hello, world!
  date: "2024-08-15"
@@ -152,5 +152,4 @@ test("h2から始める", async ()=> {
 	const r = await render({ content: Buffer.from(content) });
 	expect(r.rawBody).toContain('<h2 id="hello-world"');
 	expect(r.rawBody).toContain('<h3 id="日本語でも遊ぶ"');
-  
-})
+});

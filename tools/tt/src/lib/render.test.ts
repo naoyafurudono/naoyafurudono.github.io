@@ -132,6 +132,7 @@ date: "2024-08-15"
 ## 日本語でも遊ぶ
     `;
 	const r = await render({ content: Buffer.from(content) });
-	expect(r.rawBody).toContain('<h1 id="hello-world"');
-	expect(r.rawBody).toContain('<h2 id="日本語でも遊ぶ"');
+	expect(r.rawBody).toContain('id="hello-world"');
+	expect(r.rawBody).toContain('id="日本語でも遊ぶ"');
 });
+

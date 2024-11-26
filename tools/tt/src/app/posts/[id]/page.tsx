@@ -27,8 +27,18 @@ const Post: NextPage<Props> = async ({ params }) => {
 					dangerouslySetInnerHTML={{ __html: rendered.rawBody.toString() }}
 				/>
 			</article>
-			<div>{before && <a href={`/posts/${before}`}>{`< ${before}`}</a>}</div>
-			<div>{after && <a href={`/posts/${after}`}>{`${after} >`}</a>}</div>
+			<ol>
+				{before && (
+					<li>
+						<a href={`/posts/${before}`}>{`< ${before}`}</a>
+					</li>
+				)}
+				{after && (
+					<li>
+						<a href={`/posts/${after}`}>{`${after} >`}</a>
+					</li>
+				)}
+			</ol>
 		</>
 	);
 };

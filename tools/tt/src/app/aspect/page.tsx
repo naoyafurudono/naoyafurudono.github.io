@@ -1,11 +1,11 @@
-import { type ArticleMeta, listPublishedArticles } from "@/lib/gateway";
+import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import { renderMdAst } from "@/lib/render";
 import * as util from "@/lib/util";
 import type { List, ListItem, Root, RootContent } from "mdast";
 import type { Metadata, NextPage } from "next";
 
 const Home: NextPage = async () => {
-	const as: ArticleMeta[] = await listPublishedArticles();
+	const as: ArticleMeta[] = await listArticles();
 	return (
 		<>
 			<ol>

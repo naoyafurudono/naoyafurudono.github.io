@@ -3,6 +3,7 @@ import path from "node:path";
 // 一覧を返す
 import type { ListItem } from "mdast";
 import { render } from "./render";
+import { lexOrder } from "./util";
 
 const articleDirectoryPaths: string[] =
 	process.env.ARTICLE_DIRECTORY_PATHS?.split(",") || [
@@ -21,18 +22,15 @@ export type ArticleMeta = {
 };
 export type Article = {
 	content: Buffer;
+	before?: string;
+	after?: string;
 } & ArticleMeta;
 
 export function isDraft(a: ArticleMeta): boolean {
 	return a.draft;
 }
 
-export async function listPublishedArticles(): Promise<Article[]> {
-	const a = await listArticles();
-	return a.filter((a) => !isDraft(a));
-}
-
-let memo: Promise<Article[]>;
+let memo: Article[];
 export async function listArticles(): Promise<Article[]> {
 	if (memo) {
 		return memo;
@@ -63,9 +61,17 @@ export async function listArticles(): Promise<Article[]> {
 					unchecked: r.unchecked,
 					// about: r.about,
 				};
-			});
+			})
+			.filter(async (a) => !isDraft(await a));
 	});
-	memo = Promise.all(a);
+	memo = await Promise.all(a);
+	memo.sort((a, b) => -lexOrder(a.date, b.date));
+	for (let i = 0; i < memo.length; i++) {
+		const a = memo[i];
+		// 最新（latest)の記事が最小の記事
+		a.after = i > 0 ? memo[i - 1].id : undefined;
+		a.before = i < memo.length - 1 ? memo[i + 1].id : undefined;
+	}
 	return memo;
 }
 

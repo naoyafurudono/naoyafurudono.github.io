@@ -1,4 +1,4 @@
-import { type ArticleMeta, listPublishedArticles } from "@/lib/gateway";
+import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import * as util from "@/lib/util";
 import type { NextPage } from "next";
 
@@ -8,7 +8,7 @@ type Props = {
 	};
 };
 const Home: NextPage<Props> = async () => {
-	const as: ArticleMeta[] = await listPublishedArticles();
+	const as: ArticleMeta[] = await listArticles();
 	return (
 		<ol>
 			{as

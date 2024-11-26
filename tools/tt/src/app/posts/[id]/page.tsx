@@ -1,10 +1,12 @@
-import { findArticle, listPublishedArticles } from "@/lib/gateway";
+import { findArticle, listArticles } from "@/lib/gateway";
 import { type RenderResult, render } from "@/lib/render";
 import type { Metadata, NextPage } from "next";
 
 type Props = {
 	params: {
 		id: string;
+		before?: string;
+		after?: string;
 	};
 };
 const Post: NextPage<Props> = async ({ params }) => {
@@ -14,7 +16,7 @@ const Post: NextPage<Props> = async ({ params }) => {
 		throw new Error("Not found");
 	}
 	const rendered: RenderResult = await render(a);
-
+	const { before, after } = a;
 	return (
 		<>
 			<article>
@@ -25,16 +27,16 @@ const Post: NextPage<Props> = async ({ params }) => {
 					dangerouslySetInnerHTML={{ __html: rendered.rawBody.toString() }}
 				/>
 			</article>
+			<div>{before && <a href={`/posts/${before}`}>{`< ${before}`}</a>}</div>
+			<div>{after && <a href={`/posts/${after}`}>{`${after} >`}</a>}</div>
 		</>
 	);
 };
 
 export default Post;
 export async function generateStaticParams() {
-	const as = await listPublishedArticles();
-	return as.map((a) => ({
-		id: a.id,
-	}));
+	const as = await listArticles();
+	return as.map((a) => ({ id: a.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

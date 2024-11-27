@@ -25,8 +25,8 @@ export type ArticleMeta = {
 };
 export type Article = {
 	content: Buffer;
-	before?: string;
-	after?: string;
+	before?: ArticleID;
+	after?: ArticleID;
 } & ArticleMeta;
 
 export function isDraft(a: ArticleMeta): boolean {

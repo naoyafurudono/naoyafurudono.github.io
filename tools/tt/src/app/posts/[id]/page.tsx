@@ -2,14 +2,12 @@ import { findArticle, listArticles } from "@/lib/gateway";
 import { type RenderResult, render } from "@/lib/render";
 import type { Metadata, NextPage } from "next";
 
-type Props = {
+type Slugs = {
 	params: {
 		id: string;
-		before?: string;
-		after?: string;
 	};
 };
-const Post: NextPage<Props> = async ({ params }) => {
+const Post: NextPage<Slugs> = async ({ params }) => {
 	const { id } = params;
 	const a = await findArticle({ articleId: id });
 	if (!a) {
@@ -46,7 +44,7 @@ export async function generateStaticParams() {
 	return as.map((a) => ({ id: a.id }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Slugs): Promise<Metadata> {
 	const { id } = params;
 	const a = await findArticle({ articleId: id });
 	if (!a) {

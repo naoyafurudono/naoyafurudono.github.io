@@ -27,21 +27,18 @@ const Post: NextPage<Props> = async ({ params }) => {
 					dangerouslySetInnerHTML={{ __html: rendered.rawBody.toString() }}
 				/>
 			</article>
-			<ol>
-				{before && (
-					<li>
-						<a href={`/posts/${before}`}>{`< ${before}`}</a>
-					</li>
-				)}
-				{after && (
-					<li>
-						<a href={`/posts/${after}`}>{`${after} >`}</a>
-					</li>
-				)}
-			</ol>
+			{before && <Textlink href={`/posts/${before}`} text={before} />}
+			{after && <Textlink href={`/posts/${after}`} text={after} />}
 		</>
 	);
 };
+function Textlink({ text, href }: { text: string; href: string }) {
+	return (
+		<span style={{ marginInline: "5px" }}>
+			<a href={href}>{text}</a>
+		</span>
+	);
+}
 
 export default Post;
 export async function generateStaticParams() {

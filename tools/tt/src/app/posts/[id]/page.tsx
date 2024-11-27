@@ -1,4 +1,4 @@
-import { findArticle, listArticles } from "@/lib/gateway";
+import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
 import { type RenderResult, render } from "@/lib/render";
 import type { Metadata, NextPage } from "next";
 
@@ -9,7 +9,7 @@ type Slugs = {
 };
 const Post: NextPage<Slugs> = async ({ params }) => {
 	const { id } = params;
-	const a = await findArticle({ articleId: id });
+	const a = await findArticle({ articleId: id as ArticleID });
 	if (!a) {
 		throw new Error("Not found");
 	}
@@ -54,7 +54,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Slugs): Promise<Metadata> {
 	const { id } = params;
-	const a = await findArticle({ articleId: id });
+	const a = await findArticle({ articleId: id as ArticleID });
 	if (!a) {
 		throw new Error(`Not found: ${id}`);
 	}

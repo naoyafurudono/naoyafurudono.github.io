@@ -3,19 +3,22 @@ import path from "node:path";
 // 一覧を返す
 import type { ListItem } from "mdast";
 import { render } from "./render";
-import { lexOrder } from "./util";
+import { type Brand, lexOrder } from "./util";
 
 const articleDirectoryPaths: string[] =
 	process.env.ARTICLE_DIRECTORY_PATHS?.split(",") || [
 		path.join(process.cwd(), "article"),
 	];
 
+export type ArticleID = Brand<string, "article">;
+export type On = Brand<string, "publish on">;
+export type Draft = Brand<boolean, "draft">;
 export type ArticleMeta = {
-	id: string;
+	id: ArticleID;
 	path: string;
-	date: string;
+	date: On;
 	title: string;
-	draft: boolean;
+	draft: Draft;
 	desc: string;
 	unchecked: ListItem[];
 	// about: AboutSections;
@@ -51,7 +54,7 @@ export async function listArticles(): Promise<Article[]> {
 				}
 				const r = await render({ content });
 				return {
-					id: name,
+					id: name as ArticleID,
 					path: fpath,
 					title: r.title,
 					date: r.date,
@@ -77,7 +80,7 @@ export async function listArticles(): Promise<Article[]> {
 
 export async function findArticle({
 	articleId,
-}: { articleId: string }): Promise<Article | null> {
+}: { articleId: ArticleID }): Promise<Article | null> {
 	const m = await listArticles().then((as) =>
 		as.find((v) => {
 			return v.id === articleId;

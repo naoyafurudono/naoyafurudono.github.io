@@ -9,6 +9,7 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
+import type { Draft, On } from "./gateway";
 import {
 	addHeadingIds,
 	ignoreNewLine,
@@ -19,9 +20,9 @@ import {
 
 export type RenderResult = {
 	rawBody: string;
-	date: string;
+	date: On;
 	title: string;
-	draft: boolean;
+	draft: Draft;
 	desc: string;
 	unchecked: ListItem[];
 	// about: AboutSections;
@@ -50,9 +51,9 @@ export async function render({
 		rawBody: result.toString(),
 
 		// frontmatter
-		date: result.data.date as string,
+		date: result.data.date as string as On,
 		title: result.data.title as string,
-		draft: result.data.draft as boolean,
+		draft: result.data.draft as boolean as Draft,
 
 		// by rehypeExtractExcerpt
 		desc: result.data.excerpt as string,

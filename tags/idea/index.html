@@ -40,11 +40,7 @@ message SayResponse {
   string sentence = 1;
   bool dry_run = 2;
 }
-
-こんな定義があるときに
-
-```sh
-$ ./sample say --sentence &quot;hello world&quot; --dryrun
+</code></pre><p>こんな定義があるときに</p><pre><code class=language-sh>$ ./sample say --sentence &quot;hello world&quot; --dryrun
 sentence: &quot;I will say: hello world&quot;
 </code></pre><p>みたいなやりとりを定義するためのCLIテンプレート生成ツールを作る。あくまでテンプレートなので、生成ツールではインターフェースとかグルーコードだけ提供して、ユーザは以下のようなコードを書くことになる。</p><ul><li>connectとかでサービスとサーバの起動を定義してmainからいい感じに呼ぶようにすると、gRPCサーバがたつのに対して、</li><li>CLIテンプレート作成ツールでサービスとCLIコマンドの呼び出しを定義してmainからいい感じに呼ぶようにすると、CLIから実行できる</li></ul><h3><a href=#%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ae%e5%ae%9f%e8%a3%85 id=サービスの実装 class=anchor aria-hidden=true>サービスの実装</a></h3><pre><code class=language-go>package service
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tool on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/tool/</link><description>Recent content in Tool on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Thu, 28 Nov 2024 11:32:06 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/tool/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-11-27</title><link>https://blog.nfurudono.com/daily/2024-11-27/</link><pubDate>Wed, 27 Nov 2024 19:19:42 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-11-27/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tool on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/tool/</link><description>Recent content in Tool on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sun, 01 Dec 2024 17:51:10 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/tool/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-11-27</title><link>https://blog.nfurudono.com/daily/2024-11-27/</link><pubDate>Wed, 27 Nov 2024 19:19:42 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-11-27/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://incepter.github.io/how-react-works/">https://incepter.github.io/how-react-works/&lt;/a> これ面白そうなので読む。定期的にくるReactの仕組みを深掘りしたくなる時期。&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> ブログのMakefileを書く&lt;/li>
 &lt;/ul>
@@ -22,6 +22,43 @@
 &lt;li>これはそれらにCLIをインターフェースとして加える。つまりローカルから、サーバを立てる事なく実行できるようにする。そういう立ち位置がいい。単にインターフェースを一個加えるだけ。実装はできるだけシェアしたい。&lt;/li>
 &lt;li>まずはconnectを採用するアプリケーションを一個用意して、それにCLIを入れる。ここで上手い入れ方を探る&lt;/li>
 &lt;li>次にその入れる作業を自動化する。そのためのCLIがproto2cli&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>サブコマンドでサービス、位置引数でメソッド、フラグ引数(&lt;code>-d&lt;/code>)でリクエストメッセージを受け取る。
+&lt;ul>
+&lt;li>サブコマンドと位置引数は最初は特に区別しなくていいか。 &lt;code>cmd &amp;lt;service&amp;gt; &amp;lt;method&amp;gt; -d &amp;lt;request message json&amp;gt;&lt;/code> の形式で呼び出すだけ。&lt;/li>
+&lt;li>CLIへの入力はそのままサービス名、メソッド名、リクエストメッセージがそれぞれbyte列かstringのどちらかで得られる。それらをなんとかするのは一旦別のコンポーネントの役割にしよう&lt;/li>
+&lt;li>ここまでは普通にflagsパッケージとかを使うだけでいける&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>次にリクエストメッセージのデコードを自動化する。
+&lt;ul>
+&lt;li>&lt;code>func unmarshalRPC(service, method, req string) (MessageInterface, error)&lt;/code>
+&lt;ul>
+&lt;li>対応する型のunmarshellerへのディスパッチとその呼び出しが責務&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>dispatchUnMarshelelr(service, method string) (func(byte[], MessageInterface) error, error)&lt;/code>
+&lt;ul>
+&lt;li>ディスパッチだけでも良さそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>次に、サービスの呼び出しを行う
+&lt;ul>
+&lt;li>connect サーバをclient経由で呼び出す&lt;/li>
+&lt;li>単にサービスを呼び出す
+&lt;ul>
+&lt;li>インターセプタを通過できない、特にproto validateを通せない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>インターセプタとサービスを合成する
+&lt;ul>
+&lt;li>できればhttpサーバの仕組みに乗っかりたい&lt;/li>
+&lt;li>でも無理がありそう、intercepter (unaryfunc) を受け入れてデコレートする感じにしそう&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>

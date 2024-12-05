@@ -23,7 +23,7 @@ test("ドラフトな記事は判定できる", async () => {
 ---
 title: Hello, world!
 date: "2024-08-15"
-drafat: true
+draft: true
 ---
 # Hello, world!
 
@@ -31,7 +31,23 @@ drafat: true
 こんにちは。
     `;
 	const r = await render({ content: Buffer.from(content) });
-	expect(r.draft).toBeTruthy;
+	expect(r.draft).toBeTruthy();
+});
+
+test("ドラフトな記事は判定できる: false", async () => {
+	const content = `
+---
+title: Hello, world!
+date: "2024-08-15"
+draft: false
+---
+# Hello, world!
+
+これはあいさつです。
+こんにちは。
+    `;
+	const r = await render({ content: Buffer.from(content) });
+	expect(r.draft).toBeFalsy();
 });
 
 test("明記がなければドラフトじゃない", async () => {
@@ -46,7 +62,7 @@ date: "2024-08-15"
 こんにちは。
     `;
 	const r = await render({ content: Buffer.from(content) });
-	expect(r.draft).toBeFalsy;
+	expect(r.draft).toBeFalsy();
 });
 
 test("最初の段落がdescとして取れる", async () => {

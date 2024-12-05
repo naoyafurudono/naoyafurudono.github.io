@@ -47,6 +47,7 @@ export async function render({
 		.use(rehypeExtractExcerpt) // 概要をとるやつ。
 		.use(rehypeStringify)
 		.process(content);
+	console.log(result.data)
 	return {
 		rawBody: result.toString(),
 

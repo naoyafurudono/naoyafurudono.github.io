@@ -66,7 +66,7 @@ date: "2024-08-15"
 });
 
 test("最初の段落がdescとして取れる", async () => {
-  const content = `\
+	const content = `\
 ---
 title: Hello, world!
 date: "2024-08-15"

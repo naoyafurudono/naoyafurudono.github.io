@@ -32,7 +32,7 @@ export const unchecked = () => {
 		});
 
 		// file.data.unchecked = unchecked;
-		file.data = { unchecked: unchecked, ...file.data}
+		file.data = { unchecked: unchecked, ...file.data };
 	};
 };
 

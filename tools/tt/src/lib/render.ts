@@ -34,6 +34,10 @@ export async function render({
 	const result = await unified()
 		.use(remarkParse)
 		.use(behead, { minDepth: 2 }) // headingの深さの最小を2にするやつ。"## hoge\n" みたいなmd行は深さ3になる。
+		// remarkFrontmatterとremarkExtractFrontmatterは二つで一つ。
+		// 前者がフロントマターをマークダウンから分離して
+		// 後者がそれを解釈してメタデータに落とし込む
+		// そう、フロントマターをマークダウンとして解釈するのは間違いで、僕たちは横着してキメラしているだけなのだ...
 		.use(remarkFrontmatter, [{ type: "yaml", marker: "-", anywhere: false }])
 		.use(remarkExtractFrontmatter, { yaml: yaml.parse, name: "frontmatter" })
 		.use(remarkGfm)

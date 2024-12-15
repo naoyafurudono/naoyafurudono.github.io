@@ -3,3 +3,5 @@ export function lexOrder(a: string, b: string): number {
 }
 export const postPath = (id: string) => `/posts/${id}/`;
 export type Brand<T, B> = T & { __brand: B };
+export const withSiteTitle = (name: string) => `${name} | ${siteTitle}`;
+export const siteTitle = "diary.nfurudono.com";

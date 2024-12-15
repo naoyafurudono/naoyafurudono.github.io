@@ -1,8 +1,9 @@
+import { siteTitle } from "@/lib/util";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: "日記",
+	title: siteTitle,
 	description: "これは日記です",
 	authors: [
 		{

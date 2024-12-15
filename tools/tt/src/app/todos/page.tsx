@@ -1,6 +1,7 @@
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import { renderMdAst } from "@/lib/render";
 import * as util from "@/lib/util";
+import { withSiteTitle } from "@/lib/util";
 import type { List, ListItem, Root, RootContent } from "mdast";
 import type { Metadata, NextPage } from "next";
 
@@ -59,7 +60,7 @@ const TodoSummary = async ({ article }: SummaryProps) => {
 
 export async function generateMetadata(): Promise<Metadata> {
 	return {
-		title: "todos",
+		title: withSiteTitle("todos"),
 		description: "未消化のtodo一覧です",
 	};
 }

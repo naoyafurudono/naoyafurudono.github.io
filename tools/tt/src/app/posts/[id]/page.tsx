@@ -1,5 +1,6 @@
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
 import { type RenderResult, render } from "@/lib/render";
+import { withSiteTitle } from "@/lib/util";
 import type { Metadata, NextPage } from "next";
 
 type Slugs = {
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: Slugs): Promise<Metadata> {
 	}
 	const r = await render(a);
 	return {
-		title: r.title,
+		title: withSiteTitle(r.title),
 		description: r.desc,
 	};
 }

@@ -59,7 +59,7 @@ const TodoSummary = async ({ article }: SummaryProps) => {
 
 export async function generateMetadata(): Promise<Metadata> {
 	return {
-		title: "todos",
+		title: util.withSiteTitle("todos"),
 		description: "未消化のtodo一覧です",
 	};
 }

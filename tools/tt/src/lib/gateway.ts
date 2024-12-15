@@ -30,7 +30,7 @@ export type Article = {
 } & ArticleMeta;
 
 export function isDraft(a: ArticleMeta): boolean {
-	return a.draft;
+	return !!a.draft;
 }
 
 let memo: Article[];
@@ -64,10 +64,9 @@ export async function listArticles(): Promise<Article[]> {
 					unchecked: r.unchecked,
 					// about: r.about,
 				};
-			})
-			.filter(async (a) => !isDraft(await a));
+			});
 	});
-	memo = await Promise.all(a);
+	memo = (await Promise.all(a)).filter((a) => !isDraft(a));
 	memo.sort((a, b) => -lexOrder(a.date, b.date));
 	for (let i = 0; i < memo.length; i++) {
 		const a = memo[i];

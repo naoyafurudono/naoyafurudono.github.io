@@ -47,7 +47,6 @@ export async function render({
 		.use(rehypeExtractExcerpt) // 概要をとるやつ。
 		.use(rehypeStringify)
 		.process(content);
-	console.log(result.data.frontmatter);
 	const frontmater = result.data.frontmatter as {
 		date: string;
 		title: string;

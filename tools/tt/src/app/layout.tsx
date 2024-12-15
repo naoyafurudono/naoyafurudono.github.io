@@ -67,6 +67,14 @@ const Nav = () => {
 						href: "https://twitter.com/furudono2",
 						text: "書いてる人のTwitter",
 					},
+					{
+						href: "https://zenn.dev/nfurudono",
+						text: "最近の技術記事（Zenn、試しに使っています）",
+					},
+					{
+						href: "https://blog.nfurudono.com",
+						text: "技術記事",
+					},
 				].map(({ href, text }) => {
 					return (
 						<li key={href}>

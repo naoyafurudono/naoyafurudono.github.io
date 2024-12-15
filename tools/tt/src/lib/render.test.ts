@@ -3,7 +3,7 @@ import { expect, test } from "vitest";
 import { render } from "./render";
 
 test("改行は取り除かれる", async () => {
-	const content = `
+	const content = `\
 ---
 title: Hello, world!
 date: "2024-08-15"
@@ -19,7 +19,7 @@ date: "2024-08-15"
 });
 
 test("ドラフトな記事は判定できる", async () => {
-	const content = `
+	const content = `\
 ---
 title: Hello, world!
 date: "2024-08-15"
@@ -35,7 +35,7 @@ draft: true
 });
 
 test("ドラフトな記事は判定できる: false", async () => {
-	const content = `
+	const content = `\
 ---
 title: Hello, world!
 date: "2024-08-15"
@@ -51,7 +51,7 @@ draft: false
 });
 
 test("明記がなければドラフトじゃない", async () => {
-	const content = `
+	const content = `\
 ---
 title: Hello, world!
 date: "2024-08-15"
@@ -66,16 +66,16 @@ date: "2024-08-15"
 });
 
 test("最初の段落がdescとして取れる", async () => {
-	const content = `
- ---
- title: Hello, world!
- date: "2024-08-15"
- ---
- # Hello, world!
+  const content = `\
+---
+title: Hello, world!
+date: "2024-08-15"
+---
+# Hello, world!
 
- これはあいさつです。
- こんにちは。
-     `;
+これはあいさつです。
+こんにちは。
+`;
 	const r = await render({ content: Buffer.from(content) });
 	expect(r.desc).include("こんにちは");
 });
@@ -154,17 +154,17 @@ date: "2024-08-15"
 
 test("h2から始める", async () => {
 	const content = `\
- ---
- title: Hello, world!
- date: "2024-08-15"
- ---
- # Hello, world!
- 
- これはあいさつです。
- こんにちは。
- 
- ## 日本語でも遊ぶ
-     `;
+---
+title: Hello, world!
+date: "2024-08-15"
+---
+# Hello, world!
+
+これはあいさつです。
+こんにちは。
+
+## 日本語でも遊ぶ
+`;
 	const r = await render({ content: Buffer.from(content) });
 	expect(r.rawBody).toContain('<h2 id="hello-world"');
 	expect(r.rawBody).toContain('<h3 id="日本語でも遊ぶ"');

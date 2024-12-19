@@ -17,6 +17,7 @@ import {
 	rehypeCopyElementURL,
 	unchecked,
 } from "./plugin";
+import rehypeRaw from "rehype-raw";
 
 export type RenderResult = {
 	rawBody: string;
@@ -45,7 +46,8 @@ export async function render({
 		.use(addHeadingIds)
 		.use(unchecked)
 		// .use(extractAboutSections)
-		.use(remarkRehype)
+		.use(remarkRehype, { allowDangerousHtml: true })
+		.use(rehypeRaw)
 		.use(putIDOn("task-list-item"))
 		.use(rehypeCopyElementURL)
 		.use(rehypeExtractExcerpt) // 概要をとるやつ。

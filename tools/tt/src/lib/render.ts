@@ -1,5 +1,6 @@
 import type { ListItem, Root } from "mdast";
 import rehypeExtractExcerpt from "rehype-extract-excerpt";
+import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import behead from "remark-behead";
 import remarkExtractFrontmatter from "remark-extract-frontmatter";
@@ -17,7 +18,6 @@ import {
 	rehypeCopyElementURL,
 	unchecked,
 } from "./plugin";
-import rehypeRaw from "rehype-raw";
 
 export type RenderResult = {
 	rawBody: string;

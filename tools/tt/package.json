@@ -19,7 +19,7 @@
     "buffer-crc32": "^1.0.0",
     "glob": "^11.0.0",
     "mdast-util-find-and-replace": "^3.0.1",
-    "next": "14.2.5",
+    "next": "^14.2.21",
     "react": "^18",
     "react-dom": "^18",
     "rehype-extract-excerpt": "^0.3.1",

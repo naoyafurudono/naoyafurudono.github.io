@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Thu, 12 Dec 2024 01:57:12 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-12</title><link>https://blog.nfurudono.com/daily/2024-12-12/</link><pubDate>Thu, 12 Dec 2024 01:52:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-12/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Fri, 20 Dec 2024 02:07:57 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-20</title><link>https://blog.nfurudono.com/daily/2024-12-20/</link><pubDate>Fri, 20 Dec 2024 02:07:42 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-20/</guid><description>&lt;iframe height="162" width="375" src="https://suzuri.jp/fnaoya/12466887/masking-tape/15mm/white/embed">&lt;/iframe></description></item><item><title>2024-12-15</title><link>https://blog.nfurudono.com/daily/2024-12-15/</link><pubDate>Sun, 15 Dec 2024 14:46:40 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-15/</guid><description>&lt;h2>
+&lt;a href="#filter%e3%81%abasync%e3%82%92%e6%b8%a1%e3%81%97%e3%81%a6%e3%81%af%e3%81%84%e3%81%91%e3%81%aa%e3%81%84" id="filterにasyncを渡してはいけない" class="anchor" aria-hidden="true">filterにasyncを渡してはいけない&lt;/a>
+&lt;/h2>
+&lt;p>日記はマークダウンで書いていて、タイトルとか公開・非公開とかはフロントマターに書いている。それをパースしてよしなに処理してHTMLに落としたり、そもそも公開しないようにしている。それらの処理はTSで書いている。&lt;/p></description></item><item><title>2024-12-13</title><link>https://blog.nfurudono.com/daily/2024-12-13/</link><pubDate>Fri, 13 Dec 2024 20:11:32 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-13/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> kamakura.goの感想とかを書く&lt;/li>
+&lt;/ul>
+&lt;!--
+# kamakura.goで発表した
+
+https://kamakurago.connpass.com/event/336353/
+
+https://x.com/fujiwara/status/1867533095584641426 たまたま？ カヤック3名 v.s. ペパボ3名だったみたい。
+
+「Protocol Buffersスキーマ定義から GoのCLIを生成する」というタイトルでお話をした。
+スライドは https://speakerdeck.com/naoyafurudono/protocol-bufferssukimading-yi-kara-gonocliwosheng-cheng-suru に公開してある。
+
+最初にバッチとして実装しておいて、後からhttpを喋ってストリーミング処理できるようにしたいと思うことがあってそれにハマりそうという感想をいただいた。
+
+## kongはいいぞ
+
+https://x.com/fujiwara/status/1867517006532260316
+--></description></item><item><title>2024-12-12</title><link>https://blog.nfurudono.com/daily/2024-12-12/</link><pubDate>Thu, 12 Dec 2024 01:52:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-12/</guid><description>&lt;blockquote>
 &lt;p>We recommend that all third-party code generators be written as plugins, as this allows all generators to provide a consistent interface and share a single parser implementation.&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;a href="https://protobuf.dev/reference/other/#plugins">https://protobuf.dev/reference/other/#plugins&lt;/a>&lt;/p>
@@ -25,8 +46,19 @@ viperに依存性を注入するような使い方をしたい。Facadeを受け
 &lt;a href="#%e3%82%b9%e3%82%ad%e3%83%bc%e3%83%9e%e9%a7%86%e5%8b%95cli%e3%83%84%e3%83%bc%e3%83%ab%e9%96%8b%e7%99%ba%e3%82%92%e6%94%af%e6%8f%b4%e3%81%99%e3%82%8b%e3%83%84%e3%83%bc%e3%83%ab%e3%82%92proto%e3%81%ab%e4%b9%97%e3%81%a3%e3%81%8b%e3%81%a3%e3%81%a6%e4%bd%9c%e3%82%8a%e3%81%9f%e3%81%84" id="スキーマ駆動cliツール開発を支援するツールをprotoに乗っかって作りたい" class="anchor" aria-hidden="true">スキーマ駆動CLIツール開発を支援するツールをprotoに乗っかって作りたい&lt;/a>
 &lt;/h2>
 &lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> proto2cliを実装する
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> proto2cliを実装する
 &lt;ul>
+&lt;li>やった
+&lt;ul>
+&lt;li>zennに紹介記事を書いた &lt;a href="https://zenn.dev/nfurudono/articles/719e3aafac6065">https://zenn.dev/nfurudono/articles/719e3aafac6065&lt;/a>&lt;/li>
+&lt;li>kamakura.go #7で発表した &lt;a href="https://kamakurago.connpass.com/event/336353/">https://kamakurago.connpass.com/event/336353/&lt;/a>
+&lt;ul>
+&lt;li>スライドはこれ &lt;a href="https://speakerdeck.com/naoyafurudono/protocol-bufferssukimading-yi-kara-gonocliwosheng-cheng-suru">https://speakerdeck.com/naoyafurudono/protocol-bufferssukimading-yi-kara-gonocliwosheng-cheng-suru&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>まだ本番環境に組み込めてないのと、機能開発とか開発環境の整備ができていない。やる&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>名前を決める：connectはブラウザやgRPCと互換性のあるAPIを提供するのに必要なボイラープレートが必要なのを軽減してくれるやつ。
 &lt;ul>
 &lt;li>これはそれらにCLIをインターフェースとして加える。つまりローカルから、サーバを立てる事なく実行できるようにする。そういう立ち位置がいい。単にインターフェースを一個加えるだけ。実装はできるだけシェアしたい。&lt;/li>
@@ -71,6 +103,7 @@ viperに依存性を注入するような使い方をしたい。Facadeを受け
 &lt;/li>
 &lt;/ul>
 &lt;/li>
+&lt;li>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>

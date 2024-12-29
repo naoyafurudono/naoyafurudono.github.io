@@ -1,8 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daily on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/daily/</link><description>Recent content in Daily on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Mon, 30 Dec 2024 01:19:44 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-30</title><link>https://blog.nfurudono.com/daily/2024-12-30/</link><pubDate>Mon, 30 Dec 2024 01:07:13 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-30/</guid><description>&lt;h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daily on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/daily/</link><description>Recent content in Daily on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Mon, 30 Dec 2024 01:24:34 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-30</title><link>https://blog.nfurudono.com/daily/2024-12-30/</link><pubDate>Mon, 30 Dec 2024 01:07:13 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-30/</guid><description>&lt;h2>
 &lt;a href="#pc%e3%81%ae%e5%a4%a7%e6%8e%83%e9%99%a4%e3%82%92%e3%81%97%e3%81%9f" id="pcの大掃除をした" class="anchor" aria-hidden="true">PCの大掃除をした&lt;/a>
 &lt;/h2>
 &lt;p>ディスクの空きが少なくなっていたので何が埋めてるのだろうと思ったら、
-steam osを以前インストールしてみたときに一時的にダウンロードしたイメージがずっと生き残っていた。それもなぜか似たようなのが三つあり、それらを消すだけでだいぶ効いた。&lt;/p></description></item><item><title>2024-12-25</title><link>https://blog.nfurudono.com/daily/2024-12-25/</link><pubDate>Wed, 25 Dec 2024 23:27:09 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-25/</guid><description>&lt;h2>
+steam osを以前インストールしてみたときに一時的にダウンロードしたイメージがずっと生き残っていた。それもなぜか似たようなのが三つあり、それらを消すだけでだいぶ効いた。&lt;/p></description></item><item><title>2024-12-28</title><link>https://blog.nfurudono.com/daily/2024-12-28/</link><pubDate>Sat, 28 Dec 2024 14:44:22 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-28/</guid><description>&lt;p>年末やること&lt;/p>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> カンファレンスのスライドを作る&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> LTの資料を作る&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 掃除
+&lt;ul>
+&lt;li>普通のに加えてトイレ、風呂と棚の整理でもしよう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> ワインのシミを落とす&lt;/li>
+&lt;li>helm完全理解?
+&lt;ul>
+&lt;li>会社の構成管理をhelmに置き換えられたら色々嬉しいのだが仕事になっちゃうのが悩ましい&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 認証の本読む&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> データモデリングの本読む&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> zig入門
+&lt;ul>
+&lt;li>ghostty読むと楽しそう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>clioの開発&lt;/li>
+&lt;li>年を振り返る&lt;/li>
+&lt;/ul></description></item><item><title>2024-12-25</title><link>https://blog.nfurudono.com/daily/2024-12-25/</link><pubDate>Wed, 25 Dec 2024 23:27:09 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-25/</guid><description>&lt;h2>
 &lt;a href="#%e5%a5%91%e7%b4%84%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0%e4%b9%b1%e6%96%87%e3%81%a7%e3%81%99" id="契約プログラミング乱文です" class="anchor" aria-hidden="true">契約プログラミング（乱文です）&lt;/a>
 &lt;/h2>
 &lt;p>関数の引数はそれぞれ何で、どんな性質を期待するかや、そのほかの事前条件を満たした上でこの関数を呼び出すと、その結果としてどんな返り値が得られてそれ以外にどんな副作用があるかを表明するのが関数の契約。文章を用いるのが簡単だし、伝えやすくするには図を用いても良いし、型とかバリデーションのための式で表現しても良い。何にしても契約を表明すると楽しくプログラミングできる。&lt;/p></description></item><item><title>2024-12-22</title><link>https://blog.nfurudono.com/daily/2024-12-22/</link><pubDate>Sun, 22 Dec 2024 23:15:35 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-22/</guid><description>&lt;p>週末はずっと漫画を読んでいました。荻窪に住んでいた頃に24時までやっていた本屋さんで買ったり試し読みした続きを再開しました。あかね噺と地政のあれ（八田が主人公のやつ）です。あかね噺は3巻まで物理本で買っていたので続きも物理で買いました。どっちも面白い。&lt;/p></description></item><item><title>2024-12-20</title><link>https://blog.nfurudono.com/daily/2024-12-20/</link><pubDate>Fri, 20 Dec 2024 02:07:42 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-20/</guid><description>&lt;p>SUZURIでマスキングテープ作りました。発売中です。&lt;/p>

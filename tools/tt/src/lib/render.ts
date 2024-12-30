@@ -14,7 +14,7 @@ import type { Draft, On } from "./gateway";
 import {
 	addHeadingIds,
 	ignoreNewLine,
-	putIDOn,
+	putIDOnTODOItem,
 	rehypeCopyElementURL,
 	unchecked,
 } from "./plugin";
@@ -48,7 +48,7 @@ export async function render({
 		// .use(extractAboutSections)
 		.use(remarkRehype, { allowDangerousHtml: true })
 		.use(rehypeRaw)
-		.use(putIDOn("task-list-item"))
+		.use(putIDOnTODOItem)
 		.use(rehypeCopyElementURL)
 		.use(rehypeExtractExcerpt) // 概要をとるやつ。
 		.use(rehypeStringify)

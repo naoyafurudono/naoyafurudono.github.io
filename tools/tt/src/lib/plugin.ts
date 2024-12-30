@@ -36,11 +36,11 @@ export const unchecked = () => {
 	};
 };
 
-let counter = 0
+let _counter = 0;
 function uniqueID(): string {
-  const id = `genID{conteur}`
-  counter += 1
-  return id
+	const id = "genID{conteur}";
+	_counter += 1;
+	return id;
 }
 
 // 指定した要素にコンテンツに依存したIDをつける。
@@ -54,7 +54,7 @@ export const putIDOn = (className: string) => {
 					if (node.properties.className.includes(target)) {
 						const contents = node.children
 							.filter((child) => child.type === "text")
-							.map((child) => child.value)
+							.map((child) => child.value);
 						const hash = hashContent(contents.at(0) || uniqueID());
 						const linkSVG = createLinkSVG(hash);
 						node.children.unshift(linkSVG);
@@ -64,6 +64,29 @@ export const putIDOn = (className: string) => {
 		};
 	};
 };
+
+export const putIDOnTODOItem = () => {
+	return (tree: Root, _f: VFile) => {
+		const target = "task-list-item";
+		visit(tree, "element", (node: Element) => {
+			if (Array.isArray(node?.properties?.className)) {
+				if (node.properties.className.includes(target)) {
+					const hash = hashContent(todoTitle(node) || uniqueID());
+					const linkSVG = createLinkSVG(hash);
+					node.children.unshift(linkSVG);
+				}
+			}
+		});
+	};
+};
+
+function todoTitle(todoItemNode: Element): string | undefined {
+	const _n = todoItemNode;
+	const contents = todoItemNode.children
+		.filter((child) => child.type === "text")
+		.map((child) => child.value);
+	return contents.at(0);
+}
 
 export function hashContent(content: string): string {
 	const h = crypto.createHash("sha256").update(content).digest();

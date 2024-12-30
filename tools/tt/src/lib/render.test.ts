@@ -101,6 +101,30 @@ date: "2024-08-15"
 	expect(JSON.stringify(second)).toContain("todoです");
 });
 
+test("todoにつけるIDはそのタイトルに対して一意に定まる", async () => {
+	const content = `\
+---
+title: Hello, world!
+date: "2024-08-15"
+---
+
+# Hello, world!
+
+- [ ] これはあいさつです。
+  - 子供要素がここにいる
+- [ ] todoです
+  ここはタイトルに含める
+`;
+	const r = await render({ content: Buffer.from(content) });
+	expect(r.unchecked).toHaveLength(2);
+	const first: ListItem = r.unchecked[0];
+	console.log("first");
+	console.log(JSON.stringify(first));
+	expect(JSON.stringify(first)).toContain("これはあいさつです。");
+	const second: ListItem = r.unchecked[1];
+	expect(JSON.stringify(second)).toContain("todoです");
+});
+
 // test("aboutセクションを抽出する", async () => {
 //   const content = `\
 // ---

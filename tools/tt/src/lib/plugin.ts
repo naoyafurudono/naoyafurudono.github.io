@@ -70,8 +70,10 @@ export const putIDOnTODOItem = () => {
 		const target = "task-list-item";
 		visit(tree, "element", (node: Element) => {
 			if (Array.isArray(node?.properties?.className)) {
+				console.log(node);
 				if (node.properties.className.includes(target)) {
-					const hash = hashContent(todoTitle(node) || uniqueID());
+					const hash = todoTitle(node) || uniqueID();
+
 					const linkSVG = createLinkSVG(hash);
 					node.children.unshift(linkSVG);
 				}
@@ -81,7 +83,6 @@ export const putIDOnTODOItem = () => {
 };
 
 function todoTitle(todoItemNode: Element): string | undefined {
-	const _n = todoItemNode;
 	const contents = todoItemNode.children
 		.filter((child) => child.type === "text")
 		.map((child) => child.value);

@@ -84,7 +84,7 @@ export const putIDOnTODOItem = () => {
 function todoTitle(todoItemNode: Element): string | undefined {
 	const contents = todoItemNode.children
 		.filter((child) => child.type === "text")
-		.map((child) => child.value);
+		.map((child) => child.value.trim());
 	return contents.at(0);
 }
 

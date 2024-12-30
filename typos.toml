@@ -1,6 +1,3 @@
 [files]
-extend-exclude = [
-  "**/themes/**",
-  "**/*.drawio",
-  "/assets/css/**/*"
-  ]
+ignore-hidden = false
+extend-exclude = [".git/", "**/themes/**", "**/*.drawio", "/assets/css/**/*"]

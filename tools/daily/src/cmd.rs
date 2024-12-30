@@ -28,10 +28,10 @@ impl Cmd {
                     date: parse_naive_date(&date)?,
                 },
                 (None, _, _) => {
-                    let nd = MyDate::now()
+                    let today = MyDate::now()
                         .force(None, args.month, args.day)?
                         .to_naive_date();
-                    Spec::Date { date: nd }
+                    Spec::Date { date: today }
                 }
                 _ => {
                     return Err(Box::new(MyErr {

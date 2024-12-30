@@ -70,7 +70,6 @@ export const putIDOnTODOItem = () => {
 		const target = "task-list-item";
 		visit(tree, "element", (node: Element) => {
 			if (Array.isArray(node?.properties?.className)) {
-				console.log(node);
 				if (node.properties.className.includes(target)) {
 					const hash = todoTitle(node) || uniqueID();
 

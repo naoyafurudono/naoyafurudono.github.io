@@ -60,7 +60,7 @@ isAllowed:: (Actor, Action, Resource) -> Bool
 ```
 
 こういうインターフェースを定めることで認可の周りで責務の境界を定められる。
-呼び出し側の責務にenforcement, 呼ばれる側の責務にdicisionという名前をここではつけている。
+呼び出し側の責務にenforcement, 呼ばれる側の責務にdecisionという名前をここではつけている。
 
 ## Enforcement
 
@@ -77,7 +77,7 @@ isAllowed:: (Actor, Action, Resource) -> Bool
 
 [5. Putting Everything Together](https://www.osohq.com/academy/what-is-authorization#authzlogic:~:text=5.%20Putting%20Everything%20Together) がまとめだった。ここまでのメモが集約されてる感じ。
 
-あとここには書かなかったけど、enforcementとかdicisionとかの話の後にenforcementをどこに実装する？みたいな話があるがマイクロサービスぽいアプリケーションを書いてないとそもそも問題にならなさそうで、一旦そこに僕は興味ないのでスルー。
+あとここには書かなかったけど、enforcementとかdecisionとかの話の後にenforcementをどこに実装する？みたいな話があるがマイクロサービスぽいアプリケーションを書いてないとそもそも問題にならなさそうで、一旦そこに僕は興味ないのでスルー。
 
 ## 課題
 

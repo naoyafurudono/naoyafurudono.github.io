@@ -48,7 +48,7 @@ Openingから全ての時間帯で参加した。
     - 厳しいケース、確かに。そもそもコンパイルできる形で両立できなさそうなので、エラーで落としてfeature flagでの対応を諦めるのがいいのかな。
     - というかそもそもそんなにがっつりfeature flag使うスタンスなのすごい
 - [Guide to Profile-Guided Optimization: inlining, devirtualining, and profiling]()
-    - Profile guided optimizaton知らなかった
+    - Profile guided optimization知らなかった
     - Datadogにプロファイル送っておくのなるほど
     - 実際パフォーマンスがどう変わったか気になる
 - [DELISH KITCHENにおけるマスタデータのキャッシュ戦略とその歴史的変遷](https://gocon.jp/2024/sessions/23/)

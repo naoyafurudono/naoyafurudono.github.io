@@ -36,6 +36,13 @@ export const unchecked = () => {
 	};
 };
 
+let counter = 0
+function uniqueID(): string {
+  const id = `genID{conteur}`
+  counter += 1
+  return id
+}
+
 // 指定した要素にコンテンツに依存したIDをつける。
 // hastを入力に期待する。
 export const putIDOn = (className: string) => {
@@ -45,12 +52,10 @@ export const putIDOn = (className: string) => {
 			visit(tree, "element", (node: Element) => {
 				if (Array.isArray(node?.properties?.className)) {
 					if (node.properties.className.includes(target)) {
-						const content = node.children
+						const contents = node.children
 							.filter((child) => child.type === "text")
 							.map((child) => child.value)
-							.join("");
-
-						const hash = hashContent(content);
+						const hash = hashContent(contents.at(0) || uniqueID());
 						const linkSVG = createLinkSVG(hash);
 						node.children.unshift(linkSVG);
 					}

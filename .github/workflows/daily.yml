@@ -19,6 +19,8 @@ jobs:
         working-directory: tools/tt
     steps:
       - uses: actions/checkout@v4
+      - name: Check for typos
+        uses: crate-ci/typos@master
       - uses: actions/setup-node@v4
         with:
           node-version-file: tools/tt/package.json

@@ -9,6 +9,7 @@ const Home: NextPage = async () => {
 	const as: ArticleMeta[] = await listArticles();
 	return (
 		<>
+		各記事にあるオリジナルのtodoアイテムに割り当てられたIDは<a href="https://diary.nfurudono.com/posts/2024-10-14/#すべてのtodoアイテムにクリックでリンクコピーが可能なsvgをつけた。そのためにidを生成しているのだけど、コンテンツのハッシュ値を用いているのでテキストを加えたりするだけでアンカーが壊れる。直したい。">アイテムのタイトルに相当するテキストをそのまま用います</a>。
 			<ol>
 				{as
 					.filter((article) => hasToDo(article))

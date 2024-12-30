@@ -46,7 +46,7 @@ message SayResponse {
 sentence: &quot;I will say: hello world&quot;
 </code></pre><p>みたいなやりとりを定義するためのCLIテンプレート生成ツールを作る。あくまでテンプレートなので、生成ツールではインターフェースとかグルーコードだけ提供して、ユーザは以下のようなコードを書くことになる。</p><ul><li>connectとかでサービスとサーバの起動を定義してmainからいい感じに呼ぶようにすると、gRPCサーバがたつのに対して、</li><li>CLIテンプレート作成ツールでサービスとCLIコマンドの呼び出しを定義してmainからいい感じに呼ぶようにすると、CLIから実行できる</li></ul><h3><a href=#%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ae%e5%ae%9f%e8%a3%85 id=サービスの実装 class=anchor aria-hidden=true>サービスの実装</a></h3><pre><code class=language-go>package service
 
-improt (
+import (
 	&quot;fmt&quot;
 	
   sample &quot;github.com/nfurudono/gen/go/sample&quot;
@@ -86,7 +86,7 @@ func main() {
 	//   - rpcに渡す入力messageのデコード、サブコマンドへのフラグ引数が対応する
 	//   - rpcの出力メッセージやエラー内容の出力、コマンドの標準出力、標準エラー出力、コマンドのステータスコードの出しわけが対応する
 	if err := cli.Run(); err != nil {
-		slog.Fatalf(&quot;unexpected inpu: %w&quot;, err)  // 予期しないサブコマンドが来たらエラーを返すのもまた一興かな。
+		slog.Fatalf(&quot;unexpected input: %w&quot;, err)  // 予期しないサブコマンドが来たらエラーを返すのもまた一興かな。
 	}
 }
 </code></pre><p>便利じゃない？</p></p></div><div class=post-footer><time>November 20, 2024</time></div></article><article><h2><a href=https://blog.nfurudono.com/daily/2024-11-13/>2024-11-13</a></h2><div><p><p>fzfで表示される選択肢と選択した結果得られる値を分けられるようにしたいので作った。

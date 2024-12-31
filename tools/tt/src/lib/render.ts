@@ -1,4 +1,4 @@
-import type { ListItem, Root } from "mdast";
+import type { List, ListItem, Root, RootContent } from "mdast";
 import rehypeExtractExcerpt from "rehype-extract-excerpt";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
@@ -11,7 +11,7 @@ import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
 import type { Draft, On } from "./gateway";
-import {
+import genTOC, {
 	addHeadingIds,
 	ignoreNewLine,
 	putIDOnTODOItem,
@@ -27,6 +27,7 @@ export type RenderResult = {
 	desc: string;
 	unchecked: ListItem[];
 	// about: AboutSections;
+	toc: List | undefined;
 };
 
 export async function render({
@@ -44,6 +45,7 @@ export async function render({
 		.use(remarkGfm)
 		.use(ignoreNewLine)
 		.use(addHeadingIds)
+		.use(genTOC)
 		.use(unchecked)
 		// .use(extractAboutSections)
 		.use(remarkRehype, { allowDangerousHtml: true })
@@ -72,6 +74,7 @@ export async function render({
 		// by unchecked
 		unchecked: result.data.unchecked as ListItem[],
 		// about: result.data.about as AboutSections,
+		toc: result.data.toc as List | undefined,
 	};
 }
 
@@ -79,4 +82,18 @@ export async function renderMdAst(ast: Root): Promise<string> {
 	const hype = await unified().use(remarkRehype).run(ast);
 	const res = unified().use(rehypeStringify).stringify(hype);
 	return res;
+}
+
+export function newRoot(data: RootContent[]): Root {
+	return {
+		type: "root",
+		children: data,
+	};
+}
+export function newUL(items: ListItem[]): List {
+	return {
+		type: "list",
+		ordered: false,
+		children: items,
+	};
 }

@@ -1,8 +1,7 @@
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
-import { renderMdAst } from "@/lib/render";
+import { newRoot, newUL, renderMdAst } from "@/lib/render";
 import * as util from "@/lib/util";
 import { withSiteTitle } from "@/lib/util";
-import type { List, ListItem, Root, RootContent } from "mdast";
 import type { Metadata, NextPage } from "next";
 
 const Home: NextPage = async () => {
@@ -30,20 +29,6 @@ export default Home;
 
 function hasToDo(a: ArticleMeta): boolean {
 	return a.unchecked.length > 0;
-}
-
-function newRoot(data: RootContent[]): Root {
-	return {
-		type: "root",
-		children: data,
-	};
-}
-function newUL(items: ListItem[]): List {
-	return {
-		type: "list",
-		ordered: false,
-		children: items,
-	};
 }
 
 type SummaryProps = {

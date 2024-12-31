@@ -1,5 +1,5 @@
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
-import { type RenderResult, render } from "@/lib/render";
+import { type RenderResult, newRoot, render, renderMdAst } from "@/lib/render";
 import { withSiteTitle } from "@/lib/util";
 import type { Metadata, NextPage } from "next";
 
@@ -15,12 +15,21 @@ const Post: NextPage<Slugs> = async ({ params }) => {
 		throw new Error("Not found");
 	}
 	const rendered: RenderResult = await render(a);
+	const toc = rendered.toc && (await renderMdAst(newRoot([rendered.toc])));
 	const { before, after } = a;
 	return (
 		<>
 			<article>
 				<h1>{rendered.title}</h1>
 				<time>{rendered.date}</time>
+				{toc && (
+					<div
+						// biome-ignore lint/security/noDangerouslySetInnerHtml: TOCは信頼してok
+						dangerouslySetInnerHTML={{
+							__html: toc,
+						}}
+					/>
+				)}
 				<div
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: 入力は信頼してok
 					dangerouslySetInnerHTML={{ __html: rendered.rawBody.toString() }}

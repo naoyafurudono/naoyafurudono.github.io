@@ -19,6 +19,7 @@
     "buffer-crc32": "^1.0.0",
     "glob": "^11.0.0",
     "mdast-util-find-and-replace": "^3.0.1",
+    "mdast-util-toc": "^7.1.0",
     "next": "^14.2.21",
     "react": "^18",
     "react-dom": "^18",

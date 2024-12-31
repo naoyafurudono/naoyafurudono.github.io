@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 31 Dec 2024 22:31:51 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-31</title><link>https://blog.nfurudono.com/daily/2024-12-31/</link><pubDate>Tue, 31 Dec 2024 11:39:50 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-31/</guid><description>&lt;p>2024年の振り返りと2025年の目標設定をする。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 31 Dec 2024 22:33:39 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-31</title><link>https://blog.nfurudono.com/daily/2024-12-31/</link><pubDate>Tue, 31 Dec 2024 11:39:50 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-31/</guid><description>&lt;p>2024年の振り返りと2025年の目標設定をする。&lt;/p>
 &lt;h2>
 &lt;a href="#2024%e3%82%92%e6%8c%af%e3%82%8a%e8%bf%94%e3%82%8b" id="2024を振り返る" class="anchor" aria-hidden="true">2024を振り返る&lt;/a>
 &lt;/h2>
@@ -14,7 +14,7 @@ steam osを以前インストールしてみたときに一時的にダウンロ
 &lt;/h2>
 &lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 12-31 契約についての主張をまとめて公開する&lt;/li>
-&lt;li>12-31 年を振り返る&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 年を振り返る&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 01-03 カンファレンスのスライドを作る&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> clioの開発
 &lt;ul>
@@ -36,7 +36,11 @@ steam osを以前インストールしてみたときに一時的にダウンロ
 &lt;li>普通のに加えてトイレ、風呂と棚の整理でもしよう&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> ワインのシミを落とす&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> ワインのシミを落とす
+&lt;ul>
+&lt;li>酸素系漂白剤につけ置きしたら一発だった&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul></description></item><item><title>2024-12-25</title><link>https://blog.nfurudono.com/daily/2024-12-25/</link><pubDate>Wed, 25 Dec 2024 23:27:09 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-25/</guid><description>&lt;h2>
 &lt;a href="#%e5%a5%91%e7%b4%84%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0%e4%b9%b1%e6%96%87%e3%81%a7%e3%81%99" id="契約プログラミング乱文です" class="anchor" aria-hidden="true">契約プログラミング（乱文です）&lt;/a>
 &lt;/h2>

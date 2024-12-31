@@ -31,7 +31,7 @@ const Post: NextPage<Slugs> = async ({ params }) => {
 					/>
 				)}
 				<div
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: 入力は信頼してok
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: 日記の記事は信頼してok
 					dangerouslySetInnerHTML={{ __html: rendered.rawBody.toString() }}
 				/>
 			</article>

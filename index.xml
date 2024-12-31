@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ツイートするには長すぎる</title><link>https://blog.nfurudono.com/</link><description>Recent content on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 31 Dec 2024 22:33:39 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-31</title><link>https://blog.nfurudono.com/daily/2024-12-31/</link><pubDate>Tue, 31 Dec 2024 11:39:50 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-31/</guid><description>&lt;p>2024年の振り返りと2025年の目標設定をする。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ツイートするには長すぎる</title><link>https://blog.nfurudono.com/</link><description>Recent content on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 31 Dec 2024 22:34:07 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-31</title><link>https://blog.nfurudono.com/daily/2024-12-31/</link><pubDate>Tue, 31 Dec 2024 11:39:50 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-31/</guid><description>&lt;p>2024年の振り返りと2025年の目標設定をする。&lt;/p>
 &lt;h2>
 &lt;a href="#2024%e3%82%92%e6%8c%af%e3%82%8a%e8%bf%94%e3%82%8b" id="2024を振り返る" class="anchor" aria-hidden="true">2024を振り返る&lt;/a>
 &lt;/h2>
@@ -14,7 +14,11 @@ steam osを以前インストールしてみたときに一時的にダウンロ
 &lt;/h2>
 &lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 12-31 契約についての主張をまとめて公開する&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 年を振り返る&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 年を振り返る
+&lt;ul>
+&lt;li>&lt;a href="https://blog.nfurudono.com/posts/2024-12-31">2025の目標設定もした&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 01-03 カンファレンスのスライドを作る&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> clioの開発
 &lt;ul>

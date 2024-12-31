@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 31 Dec 2024 22:17:20 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-31</title><link>https://blog.nfurudono.com/daily/2024-12-31/</link><pubDate>Tue, 31 Dec 2024 11:39:50 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-31/</guid><description>&lt;p>2024年の振り返りと2025年の目標設定をする。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dailies on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/daily/</link><description>Recent content in Dailies on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 31 Dec 2024 22:31:51 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-12-31</title><link>https://blog.nfurudono.com/daily/2024-12-31/</link><pubDate>Tue, 31 Dec 2024 11:39:50 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2024-12-31/</guid><description>&lt;p>2024年の振り返りと2025年の目標設定をする。&lt;/p>
 &lt;h2>
 &lt;a href="#2024%e3%82%92%e6%8c%af%e3%82%8a%e8%bf%94%e3%82%8b" id="2024を振り返る" class="anchor" aria-hidden="true">2024を振り返る&lt;/a>
 &lt;/h2>
@@ -18,14 +18,14 @@ steam osを以前インストールしてみたときに一時的にダウンロ
 &lt;li>&lt;input disabled="" type="checkbox"> 01-03 カンファレンスのスライドを作る&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> clioの開発
 &lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> protovalidateのようなintercepterに対応する&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> jsonをそのまま文字列として書いてもらうのではなく、コマンドライン引数としていい感じに指定できるようにする&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> seriarization フォーマットから解放してあげる？
+&lt;li>protovalidateのようなintercepterに対応する&lt;/li>
+&lt;li>jsonをそのまま文字列として書いてもらうのではなく、コマンドライン引数としていい感じに指定できるようにする&lt;/li>
+&lt;li>seriarization フォーマットから解放してあげる？
 &lt;ul>
 &lt;li>解放しなくて良い気がするので説明を書く&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> やることをreadmeにまとめて自慢する&lt;/li>
+&lt;li>やることをreadmeにまとめて自慢する&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> LTの資料を作る&lt;/li>

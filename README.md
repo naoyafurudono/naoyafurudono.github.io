@@ -5,7 +5,7 @@
   rel="noopener noreferrer"
   href="https://github.com/naoyafurudono/naoyafurudono.github.io/actions">
   <img
-    src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/gh-pages.yml/badge.svg"
+    src="https://github.com/naoyafurudono/naoyafurudono.github.io/actions/workflows/blog.yml/badge.svg"
     alt="github pages deploy status"
     style="max-width: 100%;">
 </a>

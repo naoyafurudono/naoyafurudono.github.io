@@ -22,22 +22,15 @@ jobs:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@3a287949d38134f0920e6ac20032acef6d4a23c4
+        uses: peaceiris/actions-hugo@v3.0.0
         with:
           hugo-version: latest
           extended: true
       - name: Build
         run: hugo --minify
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@ababa3d330af34b07419f6bc9f4a6b817ed7930b
+        uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           cname: blog.nfurudono.com
-      - name: Notify
-        uses: sarisia/actions-status-discord@ac3f7e25a1804993b2569b1e87daecb58f68d7c5
-        if: ${{ success() || failure() }}
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          status: ${{ job.status }}
-          url: https://blog.nfurudono.com

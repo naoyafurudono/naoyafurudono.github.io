@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check for typos
-        uses: crate-ci/typos@eafac375fa8ec2a246da98260222ce167bbe63b4
+        uses: crate-ci/typos@v1.29.0
       - uses: actions/setup-node@v4
         with:
           node-version-file: tools/tt/package.json
@@ -37,7 +37,7 @@ jobs:
         env:
           ARTICLE_DIRECTORY_PATHS: "../../content/daily"
       - name: Deploy to pages
-        uses: cloudflare/wrangler-action@d5031c3dbe9d5d1da55af39b63510d22d31fb202
+        uses: cloudflare/wrangler-action@v3.13.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy tools/tt/out --commit-dirty=true --project-name diary-nfurudono

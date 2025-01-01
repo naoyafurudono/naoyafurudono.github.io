@@ -1,4 +1,6 @@
 name: Deploy Diary
+permissions:
+  contents: read
 
 on:
   push:

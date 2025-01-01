@@ -4,18 +4,16 @@ import type { Heading, ListItem, PhrasingContent, Root } from "mdast";
 import { findAndReplace } from "mdast-util-find-and-replace";
 import { type Result, toc } from "mdast-util-toc";
 import slugify from "slugify";
-import type unified from "unified";
 import type { Node } from "unist";
 import { visit } from "unist-util-visit";
 import type { VFile } from "vfile";
 
-export const print: (depth: number) => unified.Plugin =
-	(depth: number) => () => {
-		return (tree: Node, _file: VFile) => {
-			console.log(JSON.stringify(tree, null, depth));
-			console.log(_file.data);
-		};
+export const print = (depth: number) => () => {
+	return (tree: Node, _file: VFile) => {
+		console.log(JSON.stringify(tree, null, depth));
+		console.log(_file.data);
 	};
+};
 
 export const ignoreNewLine = () => {
 	return (tree: Root, _file: VFile) => {

@@ -46,7 +46,7 @@ export async function listArticles(): Promise<Article[]> {
 			.map(async (filename) => {
 				const fpath = path.join(directoryPath, filename);
 				const name = path.parse(filename).name;
-				let content = Buffer.from("");
+				let content: Buffer = Buffer.from("");
 				try {
 					content = fs.readFileSync(fpath);
 				} catch (_e) {

@@ -1,6 +1,6 @@
 name: GitHub Pages Deployment
 permissions:
-  contents: read
+  contents: write
 
 on:
   push:

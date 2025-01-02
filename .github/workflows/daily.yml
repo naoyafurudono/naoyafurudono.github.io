@@ -20,10 +20,10 @@ jobs:
       run:
         working-directory: tools/tt
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Check for typos
-        uses: crate-ci/typos@v1.29.0
-      - uses: actions/setup-node@v4
+        uses: crate-ci/typos@c8fd3764afbf5eaf6e53d2e6571c835db2c8fa5f # v1.29.0
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
           node-version-file: tools/tt/package.json
           cache: 'npm'
@@ -37,7 +37,7 @@ jobs:
         env:
           ARTICLE_DIRECTORY_PATHS: "../../content/daily"
       - name: Deploy to pages
-        uses: cloudflare/wrangler-action@v3.13.0
+        uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy tools/tt/out --commit-dirty=true --project-name diary-nfurudono

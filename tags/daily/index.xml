@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daily on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/daily/</link><description>Recent content in Daily on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Fri, 03 Jan 2025 20:12:36 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2025-01-03</title><link>https://blog.nfurudono.com/daily/2025-01-03/</link><pubDate>Fri, 03 Jan 2025 18:45:14 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-01-03/</guid><description>&lt;h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daily on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/daily/</link><description>Recent content in Daily on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Fri, 03 Jan 2025 20:13:47 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2025-01-03</title><link>https://blog.nfurudono.com/daily/2025-01-03/</link><pubDate>Fri, 03 Jan 2025 18:45:14 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-01-03/</guid><description>&lt;h2>
 &lt;a href="#go%e3%81%a7%e3%82%a8%e3%83%a9%e3%83%bc%e3%81%ab%e3%82%b9%e3%82%bf%e3%83%83%e3%82%af%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b9%e3%81%a4%e3%81%91%e3%82%8b%e3%81%ae%e6%a5%bd%e3%81%98%e3%82%83%e3%81%aa%e3%81%95%e3%81%9d%e3%81%86" id="goでエラーにスタックトレースつけるの楽じゃなさそう" class="anchor" aria-hidden="true">Goでエラーにスタックトレースつけるの楽じゃなさそう&lt;/a>
 &lt;/h2>
 &lt;p>&lt;a href="https://github.com/k1LoW/errors">k1LoW/errors&lt;/a> でスタックトレースをエラーにつけられるようになる。便利なのだがトレースをプログラマが明示的に指示しないといけない。設定を一回すれば終わりではなく忘れずに繰り返す必要があるのが辛い。その漏れをどのようになくすかを考える。&lt;/p></description></item><item><title>2025-01-02</title><link>https://blog.nfurudono.com/daily/2025-01-02/</link><pubDate>Thu, 02 Jan 2025 21:47:28 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-01-02/</guid><description>&lt;p>せいろを買った。&lt;a href="https://www.shouhounet.jp/item-detail/1215821">18cmの竹でできたやつ&lt;/a>
 店が中華街にあって賑わっていた。夜に行ったのははじめてで、明かりがきれいで印象的だった。&lt;/p>
 &lt;p>学生時代の先生がお薦めしていたのと、帰省して兄が気になっていそうだったので試すことに。餃子を包んで蒸してみた。焼くのとは違って記事がつやつやした感じになるのと小麦の味が違って感じた。今度は厚めの生地で包んで試したい。白菜やもやしをまとめて蒸してもみようと思う。&lt;/p></description></item><item><title>2025-01-01</title><link>https://blog.nfurudono.com/daily/2025-01-01/</link><pubDate>Wed, 01 Jan 2025 21:38:06 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-01-01/</guid><description>&lt;p>今日はまったりする。&lt;/p>
 &lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> 家の鍋とフライパンのサイズを知りたい。せいろを買おうと思ったがサイズを選べなかったので。&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 家の鍋とフライパンのサイズを知りたい。せいろを買おうと思ったがサイズを選べなかったので。
+&lt;ul>
+&lt;li>鍋は22cmくらい。結局勘でせいろ板を買ったらジャストフィットだった。冴えてる&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;h2>
 &lt;a href="#%e5%90%8c%e7%b4%9a%e7%94%9f%e3%81%ae%e7%b5%90%e5%a9%9a" id="同級生の結婚" class="anchor" aria-hidden="true">同級生の結婚&lt;/a>

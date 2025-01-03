@@ -128,10 +128,9 @@ function createLinkSVG(id: string): Element {
 }
 
 // idを持つ要素のURLをクリップボードにコピーするプラグイン
-export function rehypeCopyElementURL() {
+export function rehypeReferredElement() {
 	return (tree: Root) => {
 		visit(tree, "element", (node: Element) => {
-			// `id` 属性を持つすべての要素に対して処理を行う
 			if (node.properties?.id) {
 				// 現在のページURLを取得して、そのidを含むURLを生成する
 				const onclick = `

@@ -15,7 +15,7 @@ import genTOC, {
 	addHeadingIds,
 	ignoreNewLine,
 	putIDOnTODOItem,
-	rehypeCopyElementURL,
+	rehypeReferredElement,
 	unchecked,
 } from "./plugin";
 
@@ -51,7 +51,7 @@ export async function render({
 		.use(remarkRehype, { allowDangerousHtml: true })
 		.use(rehypeRaw)
 		.use(putIDOnTODOItem)
-		.use(rehypeCopyElementURL)
+		.use(rehypeReferredElement)
 		.use(rehypeExtractExcerpt) // 概要をとるやつ。
 		.use(rehypeStringify)
 		.process(content);

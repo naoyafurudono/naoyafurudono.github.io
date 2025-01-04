@@ -2,7 +2,7 @@
 title: "2025年にやりたいこと"
 date: 2025-01-05T02:24:30+09:00
 author: "Naoya Furudono"
-draft: true
+draft: false
 tags:
     - "daily"
 ---

@@ -1,5 +1,5 @@
 // os.envへのアクセスは全てここで行う
-import path from "path";
+import path from "node:path";
 
 export const diaryDirectoryPaths: string[] =
 	process.env.ARTICLE_DIRECTORY_PATHS?.split(",") || [

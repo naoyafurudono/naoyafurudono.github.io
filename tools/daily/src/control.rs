@@ -95,7 +95,6 @@ impl MyDate {
         match NaiveDate::from_ymd_opt(y, m, d) {
             Some(d) => Ok(MyDate { date: d }),
             None => Err(MyErr {
-                // TODO formatを使う
                 msg: format!("y-m-d: {:?}-{:?}-{:?}", y, m, d )
             }
             .into()),

@@ -1,3 +1,4 @@
+import { commitHash } from "@/lib/config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-	const commitHash = process.env.COMMIT_HASH || "unknown";
 
 	return (
 		<main>

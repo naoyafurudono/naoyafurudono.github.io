@@ -36,6 +36,7 @@ jobs:
         run: npm run build
         env:
           ARTICLE_DIRECTORY_PATHS: "../../content/daily"
+          NORMAL_DIRECTORY_PATHS: "../../content/posts"
           COMMIT_HASH: ${{ env.COMMIT_HASH }}
       - name: Deploy to pages
         uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0

@@ -1,7 +1,9 @@
+import path from "node:path";
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
 import { type RenderResult, newRoot, render, renderMdAst } from "@/lib/render";
 import { withSiteTitle } from "@/lib/util";
 import type { Metadata, NextPage } from "next";
+import { diaryDirectoryPaths } from "@/lib/config";
 
 type Slugs = {
 	params: {
@@ -10,7 +12,7 @@ type Slugs = {
 };
 const Post: NextPage<Slugs> = async ({ params }) => {
 	const { id } = params;
-	const a = await findArticle({ articleId: id as ArticleID });
+	const a = await findArticle({ articleId: id as ArticleID , directoryPaths: diaryDirectoryPaths});
 	if (!a) {
 		throw new Error("Not found");
 	}
@@ -58,13 +60,13 @@ function Textlink({ text, href }: { text: string; href: string }) {
 
 export default Post;
 export async function generateStaticParams() {
-	const as = await listArticles();
+	const as = await listArticles(diaryDirectoryPaths);
 	return as.map((a) => ({ id: a.id }));
 }
 
 export async function generateMetadata({ params }: Slugs): Promise<Metadata> {
 	const { id } = params;
-	const a = await findArticle({ articleId: id as ArticleID });
+	const a = await findArticle({ articleId: id as ArticleID, directoryPaths: diaryDirectoryPaths });
 	if (!a) {
 		throw new Error(`Not found: ${id}`);
 	}

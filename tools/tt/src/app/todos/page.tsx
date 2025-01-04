@@ -1,3 +1,4 @@
+import { diaryDirectoryPaths } from "@/lib/config";
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import { newRoot, newUL, renderMdAst } from "@/lib/render";
 import * as util from "@/lib/util";
@@ -5,7 +6,7 @@ import { withSiteTitle } from "@/lib/util";
 import type { Metadata, NextPage } from "next";
 
 const Home: NextPage = async () => {
-	const as: ArticleMeta[] = await listArticles();
+	const as: ArticleMeta[] = await listArticles(diaryDirectoryPaths);
 	return (
 		<>
 			各記事にあるオリジナルのtodoアイテムに割り当てられたIDは

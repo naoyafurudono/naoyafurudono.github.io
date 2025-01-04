@@ -3,12 +3,7 @@ import path from "node:path";
 // 一覧を返す
 import type { ListItem } from "mdast";
 import { render } from "./render";
-import { type Brand, lexOrder } from "./util";
-
-const articleDirectoryPaths: string[] =
-	process.env.ARTICLE_DIRECTORY_PATHS?.split(",") || [
-		path.join(process.cwd(), "article"),
-	];
+import { type Brand, hash, lexOrder } from "./util";
 
 export type ArticleID = Brand<string, "article">;
 export type On = Brand<string, "publish on">;
@@ -33,12 +28,16 @@ export function isDraft(a: ArticleMeta): boolean {
 	return !!a.draft;
 }
 
-let memo: Article[];
-export async function listArticles(): Promise<Article[]> {
-	if (memo) {
-		return memo;
+const memo: Map<string, Article[]> = new Map();
+export async function listArticles(
+	directoryPaths: string[],
+): Promise<Article[]> {
+	const memoKey = hash(directoryPaths);
+	const m = memo.get(memoKey);
+	if (m) {
+		return m;
 	}
-	const a = articleDirectoryPaths.flatMap((directoryPath) => {
+	const a = directoryPaths.flatMap((directoryPath) => {
 		return fs
 			.readdirSync(directoryPath, { withFileTypes: true })
 			.filter((de) => de.isFile() && de.name.endsWith(".md"))
@@ -66,21 +65,26 @@ export async function listArticles(): Promise<Article[]> {
 				};
 			});
 	});
-	memo = (await Promise.all(a)).filter((a) => !isDraft(a));
-	memo.sort((a, b) => -lexOrder(a.date, b.date));
-	for (let i = 0; i < memo.length; i++) {
-		const a = memo[i];
+	const res: Article[] = (await Promise.all(a)).filter((a) => !isDraft(a));
+	res.sort((a, b) => -lexOrder(a.date, b.date));
+	for (let i = 0; i < res.length; i++) {
+		const a = res[i];
 		// 最新（latest)の記事が最小の記事
-		a.after = i > 0 ? memo[i - 1].id : undefined;
-		a.before = i < memo.length - 1 ? memo[i + 1].id : undefined;
+		a.after = i > 0 ? res[i - 1].id : undefined;
+		a.before = i < res.length - 1 ? res[i + 1].id : undefined;
 	}
-	return memo;
+	memo.set(memoKey, res);
+	return res;
 }
 
 export async function findArticle({
 	articleId,
-}: { articleId: ArticleID }): Promise<Article | null> {
-	const m = await listArticles().then((as) =>
+	directoryPaths,
+}: {
+	articleId: ArticleID;
+	directoryPaths: string[];
+}): Promise<Article | null> {
+	const m = await listArticles(directoryPaths).then((as) =>
 		as.find((v) => {
 			return v.id === articleId;
 		}),

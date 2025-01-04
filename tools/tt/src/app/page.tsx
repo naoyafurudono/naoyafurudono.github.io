@@ -1,3 +1,4 @@
+import { diaryDirectoryPaths } from "@/lib/config";
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import * as util from "@/lib/util";
 import type { NextPage } from "next";
@@ -8,7 +9,7 @@ type Props = {
 	};
 };
 const Home: NextPage<Props> = async () => {
-	const as: ArticleMeta[] = await listArticles();
+	const as: ArticleMeta[] = await listArticles(diaryDirectoryPaths);
 	return (
 		<ol>
 			{as

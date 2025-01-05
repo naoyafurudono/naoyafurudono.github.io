@@ -18,11 +18,14 @@ jobs:
         working-directory: tools/tt
     steps:
       - uses: actions/checkout@v4
+      
       - name: Get commit hash
         id: get_commit_hash
         run: echo "COMMIT_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+
       - name: Check for typos
         uses: crate-ci/typos@c8fd3764afbf5eaf6e53d2e6571c835db2c8fa5f # v1.29.0
+
       - uses: actions/setup-node@v4
         with:
           node-version-file: tools/tt/package.json
@@ -30,21 +33,31 @@ jobs:
           cache-dependency-path: tools/tt/package-lock.json
       - name: Install dependencies
         run: npm install
+
       - name: Test
         run: npm run check
-      - name: Build
+
+      - name: Build for diary
         run: npm run build && mv out out-diary
         env:
           ARTICLE_DIRECTORY_PATHS: "../../content/daily"
-          NORMAL_DIRECTORY_PATHS: "../../content/posts"
           COMMIT_HASH: ${{ env.COMMIT_HASH }}
+
+      - name: Build for dev
+        run: npm run build && mv out out-dev
+        env:
+          ARTICLE_DIRECTORY_PATHS: "../../content/posts"
+          SHOW_DATE_ON_TOP_PAGE: "true"
+          COMMIT_HASH: ${{ env.COMMIT_HASH }}
+
       - name: Deploy to diary pages
         uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy tools/tt/out-diary --commit-dirty=true --project-name diary-nfurudono
-      # - name: Deploy to dev pages
-      #   uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     command: pages deploy tools/tt/out --commit-dirty=true --project-name dev-nfurudono
+
+      - name: Deploy to dev pages
+        uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: pages deploy tools/tt/out-dev --commit-dirty=true --project-name dev-nfurudono

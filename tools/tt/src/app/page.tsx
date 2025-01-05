@@ -1,4 +1,4 @@
-import { diaryDirectoryPaths } from "@/lib/config";
+import { diaryDirectoryPaths, showDateOnTopPage } from "@/lib/config";
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import * as util from "@/lib/util";
 import type { NextPage } from "next";
@@ -32,6 +32,11 @@ const ArticleSummary = async ({ article }: SummaryProps) => {
 		<article>
 			<div>
 				<a href={util.postPath(article.id)}>{article.title}</a>
+				{showDateOnTopPage && (
+					<p>
+						<time>{article.date}</time>
+					</p>
+				)}
 				<p>{article.desc}</p>
 			</div>
 		</article>

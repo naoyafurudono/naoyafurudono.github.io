@@ -1,8 +1,8 @@
-import { articleDirectoryPaths } from "@/lib/config";
+import { articleDirectoryPaths, postPath } from "@/lib/config";
+import { withSiteTitle } from "@/lib/config";
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import { newRoot, newUL, renderMdAst } from "@/lib/render";
 import * as util from "@/lib/util";
-import { withSiteTitle } from "@/lib/util";
 import type { Metadata, NextPage } from "next";
 
 const Home: NextPage = async () => {
@@ -40,7 +40,7 @@ const TodoSummary = async ({ article }: SummaryProps) => {
 	const todohtml = await renderMdAst(root);
 	return (
 		<>
-			<a href={util.postPath(article.id)}>{article.title}</a>
+			<a href={postPath(article.id)}>{article.title}</a>
 			<div
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: 記事の一部がここに渡るだけなのでok
 				dangerouslySetInnerHTML={{ __html: todohtml }}

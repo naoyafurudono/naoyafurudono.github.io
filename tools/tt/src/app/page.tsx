@@ -1,6 +1,10 @@
-import { articleDirectoryPaths, showDateOnTopPage } from "@/lib/config";
+import {
+	articleDirectoryPaths,
+	postPath,
+	showDateOnTopPage,
+} from "@/lib/config";
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
-import * as util from "@/lib/util";
+import { lexOrder } from "@/lib/util";
 import type { NextPage } from "next";
 
 type Props = {
@@ -13,7 +17,7 @@ const Home: NextPage<Props> = async () => {
 	return (
 		<ol>
 			{as
-				.toSorted((a, b) => -util.lexOrder(a.date, b.date))
+				.toSorted((a, b) => -lexOrder(a.date, b.date))
 				.map((article) => (
 					<li key={article.id}>
 						<ArticleSummary article={article} />
@@ -31,7 +35,7 @@ const ArticleSummary = async ({ article }: SummaryProps) => {
 	return (
 		<article>
 			<div>
-				<a href={util.postPath(article.id)}>{article.title}</a>
+				<a href={postPath(article.id)}>{article.title}</a>
 				{showDateOnTopPage && (
 					<p>
 						<time>{article.date}</time>

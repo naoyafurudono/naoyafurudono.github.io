@@ -5,6 +5,8 @@ export const articleDirectoryPaths: string[] =
 	process.env.ARTICLE_DIRECTORY_PATHS?.split(",") || [
 		path.join(process.cwd(), "article"),
 	];
+export const postPath = (id: string) => `/posts/${id}/`;
+export const withSiteTitle = (name: string) => `${name} | ${siteTitle}`;
 export const siteTitle: string =
 	process.env.SITE_TITLE || "diary.nfurudono.com";
 export const showDateOnTopPage = parseBoolean(

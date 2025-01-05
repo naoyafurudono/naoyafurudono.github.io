@@ -1,4 +1,4 @@
-import { siteTitle } from "@/lib/util";
+import { siteTitle } from "@/lib/config";
 import type { Metadata } from "next";
 import Link from "next/link";
 

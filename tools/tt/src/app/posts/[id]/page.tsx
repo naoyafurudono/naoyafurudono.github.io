@@ -1,7 +1,7 @@
 import { articleDirectoryPaths } from "@/lib/config";
+import { withSiteTitle } from "@/lib/config";
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
 import { type RenderResult, newRoot, render, renderMdAst } from "@/lib/render";
-import { withSiteTitle } from "@/lib/util";
 import type { Metadata, NextPage } from "next";
 
 type Slugs = {

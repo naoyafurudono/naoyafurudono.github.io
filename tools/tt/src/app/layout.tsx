@@ -58,7 +58,7 @@ const Nav = () => {
 		<nav>
 			<ul>
 				{[
-					{ href: "/", text: "diary.nfurudono.com" },
+					{ href: "/", text: siteTitle },
 					{
 						href: "/todos/",
 						text: "todos",

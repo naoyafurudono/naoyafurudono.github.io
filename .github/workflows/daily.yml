@@ -41,12 +41,14 @@ jobs:
         run: npm run build && mv out out-diary
         env:
           ARTICLE_DIRECTORY_PATHS: "../../content/daily"
+          SITE_TITLE: "diary.nfurudono.com"
           COMMIT_HASH: ${{ env.COMMIT_HASH }}
 
       - name: Build for dev
         run: npm run build && mv out out-dev
         env:
           ARTICLE_DIRECTORY_PATHS: "../../content/posts"
+          SITE_TITLE: "dev.nfurudono.com"
           SHOW_DATE_ON_TOP_PAGE: "true"
           COMMIT_HASH: ${{ env.COMMIT_HASH }}
 

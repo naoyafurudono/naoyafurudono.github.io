@@ -63,7 +63,7 @@ func main() {
 	}
 	// ...
 }
-</code></pre><h3><a href=#%e8%aa%b2%e9%a1%8c id=課題 class=anchor aria-hidden=true>課題</a></h3><ol><li>deferを書くのを忘れそう</li></ol><ul><li>こちらはリンターでなんとかなるだろう。ここでは議論しない</li></ul><ol><li>deferで呼ぶとerrors.WithStackを呼ぶ箇所がdeferの中になって、具体的にどのreturn errで落ちたかがスタックトレースから追えない</li></ol><ul><li>エラーメッセージから判断できる可能性は大きいけど</li></ul><p>二つ目の課題の例を以下に挙げる。fではどの行で落ちたか分からないが、gではどちらのwithStackで生成したかが残る。</p><pre><code class=language-go>func f() (err error) {
+</code></pre><h3><a href=#%e8%aa%b2%e9%a1%8c id=課題 class=anchor aria-hidden=true>課題</a></h3><ol><li>deferを書くのを忘れそう<ul><li>こちらはリンターでなんとかなるだろう。ここでは議論しない</li></ul></li><li>deferで呼ぶとerrors.WithStackを呼ぶ箇所がdeferの中になって、具体的にどのreturn errで落ちたかがスタックトレースから追えない<ul><li>エラーメッセージから判断できる可能性は大きいけど</li></ul></li></ol><p>二つ目の課題の例を以下に挙げる。fではどの行で落ちたか分からないが、gではどちらのwithStackで生成したかが残る。</p><pre><code class=language-go>func f() (err error) {
 	defer (func() {
 		err = errors.WithStack(err)
 	})()

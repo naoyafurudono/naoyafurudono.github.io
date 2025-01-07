@@ -15,7 +15,7 @@ import (
 
 func f() error {
 	// このようにWithStackを呼び出した箇所でのスタックトレースがerrorオブジェクトに記録される
-	return errors.WithStack(errors.New(&quot;ouch!&quot;))
+	return errors.WithStack(errors.New(&quot;ouch!&quot;)) // ここは11行目
 }
 
 func main() {
@@ -52,7 +52,7 @@ func main() {
     ]
   }
 ]
-</code></pre><p>スタックトレースの先頭 (frames配列の先頭要素) はWithStackを呼び出した位置を指すである。</p><p>したがって、アプリケーションの中でのエラーの発生源をスタックトレースから漏れなく特定するためには、<strong>エラーの発生源の全てでWithStackを呼び出す必要がある</strong>。</p><p>なお、WithStackを重ねて呼び出しても問題ようになっている（深いスタックトレースを持つものが生き残るようになっているし、他のも気遣いがされている）。</p><h2><a href=#%e8%83%8c%e6%99%af%e6%97%a2%e5%ad%98%e3%81%ae%e3%82%a2%e3%82%a4%e3%83%87%e3%82%a2 id=背景既存のアイデア class=anchor aria-hidden=true>背景・既存のアイデア</a></h2><p><a href=https://k1low.hatenablog.com/entry/2024/08/13/083000>名前付き返り値とdeferを使って忘れないようにする手法も紹介されている</a>。</p><pre><code class=language-go>func f() (err error) {
+</code></pre><p>スタックトレースの先頭 (frames配列の先頭要素) はWithStackを呼び出した位置を指す。</p><p>したがって、アプリケーションの中でのエラーの発生源をスタックトレースから漏れなく特定するためには、<strong>エラーの発生源の全てでWithStackを呼び出す必要がある</strong>。</p><p>なお、WithStackを重ねて呼び出しても問題ようになっている（深いスタックトレースを持つものが生き残るようになっているし、他のも気遣いがされている）。</p><h2><a href=#%e8%83%8c%e6%99%af%e6%97%a2%e5%ad%98%e3%81%ae%e3%82%a2%e3%82%a4%e3%83%87%e3%82%a2 id=背景既存のアイデア class=anchor aria-hidden=true>背景・既存のアイデア</a></h2><p><a href=https://k1low.hatenablog.com/entry/2024/08/13/083000>名前付き返り値とdeferを使って忘れないようにする手法も紹介されている</a>。</p><pre><code class=language-go>func f() (err error) {
 	defer (func(){
 		err = errors.WithStack(err)
 	})()

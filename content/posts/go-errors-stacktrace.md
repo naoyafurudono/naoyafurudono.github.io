@@ -31,7 +31,7 @@ import (
 
 func f() error {
 	// このようにWithStackを呼び出した箇所でのスタックトレースがerrorオブジェクトに記録される
-	return errors.WithStack(errors.New("ouch!"))
+	return errors.WithStack(errors.New("ouch!")) // ここは11行目
 }
 
 func main() {
@@ -75,7 +75,7 @@ func main() {
 ]
 ```
 
-スタックトレースの先頭 (frames配列の先頭要素) はWithStackを呼び出した位置を指すである。
+スタックトレースの先頭 (frames配列の先頭要素) はWithStackを呼び出した位置を指す。
 
 したがって、アプリケーションの中でのエラーの発生源をスタックトレースから漏れなく特定するためには、**エラーの発生源の全てでWithStackを呼び出す必要がある**。
 

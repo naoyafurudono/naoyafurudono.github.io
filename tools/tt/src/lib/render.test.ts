@@ -154,3 +154,23 @@ date: "2024-08-15"
 	expect(r.toc).toBeTruthy();
 	expect(JSON.stringify(r.toc)).toContain("#hello");
 });
+
+test("<link>を解釈する", async () => {
+	const content = `\
+---
+title: Hello, world!
+date: "2024-08-15"
+---
+# Hello, world!
+
+<https://example.com>
+
+<badlink.com>
+
+`;
+	const r = await render({ content: Buffer.from(content) });
+	console.log(r.rawBody);
+	expect(r.rawBody).include(`href="https://example.com"`);
+	// スキーマが必要
+	expect(r.rawBody).not.include(`href="badlink.com"`);
+});

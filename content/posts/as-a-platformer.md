@@ -2,7 +2,7 @@
 title: "プラットフォーマの良心"
 date: 2024-02-08T00:28:51+09:00
 author: "Naoya Furudono"
-draft: false
+draft: true
 tags:
     - "daily"
     - "alchole"

@@ -63,7 +63,7 @@ func main() {
 	}
 	// ...
 }
-</code></pre><p>ある程度楽をできるし、この後の議論をした上でもバランスの良い選択肢だと思うが課題も感じている。その課題と解決案を以降で議論する。</p><h2><a href=#%e8%aa%b2%e9%a1%8c id=課題 class=anchor aria-hidden=true>課題</a></h2><ol><li>deferを書くのを忘れそう<ul><li>こちらはリンターでなんとかなるだろう。ここでは議論しない</li></ul></li><li>deferの中でerrors.WithStackを呼ぶと、エラーの発生源から離れるため、具体的にどのreturn errで落ちたかがスタックトレースから追えない<ul><li>エラーメッセージから判断できる可能性は大きいけど</li></ul></li></ol><p>二つ目の課題の例を以下に挙げる。fではどの行で落ちたか分からないが、gではどちらのwithStackで生成したかが残る。</p><pre><code class=language-go>func f() (err error) {
+</code></pre><p>ある程度楽をできるし、この後の議論をした上でもバランスの良い選択肢だと思うが課題も感じている。その課題と解決案を以降で議論する。</p><h2><a href=#%e8%aa%b2%e9%a1%8c id=課題 class=anchor aria-hidden=true>課題</a></h2><ol><li>deferを書くのを忘れそう<ul><li>こちらはリンターでなんとかなるだろう。ここでは深く議論しない</li></ul></li><li>deferの中でerrors.WithStackを呼ぶと、エラーの発生源から離れるため、具体的にどのreturn errで落ちたかがスタックトレースから追えない<ul><li>エラーメッセージから判断できる可能性は大きいけど</li></ul></li></ol><p>二つ目の課題の例を以下に挙げる。fではどの行で落ちたか分からないが、gではどちらのwithStackで生成したかが残る。</p><pre><code class=language-go>func f() (err error) {
 	defer (func() {
 		err = errors.WithStack(err)
 	})()

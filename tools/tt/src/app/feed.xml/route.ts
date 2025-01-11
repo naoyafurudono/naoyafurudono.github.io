@@ -1,9 +1,9 @@
+import fs from "node:fs";
+import path from "node:path";
 import { articleDirectoryPaths } from "@/lib/config";
 import { generateFeed } from "@/lib/feed";
 import { listArticles } from "@/lib/gateway";
 import { lexOrder } from "@/lib/util";
-import fs from "node:fs";
-import path from "node:path";
 
 // ビルド時に実行される
 export async function GET() {

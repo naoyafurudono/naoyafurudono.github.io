@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daily on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/daily/</link><description>Recent content in Daily on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sat, 11 Jan 2025 16:16:03 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2025-01-11</title><link>https://blog.nfurudono.com/daily/2025-01-11/</link><pubDate>Sat, 11 Jan 2025 00:17:10 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-01-11/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daily on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/daily/</link><description>Recent content in Daily on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Sat, 11 Jan 2025 21:02:15 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/daily/index.xml" rel="self" type="application/rss+xml"/><item><title>2025-01-11</title><link>https://blog.nfurudono.com/daily/2025-01-11/</link><pubDate>Sat, 11 Jan 2025 00:17:10 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-01-11/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 日記管理CLIからhugo依存を抜きたい。Hugoはもう使わないので単にインストールの必要があり面倒になっている。テンプレファイルが好みじゃないのもある&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> ZedのAIと仲良くする機能を把握したい&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> ZedのAIと仲良くする機能を把握したい
+&lt;ul>
+&lt;li>した。便利&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> Zedにコントリビュートできるようになっておきたい
 &lt;ul>
 &lt;li>お作法&lt;/li>

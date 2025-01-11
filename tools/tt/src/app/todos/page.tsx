@@ -39,13 +39,13 @@ const TodoSummary = async ({ article }: SummaryProps) => {
 	const root = newRoot([newUL(article.unchecked)]);
 	const todohtml = await renderMdAst(root);
 	return (
-		<>
+		<li>
 			<a href={postPath(article.id)}>{article.title}</a>
 			<div
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: 記事の一部がここに渡るだけなのでok
 				dangerouslySetInnerHTML={{ __html: todohtml }}
 			/>
-		</>
+		</li>
 	);
 };
 

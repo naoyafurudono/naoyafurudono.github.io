@@ -14,7 +14,7 @@ export function generateFeed(articles: ArticleMeta[]) {
 		copyright: "All rights reserved 2024, Naoya Furudono",
 		author: {
 			name: "Naoya Furudono",
-			email: "contact@nfurudono.com",
+			email: "naoyafurudono@gmail.com",
 			link: "https://blog.nfurudono.com/profile/",
 		},
 	});

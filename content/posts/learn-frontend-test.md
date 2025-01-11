@@ -1,19 +1,11 @@
 ---
-title: "TODO"
+title: "wip Next.jsでのテストを自由自在に書けるようになりたい"
 date: 2025-01-11T19:03:01+09:00
 author: "Naoya Furudono"
-draft: true
+draft: false
 tags:
-    - "daily"
-    - "PL"
     - "tech"
-    - "ubuntu"
-    - "alexa"
-    - "book"
-    - "idea"
-    - "python"
     - "tool"
-    - "cock"
 ---
 
 Next.jsのアプリケーションでテストを自由自在に書けるようになることが目的。

@@ -17,6 +17,7 @@
     "@types/mdast": "^4.0.4",
     "@types/unist": "^3.0.2",
     "buffer-crc32": "^1.0.0",
+    "feed": "^4.2.2",
     "glob": "^11.0.0",
     "mdast-util-find-and-replace": "^3.0.1",
     "mdast-util-toc": "^7.1.0",

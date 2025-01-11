@@ -59,7 +59,7 @@ const Nav = () => {
 			<ul>
 				{[
 					{ href: "/", text: siteTitle },
-					{ href: "/feed.xml", text: "RSS feed (experimental)"},
+					{ href: "/feed.xml", text: "RSS feed (experimental)" },
 					{
 						href: "/todos/",
 						text: "todos",

@@ -5,7 +5,9 @@ export const articleDirectoryPaths: string[] =
 	process.env.ARTICLE_DIRECTORY_PATHS?.split(",") || [
 		path.join(process.cwd(), "article"),
 	];
+export const baseUrl = process.env.SITE_URL || "https://diary.nfurudono.com"; // 環境変数から取得
 export const postPath = (id: string) => `/posts/${id}/`;
+export const postUrl = (id: string) => `${baseUrl}${postPath(id)}`
 export const withSiteTitle = (name: string) => `${name} | ${siteTitle}`;
 export const siteTitle: string =
 	process.env.SITE_TITLE || "diary.nfurudono.com";

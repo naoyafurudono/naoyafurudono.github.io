@@ -1,4 +1,4 @@
-import { articleDirectoryPaths } from "@/lib/config";
+import { articleDirectoryPaths, postUrl, siteTitle } from "@/lib/config";
 import { withSiteTitle } from "@/lib/config";
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
 import { type RenderResult, newRoot, render, renderMdAst } from "@/lib/render";
@@ -79,5 +79,16 @@ export async function generateMetadata({ params }: Slugs): Promise<Metadata> {
 	return {
 		title: withSiteTitle(r.title),
 		description: r.desc,
+		openGraph: {
+			title: withSiteTitle(r.title),
+			description: r.desc,
+			url: postUrl(id),
+			siteName: siteTitle,
+		},
+		twitter: {
+			title: withSiteTitle(r.title),
+			description: r.desc,
+			creator: "@furudono2",
+		},
 	};
 }

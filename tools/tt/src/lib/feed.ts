@@ -1,9 +1,8 @@
 import { Feed } from "feed";
-import { siteTitle } from "./config";
+import { baseUrl, siteTitle } from "./config";
 import type { ArticleMeta } from "./gateway";
 
 export function generateFeed(articles: ArticleMeta[]) {
-	const baseUrl = process.env.SITE_URL || "https://diary.nfurudono.com"; // 環境変数から取得
 	const feed = new Feed({
 		title: siteTitle,
 		description: "これは日記です",

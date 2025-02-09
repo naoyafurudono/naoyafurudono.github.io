@@ -24,7 +24,7 @@ export default async function Image({ params }: { params: { id: string } }) {
 	}
 	const r = await render(a);
 	const i = r.toc?.children.at(0);
-	const k = i && (await renderMdAst(newRoot([i])));
+	const _k = i && (await renderMdAst(newRoot([i])));
 
 	return new ImageResponse(
 		// ImageResponse JSX element
@@ -38,9 +38,8 @@ export default async function Image({ params }: { params: { id: string } }) {
 				alignItems: "center",
 				justifyContent: "center",
 			}}
-			// biome-ignore lint/security/noDangerouslySetInnerHtmlWithChildren: 自分で生成しているやつなのでok。
-			dangerouslySetInnerHTML={k}>
-			{!k ? withSiteTitle(a.title) : ""}
+		>
+			{withSiteTitle(a.title)}
 		</div>,
 		// ImageResponse options
 		{

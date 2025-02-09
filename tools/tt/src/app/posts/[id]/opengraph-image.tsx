@@ -1,5 +1,6 @@
-import { articleDirectoryPaths } from "@/lib/config";
+import { articleDirectoryPaths, withSiteTitle } from "@/lib/config";
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
+import { newRoot, render, renderMdAst } from "@/lib/render";
 import { ImageResponse } from "next/og";
 
 // Image metadata
@@ -21,6 +22,9 @@ export default async function Image({ params }: { params: { id: string } }) {
 	if (!a) {
 		throw new Error(`Not found: ${id}`);
 	}
+	const r = await render(a);
+	const i = r.toc?.children.at(0);
+	const k = i && (await renderMdAst(newRoot([i])));
 
 	return new ImageResponse(
 		// ImageResponse JSX element
@@ -35,7 +39,7 @@ export default async function Image({ params }: { params: { id: string } }) {
 				justifyContent: "center",
 			}}
 		>
-			{a.desc || a.title}
+			{k || withSiteTitle(a.title)}
 		</div>,
 		// ImageResponse options
 		{

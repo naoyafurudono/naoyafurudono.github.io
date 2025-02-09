@@ -12,11 +12,6 @@ export async function GET() {
 
 	const feed = generateFeed(articles);
 
-	// publicディレクトリに直接書き出す
-	const publicDir = path.join(process.cwd(), "public");
-	fs.mkdirSync(publicDir, { recursive: true });
-	fs.writeFileSync(path.join(publicDir, "feed.xml"), feed);
-
 	return new Response(feed, {
 		headers: {
 			"Content-Type": "application/xml",

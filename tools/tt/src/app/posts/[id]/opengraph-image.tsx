@@ -1,5 +1,5 @@
 import { articleDirectoryPaths } from "@/lib/config";
-import { type ArticleID, findArticle } from "@/lib/gateway";
+import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
 import { ImageResponse } from "next/og";
 
 // Image metadata
@@ -44,4 +44,9 @@ export default async function Image({ params }: { params: { id: string } }) {
 			...size,
 		},
 	);
+}
+
+export async function generateStaticParams() {
+	const as = await listArticles(articleDirectoryPaths);
+	return as.map((a) => ({ id: a.id }));
 }

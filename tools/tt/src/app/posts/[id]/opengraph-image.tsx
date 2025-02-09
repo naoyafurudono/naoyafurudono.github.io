@@ -26,7 +26,7 @@ export default async function Image({ params }: { params: { id: string } }) {
 		// ImageResponse JSX element
 		<div
 			style={{
-				fontSize: 128,
+				fontSize: 40,
 				background: "white",
 				width: "100%",
 				height: "100%",

@@ -38,8 +38,9 @@ export default async function Image({ params }: { params: { id: string } }) {
 				alignItems: "center",
 				justifyContent: "center",
 			}}
-		>
-			{k || withSiteTitle(a.title)}
+			// biome-ignore lint/security/noDangerouslySetInnerHtmlWithChildren: 自分で生成しているやつなのでok。
+			dangerouslySetInnerHTML={k}>
+			{!k ? withSiteTitle(a.title) : ""}
 		</div>,
 		// ImageResponse options
 		{

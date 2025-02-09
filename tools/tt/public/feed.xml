@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>diary.nfurudono.com</title>
+        <link>https://diary.nfurudono.com</link>
+        <description>これは日記です</description>
+        <lastBuildDate>Sun, 09 Feb 2025 06:11:33 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ja</language>
+        <copyright>All rights reserved 2024, Naoya Furudono</copyright>
+        <item>
+            <title><![CDATA[2025-02-07]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-02-07</link>
+            <guid>https://diary.nfurudono.com/posts/2025-02-07</guid>
+            <pubDate>Fri, 07 Feb 2025 07:50:58 GMT</pubDate>
+            <description><![CDATA[1/31に吉祥寺.pmのLT、2/1にBuriKaigiのセッションで発表しました。カレンダー上で予定かぶっていないことだけしか確認せず勢いで楽しそうなカンファレンスの楽しそうな枠に申し込んだところ、発表の間の時間が12時間くらいしかなくて大変でした。とはいえやはり楽しかったので後悔はしていませんし、それぞれの発表に対して準備をして知見を得られたし、聴衆と意思疎通できたとも思っています。満足...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-26</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-26</guid>
+            <pubDate>Sun, 26 Jan 2025 07:21:43 GMT</pubDate>
+            <description><![CDATA[/etc/hosts で以下のようにしてツイッターを封印している。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-21</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-21</guid>
+            <pubDate>Mon, 20 Jan 2025 15:06:18 GMT</pubDate>
+            <description><![CDATA[昨日は雨上がりの空気が澄んで見た目が綺麗だったし吸っておいしかった。毎日あれがいい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-17]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-17</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-17</guid>
+            <pubDate>Fri, 17 Jan 2025 10:18:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-16</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-16</guid>
+            <pubDate>Wed, 15 Jan 2025 15:21:25 GMT</pubDate>
+            <description><![CDATA[今日はたくさん設計をしたので満足。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-13</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-13</guid>
+            <pubDate>Mon, 13 Jan 2025 04:17:35 GMT</pubDate>
+            <description><![CDATA[昨日は友達とキリンビール工場に行ってきた。500円のツアーがあってビール作りの概要を教えてもらいつつビールを飲ませてもらえる。だいぶ楽しかった。あの体験は優しさで成立していると思う。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-12</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-12</guid>
+            <pubDate>Sat, 11 Jan 2025 16:06:23 GMT</pubDate>
+            <description><![CDATA[むかし父さんに僕は文系に向いているだろうと僕が子供のときに思っていたときいた。結局一応理系な分野に進んだ（境界だと僕は思っているが）ので意外だったみたい。何を感じ取ってそう思ったのかを今度聞いてみようと思う。せっかく同じ関東に暮らしているので会う機会を設けよう。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-11]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-11</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-11</guid>
+            <pubDate>Fri, 10 Jan 2025 15:17:10 GMT</pubDate>
+            <description><![CDATA[Zedの機能を把握したことでAIを使ったコーディング能力が上がった。全体的なリファクタリングを受け入れるのはきついので、ロバストなコンポーネントを作り上げる必要がある。それらを全て把握して、気合いで組み立てる体験が最高。モデリング・抽象化・契約が効いてくるのではないだろうか。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-06]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-06</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-06</guid>
+            <pubDate>Mon, 06 Jan 2025 02:33:27 GMT</pubDate>
+            <description><![CDATA[https://github.com/zed-industries/zed/blob/94ee2e1811ea65366b851d7580b11616385f56cc/crates/git_hosting_providers/src/providers/github.rs#L111これをGHESに対応させたい...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-05]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-05</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-05</guid>
+            <pubDate>Sun, 05 Jan 2025 06:10:57 GMT</pubDate>
+            <description><![CDATA[今日は9時に目が覚めたのだけど、気がついたら二度寝していて11時になっていた。明日からが思いやられる。家にあった甘いものとコーヒーを摂って、洗濯物を干したりパソコン触ったりしてからやっぱりお腹が空いたのでそばを買いにイオンへ行った。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-04]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-04</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-04</guid>
+            <pubDate>Fri, 03 Jan 2025 19:07:56 GMT</pubDate>
+            <description><![CDATA[過去に何個か一人でCLIツールを作ったことがある。そのときに雰囲気で乗り越えてしまいストレスの少ない綺麗な書き方を知りたかった概念をあげる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-03]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-03</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-03</guid>
+            <pubDate>Fri, 03 Jan 2025 09:45:14 GMT</pubDate>
+            <description><![CDATA[https://dev.nfurudono.com/posts/go-errors-stacktrace に移転しました。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-02]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-02</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-02</guid>
+            <pubDate>Thu, 02 Jan 2025 12:47:28 GMT</pubDate>
+            <description><![CDATA[せいろを買った。18cmの竹でできたやつ店が中華街にあって賑わっていた。夜に行ったのははじめてで、明かりがきれいで印象的だった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2025-01-01]]></title>
+            <link>https://diary.nfurudono.com/posts/2025-01-01</link>
+            <guid>https://diary.nfurudono.com/posts/2025-01-01</guid>
+            <pubDate>Wed, 01 Jan 2025 12:38:06 GMT</pubDate>
+            <description><![CDATA[今日はまったりする。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-31]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-31</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-31</guid>
+            <pubDate>Tue, 31 Dec 2024 02:39:50 GMT</pubDate>
+            <description><![CDATA[2024年の振り返りと2025年の目標設定をする。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-30]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-30</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-30</guid>
+            <pubDate>Sun, 29 Dec 2024 16:07:13 GMT</pubDate>
+            <description><![CDATA[ディスクの空きが少なくなっていたので何が埋めてるのだろうと思ったら、steam osを以前インストールしてみたときに一時的にダウンロードしたイメージがずっと生き残っていた。それもなぜか似たようなのが三つあり、それらを消すだけでだいぶ効いた。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-28]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-28</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-28</guid>
+            <pubDate>Sat, 28 Dec 2024 05:44:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-25]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-25</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-25</guid>
+            <pubDate>Wed, 25 Dec 2024 14:27:09 GMT</pubDate>
+            <description><![CDATA[関数の引数はそれぞれ何で、どんな性質を期待するかや、そのほかの事前条件を満たした上でこの関数を呼び出すと、その結果としてどんな返り値が得られてそれ以外にどんな副作用があるかを表明するのが関数の契約。文章を用いるのが簡単だし、伝えやすくするには図を用いても良いし、型とかバリデーションのための式で表現しても良い。何にしても契約を表明すると楽しくプログラミングできる...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-22]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-22</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-22</guid>
+            <pubDate>Sun, 22 Dec 2024 14:15:35 GMT</pubDate>
+            <description><![CDATA[週末はずっと漫画を読んでいました。荻窪に住んでいた頃に24時までやっていた本屋さんで買ったり試し読みした続きを再開しました。あかね噺と地政のあれ（八田が主人公のやつ）です。あかね噺は3巻まで物理本で買っていたので続きも物理で買いました。どっちも面白い。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-20]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-20</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-20</guid>
+            <pubDate>Thu, 19 Dec 2024 17:07:42 GMT</pubDate>
+            <description><![CDATA[SUZURIでマスキングテープ作りました。発売中です。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-15]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-15</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-15</guid>
+            <pubDate>Sun, 15 Dec 2024 05:46:40 GMT</pubDate>
+            <description><![CDATA[日記はマークダウンで書いていて、タイトルとか公開・非公開とかはフロントマターに書いている。それをパースしてよしなに処理してHTMLに落としたり、そもそも公開しないようにしている。それらの処理はTSで書いている。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-13</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-13</guid>
+            <pubDate>Fri, 13 Dec 2024 11:11:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-12</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-12</guid>
+            <pubDate>Wed, 11 Dec 2024 16:52:31 GMT</pubDate>
+            <description><![CDATA[We recommend that all third-party code generators be written as plugins, as this allows all generators to provide a consistent interface...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-12-05]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-12-05</link>
+            <guid>https://diary.nfurudono.com/posts/2024-12-05</guid>
+            <pubDate>Thu, 05 Dec 2024 13:58:31 GMT</pubDate>
+            <description><![CDATA[viperってinit使わないといけないのかな。viperに依存性を注入するような使い方をしたい。Facadeを受け取ってCLIを返すようなCLIジェネレータを定義しようとしていて、CLIジェネレータを実装するためにviperの諸々をinitとかで終えようと思うと困る。実行時にfacadeを入れたいので...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-11-28]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-11-28</link>
+            <guid>https://diary.nfurudono.com/posts/2024-11-28</guid>
+            <pubDate>Thu, 28 Nov 2024 07:12:48 GMT</pubDate>
+            <description><![CDATA[Reactのカスタムフックの心をわかっていなかったけど、クロージャに変数をキャプチャさせて、状態をもつクロージャ（の組）を返す関数がカスタムフックぽい。組と言ったのは、getterとsetterが別々に提供されることがあるから。例えば const [v, setV] =...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-11-27]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-11-27</link>
+            <guid>https://diary.nfurudono.com/posts/2024-11-27</guid>
+            <pubDate>Wed, 27 Nov 2024 10:19:42 GMT</pubDate>
+            <description><![CDATA[Branded typeはTSでnominal typingっぽいことをするためのプログラミングテクニックの一つ。Branded Typesを導入してみる / TypeScript一人カレンダー が詳しい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-11-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-11-26</link>
+            <guid>https://diary.nfurudono.com/posts/2024-11-26</guid>
+            <pubDate>Tue, 26 Nov 2024 00:57:07 GMT</pubDate>
+            <description><![CDATA[https://architecture-con.findy-tools.io/ これに来ている。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-11-25]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-11-25</link>
+            <guid>https://diary.nfurudono.com/posts/2024-11-25</guid>
+            <pubDate>Mon, 25 Nov 2024 11:02:45 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2024-11-20]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-11-20</link>
+            <guid>https://diary.nfurudono.com/posts/2024-11-20</guid>
+            <pubDate>Wed, 20 Nov 2024 14:41:11 GMT</pubDate>
+            <description><![CDATA[以下のようなprotoスキーマを定義する。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-11-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-11-13</link>
+            <guid>https://diary.nfurudono.com/posts/2024-11-13</guid>
+            <pubDate>Wed, 13 Nov 2024 10:02:20 GMT</pubDate>
+            <description><![CDATA[fzfで表示される選択肢と選択した結果得られる値を分けられるようにしたいので作った。yamlでkey-valueペアのリストを保持しておいて、そのキーの選択をfzfで行い、得られる値はvalueである、みたいな感じ。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-11-09]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-11-09</link>
+            <guid>https://diary.nfurudono.com/posts/2024-11-09</guid>
+            <pubDate>Fri, 08 Nov 2024 16:30:10 GMT</pubDate>
+            <description><![CDATA[ぼくが酒を飲みながら書いた文章がLLMの学習に使われて、お固い用途に使われると思ったら人生だいぶ楽しい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-11-04]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-11-04</link>
+            <guid>https://diary.nfurudono.com/posts/2024-11-04</guid>
+            <pubDate>Mon, 04 Nov 2024 08:14:21 GMT</pubDate>
+            <description><![CDATA[ちょっと前からソフトウェア工学を触っている。興味から学んでいるというよりは必要に駆られて学んでいる側面が大きい。楽しい仕事をするためにつまらない状況を抑え込む力を身につけるために学んでいる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-28]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-28</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-28</guid>
+            <pubDate>Mon, 28 Oct 2024 14:14:39 GMT</pubDate>
+            <description><![CDATA[昔は親の顔より見た lambda をこの頃は全然見ていないしタイプしてもいない。寂しいねえ。クロージャをぼちぼち使うのだけど、評価規則や型規則とにらめっこする時間は完全に失ってしまった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-27]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-27</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-27</guid>
+            <pubDate>Sat, 26 Oct 2024 16:20:03 GMT</pubDate>
+            <description><![CDATA[友達の結婚式に今度出席するので真面目に準備してみる。普段スーツを着ないので礼服を着るのはコスプレみたいでドキドキする。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-26</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-26</guid>
+            <pubDate>Sat, 26 Oct 2024 13:50:25 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-21</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-21</guid>
+            <pubDate>Mon, 21 Oct 2024 06:41:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-17]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-17</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-17</guid>
+            <pubDate>Thu, 17 Oct 2024 14:28:44 GMT</pubDate>
+            <description><![CDATA[イマジナリーの3巻を読んでいる。良い。あんじゅうも続きが欲しい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-16</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-16</guid>
+            <pubDate>Tue, 15 Oct 2024 16:15:45 GMT</pubDate>
+            <description><![CDATA[エンジニアリングの中ではプログラミングは割と得意なのかもしれないとここ１ヶ月くらいでなんとなく思うようになった。こういうプログラムの構成の方が良くない？みたいなことを理由込みでそれなりに説明・提案できることが周囲より多そうな気がしてきたので。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-15]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-15</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-15</guid>
+            <pubDate>Mon, 14 Oct 2024 15:40:12 GMT</pubDate>
+            <description><![CDATA[見出しにidを振るようにした。idが振られている要素に対するCSSとクリックでリンクをクリップボードに貼り付ける実装と相まっていい感じ。やったね。パーマリンクは意味のある単位ごとに簡単に取れるべきだと信仰している。なのでハッピー。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-14]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-14</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-14</guid>
+            <pubDate>Mon, 14 Oct 2024 03:32:35 GMT</pubDate>
+            <description><![CDATA[模様替えした。机を片付けてリビングを生成した。ソファと本棚、ベランダに続く窓で余白を三方から囲む間取り。寝室にはベッドと着替えに関するものがある。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-11]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-11</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-11</guid>
+            <pubDate>Thu, 10 Oct 2024 15:15:57 GMT</pubDate>
+            <description><![CDATA[昨日は健康診断だった。身長は縮み（多分測定時の姿勢の問題）、体重はちょっと増え、腹囲は3cm増加、視力は片方0.3落ちるという散々な結果だった。体重と腹囲は運動しようねと思う。視力も運動の頻度を上げて遠くを見る時間を増やすと良いかな。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-10</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-10</guid>
+            <pubDate>Thu, 10 Oct 2024 10:29:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-08]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-08</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-08</guid>
+            <pubDate>Mon, 07 Oct 2024 15:11:05 GMT</pubDate>
+            <description><![CDATA[レバレッジの効いた仕事をしたいと思う。教育とか仕組みを作ることは、それが使われ続ける限り効果を発揮するのでレバレッジが効くだろう。やった努力の量に対して（十分な時間が経つと）線形よりでかいオーダーの効果が得られるということ。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-10-06]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-10-06</link>
+            <guid>https://diary.nfurudono.com/posts/2024-10-06</guid>
+            <pubDate>Sun, 06 Oct 2024 05:07:24 GMT</pubDate>
+            <description><![CDATA[LLMはコンパイラとかみたいに説明とか分析を出力してくれるものではあるけど、LLMはコンパイラよりも人間に近いものだと思っている。コンパイラみたいな決定的な出力をするツールに対して良い入力を与えてその出力をそのまま共有することには価値がたくさんあるけれど、LLMから得られた出力をそのまま「LLMに聞いたらこう返してくれました！」っていうのは（少なくとも現代使えるLLMのレベルでは）意味が薄いと感じる...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-09-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-09-21</link>
+            <guid>https://diary.nfurudono.com/posts/2024-09-21</guid>
+            <pubDate>Fri, 20 Sep 2024 17:01:23 GMT</pubDate>
+            <description><![CDATA[今日は学部一年のころからの友達と話して日曜日の旅行計画の話をした。ぼくの会社の先輩の助けを借りて、多少同的にいい感じの計画をできたと思う。満足。ありがとうございました。会社の先輩後輩とランニングをするなどその活動は多岐にわたる。。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-09-18]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-09-18</link>
+            <guid>https://diary.nfurudono.com/posts/2024-09-18</guid>
+            <pubDate>Tue, 17 Sep 2024 15:00:00 GMT</pubDate>
+            <description><![CDATA[日記からtodo一覧を抽出して専用ページにtodoアイテムとその文脈を列挙する機能を実装した。この手の機能はtodoに限らず文章で考えや記録をつける人を幸せにするだろう。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-09-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-09-16</link>
+            <guid>https://diary.nfurudono.com/posts/2024-09-16</guid>
+            <pubDate>Sun, 15 Sep 2024 17:20:29 GMT</pubDate>
+            <description><![CDATA[https://diary.nfurudono.com/todos/に実装した。これでもう過去のtodoを忘れない。収集とレンダリングの両方が必要でだるかった。特にレンダリングはunifiedのアーキテクチャを理解してなくて手間取った。今の実装がunifiedのアーキテクチャに沿っているか自信がない...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-09-15]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-09-15</link>
+            <guid>https://diary.nfurudono.com/posts/2024-09-15</guid>
+            <pubDate>Sun, 15 Sep 2024 07:37:31 GMT</pubDate>
+            <description><![CDATA[本棚を作った。2本目だけどすでに飽きてきた。慣れから余裕が出てきたことである程度精度が悪くても問題ないことに気がついてしまったところで敗北していて、「はいはい大体こんな感じでしょ」って作業になったのであまり楽しくなかった。今もさっさと油乾かないかなとか考えてる。改善の余地はあるのだろうが、前回作ったものが問題なく動いている（本棚なので動かないけど）し、物に満足しているのでまあこれでいいでしょとなってる。おかげで作業速度は改善していて、多分倍速くらいになった。でも幸せかというとなかなか......]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-09-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-09-13</link>
+            <guid>https://diary.nfurudono.com/posts/2024-09-13</guid>
+            <pubDate>Thu, 12 Sep 2024 15:18:37 GMT</pubDate>
+            <description><![CDATA[今日は（昨日は）会社の人とunrailedをやった。はじめてちゃんと一緒にゲームをしたのだけど楽しかった。またやりたいな。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-09-08]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-09-08</link>
+            <guid>https://diary.nfurudono.com/posts/2024-09-08</guid>
+            <pubDate>Sun, 08 Sep 2024 06:39:11 GMT</pubDate>
+            <description><![CDATA[代々木公園で会社の人たちとランニングをしたいのだけど、荷物をどうするかとかが悩ましい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-08-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-08-21</link>
+            <guid>https://diary.nfurudono.com/posts/2024-08-21</guid>
+            <pubDate>Tue, 20 Aug 2024 15:48:04 GMT</pubDate>
+            <description><![CDATA[Zedエディタをずっと使っている。nvimを使う機会は無くなったと思う。ぼくにとってnvimを使うのは起動が爆速なvimモードで編集できるエディタであることだけがモチベーションだった。Zedがそれをほぼカバーしているので、慣れとか不満をまとめることを目的としてZedを使うことにした...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-08-15]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-08-15</link>
+            <guid>https://diary.nfurudono.com/posts/2024-08-15</guid>
+            <pubDate>Thu, 15 Aug 2024 06:04:52 GMT</pubDate>
+            <description><![CDATA[日記をnextjsでビルドして、cloudflare pagesにデプロイするようにした。cnameの設定が効くようになれば、https://diary.nfurudono.comから見えるようになるはず。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-08-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-08-12</link>
+            <guid>https://diary.nfurudono.com/posts/2024-08-12</guid>
+            <pubDate>Mon, 12 Aug 2024 13:51:04 GMT</pubDate>
+            <description><![CDATA[vimの sort コマンドを知った。設定ファイル書くときとかの、気持ち並び替えておきたいところに使えて便利。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-08-03]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-08-03</link>
+            <guid>https://diary.nfurudono.com/posts/2024-08-03</guid>
+            <pubDate>Sat, 03 Aug 2024 03:14:16 GMT</pubDate>
+            <description><![CDATA[ソフトウェアを設計するときにはどこを変えやすくしたいか（どんな変更をしやすくしたいか）を把握したい。Expression probremは必ずしも解決しなくてよいと思っていて、変更に必要な気合がどれくらいかを把握したうえでそれを許容できるかが論点だと思う。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-07-28]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-07-28</link>
+            <guid>https://diary.nfurudono.com/posts/2024-07-28</guid>
+            <pubDate>Sun, 28 Jul 2024 14:49:19 GMT</pubDate>
+            <description><![CDATA[「ねこ　かわいい」で検索してでてくるねこは可愛すぎて思ってたのと違う。子猫じゃなくて普通サイズの猫を想定しているんだよな。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-07-06]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-07-06</link>
+            <guid>https://diary.nfurudono.com/posts/2024-07-06</guid>
+            <pubDate>Sat, 06 Jul 2024 14:45:10 GMT</pubDate>
+            <description><![CDATA[先週くらいに調査をした上で今日材料と道具を買ってきて、加工のための準備をしている。誤差は出るものとして、それを許容できる加工方法を考えるのが楽しいしめんどい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-06-25]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-06-25</link>
+            <guid>https://diary.nfurudono.com/posts/2024-06-25</guid>
+            <pubDate>Mon, 24 Jun 2024 16:24:44 GMT</pubDate>
+            <description><![CDATA[本棚を自作する。清く正しい本棚の作り方が参考になりそうなので通読する。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-06-08]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-06-08</link>
+            <guid>https://diary.nfurudono.com/posts/2024-06-08</guid>
+            <pubDate>Sat, 08 Jun 2024 14:59:32 GMT</pubDate>
+            <description><![CDATA[goconに行ったりscala matsuriで知ってる人が登壇してるのをみて、発信する人になるのが楽しいのだなと心に刻んだ。発信に対するフィードバックをもらえたり、自分を認識してもらった上で質問してコミュニケーションできるのは強い。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-06-05]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-06-05</link>
+            <guid>https://diary.nfurudono.com/posts/2024-06-05</guid>
+            <pubDate>Tue, 04 Jun 2024 15:08:07 GMT</pubDate>
+            <description><![CDATA[https://www.kikumasamune.shop/c/notseisyu/whisky/nz971 これすごくおいしかったので買い足そうと思ったら売り切れてた。大事に飲もう。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-05-23]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-05-23</link>
+            <guid>https://diary.nfurudono.com/posts/2024-05-23</guid>
+            <pubDate>Wed, 22 May 2024 15:19:31 GMT</pubDate>
+            <description><![CDATA[https://youtu.be/hCuMWrfXG4E?si=Viiw626EEgkaP7p52000年代のアニメかってなった]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-05-22]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-05-22</link>
+            <guid>https://diary.nfurudono.com/posts/2024-05-22</guid>
+            <pubDate>Wed, 22 May 2024 14:04:17 GMT</pubDate>
+            <description><![CDATA[チーム開発でコードの品質担保するのむずい。足並みを揃えて品質を上げないといけないのがむずいところで、ふっと自分がやる気を出して勉強すれば済むものではないことがむずいのかな。レビューだときりないし。レビューはするのだけど、次はLinter自由自在になるのが次のステップかな。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-05-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-05-12</link>
+            <guid>https://diary.nfurudono.com/posts/2024-05-12</guid>
+            <pubDate>Sun, 12 May 2024 11:15:46 GMT</pubDate>
+            <description><![CDATA[チャットを読み書きするのが大変なのではなく、それらを始めるのが大変という話。ラインが嫌いとかでは全然ないし、会話が嫌いなわけでもない。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-05-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-05-16</link>
+            <guid>https://diary.nfurudono.com/posts/2024-05-16</guid>
+            <pubDate>Sun, 12 May 2024 11:15:46 GMT</pubDate>
+            <description><![CDATA[社内外のrubyistの人たちとたくさん喋れた。明日ruby.wasmの話を聞けるのが楽しみ。質問するぞ！！１]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-04-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-04-21</link>
+            <guid>https://diary.nfurudono.com/posts/2024-04-21</guid>
+            <pubDate>Sat, 20 Apr 2024 15:35:12 GMT</pubDate>
+            <description><![CDATA[ボトムアップの学習と、トップダウンの学習の使い分けがずっとわからない。ボトムアップな学習は技術に対する好奇心からくると思っていて、トップダウンな学習は課題が動機になっていそう。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-04-20]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-04-20</link>
+            <guid>https://diary.nfurudono.com/posts/2024-04-20</guid>
+            <pubDate>Sat, 20 Apr 2024 14:14:18 GMT</pubDate>
+            <description><![CDATA[あれ実装したいなと思って手を動かそうとしちゃうの良くないな。とはいえその直感を無視するのは悲しいので意義を議論して見るのはありかな。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-04-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-04-13</link>
+            <guid>https://diary.nfurudono.com/posts/2024-04-13</guid>
+            <pubDate>Fri, 12 Apr 2024 17:02:40 GMT</pubDate>
+            <description><![CDATA[最近お仕事楽しいのだけど、ちょっと忙しすぎるかもしれない。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-03-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-03-26</link>
+            <guid>https://diary.nfurudono.com/posts/2024-03-26</guid>
+            <pubDate>Mon, 25 Mar 2024 15:12:48 GMT</pubDate>
+            <description><![CDATA[イベントソーシング？と言うのかわからないけど、イベントを全部持っておけば現時点での状態はイベントを全部みて計算できるので永続化しなくて良くない？みたいな考え方がある（はず）。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-03-22]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-03-22</link>
+            <guid>https://diary.nfurudono.com/posts/2024-03-22</guid>
+            <pubDate>Fri, 22 Mar 2024 12:52:53 GMT</pubDate>
+            <description><![CDATA[2年間くらい不在だったフライパンのふたの取手をさっきリニューアルした。取手の穴に割り箸を差し込む運用からついに解放される。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-03-20]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-03-20</link>
+            <guid>https://diary.nfurudono.com/posts/2024-03-20</guid>
+            <pubDate>Tue, 19 Mar 2024 15:35:14 GMT</pubDate>
+            <description><![CDATA[Webアプリケーションのテストをどう実施したものかと最近考えることが多い。Webアプリは雰囲気で変更したいはずで（ソフトウェアって大体そう？）、またテストは長持ちしてほしいと思う。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-03-17]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-03-17</link>
+            <guid>https://diary.nfurudono.com/posts/2024-03-17</guid>
+            <pubDate>Sun, 17 Mar 2024 12:41:49 GMT</pubDate>
+            <description><![CDATA[今日はランニングして、いい坂を見つけた。暖かくなってきたしランニングを再開していこうと思う。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-03-14]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-03-14</link>
+            <guid>https://diary.nfurudono.com/posts/2024-03-14</guid>
+            <pubDate>Thu, 14 Mar 2024 14:25:08 GMT</pubDate>
+            <description><![CDATA[数列とか、関係とかを日常会話で使える環境にいたいと思うことがある。あと高山ラーメン食べたい。荻窪ラーメンでもいい。今週末荻窪行くか。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-03-09]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-03-09</link>
+            <guid>https://diary.nfurudono.com/posts/2024-03-09</guid>
+            <pubDate>Fri, 08 Mar 2024 15:12:39 GMT</pubDate>
+            <description><![CDATA[フロントエンドのモデルとRPCについて考えてみたい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-03-07]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-03-07</link>
+            <guid>https://diary.nfurudono.com/posts/2024-03-07</guid>
+            <pubDate>Thu, 07 Mar 2024 14:40:54 GMT</pubDate>
+            <description><![CDATA[昔はIPAが好きだったのだけど今はハイネケンが好き。理由は今も昔もなんか甘い気がするからで、味を認知してからそれを好みと判定するところは変わってないけど味覚を認知するところが変わったのだろうと思う。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-03-02]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-03-02</link>
+            <guid>https://diary.nfurudono.com/posts/2024-03-02</guid>
+            <pubDate>Sat, 02 Mar 2024 01:44:06 GMT</pubDate>
+            <description><![CDATA[op inject が欲しいやつだった。テンプレートに1passのURLぽいやつを書いてコマンドに渡すと、そこを埋めたファイルを出力してくれる。埋め込むときに環境変数を読んで、URL内での参照を置換した上で1passのレコードを参照することもできる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-02-27]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-02-27</link>
+            <guid>https://diary.nfurudono.com/posts/2024-02-27</guid>
+            <pubDate>Mon, 26 Feb 2024 15:15:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2024-02-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-02-26</link>
+            <guid>https://diary.nfurudono.com/posts/2024-02-26</guid>
+            <pubDate>Mon, 26 Feb 2024 14:41:32 GMT</pubDate>
+            <description><![CDATA[人間失格の主人公はそんな失格っていうほどやばい人には思えないというのはあるあるだと思っていて、そういう感想を抱いたことで自分を許せるようになったと思う。そういう人も結構いるんだろうと思う。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-02-18]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-02-18</link>
+            <guid>https://diary.nfurudono.com/posts/2024-02-18</guid>
+            <pubDate>Sun, 18 Feb 2024 09:32:36 GMT</pubDate>
+            <description><![CDATA[今の家に初めて人を呼んだ。酒を飲んでタバコを吸い、餃子と焼きそばを作って食べた。どれもうまかったけど寝起きにタバコとコーヒーを一緒に摂取したことでキャパオーバーしてしまった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-02-17]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-02-17</link>
+            <guid>https://diary.nfurudono.com/posts/2024-02-17</guid>
+            <pubDate>Sat, 17 Feb 2024 08:55:29 GMT</pubDate>
+            <description><![CDATA[glangにgeneratorを入れようというプロポーザルがあって、試験的に実装されているみたい。いくつかのパターンがあるけど、だいたいこんな感じで使える (The Go Playground)。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-02-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-02-13</link>
+            <guid>https://diary.nfurudono.com/posts/2024-02-13</guid>
+            <pubDate>Tue, 13 Feb 2024 09:16:15 GMT</pubDate>
+            <description><![CDATA[今日1on1で教えてもらった。ロールモデルとして追っていく。https://scrapbox.io/kawasima/%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%A...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-02-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-02-12</link>
+            <guid>https://diary.nfurudono.com/posts/2024-02-12</guid>
+            <pubDate>Mon, 12 Feb 2024 07:54:41 GMT</pubDate>
+            <description><![CDATA[管理画面の設計について考えてみる。Webアプリケーションでもろもろを設定する際のUI設計を考えている。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-02-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-02-10</link>
+            <guid>https://diary.nfurudono.com/posts/2024-02-10</guid>
+            <pubDate>Fri, 09 Feb 2024 15:05:20 GMT</pubDate>
+            <description><![CDATA[このブログを読んだと感想をいただいた。初めて読んだ人を認識したのでなかなか恥ずかしかった。読まないで欲しいわけではないのだけど、これは人に読まれると恥ずかしいやつだよなと日々思って書いている。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-02-07]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-02-07</link>
+            <guid>https://diary.nfurudono.com/posts/2024-02-07</guid>
+            <pubDate>Wed, 07 Feb 2024 12:48:57 GMT</pubDate>
+            <description><![CDATA[家の環境を良くしたい。家でやることの幅を広げていく。今までは衣食住に加えてパソコン触るかコーヒー飲むかくらいしか快適にできなかった。読書とかゲームとかを快適にできるように -- 生活を快適にできるように -- したい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-01-22]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-01-22</link>
+            <guid>https://diary.nfurudono.com/posts/2024-01-22</guid>
+            <pubDate>Mon, 22 Jan 2024 14:29:54 GMT</pubDate>
+            <description><![CDATA[今日は仕事で最近やってたやつをガッと片付けて褒めてもらった。やったね。近所の八百屋が復活していたので豪遊してきた。飽きたのでこれくらいで。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2024-01-14]]></title>
+            <link>https://diary.nfurudono.com/posts/2024-01-14</link>
+            <guid>https://diary.nfurudono.com/posts/2024-01-14</guid>
+            <pubDate>Sat, 13 Jan 2024 15:33:06 GMT</pubDate>
+            <description><![CDATA[引越しの片付けがひと段落した。片付けてみると意外と片付くものでそれなりに快適。これから細々としたところを詰めていく。シンクのスポンジ置き場とか延長コードの配置とか。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-12-31]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-12-31</link>
+            <guid>https://diary.nfurudono.com/posts/2023-12-31</guid>
+            <pubDate>Sun, 31 Dec 2023 10:38:52 GMT</pubDate>
+            <description><![CDATA[質量ベース。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-12-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-12-26</link>
+            <guid>https://diary.nfurudono.com/posts/2023-12-26</guid>
+            <pubDate>Tue, 26 Dec 2023 11:15:27 GMT</pubDate>
+            <description><![CDATA[ついったで同僚が panicIndex と言っていて、なんだそれと思ったので調べた。golangの文脈だったので想像はある程度ついて、golangのランタイムの一部として？実装されている関数でインデックスに関するパニックを投げる関数だった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-12-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-12-21</link>
+            <guid>https://diary.nfurudono.com/posts/2023-12-21</guid>
+            <pubDate>Thu, 21 Dec 2023 13:35:26 GMT</pubDate>
+            <description><![CDATA[ターミナルのプロンプトを ❯ に一瞬変えたのだけど、心が荒みそうになったのですぐに 🐧 に戻した。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-11-25]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-11-25</link>
+            <guid>https://diary.nfurudono.com/posts/2023-11-25</guid>
+            <pubDate>Fri, 24 Nov 2023 17:10:46 GMT</pubDate>
+            <description><![CDATA[依存性逆転の原則の何が嬉しいか思い出せなくなったので考えてみる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-11-22]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-11-22</link>
+            <guid>https://diary.nfurudono.com/posts/2023-11-22</guid>
+            <pubDate>Wed, 22 Nov 2023 13:56:59 GMT</pubDate>
+            <description><![CDATA[高校生の頃、進路を考えるにあたって自分は何を求めているかを真剣に考えて幸せになることだと行き着いた。幸せにも色々あるはずで、僕の幸せはなんだろうかと思った結果、いろんなことに理解を深めることかなと思い至って進路を決めた（理学部に進学した）。大学で少し考えを変えて色々うまくできるようになることに重きを置くようになった。その中で理解することに重きをおいてはいるけど...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-11-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-11-16</link>
+            <guid>https://diary.nfurudono.com/posts/2023-11-16</guid>
+            <pubDate>Wed, 15 Nov 2023 15:06:25 GMT</pubDate>
+            <description><![CDATA[家ごとにホコリに傾向があるんじゃないだろうか。家人の髪やシーツ、カーテンなどホコリを左右するファクタは多そうで、ホコリは家の特徴を切り取っていそう。猫の味は分かるか知らないが、猫のいる家はホコリを見ればわかる。味覚ではなし得ないテイスティングをホコリで実現できるのだ。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-11-14]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-11-14</link>
+            <guid>https://diary.nfurudono.com/posts/2023-11-14</guid>
+            <pubDate>Tue, 14 Nov 2023 14:03:59 GMT</pubDate>
+            <description><![CDATA[このブログのデプロイに使っているgithub action...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-11-07]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-11-07</link>
+            <guid>https://diary.nfurudono.com/posts/2023-11-07</guid>
+            <pubDate>Tue, 07 Nov 2023 11:53:43 GMT</pubDate>
+            <description><![CDATA[ドキュメントを読むときに参考文献が適切に使われていないと辛い。ドキュメントには2種類あると思っている。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-10-29]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-10-29</link>
+            <guid>https://diary.nfurudono.com/posts/2023-10-29</guid>
+            <pubDate>Sun, 29 Oct 2023 13:12:41 GMT</pubDate>
+            <description><![CDATA[新書で勉強しようとしても失敗する。話がまどろっこしく感じてしまって途中で投げてしまう。推敲していらないところを削ってくれ、読者はたくさんいるはずだから全体の利益を考えればそれがプラスになると思うんだ！みたいなことを思いだして読む気が失せてしまう。教科書とか読めばいいんだろうな。心理学の概論っぽい教科書は割と読めた記憶がある。暇で時間を持て余していた時期だったというのもありそうだが。あとおすすめされて読んだ社会学の新書は面白かった。民主主義とか共栄圏？だったかみたいな話が書いてあって今も多少影響されている...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-10-28]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-10-28</link>
+            <guid>https://diary.nfurudono.com/posts/2023-10-28</guid>
+            <pubDate>Fri, 27 Oct 2023 15:18:23 GMT</pubDate>
+            <description><![CDATA[ジャンププラスの表示がどなっているか気になって開発者ツールでみたらなんかすごかった。アプリケーションのストレージにページをバラバラにしてパッチワークみたいにしたデータがあって、恐らくそれをいい感じに繋ぎ合わせて表示する感じでcanvas要素を使っているみたい。スクレイピングとかで漫画を引っこ抜かれないための仕組みなんだろうし、パッとわかるものではないだろうけど気になる。はてなのGigaViewrが使われているとのこと。ヒントとか開発話みたいなものが聞けないかなと思ってポッドキャストを聞いている...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-10-27]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-10-27</link>
+            <guid>https://diary.nfurudono.com/posts/2023-10-27</guid>
+            <pubDate>Thu, 26 Oct 2023 14:53:16 GMT</pubDate>
+            <description><![CDATA[https とかで通信をするときはローカルにインストールされているCA証明書を参照する。ubuntuの場合 /etc/ssl/certs/ca-certificates.crt がそれで、適当に名前を変えるとhttpsでcurlできなくなる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-10-24]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-10-24</link>
+            <guid>https://diary.nfurudono.com/posts/2023-10-24</guid>
+            <pubDate>Mon, 23 Oct 2023 15:13:41 GMT</pubDate>
+            <description><![CDATA[hugoでCJKの文章で改行を無視できるようになった。platexとかでは当たり前のように単独の改行は日本語文中で無視されていたが、巷のmarkdownエンジンはそうとは限らない。hugoがデフォルトで使うgoldmarkではオプションで指定できていたようだが、hugoではそのオプションを活用しないでいたみたい...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-10-09]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-10-09</link>
+            <guid>https://diary.nfurudono.com/posts/2023-10-09</guid>
+            <pubDate>Mon, 09 Oct 2023 03:05:12 GMT</pubDate>
+            <description><![CDATA[テキストを扱うツールをたくさん知れたことが情報系に進んで一番お得なことだったなと感じている。エディタ、git、その他CLIツールを日常的に使う環境に身をおけたことは幸運だったと思う。というか、これが幸運ではなく当たり前な世の中になって然るべきな気がしてきた。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-10-05]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-10-05</link>
+            <guid>https://diary.nfurudono.com/posts/2023-10-05</guid>
+            <pubDate>Thu, 05 Oct 2023 13:06:18 GMT</pubDate>
+            <description><![CDATA[風邪を引いた。最初は喉が痛くて、次にはなが出るようになり何だか体がだるくなった。体がだるくなった時点で体温計で熱を測ったら37度あってなるほどなって感じ。これは無理だと色々諦めて会社を休みやるべきことを放棄した。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-25]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-25</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-25</guid>
+            <pubDate>Sun, 24 Sep 2023 17:23:18 GMT</pubDate>
+            <description><![CDATA[昔スプレッドシートを頑張ってこねこねしてこなしていたような作業をsqlでしゅっとこなせるようになったことに気がついて。こういう成長なんだよなと思っている。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-22]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-22</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-22</guid>
+            <pubDate>Thu, 21 Sep 2023 15:14:22 GMT</pubDate>
+            <description><![CDATA[仕事とか技術っぽい話をするときに背景が揃っていて欲しいと思う。議論や質問、ミーティングでは背景を合わせることを大事にしていく。背景がわからないとモヤモヤしてときにはイラっとするし、見当違いな方向に話が進んだりするので。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-21</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-21</guid>
+            <pubDate>Thu, 21 Sep 2023 12:18:11 GMT</pubDate>
+            <description><![CDATA[gh コマンドを使うとPRの番号とタイトルを取得できる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-19]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-19</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-19</guid>
+            <pubDate>Tue, 19 Sep 2023 10:33:14 GMT</pubDate>
+            <description><![CDATA[ドキュメントを読むときにパッと見で読んだ気になってしまったので反省。とはいえドキュメントを使うときに理解しきるまで常に頑張るのもどうかと思うので難しい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-13</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-13</guid>
+            <pubDate>Wed, 13 Sep 2023 14:22:32 GMT</pubDate>
+            <description><![CDATA[今家のトイレで気がついてんですが、冷蔵庫と自分の体にはどんな落書きしても人に迷惑かけないので落書きし放題です！！何書こうかな...。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-12</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-12</guid>
+            <pubDate>Mon, 11 Sep 2023 16:20:35 GMT</pubDate>
+            <description><![CDATA[以下のあたりを完全に理解したらだいぶ楽になる気がする。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-10</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-10</guid>
+            <pubDate>Sun, 10 Sep 2023 07:48:32 GMT</pubDate>
+            <description><![CDATA[昨日は大会運営の準備で一日外にいた。楽しいので後悔はないのだけど、だいぶ疲れて今日の夕方になったのにまだ疲れてぐたっとしている。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-09]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-09</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-09</guid>
+            <pubDate>Sat, 09 Sep 2023 13:52:30 GMT</pubDate>
+            <description><![CDATA[tomlもyamlも難しいので、みんなjsonを書けばいいのにと思う。Goとか静的型付け言語とかが流行って、読みやすさの意義が重要視されている時代なはずなのに、設定ファイルは書きやすさとか、見栄えの良さが重視されていそうなフォーマットが人気なのが解せない。jsonがナウいんじゃないかと思うし、好みとしてもjsonがいいなと思う...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-06]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-06</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-06</guid>
+            <pubDate>Tue, 05 Sep 2023 15:20:38 GMT</pubDate>
+            <description><![CDATA[今日から有給明けて仕事に復帰した。リモートワークで少し緩めに働けた。気温が低いからか今までとちょっと違う気分だった。同期のノリも少し変わっていて、前よりもっとはっちゃけた感じになったと思う。どんどん楽しくなる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-09-05]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-09-05</link>
+            <guid>https://diary.nfurudono.com/posts/2023-09-05</guid>
+            <pubDate>Tue, 05 Sep 2023 05:45:08 GMT</pubDate>
+            <description><![CDATA[9/1-4で北海道旅行に行っていた。オリエンテーリングをするのがメインの目的で、向こうで働いている同期に会ったり美味しいもの食べたり観光したりした。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-08-31]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-08-31</link>
+            <guid>https://diary.nfurudono.com/posts/2023-08-31</guid>
+            <pubDate>Thu, 31 Aug 2023 12:32:42 GMT</pubDate>
+            <description><![CDATA[今月はOJTが始まって、大変だなあという感想と自分成長できているなという喜びがあった。毎月力不足を感じて反省をし、できることが増えて次でそれを活かしつつ、次の力不足を感じる、というのをやっている。いい流れ。ポケモンみたい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-08-30]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-08-30</link>
+            <guid>https://diary.nfurudono.com/posts/2023-08-30</guid>
+            <pubDate>Wed, 30 Aug 2023 13:59:11 GMT</pubDate>
+            <description><![CDATA[dotfileを整備して、シェルの設定を複数のマシンで共有していると、あるコマンドがインストールされている場合にのみ、有効にしたい設定が出てくる。僕が今回遭遇したのは、k8sのcontextをプロンプトに表示する設定をなんとかしたいという欲求。いい感じに表示するコマンドが入っていれば、プロンプトに反映したいけど、入っていなければ別に表示しないのもありで、無理して全てのマシンにコマンドをインストールしたくはない...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-08-19]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-08-19</link>
+            <guid>https://diary.nfurudono.com/posts/2023-08-19</guid>
+            <pubDate>Sat, 19 Aug 2023 08:24:24 GMT</pubDate>
+            <description><![CDATA[能力はすごいと思っているのだけど、使うと部屋にいるだけで体調が悪くなるので苦手。換気とか空間の隔離をうまくやれれば良いのだが、僕のやる気と部屋の構造の問題でうまくいっていない。今日は頭がクラクラする。シャワーを浴びて少しマシになった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-08-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-08-16</link>
+            <guid>https://diary.nfurudono.com/posts/2023-08-16</guid>
+            <pubDate>Wed, 16 Aug 2023 10:48:47 GMT</pubDate>
+            <description><![CDATA[夕飯に味噌ラーメンを作って食べた。自作したスープがうまくて今晩は天才。味噌と本だしは正義。スープを自作したのはインスタント麺が高くて安い生麺を買ったから。3食分残ってるので頑張って食べないといけない。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-08-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-08-13</link>
+            <guid>https://diary.nfurudono.com/posts/2023-08-13</guid>
+            <pubDate>Sun, 13 Aug 2023 10:19:05 GMT</pubDate>
+            <description><![CDATA[この前の水曜日から帰省していた。今回の帰省では地方都市の幸せな家族みたいな過ごし方をした。イオンにいったり外食に家族でいくと雰囲気が出る。高校の同期にあったりゲームをしたのもポイントが高い。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-08-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-08-10</link>
+            <guid>https://diary.nfurudono.com/posts/2023-08-10</guid>
+            <pubDate>Thu, 10 Aug 2023 12:54:55 GMT</pubDate>
+            <description><![CDATA[ルンバを買った。少し前にレンタルして、返却してから生活が崩壊したので買うことにした。この書き方だとレンタルして甘やかされたから掃除能力が落ちたみたいに見えるが、そうではなくて、もともと生活が崩壊していたことがルンバのおかげで判明したという感じ。今度家に届く予定で楽しみ。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-08-04]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-08-04</link>
+            <guid>https://diary.nfurudono.com/posts/2023-08-04</guid>
+            <pubDate>Fri, 04 Aug 2023 13:32:10 GMT</pubDate>
+            <description><![CDATA[今日は会社の飲み会で夏祭りしてきた。その前にインターンの人たちとご一緒させてもらって楽しかった。僕も頑張らねば、という感じ。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-29]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-29</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-29</guid>
+            <pubDate>Sat, 29 Jul 2023 04:02:36 GMT</pubDate>
+            <description><![CDATA[ARM64でいろんなサイズの整数の足し算をする方法を整理する。サイズごとに演算が用意されているわけではなく、レジスタの指定方法（x,wの使い分け）や、レジスタのコンテンツをいい感じにすることで、byte, half, word, double...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-22]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-22</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-22</guid>
+            <pubDate>Sat, 22 Jul 2023 02:56:59 GMT</pubDate>
+            <description><![CDATA[コンパイラの実装で、次はポインタ算術をやる。演算子がオーバーローディングされているので型検査が必要。今は環境とかのデータ構造を設計する気力がなくて、パソコンを前にふにゃっとしている。お昼ご飯食べたら考える。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-21</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-21</guid>
+            <pubDate>Fri, 21 Jul 2023 14:18:37 GMT</pubDate>
+            <description><![CDATA[https://github.com/naoyafurudono/comp]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-19]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-19</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-19</guid>
+            <pubDate>Wed, 19 Jul 2023 14:34:45 GMT</pubDate>
+            <description><![CDATA[実装しているCコンパイラで関数定義をできるようになった🎉。今までも既存のコンパイラで作ったオブジェクトファイルとリンクすれば呼び出すことはできていたが、自分で定義した関数がある程度ちゃんと呼べるようになった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-17]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-17</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-17</guid>
+            <pubDate>Mon, 17 Jul 2023 09:47:03 GMT</pubDate>
+            <description><![CDATA[Cコンパイラをarm macで実装しているのだけど、a=b=0; return...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-08]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-08</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-08</guid>
+            <pubDate>Sat, 08 Jul 2023 03:39:28 GMT</pubDate>
+            <description><![CDATA[椅子に座るほどの元気がなくてもパソコン座れるので楽しい。気軽にコーディングできる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-06]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-06</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-06</guid>
+            <pubDate>Wed, 05 Jul 2023 15:38:37 GMT</pubDate>
+            <description><![CDATA[そういえば 社会人...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-05]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-05</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-05</guid>
+            <pubDate>Wed, 05 Jul 2023 13:19:47 GMT</pubDate>
+            <description><![CDATA[プロトタイプベースのオブジェクト指向言語について、哲学の方面から議論したエッセイを読んだ。クラスベースなのは古典的なアリストテレス的な分類の考え方に基づくもので、プロトタイプベースなものはヴィトゲンシュタインっぽい考え方に基づくとのこと。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-02]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-02</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-02</guid>
+            <pubDate>Sun, 02 Jul 2023 09:15:58 GMT</pubDate>
+            <description><![CDATA[末尾位置での関数呼び出しは、継続渡し形式ではcaleeに渡す継続をcallerが大きくしないで、callerのcallerから渡されたものをそのまま渡す点で特徴的だ。レジスタマシンではcallerのスタック領域をcalleeが上書きして使うことに対応するのだろう。こういうcall命令はどのくらい実用されているのだろうか...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-07-01]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-07-01</link>
+            <guid>https://diary.nfurudono.com/posts/2023-07-01</guid>
+            <pubDate>Fri, 30 Jun 2023 16:07:45 GMT</pubDate>
+            <description><![CDATA[envsubstを使うと標準入力の環境変数の参照っぽいところに環境変数の値を埋め込んだテキストを吐ける。readmeにコマンドのヘルプメッセージを載せたいときに便利。例: https://github.com/naoyafurudono/tools/tree/main/cl]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-30]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-30</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-30</guid>
+            <pubDate>Fri, 30 Jun 2023 02:33:52 GMT</pubDate>
+            <description><![CDATA[すでにgit管理されているファイルをgitignoreでマッチするようにしても、管理から外れない。外すためには以下のようにすると良い。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-29]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-29</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-29</guid>
+            <pubDate>Thu, 29 Jun 2023 13:02:44 GMT</pubDate>
+            <description><![CDATA[crate.ioに初めてコードを登録した。cargo install で入るから便利。ちょっとしたCLIツール書く体験がなかなか良い。copilotが面倒なことやってくれる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-25]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-25</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-25</guid>
+            <pubDate>Sun, 25 Jun 2023 14:00:31 GMT</pubDate>
+            <description><![CDATA[今日は親戚のお家にお邪魔してきた。だんだん親戚のことがわかるようになってきた。たくさん構っていただけてありがたい。ここ1,2年くらい、人の人生を聞く機会が増えたように感じる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-24]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-24</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-24</guid>
+            <pubDate>Sat, 24 Jun 2023 10:10:24 GMT</pubDate>
+            <description><![CDATA[macのタイムゾーンの設定が狂っていて、今日の投稿がこれと前回の二つに分かれてしまった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-23]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-23</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-23</guid>
+            <pubDate>Sat, 24 Jun 2023 03:17:59 GMT</pubDate>
+            <description><![CDATA[macを買って環境構築をしているのでメモしていく。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-17]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-17</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-17</guid>
+            <pubDate>Sat, 17 Jun 2023 13:42:59 GMT</pubDate>
+            <description><![CDATA[ルンバをレンタルして今日から使い始めた。結構細かく動いてくれて僕より掃除がうまい気がする。7時/19時で掃除するようにしたので、目覚まし代わりになるはずだし、寝る前と出勤前に床を片付ける習慣がつきそうで期待してる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-16</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-16</guid>
+            <pubDate>Fri, 16 Jun 2023 12:51:28 GMT</pubDate>
+            <description><![CDATA[話題だったので読んでみている。手塚治虫っぽい印象を受けてる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-11]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-11</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-11</guid>
+            <pubDate>Sun, 11 Jun 2023 06:31:11 GMT</pubDate>
+            <description><![CDATA[舌の奥の方や、先端よりも少し奥、中央くらいで味わううまみやとろっとした感じが好き。苦味とか酸味にはなれてしまってあまり感じなくなったみたい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-10</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-10</guid>
+            <pubDate>Sat, 10 Jun 2023 05:04:45 GMT</pubDate>
+            <description><![CDATA[共感できるところが多かったし、なるほどなと思うところもあった。なにより読んでて楽しかったので読んでよかった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-06-06]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-06-06</link>
+            <guid>https://diary.nfurudono.com/posts/2023-06-06</guid>
+            <pubDate>Mon, 05 Jun 2023 16:29:25 GMT</pubDate>
+            <description><![CDATA[昨日は退勤後にランニングをして銭湯に行ったあと、お酒を飲んで今にいたる。ランニングをしてアパートに帰ると、階段の近くで猫が鳴いていた。一旦スルーしたのだけど、気なって戻ってからじっと見ていると近づいてきてくれた。僕は昔猫カフェに行ったときに一匹にも懐かれずに悲しい思いをしたことがあったので、近づいてきてくれた時点で感動した。猫はめちゃかわいかった...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-31]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-31</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-31</guid>
+            <pubDate>Wed, 31 May 2023 10:42:53 GMT</pubDate>
+            <description><![CDATA[初めて家の近所にあるコンパスコーヒーに行った。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-26</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-26</guid>
+            <pubDate>Thu, 25 May 2023 15:07:19 GMT</pubDate>
+            <description><![CDATA[クラフトビールを飲むと走りたくなるのをなんとかしたほうがいい気がする。心臓に悪そうだし、生活リズムが崩れる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-19]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-19</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-19</guid>
+            <pubDate>Fri, 19 May 2023 14:06:37 GMT</pubDate>
+            <description><![CDATA[明日は秋吉台に行く。楽しみ。新幹線を初めてスマホで買った。どうやらモバイルパスモで乗れるみたいなのでワクワクしてる。更に今日、仕事が終わってからJINS MEMEを買ったのでそのあたりでも楽しみが止まらない。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-17]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-17</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-17</guid>
+            <pubDate>Wed, 17 May 2023 14:27:22 GMT</pubDate>
+            <description><![CDATA[今日同僚と話していて気がついたのだが、僕は呼び方を腹に落としたい人みたいだ。新しく学んだ概念をなんて呼べば良いかがはっきりすることが大切で、単に記号として確立しているだけでは不十分みたい。たぶん、英単語を覚えるときに日本語訳より発音記号を大事にしたことが元凶だろう。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-16</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-16</guid>
+            <pubDate>Tue, 16 May 2023 13:54:18 GMT</pubDate>
+            <description><![CDATA[日曜はトレランして昨日は筋トレ、今日は走った。えらい。明日は夜に髪を切ってもらうのでおやすみ。今日は丸子橋で引き返した。退勤後はこれくらいがちょうどいい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-14]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-14</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-14</guid>
+            <pubDate>Sat, 13 May 2023 15:28:29 GMT</pubDate>
+            <description><![CDATA[高尾山で走ってきた(strava)。雨が降ったりやんだりしていて、濡れながら走った。僕ともう一人しか集まらなかったので二人でいったが、楽しかった。向こうにペースをだいぶ合わせてもらった。今回は高尾山の山頂を迂回して、小仏峠、景信山まで行った。陣馬山までいくことも考えはしていたけど、帰れるか不安だったので引き返すことにした...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-13</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-13</guid>
+            <pubDate>Sat, 13 May 2023 11:38:25 GMT</pubDate>
+            <description><![CDATA[もともとbashで書いていたスクリプトを拡張したくなって、普段ならPythonで書くところを今日は新しいことをしてみようということでRustをつかってみることにした。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-09]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-09</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-09</guid>
+            <pubDate>Tue, 09 May 2023 09:15:40 GMT</pubDate>
+            <description><![CDATA[コロナの時期に入ってから使っていたロケットモバイルを解約して、ahamoに乗り換えることにした。ロケットモバイルでは神プランという、通信制限が常にかかっているようなプランがある。通信の最初のうちだけ少しまともな速度が出るようになっているので、お財布の代わりにするくらいの用途なら困らない。電話回線込みで月に1000円程度しかかからないので、コロナ時代で引きこもっている身にはちょうど良いものだった...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-07]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-07</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-07</guid>
+            <pubDate>Sat, 06 May 2023 15:05:38 GMT</pubDate>
+            <description><![CDATA[5/4-5/6で親戚と会ってきた。少し遠目の親戚が多くて、はじめて会う人も少なくなかった。たくさんお世話になって、楽しませて頂いた。小中学生と一緒にたくさん遊んだのだのと、大人たちと夜中まで飲んでお話したのが印象的。こどもたちとはシーツをネットにしたバトミントン（相手の動きが見えない！）とかバスケやバレーっぽいことをした。時間を追うごとにルールが洗練され、楽しみを見出す場所が移ろっていた。おとなとは、持ち寄ったり、その辺においてあったりしたお酒（おいしいのばかりだった、ナポレオンの容器に入ったウイスキーと、名前を忘れたスコッチが特においしかった）を飲んだ。子育てとかキャリアの話題が中心だった...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-04]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-04</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-04</guid>
+            <pubDate>Thu, 04 May 2023 01:21:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2023-05-02]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-05-02</link>
+            <guid>https://diary.nfurudono.com/posts/2023-05-02</guid>
+            <pubDate>Mon, 01 May 2023 23:44:41 GMT</pubDate>
+            <description><![CDATA[DDD周りを最近漁っている。原著はオブジェクト指向で説明されているけど、関数型で説明している本を直近で読んでいる。僕はプログラミングを関数型から始めた人間だし、集合論や関数解析が好きだったからかオブジェクト指向があまりしっくり来ない。インターフェースとかクラスでモデルする気持ちはなんとなく分かる気がするし、拡張性とか再利用性を考えたときに既存のコードをできるだけ壊さずに機能追加できるのは強いと思う。なんだけど、そういう変更ありきで書かれたコードが素直に対象を表現しているとは思えなくて辛さを感じてしまう。それに対して型とか関数型のあれこれを考えるときは、まだ分かる感じがして救いがある。モナドとかが普通のプログラミングに入ってくるとやはりこんがらがってくるのだけど。きっとパラダイムの問題ではなくて、抽象化になれてないとか親しんでないみたいなところが問題なのだろう...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-29]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-29</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-29</guid>
+            <pubDate>Sat, 29 Apr 2023 09:28:06 GMT</pubDate>
+            <description><![CDATA[Money Forwardの連携を頑張った。あれだけ連携できるのはすごい。APIを提供しているように見えない機関はどうやって対応しているのだろうか。RPA的なものを使うのがうまかったり、営業を頑張ったりしている感じな気はする。なかなか便利。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-28]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-28</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-28</guid>
+            <pubDate>Thu, 27 Apr 2023 15:34:21 GMT</pubDate>
+            <description><![CDATA[今日は意味論の直感が少し生えたので機嫌がいい。寝て起きたらもう少しまじめに考えよう。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-27]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-27</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-27</guid>
+            <pubDate>Thu, 27 Apr 2023 14:32:18 GMT</pubDate>
+            <description><![CDATA[人と語るわけでもなければ、熱狂的に推すわけでもないのに、僕はなにのためにアニメを見たり、小説を読んだり、音楽を聞いたりするのだろうか。アニメはほぼ毎日みるし、小説は人並み以上に読むと思う。漫画もそれなりに読むし、音楽もなんやかんや毎日聞いている。これまでそういう作品の良さをまともに語ったことはないし、積極的に人と共有したりもしない。物語のキャラクターを推したいと思ったこともない。アーティストを好きになることはあっても、エッセイを読みたいとはあまり思わなくて、あくまでその人の作品が好きだからアーティストを好きになっているように思う...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-26</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-26</guid>
+            <pubDate>Wed, 26 Apr 2023 07:49:29 GMT</pubDate>
+            <description><![CDATA[おいしいご飯を食べたら感想を残すことにする。お昼に会社近くのご飯屋さんに行く機会が多くなりそうなので、その話が多くなりそう。Instagramに写真をあげていく。気が向いたらうまく連携する仕組みを考えよう。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-16</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-16</guid>
+            <pubDate>Sun, 16 Apr 2023 02:55:02 GMT</pubDate>
+            <description><![CDATA[午前中はChatGPTとかであそんでいた。ブログを書いていたおかげで、AIに食わせる自分の書いた文書に困らないのが嬉しい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-10</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-10</guid>
+            <pubDate>Mon, 10 Apr 2023 02:59:19 GMT</pubDate>
+            <description><![CDATA[この頃「詳解システム・パフォーマンス」を読んでいる。チューニングをする機会はないのでツールの説明は読み飛ばしているが、それに入る前の基礎的な概念を勉強している。学部の授業でやった理論的な基礎から復習して、もう少し具体的な実装とか最近のアーキテクチャのこととかまで勉強できている気がする...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-06]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-06</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-06</guid>
+            <pubDate>Thu, 06 Apr 2023 11:59:33 GMT</pubDate>
+            <description><![CDATA[今まではレイテンシを減らすために改札をくぐった際の処理をローカルで行い、その後まったり同期する、みたいな方式をとっているという記事をみた記憶がある。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-03]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-03</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-03</guid>
+            <pubDate>Sun, 02 Apr 2023 15:39:35 GMT</pubDate>
+            <description><![CDATA[オリエンテーリングの人たちと飲み会をした。社会人としての心構え（）を教えて頂いた。今日の入社式から頑張って行こうと思う。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-02]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-02</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-02</guid>
+            <pubDate>Sun, 02 Apr 2023 06:56:40 GMT</pubDate>
+            <description><![CDATA[CPythonの開発者向けドキュメントがとてもよい。今はコンパイラの構成に関する部分を読んでいる。抽象構文木の扱いやメモリ管理の方針など、コンパイラ開発の方針を説明している。ドラゴンブックとかからは得られない、開発手法の知識を得られて幸せ。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-04-01]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-04-01</link>
+            <guid>https://diary.nfurudono.com/posts/2023-04-01</guid>
+            <pubDate>Sat, 01 Apr 2023 08:34:45 GMT</pubDate>
+            <description><![CDATA[久しぶりにロードバイクに乗った。名古屋に帰ったとき以来かもしれない。3年くらいぶり？腕が疲れてしまった。姿勢が良くない。町中を走って信号にたくさん捕まったことで、ブレーキをたくさんかけたり、停止からの加速をたくさんしたことが原因かもしれない。荻窪から今の家までの16kmの道のり。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-03-31]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-03-31</link>
+            <guid>https://diary.nfurudono.com/posts/2023-03-31</guid>
+            <pubDate>Fri, 31 Mar 2023 07:01:16 GMT</pubDate>
+            <description><![CDATA[東大の田浦先生が公開されている大規模ソフトウェアを探るがとてもよかった。GDBを使って大きなソフトウェアの振る舞いを理解する方法を学べる。2年ほど前に、こういう資料が喉から手が出るほどほしいと感じていた記憶がある。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-03-29]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-03-29</link>
+            <guid>https://diary.nfurudono.com/posts/2023-03-29</guid>
+            <pubDate>Wed, 29 Mar 2023 13:49:17 GMT</pubDate>
+            <description><![CDATA[今日はアルバイト先のキャディの方々に送別会を開いていただいた。一年弱お世話になった。あのころはいろんなプログラミングの経験を積みたくて入社し、結果としてキャディのあの部署（秘密なわけじゃないけど、名前がよく変わるので明言しない）じゃないと積まなかっただろう経験を積ませて頂いたと思っている。僕はだいぶ一緒に働いた方々に恵まれていて、こんなにぼくに都合の良い環境でいいのだろうかとなんど思ったかわからない。機会があれば（つくれれば）また一緒にぜひとも働きたいと思っている。それまではいわゆる大学で教わる「お行儀のよいプログラミング」しかしらなかったのだが、仕事を通じてどのように僕の仕事に価値をつけるかを意識するようになった...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-03-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-03-21</link>
+            <guid>https://diary.nfurudono.com/posts/2023-03-21</guid>
+            <pubDate>Tue, 21 Mar 2023 13:30:23 GMT</pubDate>
+            <description><![CDATA[今日は久しぶりに自転車をいじった。しばらく乗っていなかったのでタイヤとチューブを交換して、移動のために外していたリアディレーラを取り付けた。チェーンオイルを注せばある程度の遠乗りはできるだろう。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-03-19]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-03-19</link>
+            <guid>https://diary.nfurudono.com/posts/2023-03-19</guid>
+            <pubDate>Sun, 19 Mar 2023 01:46:59 GMT</pubDate>
+            <description><![CDATA[最近AIが流行っていて、精度がすごいと話題で、生活が多かれ少なかれ変わっていくのだろうなという感じがする。ああいう機械学習ベースのAIは学習で直感を鍛えて、それに基づく出力をするものだと僕は解釈している。人間が頭を使うときには直感を論理とか議論で検証して、主張の穴を見つけて改善するサイクルを回すはずだ。今の機械学習っぽいAIは直感で得た主張を論理で解釈しないだろう（NECがそういうことを考えていそう。それができればAIはもっとつよくなるはずだし、そういうAIを見てみたい...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-03-17]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-03-17</link>
+            <guid>https://diary.nfurudono.com/posts/2023-03-17</guid>
+            <pubDate>Fri, 17 Mar 2023 10:16:57 GMT</pubDate>
+            <description><![CDATA[ホットクックで鶏大根を作った。大根に火がうまく通っていて本領発揮を感じた。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-03-14]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-03-14</link>
+            <guid>https://diary.nfurudono.com/posts/2023-03-14</guid>
+            <pubDate>Tue, 14 Mar 2023 09:08:07 GMT</pubDate>
+            <description><![CDATA[TODO: 割と眠いときに書いたのでまとまっていない。気が向いたら書き直す。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-03-09]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-03-09</link>
+            <guid>https://diary.nfurudono.com/posts/2023-03-09</guid>
+            <pubDate>Thu, 09 Mar 2023 06:53:59 GMT</pubDate>
+            <description><![CDATA[昨日PPLから帰ってきた。初めて対面で学会に参加した。対面だと変な疲れ方しないし、コミュニケーションを取りやすいのがいい。ポスター発表が特に楽しかった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-27]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-27</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-27</guid>
+            <pubDate>Mon, 27 Feb 2023 09:56:50 GMT</pubDate>
+            <description><![CDATA[Gentooが入った。基本的に待っているだけではあるのだけど、それがなかなか大変。パッケージを一瞬でインストールできる幸せに気がついた。割とすぐにUbuntuに戻るかもしれない。今はnodejsとtexliveをコンパイルしている。未だかつてなくCPUが仕事をしている。かわいそうに。とはいえportageに触れるのはなかなか楽しい...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-26]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-26</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-26</guid>
+            <pubDate>Sat, 25 Feb 2023 18:39:26 GMT</pubDate>
+            <description><![CDATA[Golangをすごく久しぶりに書いた結果、構造体の要素がコピーされることを忘れておりデバッグに時間を溶かした（コピーした構造体のフィールドを書き換えて、コピー元に変化が起きると思い込んでいた）。最近はPythonやTSか、関数型言語ばかり書いていて、Cっぽい構造体の扱いをしていなかったので忘れてしまっていたのだろう。忘れていたけど、CやGoのように構造体の要素をコピーする意味論は好き。直感的というか、明示的にポインタを表現することが好きなのだろうか...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-24]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-24</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-24</guid>
+            <pubDate>Fri, 24 Feb 2023 10:17:14 GMT</pubDate>
+            <description><![CDATA[最近は時間とベーシックな元気が足りない。この時期にやりたいこと/やるべきことがたくさん押し寄せてくるのはどうしてだろう。変わり目だからか。これまでぼちぼちやっていたものを、みんなが足並みをそろえて一段落つけようとするから忙しいのだろう。意識的に間引く必要があるかな。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-21</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-21</guid>
+            <pubDate>Tue, 21 Feb 2023 03:54:38 GMT</pubDate>
+            <description><![CDATA[昨日まで4日連続で人とご飯を食べた。いろんな人と話せて楽しかった。今日は研究室に行くし、昨日はオンラインでのコミュニケーションで別のコミュニティの人と話したので、社会性週間だ。てんやわんやしている。（追記）研究室ではお土産を持ってきてくれた人がいて、お茶した。だいぶ話し込んでしまった...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-16]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-16</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-16</guid>
+            <pubDate>Wed, 15 Feb 2023 15:57:27 GMT</pubDate>
+            <description><![CDATA[Jane Streatのテックブログで単体テストの書き方が紹介されていた。記事ではその手法をexpect testと呼んでいて、プログラムを書いてその結果を確認してokだったら受け入れる、というものだ。受け入れた結果はソースファイルに保存されて、その後は単体テストとして機能する。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-15]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-15</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-15</guid>
+            <pubDate>Tue, 14 Feb 2023 15:12:54 GMT</pubDate>
+            <description><![CDATA[Real World OCaml FUNCTIONAL PROGRAMMING FOR THE MASSESを読み始めた。Practicalで面白いと伺って、目次を見たら実際そのようだったので読んでいる。3年前にプログラミング in OCamlで入門したのが懐かしい。Real...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-12</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-12</guid>
+            <pubDate>Sun, 12 Feb 2023 09:33:23 GMT</pubDate>
+            <description><![CDATA[ドメインを取得して、サーバを借りた。もちろんムームードメインとロリポップを使っている。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-10</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-10</guid>
+            <pubDate>Fri, 10 Feb 2023 10:37:18 GMT</pubDate>
+            <description><![CDATA[髪を切ってもらった。２ヶ月くらい切っていなかった気がする。今回は引っ越してから初めて近所で切ってもらった。なかなかいいかんじのお店、 店員さんに巡り会えた。嬉しい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-08]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-08</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-08</guid>
+            <pubDate>Wed, 08 Feb 2023 08:16:19 GMT</pubDate>
+            <description><![CDATA[昨日、修論発表をした。発表する部屋が想像より大きかった。発表の内容はなかなか未熟だったけど、あれよりいいものを作る時間があったら研究をもっと進められると思うので、発表の準備作業に改善点はあまりないと思う。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-02-03]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-02-03</link>
+            <guid>https://diary.nfurudono.com/posts/2023-02-03</guid>
+            <pubDate>Fri, 03 Feb 2023 09:42:18 GMT</pubDate>
+            <description><![CDATA[自分のご機嫌をとるのは難しい。睡眠やエネルギーが足りていないだけのこともあれば、体を動かしていなくてつらいこともある。気持ちが足りないこともあれば、気温が低いことが原因で機嫌が良くないというか、パフォーマンスがでないこともある。他にもモニタの見すぎとか眼精疲労みたいなものが原因なこともある...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-24]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-24</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-24</guid>
+            <pubDate>Mon, 23 Jan 2023 16:23:04 GMT</pubDate>
+            <description><![CDATA[この前みそしるを作ったのだけど火にかけたことを忘れて2,3時間放置してしまった。水分は完全に失われ、具のもやしとは白菜が完全に炭になっていた。幸い火事とかにはならなかったが、炭の匂いがなかなかとれない。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-15]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-15</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-15</guid>
+            <pubDate>Sun, 15 Jan 2023 11:09:45 GMT</pubDate>
+            <description><![CDATA[カタログギフトで頂いたお茶が届いた。煎茶の詰め合わせで、いい感じの缶に入っている。300gもあるのでうまい運用を考えたいところだ。研究室で飲むか。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-13]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-13</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-13</guid>
+            <pubDate>Fri, 13 Jan 2023 08:54:27 GMT</pubDate>
+            <description><![CDATA[鼻セレブを使い切ってしまった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-12]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-12</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-12</guid>
+            <pubDate>Thu, 12 Jan 2023 03:37:22 GMT</pubDate>
+            <description><![CDATA[36.8]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-10</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-10</guid>
+            <pubDate>Mon, 09 Jan 2023 16:50:53 GMT</pubDate>
+            <description><![CDATA[Value independenceという言葉をVIMPL 2023のcall for papers経由で知ったのだが、それがどういう概念かを説明するドキュメントは見つからなかった。頑張って検索すると、VIMPLの組織委員であるDave Abrahams (twitter)...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-09]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-09</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-09</guid>
+            <pubDate>Mon, 09 Jan 2023 12:07:43 GMT</pubDate>
+            <description><![CDATA[念願かなって時計を壁にかけた。今までは机の上に置いていたのだけど、なにかの拍子に落としたり、モニタを見るときの邪魔になったりしていた。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-08]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-08</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-08</guid>
+            <pubDate>Sun, 08 Jan 2023 03:40:39 GMT</pubDate>
+            <description><![CDATA[体温: 37.1]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-07]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-07</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-07</guid>
+            <pubDate>Sat, 07 Jan 2023 09:05:08 GMT</pubDate>
+            <description><![CDATA[体温: 36.7]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-06]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-06</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-06</guid>
+            <pubDate>Fri, 06 Jan 2023 01:49:59 GMT</pubDate>
+            <description><![CDATA[昨日の朝からのどが痛い。それ以外の症状はないので単に乾燥とかにやられただけだと思う。とはいえ確証がないので学校にはとりあえず行かないようにしている。おしゃべりと作業を学校でしたい〜。週明けにたくさんたのしい議論ができるように（それをモチベーションにして）研究とかの作業を進めておこう...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-05]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-05</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-05</guid>
+            <pubDate>Thu, 05 Jan 2023 04:51:03 GMT</pubDate>
+            <description><![CDATA[年末にPython向けのGoogleのスタイルガイドを読んでからPythonを書くのがとても楽しい。知らなかった言語機能やその有効な使い方とその理由をコンパクトに説明してくれる。言語機能の使い方は補足程度で、機能そのものは知っていたりググって理解することを読者に期待していそう。言語に入門したあと、息を吸うようにかけるようになるまでの間を埋めるのに役立ちそう...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2023-01-02]]></title>
+            <link>https://diary.nfurudono.com/posts/2023-01-02</link>
+            <guid>https://diary.nfurudono.com/posts/2023-01-02</guid>
+            <pubDate>Mon, 02 Jan 2023 09:29:46 GMT</pubDate>
+            <description><![CDATA[名古屋の地下鉄に久しぶりに乗った。桜通り線は電車がホーム来る前後の音楽や音がいい。特に構内放送が始まる前の音楽がかっこいい。ギターっぽい少し高めの音を出す弦楽器で奏でられた5秒くらいの曲が流れる。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-12-30]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-12-30</link>
+            <guid>https://diary.nfurudono.com/posts/2022-12-30</guid>
+            <pubDate>Fri, 30 Dec 2022 11:37:17 GMT</pubDate>
+            <description><![CDATA[昔聴いていた音楽を久しぶりに聞きたくなったのだがSpotifyで配信されていなかった。ローカルにデータがあったのでそこからSpotifyかVLCとかで使えるようにしようと思ったのだが、ローカルデータのファイルフォーマットが変だったりディレクトリ構成がイマイチで体験が良くない。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-12-28]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-12-28</link>
+            <guid>https://diary.nfurudono.com/posts/2022-12-28</guid>
+            <pubDate>Wed, 28 Dec 2022 10:35:00 GMT</pubDate>
+            <description><![CDATA[就職先のイベントに参加してきた。想像以上にたくさんの方に認識していただいていた。僕が初めて認識した方や、ネットで認識していた方、面接などでお世話になった方から、たくさんお話をうかがえて楽しい時間だった。みなさん、ありがとうございました。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-12-21]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-12-21</link>
+            <guid>https://diary.nfurudono.com/posts/2022-12-21</guid>
+            <pubDate>Wed, 21 Dec 2022 11:44:28 GMT</pubDate>
+            <description><![CDATA[最近ちいさな言語処理系(検証器)をPythonで実装している。学校の講義でそういう講義があって、好きに言語を選んでよいということだった。参加者の間で関数型言語がメジャーな感じではなかったのこともあり、怖いもの見たさでPythonを選んでみた。ちなみに今回の実装は性能を問題にしておらず、動くことが大切...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-12-18]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-12-18</link>
+            <guid>https://diary.nfurudono.com/posts/2022-12-18</guid>
+            <pubDate>Sun, 18 Dec 2022 00:53:44 GMT</pubDate>
+            <description><![CDATA[昨日は服を買いに行った。引っ越すときに薄々気がついてはいたのだけど、冬に着る上着が一枚も手元になくてこのままでは凍えて外出できなくなるところだった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-12-10]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-12-10</link>
+            <guid>https://diary.nfurudono.com/posts/2022-12-10</guid>
+            <pubDate>Sat, 10 Dec 2022 11:19:37 GMT</pubDate>
+            <description><![CDATA[公開範囲を限定する機能をこのブログにつけたい。技術的なメモを書くこともあればちょっとした考え事をメモをすることもある。大体のことはガンガン公開すればよいと思うのだけど、勤務中に出会った技術的なことでコンプライアンス的に公開できないものや、人を傷つけるかもしれない考え事もたまにある。そういうものは公開していないところに吐き出しているのだけど、メモは一箇所にまとめたい気持ちがあるのでこの体験は良くない。今日の考え事は今日の日記にまとめたい気持ちがある...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-12-07]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-12-07</link>
+            <guid>https://diary.nfurudono.com/posts/2022-12-07</guid>
+            <pubDate>Wed, 07 Dec 2022 11:04:55 GMT</pubDate>
+            <description><![CDATA[Pythonによるデータ分析入門を眺めている。これまでpandasのDataFrameを使う機会があったのだけど、ググった知識でごまかしたり、dictとlistを駆使してなんとかしてきた。そろそろインデックスや配列指向を活用したい気持ちが抑えきれなくなったので本を買ってみた。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-12-03]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-12-03</link>
+            <guid>https://diary.nfurudono.com/posts/2022-12-03</guid>
+            <pubDate>Fri, 02 Dec 2022 16:38:55 GMT</pubDate>
+            <description><![CDATA[昨日は研究が進捗した。嬉しい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-11-28]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-11-28</link>
+            <guid>https://diary.nfurudono.com/posts/2022-11-28</guid>
+            <pubDate>Mon, 28 Nov 2022 14:34:53 GMT</pubDate>
+            <description><![CDATA[AmazonでEchoが安かったので買ってしまった。特に使いみちは考えていなかったのだけど、プログラミングの新しいエントリポイントとして楽しい。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-11-27]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-11-27</link>
+            <guid>https://diary.nfurudono.com/posts/2022-11-27</guid>
+            <pubDate>Sun, 27 Nov 2022 08:27:48 GMT</pubDate>
+            <description><![CDATA[タイトルを見たときには、アーキテクチャ的な話が中心なのかと思っていたけど、蓋を開けると、それを構成するための技術を基礎から説明してくれた。たとえばデータベースの種類（関係、ドキュメント、グラフ）とその実例や特性、インデックスのデータ構造の説明、比較など。データベースだけの本でもないけど、そのへんはまだ読んでいないので触れない...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-11-25]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-11-25</link>
+            <guid>https://diary.nfurudono.com/posts/2022-11-25</guid>
+            <pubDate>Fri, 25 Nov 2022 09:27:14 GMT</pubDate>
+            <description><![CDATA[ディスプレイの配置を変えたら首が楽になった気がする。今まではモニターアームを使って机の天板ギリギリの高さに設置していた。もっと低く、遠くに置きたかったのだが机に設置するモニターアームでは限界だった。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-11-24]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-11-24</link>
+            <guid>https://diary.nfurudono.com/posts/2022-11-24</guid>
+            <pubDate>Thu, 24 Nov 2022 06:46:08 GMT</pubDate>
+            <description><![CDATA[トップページでのページネーションは利益がだれにもないと判断して削除した。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022-11-23]]></title>
+            <link>https://diary.nfurudono.com/posts/2022-11-23</link>
+            <guid>https://diary.nfurudono.com/posts/2022-11-23</guid>
+            <pubDate>Wed, 23 Nov 2022 08:20:29 GMT</pubDate>
+            <description><![CDATA[日記を書き始めるためのシェルスクリプトを書いた。今まではタイトルの指定が面倒だったので、日付をタイトルとして設定するようにした。]]></description>
+        </item>
+    </channel>
+</rss>

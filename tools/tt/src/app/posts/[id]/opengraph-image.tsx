@@ -1,5 +1,3 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { articleDirectoryPaths } from "@/lib/config";
 import { type ArticleID, findArticle } from "@/lib/gateway";
 import { ImageResponse } from "next/og";

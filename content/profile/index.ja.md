@@ -46,7 +46,7 @@ Goを用いたバックエンドサービスを設計・実装・運用する時
 
 - [ペパボテックポータル](https://tech.pepabo.com/authors/donokun/): ペパボのウェブサイトに公開された私の記事。
 
-# Academic Paper
+# 論文
 
 ## 2022
 
@@ -56,7 +56,12 @@ Goを用いたバックエンドサービスを設計・実装・運用する時
   - [Slide (pdf)](https://drive.google.com/file/d/1oYLtxE0b1AIBbkcotf_YyPST0yLdvbNl/view?usp=sharing)
   - [Talk at TFP2022 (12min, mp4)](https://drive.google.com/file/d/14EBEGQYZDNIGADXyRU7XTsbgUE4XqO1x/view?usp=sharing)
 
-# Talks
+# 発表
+
+## 2024-
+
+See <https://speakerdeck.com/naoyafurudono>
+
 
 ## 2022
 

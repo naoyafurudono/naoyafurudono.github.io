@@ -45,6 +45,10 @@ He majored in semntics, implementation, and design of programming languages.
 
 # Talks
 
+## 2024-
+
+See <https://speakerdeck.com/naoyafurudono>
+
 ## 2022
 
 - Permissions in Linux [slide (google slides)](https://docs.google.com/presentation/d/18kkR9ew1Si_7SMuMgkct1drntBZZ1YPYcVi9B0lpLCE/edit?usp=sharing)

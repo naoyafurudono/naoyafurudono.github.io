@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ツイートするには長すぎる</title><link>https://blog.nfurudono.com/</link><description>Recent content on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 11 Feb 2025 15:51:29 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/index.xml" rel="self" type="application/rss+xml"/><item><title>吉祥寺.pmとBurikaigiに登壇参加した</title><link>https://blog.nfurudono.com/daily/2025-02-07/</link><pubDate>Fri, 07 Feb 2025 16:50:58 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-02-07/</guid><description>&lt;p>1/31に吉祥寺.pmのLT、2/1にBuriKaigiのセッションで発表しました。カレンダー上で予定かぶっていないことだけしか確認せず勢いで楽しそうなカンファレンスの楽しそうな枠に申し込んだところ、発表の間の時間が12時間くらいしかなくて大変でした。とはいえそれぞれの発表に対して準備をして知見を得られたし、聴衆と意思疎通できたとも思っています。登壇できてよかった。&lt;/p></description></item><item><title>2025-01-26</title><link>https://blog.nfurudono.com/daily/2025-01-26/</link><pubDate>Sun, 26 Jan 2025 16:21:43 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-01-26/</guid><description>&lt;h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ツイートするには長すぎる</title><link>https://blog.nfurudono.com/</link><description>Recent content on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 11 Feb 2025 15:53:13 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/index.xml" rel="self" type="application/rss+xml"/><item><title>吉祥寺.pmとBurikaigiに登壇参加した</title><link>https://blog.nfurudono.com/daily/2025-02-07/</link><pubDate>Fri, 07 Feb 2025 16:50:58 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-02-07/</guid><description>&lt;p>1/31に吉祥寺.pmのLT、2/1にBuriKaigiのセッションで発表しました。カレンダー上で予定かぶっていないことだけしか確認せず勢いで楽しそうなカンファレンスの楽しそうな枠に申し込んだところ、発表の間の時間が12時間くらいしかなくて大変でした。とはいえそれぞれの発表に対して準備をして知見を得られたし、聴衆と意思疎通できたとも思っています。登壇できてよかった。&lt;/p></description></item><item><title>2025-01-26</title><link>https://blog.nfurudono.com/daily/2025-01-26/</link><pubDate>Sun, 26 Jan 2025 16:21:43 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-01-26/</guid><description>&lt;h2>
 &lt;a href="#etchosts-%e3%81%a7%e3%83%84%e3%82%a4%e3%83%83%e3%82%bf%e3%83%bc%e3%82%92%e5%b0%81%e5%8d%b0" id="etchosts-でツイッターを封印" class="anchor" aria-hidden="true">/etc/hosts でツイッターを封印&lt;/a>
 &lt;/h2>
 &lt;p>&lt;code>/etc/hosts&lt;/code> で以下のようにしてツイッターを封印している。&lt;/p>
@@ -1276,22 +1276,16 @@ Hugoの設定をろくに調べずに雑に書いていたのだが、今回少�
 &lt;p>おそらく情報工学科の学部で扱うであろう内容をまとめた本。プログラミングはしないけど、それ以外の座学は大体ざっくりまとまっていそう。僕は情報工学科の講義をとっていないので、真偽はわからないのだけど。あくまで内容はざっくりしていて、専門的な内容は省かれている感じ。インターネットとはとか、データベースとは、プログラミング言語とは、みたいなことが書かれていて、それぞれの難しさを指摘するところまでを解説してくれる。技術の実装方法や難しさの解決策とかは扱わない感じ（だったはず）。CS関連で知らないことが出てきた時に、どの辺を勉強すれば良いかの手がかりとなる概観を与えてくれたんだと思う。&lt;/p></description></item><item><title>古殿直也</title><link>https://blog.nfurudono.com/profile/</link><pubDate>Wed, 23 Mar 2022 14:23:47 +0900</pubDate><guid>https://blog.nfurudono.com/profile/</guid><description>&lt;p>&lt;img src="https://blog.nfurudono.com/profile/face.jpg" alt="古殿直也の顔写真">&lt;/p>
 &lt;p>このページはGMOペパボ株式会社のソフトウェアエンジニアである&lt;strong>古殿直也&lt;/strong>のプロフィールです。&lt;/p>
 &lt;h2>
-&lt;a href="#%e9%80%a3%e7%b5%a1%e5%85%88" id="連絡先" class="anchor" aria-hidden="true">連絡先&lt;/a>
+&lt;a href="#sns" id="sns" class="anchor" aria-hidden="true">SNS&lt;/a>
 &lt;/h2>
-&lt;p>次のメールアドレスを通じてご連絡ください: &lt;span id="email">
- (wait for a few seconds to show)
-&lt;/span>
-
-
-&lt;script>
- (function () {
- const encEmail = "bmFveWFmdXJ1ZG9ub0BnbWFpbC5jb20=";
- const handle = document.getElementById("email");
- setTimeout(() => {
- handle.innerHTML = atob(encEmail);
- }, 5000);
- })();
-&lt;/script>&lt;/p></description></item><item><title>My First Post</title><link>https://blog.nfurudono.com/posts/2022/march/my-first-post/</link><pubDate>Wed, 23 Mar 2022 11:41:44 +0900</pubDate><guid>https://blog.nfurudono.com/posts/2022/march/my-first-post/</guid><description>&lt;h2>
+&lt;ul>
+&lt;li>GitHub: &lt;a href="https://github.com/naoyafurudono">naoyafurudono&lt;/a>&lt;/li>
+&lt;li>Twitter: &lt;a href="https://twitter.com/furudono2">(@furudono2)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#%e4%bb%95%e4%ba%8b" id="仕事" class="anchor" aria-hidden="true">仕事&lt;/a>
+&lt;/h2>
+&lt;p>2023年からGMOペパボでWebアプリケーションを開発するソフトウェアエンジニアとして働いています。現在はホスティング事業部に所属しており、新規ホスティング事業の開発・運用に携わっています。例えば2024年の2月にリリースした「ロリポップ for Gamers」に携わりました。&lt;/p></description></item><item><title>My First Post</title><link>https://blog.nfurudono.com/posts/2022/march/my-first-post/</link><pubDate>Wed, 23 Mar 2022 11:41:44 +0900</pubDate><guid>https://blog.nfurudono.com/posts/2022/march/my-first-post/</guid><description>&lt;h2>
 &lt;a href="#hello-hugo-and-github-pages" id="hello-hugo-and-github-pages" class="anchor" aria-hidden="true">Hello, Hugo and GitHub Pages&lt;/a>
 &lt;/h2>
 &lt;p>このサイトはHugoとGitHub Pagesを用いて運用しています。これらとGitHub Actionを組み合わせることで、マークダウンで記事を書いてGitHubにpushするだけで更新できるブログを構築しています。

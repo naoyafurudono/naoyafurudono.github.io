@@ -9,14 +9,10 @@ aliases:  ['/portfolio/bio/']
 
 This page is a profile of **Naoya Furudono**（古殿 直也）, who is a software engineer of GMO Pepabo, Inc.
 
-# Contact
-
-Contact me through following e-mail address: {{<email>}}
-
 # SNS
 
 - GitHub: [naoyafurudono](https://github.com/naoyafurudono)
-- Twitter: [(@furudono2)](https://twitter.com/furudono2) (not active, but live)
+- Twitter: [(@furudono2)](https://twitter.com/furudono2)
 
 # Job
 

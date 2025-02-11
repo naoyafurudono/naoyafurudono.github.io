@@ -9,10 +9,6 @@ aliases:  ['/portfolio/bio/']
 
 このページはGMOペパボ株式会社のソフトウェアエンジニアである**古殿直也**のプロフィールです。
 
-# 連絡先
-
-次のメールアドレスを通じてご連絡ください: {{<email>}}
-
 # SNS
 
 - GitHub: [naoyafurudono](https://github.com/naoyafurudono)

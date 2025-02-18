@@ -8,9 +8,9 @@ import { lexOrder } from "@/lib/util";
 import type { NextPage } from "next";
 
 type Props = {
-	params: {
+	params: Promise<{
 		id: string;
-	};
+	}>;
 };
 const Home: NextPage<Props> = async () => {
 	const as: ArticleMeta[] = await listArticles(articleDirectoryPaths);

@@ -5,11 +5,12 @@ import { type RenderResult, newRoot, render, renderMdAst } from "@/lib/render";
 import type { Metadata, NextPage } from "next";
 
 type Slugs = {
-	params: {
+	params: Promise<{
 		id: string;
-	};
+	}>;
 };
-const Post: NextPage<Slugs> = async ({ params }) => {
+const Post: NextPage<Slugs> = async (props) => {
+	const params = await props.params;
 	const { id } = params;
 	const a = await findArticle({
 		articleId: id as ArticleID,
@@ -66,7 +67,8 @@ export async function generateStaticParams() {
 	return as.map((a) => ({ id: a.id }));
 }
 
-export async function generateMetadata({ params }: Slugs): Promise<Metadata> {
+export async function generateMetadata(props: Slugs): Promise<Metadata> {
+	const params = await props.params;
 	const { id } = params;
 	const a = await findArticle({
 		articleId: id as ArticleID,

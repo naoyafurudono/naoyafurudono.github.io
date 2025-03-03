@@ -60,6 +60,7 @@ const Nav = () => {
 				{[
 					{ href: "/", text: siteTitle },
 					{ href: "/feed.xml", text: "RSS feed (experimental)" },
+					{ href: "/all", text: "すべての記事" },
 					{
 						href: "/todos/",
 						text: "todos",

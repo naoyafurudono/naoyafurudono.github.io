@@ -20,16 +20,18 @@ import genTOC, {
 } from "./plugin";
 
 export type RenderResult = {
-	rawBody: string;
-	date: On;
-	title: string;
-	draft: Draft;
-	desc: string;
-	unchecked: ListItem[];
+	rawBody: string; // HTML形式での記事の内容
+	date: On; // 日付
+	title: string; // タイトル
+	draft: Draft; // 下書きかどうか
+	desc: string; // 概要
+	unchecked: ListItem[]; // チェックリストのマークダウン表現
 	// about: AboutSections;
-	toc: List | undefined;
+	toc: List | undefined; // 目次
 };
 
+// マークダウン記法で表現されたcontentをレンダーする。
+// マークダウンのヘッディングレベルnはHTMLのhn+1に対応する。
 export async function render({
 	content,
 }: { content: Buffer }): Promise<RenderResult> {

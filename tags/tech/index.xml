@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tech on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/tech/</link><description>Recent content in Tech on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 25 Mar 2025 00:44:23 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>2025-03-25</title><link>https://blog.nfurudono.com/daily/2025-03-25/</link><pubDate>Tue, 25 Mar 2025 00:32:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-03-25/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tech on ツイートするには長すぎる</title><link>https://blog.nfurudono.com/tags/tech/</link><description>Recent content in Tech on ツイートするには長すぎる</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;{currentYear} Naoya Furudono</copyright><lastBuildDate>Tue, 25 Mar 2025 01:46:37 +0900</lastBuildDate><atom:link href="https://blog.nfurudono.com/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>2025-03-25</title><link>https://blog.nfurudono.com/daily/2025-03-25/</link><pubDate>Tue, 25 Mar 2025 00:32:31 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-03-25/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 以下の三つについて紹介しつつ、ぼくの信じる主張をする
 &lt;ul>
 &lt;li>how to design programs&lt;/li>
@@ -16,7 +16,11 @@
 &lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>2025-02-18</title><link>https://blog.nfurudono.com/daily/2025-02-18/</link><pubDate>Tue, 18 Feb 2025 01:38:37 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-02-18/</guid><description>&lt;h2>
+&lt;/ul>
+&lt;h2>
+&lt;a href="#%e8%a8%ad%e5%ae%9a%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e4%b8%80%e7%99%ba%e3%81%a7%e9%96%8b%e3%81%8f%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89" id="設定ファイルを一発で開くコマンド" class="anchor" aria-hidden="true">設定ファイルを一発で開くコマンド&lt;/a>
+&lt;/h2>
+&lt;p>fishで設定ファイルを一発で開くコマンドを書いた。導入したてのツールだとこまめに設定ファイルを編集したい。わざわざ.confgまで行ってあれこれするのが面倒なので、このコマンドを使うと幸せ。&lt;/p></description></item><item><title>2025-02-18</title><link>https://blog.nfurudono.com/daily/2025-02-18/</link><pubDate>Tue, 18 Feb 2025 01:38:37 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-02-18/</guid><description>&lt;h2>
 &lt;a href="#%e7%94%9f%e6%88%90ai%e3%81%ab%e5%90%a6%e5%ae%9a%e3%81%97%e3%81%a6%e3%82%82%e3%82%89%e3%81%a3%e3%81%a6%e6%96%87%e5%8f%a5%e3%81%ae%e3%81%a4%e3%81%91%e3%82%88%e3%81%86%e3%81%8c%e3%81%aa%e3%81%84%e4%b8%bb%e5%bc%b5%e3%82%92%e4%bd%9c%e3%82%8b" id="生成aiに否定してもらって文句のつけようがない主張を作る" class="anchor" aria-hidden="true">生成AIに否定してもらって文句のつけようがない主張を作る&lt;/a>
 &lt;/h2>
 &lt;p>生成AIを壁にして議論することが不毛に感じる。自分で思考することを放棄して生成AIに言わせたいことを言わせるゲームになるのが不毛であるように感じる。あいつはぼくに質問をしてこなくて、なされるがままに僕の願いを叶えるようにチューニングされている。ぼくは議論を通じて思考を深めて問題領域の理解を深めたいが、そのための思考をあいつに渡してしまうことになる。俺が論じるからお前は俺の考えをできるだけ簡潔に論破しろ、とか言えばいいのだろうか。&lt;/p></description></item><item><title>2025-02-11</title><link>https://blog.nfurudono.com/daily/2025-02-11/</link><pubDate>Tue, 11 Feb 2025 13:48:57 +0900</pubDate><guid>https://blog.nfurudono.com/daily/2025-02-11/</guid><description>&lt;h2>

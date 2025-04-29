@@ -2,7 +2,7 @@
 title: "A Philosophy of Software Designの読書メモ"
 date: 2025-04-29T19:21:37+09:00
 author: "Naoya Furudono"
-draft: true
+draft: false
 tags:
     - "daily"
     - "tech"

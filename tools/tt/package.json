@@ -11,7 +11,7 @@
     "check": "biome check src/**/* && npm run test"
   },
   "engines": {
-    "node": "22.x"
+    "node": "23.x"
   },
   "dependencies": {
     "@types/mdast": "^4.0.4",
@@ -21,7 +21,7 @@
     "glob": "^11.0.0",
     "mdast-util-find-and-replace": "^3.0.1",
     "mdast-util-toc": "^7.1.0",
-    "next": "15.1.7",
+    "next": "^15.3.2",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "rehype-extract-excerpt": "^0.3.1",

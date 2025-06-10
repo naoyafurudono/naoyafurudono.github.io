@@ -5,16 +5,15 @@ author: "Naoya Furudono"
 draft: true
 tags:
     - daily
-    - PL
-    - comp
-    - tech
-    - book
-    - idea
-    - tool
-    - cock
     - alcohol
+    - book
+    - cock
     - food
-    - sport
     - home
+    - idea
+    - sport
+    - tech
+    - tool
+    - travel
 ---
 

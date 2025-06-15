@@ -22,21 +22,106 @@ export default function RootLayout({
 		<html lang="ja">
 			<style>
 				{`
-[id] {
+/* メインコンテンツの要素に適用されるスタイル */
+main [id] {
   border: 2px solid transparent; /* 初期のボーダー */
   transition: all 0.3s ease; /* トランジション効果 */
   cursor: pointer; /* カーソルをポインタにする */
 }
 
-[id]:hover {
+main [id]:hover {
   background-color: #f0f0f0; /* 背景色を変更 */
   border-color: #007bff; /* ボーダーの色を変更 */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* シャドウを追加 */
 }
 
-[id]:focus {
+main [id]:focus {
   outline: none; /* デフォルトのアウトラインを消す */
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* フォーカス時の影を追加 */
+}
+
+/* ヘッダーとフッターのスタイリング */
+header, footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+
+header {
+  border-top: none;
+  margin-top: 0;
+}
+
+footer {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* ナビゲーションのスタイリング */
+nav {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: #495057;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a:focus {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* メインコンテンツのスタイリング */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  nav a {
+    text-align: center;
+  }
 }
 		`}
 			</style>

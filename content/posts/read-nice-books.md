@@ -68,3 +68,12 @@ Known unknown（知らないことを知っている、例えばOSにはプロ�
 - A Philosophy of Software Design
 - プログラミング言語Go
 - K and R
+
+# おまけ、インターネットには良書を紹介してくれる人
+
+- https://izumisy.work/
+- https://zenn.dev/yoshiko
+  - 本ではなくインターネットの記事の紹介が多いですが、ご本人の記事もそこで引用される記事も良いものと感じます
+- https://ohbarye.hatenablog.jp/
+
+パッとはそんなに出てこなかったです。

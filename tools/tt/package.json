@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check --write --unsafe src/**/*",
+    "fix": "biome check --write --unsafe src/**/*",
     "test": "vitest run",
     "check": "biome check src/**/* && npm run test"
   },

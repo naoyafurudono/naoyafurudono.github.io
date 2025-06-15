@@ -3,25 +3,25 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-	title: siteTitle,
-	description: "これは日記です",
-	authors: [
-		{
-			name: "Naoya Furudono",
-			url: "https://blog.nfurudono.com/profile/",
-		},
-	],
+  title: siteTitle,
+  description: "これは日記です",
+  authors: [
+    {
+      name: "Naoya Furudono",
+      url: "https://blog.nfurudono.com/profile/",
+    },
+  ],
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="ja">
-			<style>
-				{`
+  return (
+    <html lang="ja">
+      <style>
+        {`
 /* メインコンテンツの要素に適用されるスタイル */
 main [id] {
   border: 2px solid transparent; /* 初期のボーダー */
@@ -104,6 +104,29 @@ nav a:focus {
   outline-offset: 2px;
 }
 
+/* サイトタイトルのスタイリング */
+.site-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.site-title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.site-title a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-title a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
 /* メインコンテンツのスタイリング */
 main {
   max-width: 800px;
@@ -124,52 +147,58 @@ main {
   }
 }
 		`}
-			</style>
-			<body>
-				<header>
-					<Nav />
-				</header>
-				<main>{children}</main>
-				<footer>
-					<Nav />
-				</footer>
-			</body>
-		</html>
-	);
+      </style>
+      <body>
+        <header>
+          <div className="site-title">
+            <h1>
+              <Link href="/">{siteTitle}</Link>
+            </h1>
+          </div>
+          <Nav />
+        </header>
+        <main>{children}</main>
+        <footer>
+          <Nav />
+        </footer>
+      </body>
+    </html>
+  );
 }
 
 const Nav = () => {
-	return (
-		<nav>
-			<ul>
-				{[
-					{ href: "/", text: siteTitle },
-					{ href: "/feed.xml", text: "RSS feed (experimental)" },
-					{ href: "/all", text: "すべての記事" },
-					{
-						href: "/todos/",
-						text: "todos",
-					},
-					{
-						href: "https://twitter.com/furudono2",
-						text: "書いてる人のTwitter",
-					},
-					{
-						href: "https://zenn.dev/nfurudono",
-						text: "最近の技術記事（Zenn、試しに使っています）",
-					},
-					{
-						href: "https://blog.nfurudono.com",
-						text: "技術記事",
-					},
-				].map(({ href, text }) => {
-					return (
-						<li key={href}>
-							<Link href={href}>{text}</Link>
-						</li>
-					);
-				})}
-			</ul>
-		</nav>
-	);
+  const navItems = [
+    { href: "/feed.xml", text: "RSS feed (experimental)" },
+    { href: "/all", text: "すべての記事" },
+    {
+      href: "/todos/",
+      text: "todos",
+    },
+    {
+      href: "https://twitter.com/furudono2",
+      text: "書いてる人のTwitter",
+    },
+    {
+      href: "https://zenn.dev/nfurudono",
+      text: "最近の技術記事（Zenn、試しに使っています）",
+    },
+    {
+      href: "https://blog.nfurudono.com",
+      text: "技術記事",
+    },
+  ];
+
+  return (
+    <nav>
+      <ul>
+        {navItems.map(({ href, text }) => {
+          return (
+            <li key={href}>
+              <Link href={href}>{text}</Link>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
 };

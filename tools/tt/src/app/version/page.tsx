@@ -11,7 +11,7 @@ export default function Home() {
 		<main>
 			<p>
 				commit hash:
-				<span id="hash">{commitHash}</span>
+				<span>{commitHash}</span>
 			</p>
 		</main>
 	);

@@ -1,19 +1,140 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.0.4/schema.json",
-  "formatter": {
-    "enabled": true
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
   },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/.next",
+      "!**/out",
+      "!**/dist",
+      "!**/build",
+      "!**/.wrangler",
+      "!**/.git"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "attributePosition": "auto"
+  },
+
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
+      "a11y": {
+        "recommended": true
+      },
+      "complexity": {
+        "recommended": true,
+        "noExcessiveCognitiveComplexity": "error",
+        "noVoid": "off"
+      },
       "correctness": {
+        "recommended": true,
         "noUnusedImports": "error",
-        "noUnusedVariables": "error"
+        "noUnusedVariables": "error",
+        "noUndeclaredVariables": "error",
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "error"
+      },
+      "nursery": {
+        "noFloatingPromises": "error",
+        "useSortedClasses": "error"
+      },
+      "performance": {
+        "recommended": true,
+        "noAccumulatingSpread": "error",
+        "noDelete": "error"
+      },
+      "security": {
+        "recommended": true,
+        "noDangerouslySetInnerHtml": "warn"
+      },
+      "style": {
+        "recommended": true,
+        "noNonNullAssertion": "warn",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": {
+            "syntax": "shorthand"
+          }
+        },
+        "useImportType": "error",
+        "useNodejsImportProtocol": "error",
+        "useNumberNamespace": "error",
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
+      },
+      "suspicious": {
+        "recommended": true,
+        "noArrayIndexKey": "error",
+        "noExplicitAny": "warn",
+        "noEmptyBlockStatements": "error"
       }
+    },
+    "domains": {
+      "react": "all",
+      "next": "all"
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "es5",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSpacing": true,
+      "bracketSameLine": false
+    }
+  },
+
+  "json": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "lineEnding": "lf",
+      "lineWidth": 100,
+      "quoteStyle": "double"
+    },
+    "linter": {
+      "enabled": true
     }
   },
   "assist": {
-    "enabled": true
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
   }
 }

@@ -6,9 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "fix": "biome check --write --unsafe src/**/*",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format .",
+    "format:write": "biome format --write .",
+    "check:write": "biome check --write .",
     "test": "vitest run",
-    "check": "biome check src/**/* && npm run test"
+    "check": "biome ci . && npm run test"
   },
   "engines": {
     "node": "23.x"

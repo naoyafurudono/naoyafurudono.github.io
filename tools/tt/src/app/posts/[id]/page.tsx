@@ -1,35 +1,30 @@
 import type { Metadata, NextPage } from "next";
-import {
-	articleDirectoryPaths,
-	postUrl,
-	siteTitle,
-	withSiteTitle,
-} from "@/lib/config";
+import { articleDirectoryPaths, postUrl, siteTitle, withSiteTitle } from "@/lib/config";
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
 import { newRoot, type RenderResult, render, renderMdAst } from "@/lib/render";
 
 type Slugs = {
-	params: Promise<{
-		id: string;
-	}>;
+  params: Promise<{
+    id: string;
+  }>;
 };
 const Post: NextPage<Slugs> = async (props) => {
-	const params = await props.params;
-	const { id } = params;
-	const a = await findArticle({
-		articleId: id as ArticleID,
-		directoryPaths: articleDirectoryPaths,
-	});
-	if (!a) {
-		throw new Error("Not found");
-	}
-	const rendered: RenderResult = await render(a);
-	const toc = rendered.toc && (await renderMdAst(newRoot([rendered.toc])));
-	const { before, after } = a;
-	return (
-		<>
-			<style>
-				{`
+  const params = await props.params;
+  const { id } = params;
+  const a = await findArticle({
+    articleId: id as ArticleID,
+    directoryPaths: articleDirectoryPaths,
+  });
+  if (!a) {
+    throw new Error("Not found");
+  }
+  const rendered: RenderResult = await render(a);
+  const toc = rendered.toc && (await renderMdAst(newRoot([rendered.toc])));
+  const { before, after } = a;
+  return (
+    <>
+      <style>
+        {`
 /* 記事ナビゲーションのスタイリング */
 .article-navigation {
   display: flex;
@@ -137,99 +132,93 @@ const Post: NextPage<Slugs> = async (props) => {
   }
 }
 				`}
-			</style>
-			<article>
-				<h1>{rendered.title}</h1>
-				<time>{rendered.date}</time>
-				{toc && (
-					<div
-						// biome-ignore lint/security/noDangerouslySetInnerHtml: TOCは信頼してok
-						dangerouslySetInnerHTML={{
-							__html: toc,
-						}}
-					/>
-				)}
-				<div
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: 日記の記事は信頼してok
-					dangerouslySetInnerHTML={{ __html: rendered.rawBody.toString() }}
-				/>
-			</article>
-			<nav className="article-navigation">
-				<div className="nav-item nav-prev">
-					{before ? (
-						<Textlink
-							href={`/posts/${before}`}
-							text={before}
-							direction="prev"
-						/>
-					) : (
-						<span className="nav-disabled">この記事が最古です</span>
-					)}
-				</div>
-				<div className="nav-item nav-next">
-					{after ? (
-						<Textlink href={`/posts/${after}`} text={after} direction="next" />
-					) : (
-						<span className="nav-disabled">この記事が最新です</span>
-					)}
-				</div>
-			</nav>
-		</>
-	);
+      </style>
+      <article>
+        <h1>{rendered.title}</h1>
+        <time>{rendered.date}</time>
+        {toc && (
+          <div
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: TOCは信頼してok
+            dangerouslySetInnerHTML={{
+              __html: toc,
+            }}
+          />
+        )}
+        <div
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: 日記の記事は信頼してok
+          dangerouslySetInnerHTML={{ __html: rendered.rawBody.toString() }}
+        />
+      </article>
+      <nav className="article-navigation">
+        <div className="nav-item nav-prev">
+          {before ? (
+            <Textlink href={`/posts/${before}`} text={before} direction="prev" />
+          ) : (
+            <span className="nav-disabled">この記事が最古です</span>
+          )}
+        </div>
+        <div className="nav-item nav-next">
+          {after ? (
+            <Textlink href={`/posts/${after}`} text={after} direction="next" />
+          ) : (
+            <span className="nav-disabled">この記事が最新です</span>
+          )}
+        </div>
+      </nav>
+    </>
+  );
 };
 function Textlink({
-	text,
-	href,
-	direction,
+  text,
+  href,
+  direction,
 }: {
-	text: string;
-	href: string;
-	direction: "prev" | "next";
+  text: string;
+  href: string;
+  direction: "prev" | "next";
 }) {
-	return (
-		<a href={href} className={`nav-link nav-link-${direction}`}>
-			<span className="nav-label">
-				{direction === "prev" ? "前の記事" : "次の記事"}
-			</span>
-			<span className="nav-title">
-				{direction === "prev" ? "← " : ""}
-				{text}
-				{direction === "next" ? " →" : ""}
-			</span>
-		</a>
-	);
+  return (
+    <a href={href} className={`nav-link nav-link-${direction}`}>
+      <span className="nav-label">{direction === "prev" ? "前の記事" : "次の記事"}</span>
+      <span className="nav-title">
+        {direction === "prev" ? "← " : ""}
+        {text}
+        {direction === "next" ? " →" : ""}
+      </span>
+    </a>
+  );
 }
 
 export default Post;
 export async function generateStaticParams() {
-	const as = await listArticles(articleDirectoryPaths);
-	return as.map((a) => ({ id: a.id }));
+  const as = await listArticles(articleDirectoryPaths);
+  return as.map((a) => ({ id: a.id }));
 }
 
 export async function generateMetadata(props: Slugs): Promise<Metadata> {
-	const params = await props.params;
-	const { id } = params;
-	const a = await findArticle({
-		articleId: id as ArticleID,
-		directoryPaths: articleDirectoryPaths,
-	});
-	if (!a) {
-		throw new Error(`Not found: ${id}`);
-	}
-	const r = await render(a);
-	return {
-		title: withSiteTitle(r.title),
-		description: r.desc,
-		openGraph: {
-			title: withSiteTitle(r.title),
-			description: r.desc,
-			url: postUrl(id),
-			siteName: siteTitle,
-		},
-		twitter: {
-			title: withSiteTitle(r.title),
-			description: r.desc,
-			creator: "@furudono2",
-		},
-	};
+  const params = await props.params;
+  const { id } = params;
+  const a = await findArticle({
+    articleId: id as ArticleID,
+    directoryPaths: articleDirectoryPaths,
+  });
+  if (!a) {
+    throw new Error(`Not found: ${id}`);
+  }
+  const r = await render(a);
+  return {
+    title: withSiteTitle(r.title),
+    description: r.desc,
+    openGraph: {
+      title: withSiteTitle(r.title),
+      description: r.desc,
+      url: postUrl(id),
+      siteName: siteTitle,
+    },
+    twitter: {
+      title: withSiteTitle(r.title),
+      description: r.desc,
+      creator: "@furudono2",
+    },
+  };
 }

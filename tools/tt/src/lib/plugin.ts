@@ -8,12 +8,7 @@ import type { Node } from "unist";
 import { visit } from "unist-util-visit";
 import type { VFile } from "vfile";
 
-export const print = (depth: number) => () => {
-	return (tree: Node, _file: VFile) => {
-		console.log(JSON.stringify(tree, null, depth));
-		console.log(_file.data);
-	};
-};
+
 
 export const ignoreNewLine = () => {
 	return (tree: Root, _file: VFile) => {
@@ -50,28 +45,6 @@ function uniqueID(): string {
 	_counter += 1;
 	return id;
 }
-
-// 指定した要素にコンテンツに依存したIDをつける。
-// hastを入力に期待する。
-export const putIDOn = (className: string) => {
-	const target = className;
-	return () => {
-		return (tree: Root, _f: VFile) => {
-			visit(tree, "element", (node: Element) => {
-				if (Array.isArray(node?.properties?.className)) {
-					if (node.properties.className.includes(target)) {
-						const contents = node.children
-							.filter((child) => child.type === "text")
-							.map((child) => child.value);
-						const hash = hashContent(contents.at(0) || uniqueID());
-						const linkSVG = createLinkSVG(hash);
-						node.children.unshift(linkSVG);
-					}
-				}
-			});
-		};
-	};
-};
 
 // TODO テストする。
 export const putIDOnTODOItem = () => {

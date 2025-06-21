@@ -7,12 +7,7 @@ import {
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import { lexOrder } from "@/lib/util";
 
-type Props = {
-	params: Promise<{
-		id: string;
-	}>;
-};
-const Home: NextPage<Props> = async () => {
+const Home: NextPage = async () => {
 	const as: ArticleMeta[] = await listArticles(articleDirectoryPaths);
 	return (
 		<ol>

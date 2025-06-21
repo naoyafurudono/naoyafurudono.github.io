@@ -95,26 +95,3 @@ export async function findArticle({
 	const content = fs.readFileSync(m.path);
 	return { ...m, content };
 }
-
-// export async function listAspects(): Promise<Article[]> {
-// 	const as = await listArticles();
-// 	const aspects: Record<string, Node[]> = {};
-// 	for (const a of as) {
-// 		const about = a.about;
-// 		for (const [key, value] of Object.entries(about)) {
-// 			aspects[key].push(...value);
-// 		}
-// 	}
-// 	return Object.entries(aspects).map(([key, value]) => {
-// 		return {
-// 			id: key,
-// 			title: key,
-// 			content: Buffer.from(value),
-// 			unchecked: value,
-// 		};
-// 	});
-// 	// 	draft: r.draft,
-// 	// 	desc: r.desc,
-// 	// 	unchecked: r.unchecked,
-// 	// };
-// }

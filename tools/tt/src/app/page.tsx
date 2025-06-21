@@ -1,3 +1,4 @@
+import type { NextPage } from "next";
 import {
 	articleDirectoryPaths,
 	postPath,
@@ -5,7 +6,6 @@ import {
 } from "@/lib/config";
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import { lexOrder } from "@/lib/util";
-import type { NextPage } from "next";
 
 type Props = {
 	params: Promise<{

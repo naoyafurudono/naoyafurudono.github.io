@@ -1,7 +1,7 @@
+import { ImageResponse } from "next/og";
 import { articleDirectoryPaths, withSiteTitle } from "@/lib/config";
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
 import { newRoot, render, renderMdAst } from "@/lib/render";
-import { ImageResponse } from "next/og";
 
 // Image metadata
 export const alt = "About Acme";

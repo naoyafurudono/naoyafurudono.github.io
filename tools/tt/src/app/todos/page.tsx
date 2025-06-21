@@ -1,9 +1,8 @@
-import { articleDirectoryPaths, postPath } from "@/lib/config";
-import { withSiteTitle } from "@/lib/config";
+import type { Metadata, NextPage } from "next";
+import { articleDirectoryPaths, postPath, withSiteTitle } from "@/lib/config";
 import { type ArticleMeta, listArticles } from "@/lib/gateway";
 import { newRoot, newUL, renderMdAst } from "@/lib/render";
 import * as util from "@/lib/util";
-import type { Metadata, NextPage } from "next";
 
 const Home: NextPage = async () => {
 	const as: ArticleMeta[] = await listArticles(articleDirectoryPaths);

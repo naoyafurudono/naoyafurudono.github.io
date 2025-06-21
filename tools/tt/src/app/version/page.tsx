@@ -1,5 +1,5 @@
-import { commitHash } from "@/lib/config";
 import type { Metadata } from "next";
+import { commitHash } from "@/lib/config";
 
 export const metadata: Metadata = {
 	title: "Current Commit Hash",

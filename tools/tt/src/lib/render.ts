@@ -34,7 +34,9 @@ export type RenderResult = {
 // マークダウンのヘッディングレベルnはHTMLのhn+1に対応する。
 export async function render({
 	content,
-}: { content: Buffer }): Promise<RenderResult> {
+}: {
+	content: Buffer;
+}): Promise<RenderResult> {
 	const result = await unified()
 		.use(remarkParse)
 		.use(behead, { minDepth: 2 }) // headingの深さの最小を2にするやつ。"## hoge\n" みたいなmd行は深さ3になる。

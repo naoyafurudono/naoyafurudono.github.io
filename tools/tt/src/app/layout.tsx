@@ -1,6 +1,6 @@
-import { siteTitle } from "@/lib/config";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteTitle } from "@/lib/config";
 
 export const metadata: Metadata = {
 	title: siteTitle,

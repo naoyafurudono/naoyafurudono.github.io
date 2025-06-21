@@ -1,6 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-  "organizeImports": {
+  "$schema": "https://biomejs.dev/schemas/2.0.4/schema.json",
+  "formatter": {
     "enabled": true
   },
   "linter": {
@@ -12,5 +12,8 @@
         "noUnusedVariables": "error"
       }
     }
+  },
+  "assist": {
+    "enabled": true
   }
 }

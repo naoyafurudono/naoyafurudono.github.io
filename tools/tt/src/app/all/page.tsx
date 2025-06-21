@@ -1,8 +1,8 @@
+import type { Metadata, NextPage } from "next";
 import { articleDirectoryPaths, postPath, withSiteTitle } from "@/lib/config";
 import { type Article, listArticles } from "@/lib/gateway";
 import { render } from "@/lib/render";
 import { lexOrder } from "@/lib/util";
-import type { Metadata, NextPage } from "next";
 
 const Articles: NextPage = async () => {
 	const articles: Article[] = await listArticles(articleDirectoryPaths);

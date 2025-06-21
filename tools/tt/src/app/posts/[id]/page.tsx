@@ -1,8 +1,12 @@
-import { articleDirectoryPaths, postUrl, siteTitle } from "@/lib/config";
-import { withSiteTitle } from "@/lib/config";
-import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
-import { type RenderResult, newRoot, render, renderMdAst } from "@/lib/render";
 import type { Metadata, NextPage } from "next";
+import {
+	articleDirectoryPaths,
+	postUrl,
+	siteTitle,
+	withSiteTitle,
+} from "@/lib/config";
+import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
+import { newRoot, type RenderResult, render, renderMdAst } from "@/lib/render";
 
 type Slugs = {
 	params: Promise<{
@@ -177,7 +181,11 @@ function Textlink({
 	text,
 	href,
 	direction,
-}: { text: string; href: string; direction: "prev" | "next" }) {
+}: {
+	text: string;
+	href: string;
+	direction: "prev" | "next";
+}) {
 	return (
 		<a href={href} className={`nav-link nav-link-${direction}`}>
 			<span className="nav-label">

@@ -169,7 +169,6 @@ date: "2024-08-15"
 
 `;
   const r = await render({ content: Buffer.from(content) });
-  console.log(r.rawBody);
   expect(r.rawBody).include(`href="https://example.com"`);
   // スキーマが必要
   expect(r.rawBody).not.include(`href="badlink.com"`);

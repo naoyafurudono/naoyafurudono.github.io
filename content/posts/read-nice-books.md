@@ -68,6 +68,7 @@ Known unknown（知らないことを知っている、例えばOSにはプロ�
 - A Philosophy of Software Design
 - プログラミング言語Go
 - K and R
+- 数学文章作法
 
 # おまけ、インターネットには良書を紹介してくれる人
 

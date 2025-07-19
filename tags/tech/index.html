@@ -31,7 +31,7 @@ func (o *OrgService) SyncMembership(org organization, users []user) error {
   return nil
 }
 </code></pre><h2><a href=#%e5%ae%9f%e7%8f%be%e6%96%b9%e9%87%9d id=実現方針 class=anchor aria-hidden=true>実現方針</a></h2><p>エフェクトシステム自体は特に新しいアイデアではない。簡単なはずなのでここでは扱わない。
-SQLクエリを発行するルートのGo関数にエフェクトをつけることがネックで、それをプラグインで実現することを提案する。</p><p>以下のようなSQLクエリを考える:</p><pre><code class=language-sql>-- ListOrganizationMember :many
+SQLクエリを発行するルートのGo関数にエフェクトをつけることがネックで、なんとかしてsqlcが生成したコードに対してエフェクトをつける必要がある。プラグインでは素直にはできない。</p><p>以下のようなSQLクエリを考える:</p><pre><code class=language-sql>-- ListOrganizationMember :many
 select user.* from user
 inner join member on user.id = member.user_id
 inner join organization on organization.id = member.organization_id

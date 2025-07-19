@@ -52,7 +52,22 @@ func AddMember(string, string) error
 
 //effect: delete&lt;member&gt;
 func RemoveMember(string, string) error
-</code></pre><p>ここではシグネチャしか記載していないが、実際には関数本体も生成される。関数につける作用の表明はバニラなsqlcではつかないのでプラグインを実装して対応したい。</p><p>あとは普通にエフェクトを再帰的に計算して推論とチェックをすればいい。</p></p></div><div class=post-footer><p><a class=tag href=/%20tags/daily>#daily</a>
+</code></pre><p>ここではシグネチャしか記載していないが、実際には関数本体も生成される。関数につける作用の表明はバニラなsqlcではつかないのでプラグインを実装して対応したい。</p><p>あとは普通にエフェクトを再帰的に計算して推論とチェックをすればいい。</p><h2><a href=#%e5%86%85%e9%83%a8%e5%ae%9f%e8%a3%85 id=内部実装 class=anchor aria-hidden=true>内部実装</a></h2><h3><a href=#%e3%82%a8%e3%83%95%e3%82%a7%e3%82%af%e3%83%88%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0 id=エフェクトシステム class=anchor aria-hidden=true>エフェクトシステム</a></h3><p>一応どんな感じにするとよさそうかをメモしておく。</p><h4><a href=#%e6%a6%82%e5%bf%b5%e3%81%ae%e5%ae%9a%e7%be%a9 id=概念の定義 class=anchor aria-hidden=true>概念の定義</a></h4><p>テーブル名は型として表現する。対象のSQLに出てくる全てのテーブル名をごそっと型として定義すれば良いだろう。<code>t</code> は型を表す。</p><pre><code>t ::= user | member | organization | ...
+</code></pre><p>select とか insert とかは型を一つとって <strong>エフェクトラベル</strong> を返す型オペレータだと思うことにする。<code>l</code> はエフェクトラベルを表す。</p><pre><code>select: t -&gt; l
+insert: t -&gt; l
+delete: t -&gt; l
+update: t -&gt; l
+</code></pre><p><strong>エフェクト</strong>とは、エフェクトラベルの集合である。<code>eff</code> はエフェクトを表す。</p><pre><code>eff = setof l
+</code></pre><h4><a href=#%e6%8e%a8%e8%ab%96 id=推論 class=anchor aria-hidden=true>推論</a></h4><p>関数とかパッケージ、式や文には一つのエフェクトを割り当てる。この割り当てる処理がエフェクトの<strong>推論</strong>である。プログラムの部分を実行したときに、そこで生じうる操作を表すのがエフェクトである。そういう気持ちで推論を定義する。</p><h5><a href=#%e6%96%87%e3%81%ae%e9%80%90%e6%ac%a1%e5%ae%9f%e8%a1%8c id=文の逐次実行 class=anchor aria-hidden=true>文の逐次実行</a></h5><p>文s1を実行して、文s2を実行するプログラムが <code>s1; s2</code> である。このプログラムの型とエフェクトをどのように推論するかを、以下の<code>推論規則</code>で定義する。</p><pre><code>s1: () | eff1  s2: () | eff2
+-----------------------
+s1; s2: () | eff1 + eff2
+</code></pre><p>下側が結論であり、上の二つが仮定である。上が成り立つならば下が成り立つ、という図式。</p><p>下側の結論は 「<code>s1; s2</code> には型 <code>()</code> がつき、エフェクトは <code>eff1 + eff2</code> である」と解釈する。<code>+</code> は和集合をとる演算子とします。上の二つも同様である。</p><p>したがって、通しで読むと「<code>s1</code> に型 <code>()</code> がつき、エフェクトは <code>eff1</code> である。<code>s2</code> に型 <code>()</code> がつき、エフェクトは <code>eff2</code> であると仮定する。このとき <code>s1; s2</code> には型 <code>()</code> がつき、エフェクトは <code>eff1 + eff2</code> である。」となる。</p><h5><a href=#%e9%96%a2%e6%95%b0%e5%ae%9a%e7%be%a9 id=関数定義 class=anchor aria-hidden=true>関数定義</a></h5><pre><code>body: res | eff
+--------------------------------------------------
+func f(args: t1) res { body }: t1 -&gt; eff res | {}
+</code></pre><p>関数の型は <code>&lt;引数の型> -> &lt;関数のエフェクト> 結果の型</code> という形をとる。関数定義自体の計算では何も操作しないためエフェクトは空。</p><h5><a href=#%e3%82%a2%e3%83%8e%e3%83%86%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3 id=アノテーション class=anchor aria-hidden=true>アノテーション</a></h5><pre><code>function: t1 -&gt; eff1 res | {}     eff1 &lt; eff
+---------------------------------------------------
+function //effect eff : () | eff
+</code></pre><p>だんだん変数を考慮に入れてないことで無理が生じてきた。アノテーションをつけていたら、それが優先される。ただし、計算されたエフェクトがアノテーションの部分集合であることを要求する。</p></p></div><div class=post-footer><p><a class=tag href=/%20tags/daily>#daily</a>
 <a class=tag href=/%20tags/pl>#PL</a>
 <a class=tag href=/%20tags/tech>#tech</a>
 <a class=tag href=/%20tags/idea>#idea</a>

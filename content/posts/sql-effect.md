@@ -40,16 +40,16 @@ GoとsqlcでAPIサーバを開発している。
 エイリアスとして `own = select, insert, delete` とか、`refer = select`、`mut = insert, update` とか（内容はてきとう）を定義してもいいだろう。
 
 ```go
-//effect: select<user, member, organization> insert<member>, delete<member>
+// effect: select<user, member, organization> insert<member>, delete<member>
 package org_service
 
 // OrgServiceは組織に関連するサービスを提供する。
-//effect: select<user, member, organization> insert<member>, delete<member>
+// effect: select<user, member, organization> insert<member>, delete<member>
 type OrgService struct {
   repository repository.Repository
 }
 
-//effect: select<user, member. organization>, insert<member>, delete<member>
+// effect: select<user, member. organization>, insert<member>, delete<member>
 func (o *OrgService) SyncMembership(org organization, users []user) error {
   current, err := repository.ListOrganizationMember(org.name)
   if err != nil { return err }
@@ -94,13 +94,13 @@ sqlcを用いると以下のようなGoの関数を生成できる:
 ```go
 package repository
 
-//effect: select<user, member, organization>
+// effect: select<user, member, organization>
 func ListOrganizationMember(name string) ([]string, error)
 
-//effect: insert<member>
+// effect: insert<member>
 func AddMember(string, string) error
 
-//effect: delete<member>
+// effect: delete<member>
 func RemoveMember(string, string) error
 ```
 
@@ -181,7 +181,7 @@ func f(args: t1) res { body }: t1 -> eff res | {}
 ```
 function: t1 -> eff1 res | {}     eff1 < eff
 ---------------------------------------------------
-function //effect eff : () | eff
+function // effect eff : () | eff
 ```
 
 だんだん変数を考慮に入れてないことで無理が生じてきた。アノテーションをつけていたら、それが優先される。ただし、計算されたエフェクトがアノテーションの部分集合であることを要求する。

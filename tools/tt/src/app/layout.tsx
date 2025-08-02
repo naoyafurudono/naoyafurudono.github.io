@@ -106,7 +106,7 @@ nav a:focus {
 
 /* サイトタイトルのスタイリング */
 .site-title {
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
 }
 

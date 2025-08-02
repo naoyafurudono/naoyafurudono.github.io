@@ -106,8 +106,10 @@ nav a:focus {
 
 /* サイトタイトルのスタイリング */
 .site-title {
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  padding: 0 1rem;
   text-align: left;
-  margin-bottom: 1rem;
 }
 
 .site-title h1 {

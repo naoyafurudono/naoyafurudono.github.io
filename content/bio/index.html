@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古殿直也 - プロフィール</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #34495e;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #7f8c8d;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .intro {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: #3498db;
+        }
+        
+        a:hover {
+            color: #2980b9;
+        }
+        
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            section, .intro {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./face.jpg" alt="古殿直也の顔写真" class="profile-image">
+        <h1>古殿直也</h1>
+        <div class="social-links">
+            <a href="https://github.com/naoyafurudono" target="_blank">GitHub: naoyafurudono</a>
+            <a href="https://twitter.com/furudono2" target="_blank">Twitter: @furudono2</a>
+        </div>
+    </header>
+
+    <div class="intro">
+        <p>GMOペパボ株式会社のソフトウェアエンジニアである<strong>古殿直也</strong>のプロフィールです。</p>
+    </div>
+
+    <section>
+        <h2>仕事</h2>
+        <p>2023年からGMOペパボでWebアプリケーションを開発するソフトウェアエンジニアとして働いています。
+        現在はホスティング事業部に所属しており、新規ホスティング事業の開発・運用に携わっています。
+        例えば2024年の2月にリリースした「ロリポップ for Gamers」に携わりました。</p>
+        
+        <p>Goを用いたバックエンドサービスを設計・実装・運用する時間が長いですが、
+        それに限らずクライアントであるフロントエンドアプリケーションの開発や、
+        実行環境であるKubernetes環境の手入れも行います。</p>
+        
+        <p>この頃は、変化するビジネス要件に素早く対応しつつ、頑強なソフトウェアをどのように作るかに関心があります。</p>
+        
+        <h3>職歴</h3>
+        <ul>
+            <li>ソフトウェアエンジニア, GMOペパボ株式会社 <span class="date">(2023-04 - 現在)</span></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>学歴</h2>
+        <ul>
+            <li>東京工業大学, 東京, 理学修士 <span class="date">(2023)</span></li>
+            <li>東京工業大学, 東京, 理学学士 <span class="date">(2021)</span></li>
+        </ul>
+        
+        <p>専攻はプログラミング言語の意味論や設計です。言語に関わらずプログラミングのことに興味があります。
+        プログラミング言語には、設計者が主張するプログラミングの哲学みたいなものが詰まっているように思えて特に好きでした。</p>
+    </section>
+
+    <section>
+        <h2>ブログ投稿</h2>
+        <ul>
+            <li><a href="https://tech.pepabo.com/authors/donokun/" target="_blank">ペパボテックポータル</a>: ペパボのウェブサイトに公開された私の記事。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>論文</h2>
+        <h3>2022</h3>
+        <ul>
+            <li>"Towards Efficient Adjustment of Effect Rows" in <a href="https://trendsfp.github.io/" target="_blank">TFP2022</a>
+                <ul>
+                    <li><a href="https://link.springer.com/book/10.1007/978-3-031-21314-4" target="_blank">Publication</a></li>
+                    <li><a href="https://drive.google.com/file/d/1mhK0yj5fJymBQ6vv1a3UOrO33CmhvFuv/view?usp=sharing" target="_blank">Paper (submitted version, pdf)</a></li>
+                    <li><a href="https://drive.google.com/file/d/1oYLtxE0b1AIBbkcotf_YyPST0yLdvbNl/view?usp=sharing" target="_blank">Slide (pdf)</a></li>
+                    <li><a href="https://drive.google.com/file/d/14EBEGQYZDNIGADXyRU7XTsbgUE4XqO1x/view?usp=sharing" target="_blank">Talk at TFP2022 (12min, mp4)</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>発表</h2>
+        
+        <h3>2024-</h3>
+        <p>See <a href="https://speakerdeck.com/naoyafurudono" target="_blank">https://speakerdeck.com/naoyafurudono</a></p>
+        
+        <h3>2022</h3>
+        <ul>
+            <li>Permissions in Linux <a href="https://docs.google.com/presentation/d/18kkR9ew1Si_7SMuMgkct1drntBZZ1YPYcVi9B0lpLCE/edit?usp=sharing" target="_blank">[slide (google slides)]</a></li>
+            <li>Survey of hygienic macros <a href="https://drive.google.com/file/d/1vVI1i__JJH4EPJcx8xZ2gNUR_0wCJ1-p/view?usp=sharing" target="_blank">[slide (pdf)]</a></li>
+        </ul>
+        
+        <h3>2021</h3>
+        <ul>
+            <li>Progress about Open Floating <a href="https://drive.google.com/file/d/18c3KE5okeMYFjsdfAhn6cKDSnSjVWmOL/view?usp=sharing" target="_blank">[slide (pdf)]</a></li>
+            <li>Survey the design and implementation of Julia <a href="https://drive.google.com/file/d/1_83rr9ee3PZZnUjZNtvLwzI-lM5f4qPE/view?usp=sharing" target="_blank">[slide (pdf)]</a></li>
+        </ul>
+        
+        <h3>2020</h3>
+        <ul>
+            <li>Mini-talk about my favorite beer <a href="https://drive.google.com/file/d/1kbLvc6hkLwbiL7ouyT-tigIMFOEXoLq4/view?usp=sharing" target="_blank">[slide (pdf)]</a></li>
+        </ul>
+    </section>
+</body>
+</html>

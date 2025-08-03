@@ -19,15 +19,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Get commit hash
-        id: get_commit_hash
-        run: echo "COMMIT_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
-
       - name: Check for typos
         uses: crate-ci/typos@c8fd3764afbf5eaf6e53d2e6571c835db2c8fa5f # v1.29.0
         with:
           files: content/bio/index.html
-
 
       - name: Deploy
         uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0

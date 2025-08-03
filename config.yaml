@@ -9,7 +9,6 @@ languages:
   ja:
     languageName: Japanese
 title: ツイートするには長すぎる
-theme: noteworthy
 copyright: '&copy;{currentYear} Naoya Furudono'
 enableRobotsTXT: true
 googleAnalytics: G-ES42FPF4D5

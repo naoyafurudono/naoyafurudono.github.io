@@ -1,0 +1,35 @@
+name: Deploy Bio
+permissions:
+  contents: read
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - content/bio/**/*
+  workflow_dispatch: {}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    name: Deploy
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get commit hash
+        id: get_commit_hash
+        run: echo "COMMIT_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+
+      - name: Check for typos
+        uses: crate-ci/typos@c8fd3764afbf5eaf6e53d2e6571c835db2c8fa5f # v1.29.0
+        with:
+          files: content/bio/**/*.html
+
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: pages deploy content/bio --commit-dirty=true --project-name bio-nfurudono

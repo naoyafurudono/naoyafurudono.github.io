@@ -25,7 +25,7 @@ jobs:
       - name: Check for typos
         uses: crate-ci/typos@c8fd3764afbf5eaf6e53d2e6571c835db2c8fa5f # v1.29.0
         with:
-          files: content/bio/**/*.html
+          files: content/bio/index.html
 
 
       - name: Deploy

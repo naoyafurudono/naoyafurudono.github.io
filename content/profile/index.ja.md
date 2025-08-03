@@ -2,8 +2,10 @@
 title: "古殿直也"
 date: 2022-03-23T14:23:47+09:00
 draft: false
-aliases:  ['/portfolio/bio/']
+aliases: ["/portfolio/bio/"]
 ---
+
+2025-08-03: このサイトの更新を止めました。[https://nfurudono.com/](https://nfurudono.com/)が最新の水先案内です。
 
 ![古殿直也の顔写真](face.jpg)
 
@@ -57,7 +59,6 @@ Goを用いたバックエンドサービスを設計・実装・運用する時
 ## 2024-
 
 See <https://speakerdeck.com/naoyafurudono>
-
 
 ## 2022
 

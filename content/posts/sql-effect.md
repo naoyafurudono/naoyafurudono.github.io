@@ -236,4 +236,4 @@ APIを実装するに当たって、それらはどのように管理される�
 今回はGo言語にエフェクトシステムを入れることが僕にとってチャレンジングなポイントになるだろう。
 関数型言語に入れる話しか知らないので、構造的部分型と可変な変数が普通に使われるGoに対して使い勝手の良いエフェクトシステムを定義することは自明ではないだろうと感じた。
 
-[An Object-Oriented Effects System](https://www.researchgate.net/publication/221496521_An_Object-Oriented_Effects_System) これが参考になりそう。Javaにregionをいい感じに入れよう、そのためにエフェクトシステムを導入しよう、という研究ぽい。まだちゃんと読んでいないが、生成AIに読ませて質問したところいい感じ。部分型付けの方針についてヒントを得られた。
+[An Object-Oriented Effects System](https://www.researchgate.net/publication/221496521_An_Object-Oriented_Effects_System) はJavaにregionをいい感じに入れよう、そのためにエフェクトシステムを導入しよう、という研究ぽい。まだちゃんと読んでいないが、生成AIに読ませて質問したところいい感じ。部分型付けの方針についてヒントを得られた。

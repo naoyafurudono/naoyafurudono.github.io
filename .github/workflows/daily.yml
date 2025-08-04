@@ -18,7 +18,7 @@ jobs:
         working-directory: tools/tt
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Get commit hash
         id: get_commit_hash
         run: echo "COMMIT_HASH=$(git rev-parse HEAD)" >> $GITHUB_ENV
@@ -29,7 +29,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: tools/tt/package.json
-          cache: 'npm'
+          cache: "npm"
           cache-dependency-path: tools/tt/package-lock.json
       - name: Install dependencies
         run: npm install
@@ -63,3 +63,17 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy tools/tt/out-dev --commit-dirty=true --project-name dev-nfurudono
+
+      - name: Purge All Cache
+        if: always(
+        run: |
+          curl https://api.cloudflare.com/client/v4/zones/$ZONE_ID/purge_cache \
+              -H 'Content-Type: application/json' \
+              -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+              -H "X-Auth-Key: $CLOUDFLARE_API_KEY" \
+              -d '{
+                    "hosts": [
+                      "diary.nfurudono.com",
+                      "dev.nfurudono.com"
+                    ]
+                  }'

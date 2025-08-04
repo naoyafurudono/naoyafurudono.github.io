@@ -65,7 +65,7 @@ jobs:
           command: pages deploy tools/tt/out-dev --commit-dirty=true --project-name dev-nfurudono
 
       - name: Purge All Cache
-        if: always(
+        if: always()
         run: |
           curl https://api.cloudflare.com/client/v4/zones/$ZONE_ID/purge_cache \
               -H 'Content-Type: application/json' \

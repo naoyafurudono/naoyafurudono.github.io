@@ -31,7 +31,7 @@ jobs:
           command: pages deploy content/bio --commit-dirty=true --project-name bio-nfurudono
 
       - name: Purge All Cache
-        if: always(
+        if: always()
         run: |
           curl https://api.cloudflare.com/client/v4/zones/secrets.ZONE_ID/purge_cache \
               -H 'Content-Type: application/json' \

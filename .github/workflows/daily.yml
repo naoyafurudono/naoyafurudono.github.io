@@ -67,10 +67,10 @@ jobs:
       - name: Purge All Cache
         if: always()
         run: |
-          curl https://api.cloudflare.com/client/v4/zones/$ZONE_ID/purge_cache \
+          curl https://api.cloudflare.com/client/v4/zones/${{ secrets.ZONE_ID }}/purge_cache \
               -H 'Content-Type: application/json' \
-              -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
-              -H "X-Auth-Key: $CLOUDFLARE_API_KEY" \
+              -H "X-Auth-Email: ${{ secrets.CLOUDFLARE_EMAIL }}" \
+              -H "X-Auth-Key: ${{ secrets.CLOUDFLARE_API_KEY }}" \
               -d '{
                     "hosts": [
                       "diary.nfurudono.com",

@@ -31,6 +31,17 @@ jobs:
           node-version-file: tools/tt/package.json
           cache: "npm"
           cache-dependency-path: tools/tt/package-lock.json
+      
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: |
+            tools/tt/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('tools/tt/package-lock.json') }}-${{ hashFiles('tools/tt/**/*.js', 'tools/tt/**/*.jsx', 'tools/tt/**/*.ts', 'tools/tt/**/*.tsx', 'tools/tt/**/*.mjs') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('tools/tt/package-lock.json') }}-
+            ${{ runner.os }}-nextjs-
+      
       - name: Install dependencies
         run: npm install
 

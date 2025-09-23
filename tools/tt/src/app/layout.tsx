@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Naoya Furudono",
-      url: "https://blog.nfurudono.com/profile/",
+      url: "https://nfurudono.com",
     },
   ],
 };

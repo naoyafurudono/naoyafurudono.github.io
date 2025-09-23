@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "biome lint .",
-    "lint:fix": "biome lint --write .",
+    "check": "biome ci . && npm run test",
+    "check:write": "biome check --write .",
+    "dev": "next dev --turbopack",
+    "fix": "npm run lint:fix && npm run format:write && npm run check:write",
     "format": "biome format .",
     "format:write": "biome format --write .",
-    "check:write": "biome check --write .",
-    "test": "vitest run",
-    "check": "biome ci . && npm run test"
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "start": "next start",
+    "test": "vitest run"
   },
   "engines": {
     "node": "23.x"

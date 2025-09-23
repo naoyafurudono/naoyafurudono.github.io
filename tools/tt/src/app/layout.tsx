@@ -170,6 +170,7 @@ main {
 
 const Nav = () => {
   const navItems = [
+    { href: "https://nfuruono.com", text: "自己紹介" },
     { href: "/feed.xml", text: "RSS feed (experimental)" },
     { href: "/all", text: "すべての記事" },
     {
@@ -177,16 +178,16 @@ const Nav = () => {
       text: "todos",
     },
     {
-      href: "https://twitter.com/furudono2",
-      text: "書いてる人のTwitter",
-    },
-    {
       href: "https://zenn.dev/nfurudono",
       text: "最近の技術記事（Zenn、試しに使っています）",
     },
     {
-      href: "https://blog.nfurudono.com",
+      href: "https://dev.nfurudono.com",
       text: "技術記事",
+    },
+    {
+      href: "https://diary.nfurudono.com",
+      text: "日記",
     },
   ];
 

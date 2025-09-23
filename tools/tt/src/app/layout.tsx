@@ -170,7 +170,7 @@ main {
 
 const Nav = () => {
   const navItems = [
-    { href: "https://nfuruono.com", text: "自己紹介" },
+    { href: "https://nfurudono.com", text: "自己紹介" },
     { href: "/feed.xml", text: "RSS feed (experimental)" },
     { href: "/all", text: "すべての記事" },
     {

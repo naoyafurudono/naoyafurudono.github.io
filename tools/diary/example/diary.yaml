@@ -1,0 +1,4 @@
+default:
+  outdir: content/diary
+  filename: "{{title}}.md"
+  template: template/diary.md

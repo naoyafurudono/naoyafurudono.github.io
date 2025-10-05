@@ -17,7 +17,8 @@ main [id]:focus {
 }
 
 /* ヘッダーとフッターのスタイリング */
-header, footer {
+header,
+footer {
   background-color: #f8f9fa;
   border-top: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;

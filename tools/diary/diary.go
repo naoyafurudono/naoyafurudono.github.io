@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"os"
 	"os/exec"
@@ -14,36 +13,21 @@ import (
 )
 
 type Config struct {
-	Default struct {
-		Outdir   string `yaml:"outdir"`
-		Filename string `yaml:"filename"`
-		Template string `yaml:"template"`
-	} `yaml:"default"`
+	Default TemplateConfig `yaml:"default"`
 }
 
-type TemplateData struct {
+type TemplateConfig struct {
+	Outdir   string `yaml:"outdir"`
+	Filename string `yaml:"filename"`
+	Template string `yaml:"template"`
+}
+
+type Article struct {
 	Date  string
 	Title string
 }
 
 func main() {
-	// コマンドライン引数の解析
-	var (
-		dateStr   = flag.String("date", "", "(YYYY-)(mm-)dd format")
-		month     = flag.Int("month", 0, "month (1-12)")
-		day       = flag.Int("day", 0, "day (1-31)")
-		remove    = flag.Bool("remove", false, "remove the diary file")
-		yesterday = flag.Bool("yesterday", false, "use yesterday's date")
-	)
-	flag.Parse()
-
-	// 日付の決定
-	targetDate, err := determineDate(*dateStr, *month, *day, *yesterday)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error determining date: %v\n", err)
-		os.Exit(1)
-	}
-
 	// 設定ファイルの読み込み
 	config, err := loadConfig("diary.yaml")
 	if err != nil {
@@ -51,21 +35,13 @@ func main() {
 		os.Exit(1)
 	}
 
+	targetDate := Today()
+
 	// ファイルパスの生成
 	filePath, err := generateFilePath(config, targetDate)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error generating file path: %v\n", err)
 		os.Exit(1)
-	}
-
-	// 削除モードの場合
-	if *remove {
-		if err := os.Remove(filePath); err != nil {
-			fmt.Fprintf(os.Stderr, "Error removing file: %v\n", err)
-			os.Exit(1)
-		}
-		fmt.Printf("Removed: %s\n", filePath)
-		return
 	}
 
 	// ファイルが存在しない場合はテンプレートから生成
@@ -94,51 +70,34 @@ func main() {
 	}
 }
 
-func determineDate(dateStr string, month, day int, yesterday bool) (time.Time, error) {
-	now := time.Now()
+type Date struct {
+	Year  int
+	Month int
+	Day   int
+}
 
-	if yesterday {
-		return now.AddDate(0, 0, -1), nil
+func (d *Date) Format() string {
+	return fmt.Sprintf("%04d-%02d-%02d", d.Year, d.Month, d.Day)
+}
+
+var local *time.Location
+
+func init() {
+	l, err := time.LoadLocation("Local")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error loading local location: %v\n", err)
+		os.Exit(1)
 	}
+	local = l
+}
 
-	if dateStr != "" {
-		// dateStrのパース
-		parts := strings.Split(dateStr, "-")
-		var year, mon, d int
-
-		switch len(parts) {
-		case 1: // dd
-			d = mustAtoi(parts[0])
-			year = now.Year()
-			mon = int(now.Month())
-		case 2: // mm-dd
-			mon = mustAtoi(parts[0])
-			d = mustAtoi(parts[1])
-			year = now.Year()
-		case 3: // YYYY-mm-dd
-			year = mustAtoi(parts[0])
-			mon = mustAtoi(parts[1])
-			d = mustAtoi(parts[2])
-		default:
-			return time.Time{}, fmt.Errorf("invalid date format: %s", dateStr)
-		}
-
-		return time.Date(year, time.Month(mon), d, 0, 0, 0, 0, time.Local), nil
+func Today() Date {
+	now := time.Now().In(local)
+	return Date{
+		Year:  now.Year(),
+		Month: int(now.Month()),
+		Day:   now.Day(),
 	}
-
-	// month/dayオプションの処理
-	year := now.Year()
-	mon := int(now.Month())
-	d := now.Day()
-
-	if month > 0 {
-		mon = month
-	}
-	if day > 0 {
-		d = day
-	}
-
-	return time.Date(year, time.Month(mon), d, 0, 0, 0, 0, time.Local), nil
 }
 
 func mustAtoi(s string) int {
@@ -161,8 +120,8 @@ func loadConfig(configPath string) (*Config, error) {
 	return &config, nil
 }
 
-func generateFilePath(config *Config, date time.Time) (string, error) {
-	dateStr := date.Format("2006-01-02")
+func generateFilePath(config *Config, date Date) (string, error) {
+	dateStr := date.Format()
 
 	// filenameテンプレートの処理
 	tmpl, err := template.New("filename").Parse(config.Default.Filename)
@@ -171,7 +130,7 @@ func generateFilePath(config *Config, date time.Time) (string, error) {
 	}
 
 	var filenameBuf strings.Builder
-	data := TemplateData{
+	data := Article{
 		Date:  dateStr,
 		Title: dateStr,
 	}
@@ -182,7 +141,7 @@ func generateFilePath(config *Config, date time.Time) (string, error) {
 	return filepath.Join(config.Default.Outdir, filenameBuf.String()), nil
 }
 
-func createFromTemplate(config *Config, filePath string, date time.Time) error {
+func createFromTemplate(config *Config, filePath string, date Date) error {
 	// ディレクトリの作成
 	dir := filepath.Dir(filePath)
 	if err := os.MkdirAll(dir, 0755); err != nil {
@@ -201,8 +160,8 @@ func createFromTemplate(config *Config, filePath string, date time.Time) error {
 		return fmt.Errorf("failed to parse template: %w", err)
 	}
 
-	dateStr := date.Format("2006-01-02")
-	data := TemplateData{
+	dateStr := date.Format()
+	data := Article{
 		Date:  dateStr,
 		Title: dateStr,
 	}

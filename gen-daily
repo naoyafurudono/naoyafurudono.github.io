@@ -1,5 +1,0 @@
-#!/bin/bash
-
-wd=$(pwd)
-cd tools/daily &&
-    ./deploy "$wd"

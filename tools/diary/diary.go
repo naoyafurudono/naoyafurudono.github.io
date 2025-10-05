@@ -151,13 +151,13 @@ func createFromTemplate(config *Config, filePath string, date Date) error {
 	// テンプレートの読み込み
 	templateContent, err := os.ReadFile(config.Default.Template)
 	if err != nil {
-		return fmt.Errorf("failed to read template file: %w", err)
+		return fmt.Errorf("failed to read template file %s: %w", config.Default.Template, err)
 	}
 
 	// テンプレートの実行
 	tmpl, err := template.New("diary").Parse(string(templateContent))
 	if err != nil {
-		return fmt.Errorf("failed to parse template: %w", err)
+		return fmt.Errorf("failed to parse template %s: %w", config.Default.Template, err)
 	}
 
 	dateStr := date.Format()

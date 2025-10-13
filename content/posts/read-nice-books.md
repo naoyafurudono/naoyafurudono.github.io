@@ -4,10 +4,10 @@ date: 2025-06-15T14:45:28+09:00
 author: "Naoya Furudono"
 draft: false
 tags:
-    - "daily"
-    - "tech"
-    - "book"
-    - "idea"
+  - "daily"
+  - "tech"
+  - "book"
+  - "idea"
 ---
 
 この記事は、技術者の成長において「良書を読み込む文化」の重要性を論じた文章です。
@@ -58,23 +58,8 @@ Known unknown（知らないことを知っている、例えばOSにはプロ�
 社内で二つの輪講会を開催しています。
 両方を狙って開催しているのが A philosophy of software designの輪講で、慣れを狙ったのが型システムの輪講です。
 
-# おまけ、良書の紹介
+# おまけ
 
-僕が思う良書です。どれも文句なしにおすすめです。
-どういう領域のメンタルモデルを手に入れられるかはそれぞれの本の冒頭に書いてあるはずです。
+僕のおすすめ書籍や僕が好きな、書籍をおすすめしてくれるサイトや記事を紹介する記事を書きました。
 
-- プログラミング in OCaml
-- Essentials of Programming Languages
-- A Philosophy of Software Design
-- プログラミング言語Go
-- K and R
-- 数学文章作法
-
-# おまけ、インターネットの良書を紹介してくれる人
-
-- https://izumisy.work/
-- https://zenn.dev/yoshiko
-  - 本ではなくインターネットの記事の紹介が多いですが、ご本人の記事もそこで引用される記事も良いものと感じます
-- https://ohbarye.hatenablog.jp/
-
-パッとはそんなに出てこなかったです。
+https://dev.nfurudono.com/posts/books/

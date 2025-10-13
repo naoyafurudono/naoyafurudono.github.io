@@ -70,7 +70,7 @@ Known unknown（知らないことを知っている、例えばOSにはプロ�
 - K and R
 - 数学文章作法
 
-# おまけ、インターネットには良書を紹介してくれる人
+# おまけ、インターネットの良書を紹介してくれる人
 
 - https://izumisy.work/
 - https://zenn.dev/yoshiko

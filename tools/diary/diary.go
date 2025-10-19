@@ -12,9 +12,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-type Config struct {
-	Default TemplateConfig `yaml:"default"`
-}
+type Config = map[string]TemplateConfig
 
 type TemplateConfig struct {
 	Outdir   string `yaml:"outdir"`
@@ -37,8 +35,13 @@ func main() {
 
 	targetDate := Today()
 
+	t, ok := config["default"]
+	if !ok {
+		os.Exit(1)
+	}
+
 	// ファイルパスの生成
-	filePath, err := generateFilePath(config, targetDate)
+	filePath, err := generateFilePath(&t, targetDate)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error generating file path: %v\n", err)
 		os.Exit(1)
@@ -46,7 +49,7 @@ func main() {
 
 	// ファイルが存在しない場合はテンプレートから生成
 	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		if err := createFromTemplate(config, filePath, targetDate); err != nil {
+		if err := createFromTemplate(&t, filePath, targetDate); err != nil {
 			fmt.Fprintf(os.Stderr, "Error creating file from template: %v\n", err)
 			os.Exit(1)
 		}
@@ -106,7 +109,7 @@ func mustAtoi(s string) int {
 	return result
 }
 
-func loadConfig(configPath string) (*Config, error) {
+func loadConfig(configPath string) (Config, error) {
 	data, err := os.ReadFile(configPath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read config file: %w", err)
@@ -117,14 +120,14 @@ func loadConfig(configPath string) (*Config, error) {
 		return nil, fmt.Errorf("failed to parse config file: %w", err)
 	}
 
-	return &config, nil
+	return config, nil
 }
 
-func generateFilePath(config *Config, date Date) (string, error) {
+func generateFilePath(config *TemplateConfig, date Date) (string, error) {
 	dateStr := date.Format()
 
 	// filenameテンプレートの処理
-	tmpl, err := template.New("filename").Parse(config.Default.Filename)
+	tmpl, err := template.New("filename").Parse(config.Filename)
 	if err != nil {
 		return "", fmt.Errorf("failed to parse filename template: %w", err)
 	}
@@ -138,10 +141,10 @@ func generateFilePath(config *Config, date Date) (string, error) {
 		return "", fmt.Errorf("failed to execute filename template: %w", err)
 	}
 
-	return filepath.Join(config.Default.Outdir, filenameBuf.String()), nil
+	return filepath.Join(config.Outdir, filenameBuf.String()), nil
 }
 
-func createFromTemplate(config *Config, filePath string, date Date) error {
+func createFromTemplate(config *TemplateConfig, filePath string, date Date) error {
 	// ディレクトリの作成
 	dir := filepath.Dir(filePath)
 	if err := os.MkdirAll(dir, 0755); err != nil {
@@ -149,15 +152,15 @@ func createFromTemplate(config *Config, filePath string, date Date) error {
 	}
 
 	// テンプレートの読み込み
-	templateContent, err := os.ReadFile(config.Default.Template)
+	templateContent, err := os.ReadFile(config.Template)
 	if err != nil {
-		return fmt.Errorf("failed to read template file %s: %w", config.Default.Template, err)
+		return fmt.Errorf("failed to read template file %s: %w", config.Template, err)
 	}
 
 	// テンプレートの実行
 	tmpl, err := template.New("diary").Parse(string(templateContent))
 	if err != nil {
-		return fmt.Errorf("failed to parse template %s: %w", config.Default.Template, err)
+		return fmt.Errorf("failed to parse template %s: %w", config.Template, err)
 	}
 
 	dateStr := date.Format()

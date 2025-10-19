@@ -126,16 +126,17 @@ func TestLoadConfig(t *testing.T) {
 				t.Errorf("loadConfig() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
+			d := config["default"]
 
 			if !tt.wantErr {
-				if config.Default.Outdir != tt.wantOutdir {
-					t.Errorf("config.Default.Outdir = %v, want %v", config.Default.Outdir, tt.wantOutdir)
+				if d.Outdir != tt.wantOutdir {
+					t.Errorf("d.Outdir = %v, want %v", d.Outdir, tt.wantOutdir)
 				}
-				if config.Default.Filename != tt.wantFilename {
-					t.Errorf("config.Default.Filename = %v, want %v", config.Default.Filename, tt.wantFilename)
+				if d.Filename != tt.wantFilename {
+					t.Errorf("d.Filename = %v, want %v", d.Filename, tt.wantFilename)
 				}
-				if config.Default.Template != tt.wantTemplate {
-					t.Errorf("config.Default.Template = %v, want %v", config.Default.Template, tt.wantTemplate)
+				if d.Template != tt.wantTemplate {
+					t.Errorf("d.Template = %v, want %v", d.Template, tt.wantTemplate)
 				}
 			}
 		})
@@ -145,15 +146,15 @@ func TestLoadConfig(t *testing.T) {
 func TestGenerateFilePath(t *testing.T) {
 	tests := []struct {
 		name     string
-		config   *Config
+		config   Config
 		date     Date
 		wantPath string
 		wantErr  bool
 	}{
 		{
 			name: "simple filename template",
-			config: &Config{
-				Default: TemplateConfig{
+			config: map[string]TemplateConfig{
+				"default": TemplateConfig{
 					Outdir:   "/tmp/diary",
 					Filename: "{{.Date}}.md",
 				},
@@ -164,8 +165,8 @@ func TestGenerateFilePath(t *testing.T) {
 		},
 		{
 			name: "filename with title",
-			config: &Config{
-				Default: TemplateConfig{
+			config: map[string]TemplateConfig{
+				"default": TemplateConfig{
 					Outdir:   "/var/logs",
 					Filename: "{{.Title}}_entry.txt",
 				},
@@ -178,7 +179,8 @@ func TestGenerateFilePath(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotPath, err := generateFilePath(tt.config, tt.date)
+			temp := tt.config["default"]
+			gotPath, err := generateFilePath(&temp, tt.date)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("generateFilePath() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -232,16 +234,17 @@ func TestCreateFromTemplate(t *testing.T) {
 			// Setup config
 			outputDir := filepath.Join(tmpDir, "output")
 			outputPath := filepath.Join(outputDir, "test.md")
-			config := &Config{
-				Default: TemplateConfig{
+			config := map[string]TemplateConfig{
+				"default": TemplateConfig{
 					Outdir:   outputDir,
 					Filename: "test.md",
 					Template: templatePath,
 				},
 			}
 
+			temp := config["default"]
 			// Test createFromTemplate
-			err = createFromTemplate(config, outputPath, tt.date)
+			err = createFromTemplate(&temp, outputPath, tt.date)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("createFromTemplate() error = %v, wantErr %v", err, tt.wantErr)
 				return

@@ -18,27 +18,18 @@
   - `.github/workflows/blog.yml`
     - blog.nfurudono.com: 廃止しました。記事はdiaryやdevで引き続き公開しています。
   - `.github/workflows/dairy.yml`
-    - diary.nfurudono.com 
+    - diary.nfurudono.com
       - `contents/daily/*.md`
-    - dev.nfurudono.com 
+    - dev.nfurudono.com
       - `contents/post/*.md`
   - `.github/workflows/bio.yml`
-    - nfurudono.com 
+    - nfurudono.com
       - `contents/bio/index.html`
       - HTMLをそのまま配信している
-- daily コマンド（使うのをやめました、hugoからの脱却の一環です）
-  - 日記の原稿を生成・削除・編集するのに用いる
-  - `tools/daily/` で管理
-- hugoの設定など
-  - blog.nfurudono.com として公開していたサイト
-  - 2025年8月に更新を停止した
-  - 記事テンプレートからの生成のために一部を残している
 
 ## ローカル環境
 
 - 日記の生成には diary コマンドを用います。バイナリは `cd tools/diary && go install` で入ります
-- 普通の記事を生成するためには `hugo new contents/post/<id>.md` を実行してください。`<id>` は既存のものと被らなければなんでもokです
-  - ブログエンジンの実装依存ですが、`<id>` はその記事のURLに含まれます
 - typoを検知するために、typosを用いています。pre-commit hookの設定が /.pre-commit-config.yaml にあります。pre-commitをインストールして有効化するとローカルでいい感じになります
 
 ## デプロイ環境

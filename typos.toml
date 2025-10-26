@@ -1,6 +1,6 @@
 [files]
 ignore-hidden = false
-extend-exclude = [".git/", "**/themes/**", "**/*.drawio", "/assets/css/**/*"]
+extend-exclude = [".git/", "**/*.drawio"]
 
 [default.extend-words]
 Inferrable = "Inferrable"

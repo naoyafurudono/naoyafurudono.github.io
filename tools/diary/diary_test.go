@@ -180,7 +180,7 @@ func TestGenerateFilePath(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			temp := tt.config["default"]
-			gotPath, err := generateFilePath(&temp, tt.date)
+			gotPath, err := temp.generateFilePath(tt.date)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("generateFilePath() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -244,7 +244,7 @@ func TestCreateFromTemplate(t *testing.T) {
 
 			temp := config["default"]
 			// Test createFromTemplate
-			err = createFromTemplate(&temp, outputPath, tt.date)
+			err = temp.createFromTemplate(outputPath, tt.date)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("createFromTemplate() error = %v, wantErr %v", err, tt.wantErr)
 				return

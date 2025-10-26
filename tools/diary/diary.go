@@ -35,13 +35,13 @@ func main() {
 
 	targetDate := Today()
 
-	t, ok := config["default"]
+	c, ok := config["default"]
 	if !ok {
 		os.Exit(1)
 	}
 
 	// ファイルパスの生成
-	filePath, err := generateFilePath(&t, targetDate)
+	filePath, err := c.generateFilePath(targetDate)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error generating file path: %v\n", err)
 		os.Exit(1)
@@ -49,7 +49,7 @@ func main() {
 
 	// ファイルが存在しない場合はテンプレートから生成
 	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		if err := createFromTemplate(&t, filePath, targetDate); err != nil {
+		if err := c.createFromTemplate(filePath, targetDate); err != nil {
 			fmt.Fprintf(os.Stderr, "Error creating file from template: %v\n", err)
 			os.Exit(1)
 		}
@@ -123,11 +123,11 @@ func loadConfig(configPath string) (Config, error) {
 	return config, nil
 }
 
-func generateFilePath(config *TemplateConfig, date Date) (string, error) {
+func (c *TemplateConfig) generateFilePath(date Date) (string, error) {
 	dateStr := date.Format()
 
 	// filenameテンプレートの処理
-	tmpl, err := template.New("filename").Parse(config.Filename)
+	tmpl, err := template.New("filename").Parse(c.Filename)
 	if err != nil {
 		return "", fmt.Errorf("failed to parse filename template: %w", err)
 	}
@@ -141,10 +141,10 @@ func generateFilePath(config *TemplateConfig, date Date) (string, error) {
 		return "", fmt.Errorf("failed to execute filename template: %w", err)
 	}
 
-	return filepath.Join(config.Outdir, filenameBuf.String()), nil
+	return filepath.Join(c.Outdir, filenameBuf.String()), nil
 }
 
-func createFromTemplate(config *TemplateConfig, filePath string, date Date) error {
+func (c *TemplateConfig) createFromTemplate(filePath string, date Date) error {
 	// ディレクトリの作成
 	dir := filepath.Dir(filePath)
 	if err := os.MkdirAll(dir, 0755); err != nil {
@@ -152,15 +152,15 @@ func createFromTemplate(config *TemplateConfig, filePath string, date Date) erro
 	}
 
 	// テンプレートの読み込み
-	templateContent, err := os.ReadFile(config.Template)
+	templateContent, err := os.ReadFile(c.Template)
 	if err != nil {
-		return fmt.Errorf("failed to read template file %s: %w", config.Template, err)
+		return fmt.Errorf("failed to read template file %s: %w", c.Template, err)
 	}
 
 	// テンプレートの実行
 	tmpl, err := template.New("diary").Parse(string(templateContent))
 	if err != nil {
-		return fmt.Errorf("failed to parse template %s: %w", config.Template, err)
+		return fmt.Errorf("failed to parse template %s: %w", c.Template, err)
 	}
 
 	dateStr := date.Format()

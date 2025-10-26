@@ -22,8 +22,9 @@ type TemplateConfig struct {
 }
 
 type Article struct {
-	Date  string
-	Title string
+	Date      string
+	Title     string
+	Timestamp time.Time
 }
 
 var (
@@ -211,8 +212,9 @@ func (c *TemplateConfig) createFromTemplate(filePath string, date Date, title st
 
 	dateStr := date.Format()
 	data := Article{
-		Date:  dateStr,
-		Title: title,
+		Date:      dateStr,
+		Title:     title,
+		Timestamp: time.Now().In(local),
 	}
 
 	// ファイルの作成

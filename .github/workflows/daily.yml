@@ -32,15 +32,15 @@ jobs:
           cache: "npm"
           cache-dependency-path: tools/tt/package-lock.json
       
-      - name: Cache Next.js build
+      - name: Cache Astro build
         uses: actions/cache@v4
         with:
           path: |
-            tools/tt/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('tools/tt/package-lock.json') }}-${{ hashFiles('tools/tt/**/*.js', 'tools/tt/**/*.jsx', 'tools/tt/**/*.ts', 'tools/tt/**/*.tsx', 'tools/tt/**/*.mjs') }}
+            tools/tt/node_modules/.astro
+          key: ${{ runner.os }}-astro-${{ hashFiles('tools/tt/package-lock.json') }}-${{ hashFiles('tools/tt/**/*.js', 'tools/tt/**/*.jsx', 'tools/tt/**/*.ts', 'tools/tt/**/*.tsx', 'tools/tt/**/*.mjs', 'tools/tt/**/*.astro') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('tools/tt/package-lock.json') }}-
-            ${{ runner.os }}-nextjs-
+            ${{ runner.os }}-astro-${{ hashFiles('tools/tt/package-lock.json') }}-
+            ${{ runner.os }}-astro-
       
       - name: Install dependencies
         run: npm install

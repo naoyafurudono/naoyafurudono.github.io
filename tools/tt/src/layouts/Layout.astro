@@ -1,0 +1,62 @@
+---
+import { siteTitle } from "@/lib/config";
+import "../styles/globals.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = title || siteTitle;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="author" content="Naoya Furudono" />
+    <slot name="head" />
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <h1>
+          <a href="/">{siteTitle}</a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="https://nfurudono.com">自己紹介</a></li>
+          <li><a href="/feed.xml">RSS feed (experimental)</a></li>
+          <li><a href="/all">すべての記事</a></li>
+          <li><a href="/todos/">todos</a></li>
+          <li><a href="https://zenn.dev/nfurudono">最近の技術記事（Zenn、試しに使っています）</a></li>
+          <li><a href="https://dev.nfurudono.com">技術記事</a></li>
+          <li><a href="https://diary.nfurudono.com">日記</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="https://nfurudono.com">自己紹介</a></li>
+          <li><a href="/feed.xml">RSS feed (experimental)</a></li>
+          <li><a href="/all">すべての記事</a></li>
+          <li><a href="/todos/">todos</a></li>
+          <li><a href="https://zenn.dev/nfurudono">最近の技術記事（Zenn、試しに使っています）</a></li>
+          <li><a href="https://dev.nfurudono.com">技術記事</a></li>
+          <li><a href="https://diary.nfurudono.com">日記</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

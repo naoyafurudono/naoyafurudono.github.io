@@ -1,0 +1,31 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { articleDirectoryPaths, postPath, showDateOnTopPage } from "@/lib/config";
+import { type ArticleMeta, listArticles } from "@/lib/gateway";
+import { lexOrder } from "@/lib/util";
+
+const articles: ArticleMeta[] = await listArticles(articleDirectoryPaths);
+const sortedArticles = articles.toSorted((a, b) => -lexOrder(a.date, b.date));
+---
+
+<Layout>
+  <ol>
+    {
+      sortedArticles.map((article) => (
+        <li>
+          <article>
+            <div>
+              <a href={postPath(article.id)}>{article.title}</a>
+              {showDateOnTopPage && (
+                <p>
+                  <time>{article.date}</time>
+                </p>
+              )}
+              <p>{article.desc}</p>
+            </div>
+          </article>
+        </li>
+      ))
+    }
+  </ol>
+</Layout>

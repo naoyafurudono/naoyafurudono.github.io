@@ -1,0 +1,41 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { articleDirectoryPaths, postPath, withSiteTitle } from "@/lib/config";
+import { type ArticleMeta, listArticles } from "@/lib/gateway";
+import { newRoot, newUL, renderMdAst } from "@/lib/render";
+import * as util from "@/lib/util";
+
+const articles: ArticleMeta[] = await listArticles(articleDirectoryPaths);
+
+function hasToDo(a: ArticleMeta): boolean {
+  return a.unchecked.length > 0;
+}
+
+const filteredArticles = articles
+  .filter((article) => hasToDo(article))
+  .toSorted((a, b) => -util.lexOrder(a.date, b.date));
+
+const pageTitle = withSiteTitle("todos");
+const description = "未消化のtodo一覧です";
+---
+
+<Layout title={pageTitle} description={description}>
+  <!-- 各記事にあるオリジナルのtodoアイテムに割り当てられたIDは
+    アイテムのタイトルに相当するテキストをそのまま用います。 -->
+  <ol>
+    {
+      await Promise.all(
+        filteredArticles.map(async (article) => {
+          const root = newRoot([newUL(article.unchecked)]);
+          const todohtml = await renderMdAst(root);
+          return (
+            <li>
+              <a href={postPath(article.id)}>{article.title}</a>
+              <div set:html={todohtml} />
+            </li>
+          );
+        })
+      )
+    }
+  </ol>
+</Layout>

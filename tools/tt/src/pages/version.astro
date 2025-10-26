@@ -1,0 +1,15 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { commitHash } from "@/lib/config";
+
+const pageTitle = "Current Commit Hash";
+---
+
+<Layout title={pageTitle}>
+  <main>
+    <p>
+      commit hash:
+      <span>{commitHash}</span>
+    </p>
+  </main>
+</Layout>

@@ -11,11 +11,14 @@
       "**",
       "!**/node_modules",
       "!**/.next",
+      "!**/.astro",
+      "!**/.claude",
       "!**/out",
       "!**/dist",
       "!**/build",
       "!**/.wrangler",
-      "!**/.git"
+      "!**/.git",
+      "!**/*.astro"
     ]
   },
   "formatter": {
@@ -89,10 +92,6 @@
         "noExplicitAny": "warn",
         "noEmptyBlockStatements": "error"
       }
-    },
-    "domains": {
-      "react": "all",
-      "next": "all"
     }
   },
   "javascript": {

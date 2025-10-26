@@ -66,6 +66,8 @@ func run(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("template '%s' not found in config", templateName)
 	}
 
+	timestamp := time.Now()
+
 	// 日付の処理
 	var targetDate Date
 	if date != "" {
@@ -79,7 +81,7 @@ func run(cmd *cobra.Command, args []string) error {
 			Day:   mustAtoi(parts[2]),
 		}
 	} else {
-		targetDate = Today()
+		targetDate = Today(timestamp)
 	}
 
 	// タイトルの決定
@@ -89,14 +91,14 @@ func run(cmd *cobra.Command, args []string) error {
 	}
 
 	// ファイルパスの生成
-	filePath, err := c.generateFilePath(targetDate, articleTitle)
+	filePath, err := c.generateFilePath(targetDate, articleTitle, timestamp)
 	if err != nil {
 		return fmt.Errorf("error generating file path: %w", err)
 	}
 
 	// ファイルが存在しない場合はテンプレートから生成
 	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		if err := c.createFromTemplate(filePath, targetDate, articleTitle); err != nil {
+		if err := c.createFromTemplate(filePath, targetDate, articleTitle, timestamp); err != nil {
 			return fmt.Errorf("error creating file from template: %w", err)
 		}
 		fmt.Printf("Created: %s\n", filePath)
@@ -141,8 +143,8 @@ func init() {
 	local = l
 }
 
-func Today() Date {
-	now := time.Now().In(local)
+func Today(now time.Time) Date {
+	now = now.In(local)
 	return Date{
 		Year:  now.Year(),
 		Month: int(now.Month()),
@@ -170,7 +172,7 @@ func loadConfig(configPath string) (Config, error) {
 	return config, nil
 }
 
-func (c *TemplateConfig) generateFilePath(date Date, title string) (string, error) {
+func (c *TemplateConfig) generateFilePath(date Date, title string, timestamp time.Time) (string, error) {
 	dateStr := date.Format()
 
 	// filenameテンプレートの処理
@@ -191,7 +193,7 @@ func (c *TemplateConfig) generateFilePath(date Date, title string) (string, erro
 	return filepath.Join(c.Outdir, filenameBuf.String()), nil
 }
 
-func (c *TemplateConfig) createFromTemplate(filePath string, date Date, title string) error {
+func (c *TemplateConfig) createFromTemplate(filePath string, date Date, title string, timestamp time.Time) error {
 	// ディレクトリの作成
 	dir := filepath.Dir(filePath)
 	if err := os.MkdirAll(dir, 0755); err != nil {
@@ -214,7 +216,7 @@ func (c *TemplateConfig) createFromTemplate(filePath string, date Date, title st
 	data := Article{
 		Date:      dateStr,
 		Title:     title,
-		Timestamp: time.Now().In(local),
+		Timestamp: timestamp,
 	}
 
 	// ファイルの作成

@@ -4,6 +4,7 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+	"time"
 )
 
 func TestDateFormat(t *testing.T) {
@@ -196,7 +197,7 @@ func TestGenerateFilePath(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			temp := tt.config["default"]
-			gotPath, err := temp.generateFilePath(tt.date, tt.title)
+			gotPath, err := temp.generateFilePath(tt.date, tt.title, time.Now())
 			if (err != nil) != tt.wantErr {
 				t.Errorf("generateFilePath() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -271,7 +272,7 @@ func TestCreateFromTemplate(t *testing.T) {
 
 			temp := config["default"]
 			// Test createFromTemplate
-			err = temp.createFromTemplate(outputPath, tt.date, tt.title)
+			err = temp.createFromTemplate(outputPath, tt.date, tt.title, time.Now())
 			if (err != nil) != tt.wantErr {
 				t.Errorf("createFromTemplate() error = %v, wantErr %v", err, tt.wantErr)
 				return

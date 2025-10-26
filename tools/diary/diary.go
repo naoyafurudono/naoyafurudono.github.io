@@ -9,6 +9,7 @@ import (
 	"text/template"
 	"time"
 
+	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 )
 
@@ -25,33 +26,77 @@ type Article struct {
 	Title string
 }
 
+var (
+	title string
+	date  string
+)
+
 func main() {
+	var rootCmd = &cobra.Command{
+		Use:   "diary [template]",
+		Short: "Create and open a diary entry",
+		Args:  cobra.MaximumNArgs(1),
+		RunE:  run,
+	}
+
+	rootCmd.Flags().StringVarP(&title, "title", "t", "", "Title of the diary entry")
+	rootCmd.Flags().StringVarP(&date, "date", "d", "", "Date of the diary entry (YYYY-MM-DD format)")
+
+	if err := rootCmd.Execute(); err != nil {
+		os.Exit(1)
+	}
+}
+
+func run(cmd *cobra.Command, args []string) error {
+	// テンプレート名の決定
+	templateName := "default"
+	if len(args) > 0 {
+		templateName = args[0]
+	}
+
 	// 設定ファイルの読み込み
 	config, err := loadConfig("diary.yaml")
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error loading config: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("error loading config: %w", err)
 	}
 
-	targetDate := Today()
-
-	c, ok := config["default"]
+	c, ok := config[templateName]
 	if !ok {
-		os.Exit(1)
+		return fmt.Errorf("template '%s' not found in config", templateName)
+	}
+
+	// 日付の処理
+	var targetDate Date
+	if date != "" {
+		parts := strings.Split(date, "-")
+		if len(parts) != 3 {
+			return fmt.Errorf("invalid date format: %s (expected YYYY-MM-DD)", date)
+		}
+		targetDate = Date{
+			Year:  mustAtoi(parts[0]),
+			Month: mustAtoi(parts[1]),
+			Day:   mustAtoi(parts[2]),
+		}
+	} else {
+		targetDate = Today()
+	}
+
+	// タイトルの決定
+	articleTitle := title
+	if articleTitle == "" {
+		articleTitle = targetDate.Format()
 	}
 
 	// ファイルパスの生成
-	filePath, err := c.generateFilePath(targetDate)
+	filePath, err := c.generateFilePath(targetDate, articleTitle)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error generating file path: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("error generating file path: %w", err)
 	}
 
 	// ファイルが存在しない場合はテンプレートから生成
 	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		if err := c.createFromTemplate(filePath, targetDate); err != nil {
-			fmt.Fprintf(os.Stderr, "Error creating file from template: %v\n", err)
-			os.Exit(1)
+		if err := c.createFromTemplate(filePath, targetDate, articleTitle); err != nil {
+			return fmt.Errorf("error creating file from template: %w", err)
 		}
 		fmt.Printf("Created: %s\n", filePath)
 	}
@@ -62,15 +107,16 @@ func main() {
 		editor = "nvim"
 	}
 
-	cmd := exec.Command(editor, filePath)
-	cmd.Stdin = os.Stdin
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
+	execCmd := exec.Command(editor, filePath)
+	execCmd.Stdin = os.Stdin
+	execCmd.Stdout = os.Stdout
+	execCmd.Stderr = os.Stderr
 
-	if err := cmd.Run(); err != nil {
-		fmt.Fprintf(os.Stderr, "Error opening editor: %v\n", err)
-		os.Exit(1)
+	if err := execCmd.Run(); err != nil {
+		return fmt.Errorf("error opening editor: %w", err)
 	}
+
+	return nil
 }
 
 type Date struct {
@@ -123,7 +169,7 @@ func loadConfig(configPath string) (Config, error) {
 	return config, nil
 }
 
-func (c *TemplateConfig) generateFilePath(date Date) (string, error) {
+func (c *TemplateConfig) generateFilePath(date Date, title string) (string, error) {
 	dateStr := date.Format()
 
 	// filenameテンプレートの処理
@@ -135,7 +181,7 @@ func (c *TemplateConfig) generateFilePath(date Date) (string, error) {
 	var filenameBuf strings.Builder
 	data := Article{
 		Date:  dateStr,
-		Title: dateStr,
+		Title: title,
 	}
 	if err := tmpl.Execute(&filenameBuf, data); err != nil {
 		return "", fmt.Errorf("failed to execute filename template: %w", err)
@@ -144,7 +190,7 @@ func (c *TemplateConfig) generateFilePath(date Date) (string, error) {
 	return filepath.Join(c.Outdir, filenameBuf.String()), nil
 }
 
-func (c *TemplateConfig) createFromTemplate(filePath string, date Date) error {
+func (c *TemplateConfig) createFromTemplate(filePath string, date Date, title string) error {
 	// ディレクトリの作成
 	dir := filepath.Dir(filePath)
 	if err := os.MkdirAll(dir, 0755); err != nil {
@@ -166,7 +212,7 @@ func (c *TemplateConfig) createFromTemplate(filePath string, date Date) error {
 	dateStr := date.Format()
 	data := Article{
 		Date:  dateStr,
-		Title: dateStr,
+		Title: title,
 	}
 
 	// ファイルの作成

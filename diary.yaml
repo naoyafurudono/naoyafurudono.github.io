@@ -2,3 +2,8 @@ default:
   outdir: content/daily
   filename: "{{.Title}}.md"
   template: template/diary.md
+post:
+  outdir: content/posts
+  filename: "{{.Title}}.md"
+  template: template/post.md
+

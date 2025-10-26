@@ -148,6 +148,7 @@ func TestGenerateFilePath(t *testing.T) {
 		name     string
 		config   Config
 		date     Date
+		title    string
 		wantPath string
 		wantErr  bool
 	}{
@@ -160,6 +161,7 @@ func TestGenerateFilePath(t *testing.T) {
 				},
 			},
 			date:     Date{Year: 2025, Month: 10, Day: 5},
+			title:    "2025-10-05",
 			wantPath: "/tmp/diary/2025-10-05.md",
 			wantErr:  false,
 		},
@@ -172,7 +174,21 @@ func TestGenerateFilePath(t *testing.T) {
 				},
 			},
 			date:     Date{Year: 2024, Month: 1, Day: 1},
-			wantPath: "/var/logs/2024-01-01_entry.txt",
+			title:    "My Title",
+			wantPath: "/var/logs/My Title_entry.txt",
+			wantErr:  false,
+		},
+		{
+			name: "filename with date and title",
+			config: map[string]TemplateConfig{
+				"default": TemplateConfig{
+					Outdir:   "/tmp",
+					Filename: "{{.Date}}-{{.Title}}.md",
+				},
+			},
+			date:     Date{Year: 2024, Month: 5, Day: 15},
+			title:    "Test Post",
+			wantPath: "/tmp/2024-05-15-Test Post.md",
 			wantErr:  false,
 		},
 	}
@@ -180,7 +196,7 @@ func TestGenerateFilePath(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			temp := tt.config["default"]
-			gotPath, err := temp.generateFilePath(tt.date)
+			gotPath, err := temp.generateFilePath(tt.date, tt.title)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("generateFilePath() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -197,20 +213,31 @@ func TestCreateFromTemplate(t *testing.T) {
 		name            string
 		templateContent string
 		date            Date
+		title           string
 		expectedContent string
 		wantErr         bool
 	}{
 		{
-			name:            "simple template",
+			name:            "simple template with default title",
 			templateContent: "# {{.Title}}\n\nDate: {{.Date}}",
 			date:            Date{Year: 2025, Month: 10, Day: 5},
+			title:           "2025-10-05",
 			expectedContent: "# 2025-10-05\n\nDate: 2025-10-05",
+			wantErr:         false,
+		},
+		{
+			name:            "template with custom title",
+			templateContent: "# {{.Title}}\n\nDate: {{.Date}}",
+			date:            Date{Year: 2025, Month: 10, Day: 5},
+			title:           "My Blog Post",
+			expectedContent: "# My Blog Post\n\nDate: 2025-10-05",
 			wantErr:         false,
 		},
 		{
 			name:            "template with only date",
 			templateContent: "{{.Date}}",
 			date:            Date{Year: 2024, Month: 12, Day: 31},
+			title:           "2024-12-31",
 			expectedContent: "2024-12-31",
 			wantErr:         false,
 		},
@@ -244,7 +271,7 @@ func TestCreateFromTemplate(t *testing.T) {
 
 			temp := config["default"]
 			// Test createFromTemplate
-			err = temp.createFromTemplate(outputPath, tt.date)
+			err = temp.createFromTemplate(outputPath, tt.date, tt.title)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("createFromTemplate() error = %v, wantErr %v", err, tt.wantErr)
 				return

@@ -1,0 +1,65 @@
+---
+import '../styles/globals.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const siteTitle = "diary.nfurudono.com";
+const { title = siteTitle, description = "これは日記です" } = Astro.props;
+
+const navItems = [
+  { href: "https://nfurudono.com", text: "自己紹介" },
+  { href: "/feed.xml", text: "RSS feed (experimental)" },
+  { href: "/all", text: "すべての記事" },
+  { href: "/todos/", text: "todos" },
+  { href: "https://zenn.dev/nfurudono", text: "最近の技術記事（Zenn、試しに使っています）" },
+  { href: "https://dev.nfurudono.com", text: "技術記事" },
+  { href: "https://diary.nfurudono.com", text: "日記" },
+];
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="author" href="https://nfurudono.com" />
+    <meta name="author" content="Naoya Furudono" />
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <h1>
+          <a href="/">{siteTitle}</a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          {navItems.map(({ href, text }) => (
+            <li>
+              <a href={href}>{text}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          {navItems.map(({ href, text }) => (
+            <li>
+              <a href={href}>{text}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

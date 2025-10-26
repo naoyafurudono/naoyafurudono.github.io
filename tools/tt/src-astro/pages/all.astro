@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { listArticles } from '../lib/articles';
+
+const articles = await listArticles();
+---
+
+<BaseLayout title="すべての記事 | diary.nfurudono.com">
+  <h1>すべての記事</h1>
+  <ol>
+    {articles.map((article) => (
+      <li>
+        <article>
+          <div>
+            <a href={`/posts/${article.id}/`}>{article.title}</a>
+            <p>
+              <time>{article.date}</time>
+            </p>
+            <p>{article.desc}</p>
+          </div>
+        </article>
+      </li>
+    ))}
+  </ol>
+</BaseLayout>

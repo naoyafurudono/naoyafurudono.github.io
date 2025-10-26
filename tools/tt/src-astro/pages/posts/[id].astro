@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { listArticles, getArticle } from '../../lib/articles';
+import { Markdown } from '@astrojs/markdown-remark';
+
+export async function getStaticPaths() {
+  const articles = await listArticles();
+
+  return articles.map((article) => ({
+    params: { id: article.id },
+  }));
+}
+
+const { id } = Astro.params;
+const article = await getArticle(id);
+
+if (!article) {
+  return Astro.redirect('/404');
+}
+---
+
+<BaseLayout title={`${article.title} | diary.nfurudono.com`} description={article.desc}>
+  <article>
+    <h1>{article.title}</h1>
+    <time>{article.date}</time>
+    <div set:html={article.content} />
+  </article>
+</BaseLayout>

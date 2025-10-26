@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const commitHash = process.env.COMMIT_HASH || 'unknown';
+---
+
+<BaseLayout title="version | diary.nfurudono.com">
+  <h1>Version</h1>
+  <p>Commit: {commitHash}</p>
+</BaseLayout>

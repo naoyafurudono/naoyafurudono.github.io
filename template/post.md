@@ -1,6 +1,7 @@
 ---
 title: "{{ .Title }}"
 date: "{{ .Date }}"
+created: "{{ .Timestamp }}"
 author: "Naoya Furudono"
 draft: true
 tags:

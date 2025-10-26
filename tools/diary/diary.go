@@ -39,8 +39,8 @@ func main() {
 		RunE:  run,
 	}
 
-	rootCmd.Flags().StringVarP(&title, "title", "t", "", "Title of the diary entry")
-	rootCmd.Flags().StringVarP(&date, "date", "d", "", "Date of the diary entry (YYYY-MM-DD format)")
+	rootCmd.Flags().StringVarP(&title, "title", "t", "", "Title of the diary entry. If not provided, the date value will be used.")
+	rootCmd.Flags().StringVarP(&date, "date", "d", "", "Date of the diary entry (YYYY-MM-DD format). If not provided, the current date will be used.")
 
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)

@@ -47,7 +47,7 @@
     "@biomejs/biome": "^2.0.4",
     "@types/node": "^20",
     "@vercel/og": "^0.8.5",
-    "astro": "^5.15.1",
+    "astro": "^5.15.7",
     "typescript": "^5",
     "vitest": "^3.0.7"
   }

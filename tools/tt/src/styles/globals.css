@@ -112,6 +112,17 @@ main {
   margin: 2rem auto;
   padding: 0 1rem;
   line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+main p,
+main a,
+main li,
+main div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* レスポンシブ対応 */

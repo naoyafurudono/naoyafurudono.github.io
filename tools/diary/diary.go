@@ -38,6 +38,12 @@ func main() {
 		Short: "Create and open a diary entry",
 		Args:  cobra.MaximumNArgs(1),
 		RunE:  run,
+		ValidArgsFunction: func(cmd *cobra.Command, args []string, toComplete string) ([]string, cobra.ShellCompDirective) {
+			if len(args) != 0 {
+				return nil, cobra.ShellCompDirectiveNoFileComp
+			}
+			return getTemplateNames(), cobra.ShellCompDirectiveNoFileComp
+		},
 	}
 
 	rootCmd.Flags().StringVarP(&title, "title", "t", "", "Title of the diary entry. If not provided, the date value will be used.")
@@ -170,6 +176,19 @@ func loadConfig(configPath string) (Config, error) {
 	}
 
 	return config, nil
+}
+
+func getTemplateNames() []string {
+	config, err := loadConfig("diary.yaml")
+	if err != nil {
+		return nil
+	}
+
+	names := make([]string, 0, len(config))
+	for name := range config {
+		names = append(names, name)
+	}
+	return names
 }
 
 func (c *TemplateConfig) generateFilePath(date Date, title string, timestamp time.Time) (string, error) {

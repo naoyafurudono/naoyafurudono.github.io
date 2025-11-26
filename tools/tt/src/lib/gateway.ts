@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 // 一覧を返す
-import type { ListItem } from "mdast";
+import type { List, ListItem } from "mdast";
 import { render } from "./render";
 import { type Brand, hash, lexOrder } from "./util";
 
@@ -16,7 +16,8 @@ export type ArticleMeta = {
   draft: Draft;
   desc: string;
   unchecked: ListItem[];
-  // about: AboutSections;
+  rawBody: string;
+  toc: List | undefined;
 };
 export type Article = {
   content: Buffer;
@@ -59,7 +60,8 @@ export async function listArticles(directoryPaths: string[]): Promise<Article[]>
           draft: r.draft,
           desc: r.desc,
           unchecked: r.unchecked,
-          // about: r.about,
+          rawBody: r.rawBody,
+          toc: r.toc,
         };
       });
   });

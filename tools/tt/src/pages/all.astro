@@ -2,23 +2,10 @@
 import Layout from "@/layouts/Layout.astro";
 import { articleDirectoryPaths, postPath, withSiteTitle } from "@/lib/config";
 import { type Article, listArticles } from "@/lib/gateway";
-import { render } from "@/lib/render";
 import { lexOrder } from "@/lib/util";
 
 const articles: Article[] = await listArticles(articleDirectoryPaths);
-const renderedArticles = await Promise.all(
-  articles.map(async (article) => {
-    const rendered = await render(article);
-    return {
-      ...article,
-      rendered,
-    };
-  })
-);
-
-const sortedArticles = renderedArticles.toSorted((a, b) =>
-  -lexOrder(a.date, b.date)
-);
+const sortedArticles = articles.toSorted((a, b) => -lexOrder(a.date, b.date));
 
 const pageTitle = withSiteTitle("全ての記事");
 const description = "全ての記事を一つのページで表示します";
@@ -36,7 +23,7 @@ const description = "全ての記事を一つのページで表示します";
             </h2>
             <time>{article.date}</time>
           </header>
-          <div set:html={article.rendered.rawBody} />
+          <div set:html={article.rawBody} />
           <hr />
         </article>
       ))

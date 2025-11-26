@@ -2,7 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { articleDirectoryPaths, postUrl, siteTitle, withSiteTitle } from "@/lib/config";
 import { type ArticleID, findArticle, listArticles } from "@/lib/gateway";
-import { newRoot, type RenderResult, render, renderMdAst } from "@/lib/render";
+import { newRoot, renderMdAst } from "@/lib/render";
 
 export async function getStaticPaths() {
   const articles = await listArticles(articleDirectoryPaths);
@@ -20,12 +20,11 @@ if (!article) {
   return Astro.redirect("/404");
 }
 
-const rendered: RenderResult = await render(article);
-const toc = rendered.toc && (await renderMdAst(newRoot([rendered.toc])));
+const toc = article.toc && (await renderMdAst(newRoot([article.toc])));
 const { before, after } = article;
 
-const description = rendered.desc;
-const pageTitle = withSiteTitle(rendered.title);
+const description = article.desc;
+const pageTitle = withSiteTitle(article.title);
 ---
 
 <Layout title={pageTitle} description={description}>
@@ -152,10 +151,10 @@ const pageTitle = withSiteTitle(rendered.title);
   </style>
 
   <article>
-    <h1>{rendered.title}</h1>
-    <time>{rendered.date}</time>
+    <h1>{article.title}</h1>
+    <time>{article.date}</time>
     {toc && <div set:html={toc} />}
-    <div set:html={rendered.rawBody.toString()} />
+    <div set:html={article.rawBody} />
   </article>
   <nav class="article-navigation">
     <div class="nav-item nav-prev">

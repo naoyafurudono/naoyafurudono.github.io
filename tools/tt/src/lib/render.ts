@@ -19,17 +19,6 @@ import genTOC, {
   unchecked,
 } from "./plugin";
 
-// render結果のキャッシュ (contentのハッシュ -> RenderResult)
-const renderCache: Map<string, RenderResult> = new Map();
-
-function hashBuffer(buffer: Buffer): string {
-  let hash = 0;
-  for (let i = 0; i < buffer.length; i++) {
-    hash = (hash * 31 + buffer[i]) >>> 0;
-  }
-  return hash.toString();
-}
-
 export type RenderResult = {
   rawBody: string; // HTML形式での記事の内容
   date: On; // 日付
@@ -44,12 +33,6 @@ export type RenderResult = {
 // マークダウン記法で表現されたcontentをレンダーする。
 // マークダウンのヘッディングレベルnはHTMLのhn+1に対応する。
 export async function render({ content }: { content: Buffer }): Promise<RenderResult> {
-  const cacheKey = hashBuffer(content);
-  const cached = renderCache.get(cacheKey);
-  if (cached) {
-    return cached;
-  }
-
   const result = await unified()
     .use(remarkParse)
     .use(behead, { minDepth: 2 }) // headingの深さの最小を2にするやつ。"## hoge\n" みたいなmd行は深さ3になる。
@@ -77,7 +60,7 @@ export async function render({ content }: { content: Buffer }): Promise<RenderRe
     title: string;
     draft: boolean;
   };
-  const renderResult: RenderResult = {
+  return {
     rawBody: result.toString(),
 
     // frontmatter
@@ -93,9 +76,6 @@ export async function render({ content }: { content: Buffer }): Promise<RenderRe
     // about: result.data.about as AboutSections,
     toc: result.data.toc as List | undefined,
   };
-
-  renderCache.set(cacheKey, renderResult);
-  return renderResult;
 }
 
 export async function renderMdAst(ast: Root): Promise<string> {

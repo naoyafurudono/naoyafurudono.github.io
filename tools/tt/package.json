@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "astro build",
-    "check": "biome ci . && npm run test",
+    "check": "biome ci . && astro check && npm run test",
     "check:write": "biome check --write .",
     "dev": "astro dev",
     "fix": "npm run lint:fix && npm run format:write && npm run check:write",

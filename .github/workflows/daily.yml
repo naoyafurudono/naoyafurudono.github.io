@@ -11,9 +11,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-24.04
-    name: Build
+    name: Deploy
     defaults:
       run:
         working-directory: tools/tt
@@ -54,61 +54,20 @@ jobs:
           SHOW_DATE_ON_TOP_PAGE: "true"
           COMMIT_HASH: ${{ env.COMMIT_HASH }}
 
-      - name: Upload diary artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: out-diary
-          path: tools/tt/out-diary
-          retention-days: 1
+      - name: Deploy to pages (parallel)
+        working-directory: tools/tt
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          npm install -g wrangler
+          wrangler pages deploy out-diary --commit-dirty=true --project-name diary-nfurudono &
+          PID1=$!
+          wrangler pages deploy out-dev --commit-dirty=true --project-name dev-nfurudono &
+          PID2=$!
+          wait $PID1 $PID2
 
-      - name: Upload dev artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: out-dev
-          path: tools/tt/out-dev
-          retention-days: 1
-
-  deploy-diary:
-    runs-on: ubuntu-24.04
-    needs: build
-    name: Deploy Diary
-    steps:
-      - name: Download diary artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: out-diary
-          path: out-diary
-
-      - name: Deploy to diary pages
-        uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy out-diary --commit-dirty=true --project-name diary-nfurudono
-
-  deploy-dev:
-    runs-on: ubuntu-24.04
-    needs: build
-    name: Deploy Dev
-    steps:
-      - name: Download dev artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: out-dev
-          path: out-dev
-
-      - name: Deploy to dev pages
-        uses: cloudflare/wrangler-action@6d58852c35a27e6034745c5d0bc373d739014f7f # v3.13.0
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy out-dev --commit-dirty=true --project-name dev-nfurudono
-
-  purge-cache:
-    runs-on: ubuntu-24.04
-    needs: [deploy-diary, deploy-dev]
-    if: always()
-    name: Purge Cache
-    steps:
       - name: Purge All Cache
+        if: always()
         run: |
           curl https://api.cloudflare.com/client/v4/zones/${{ secrets.ZONE_ID }}/purge_cache \
               -H 'Content-Type: application/json' \

@@ -53,7 +53,7 @@
     "@astrojs/node": "^9.5.0",
     "@biomejs/biome": "^2.0.4",
     "@types/node": "^20",
-    "astro": "^5.15.1",
+    "astro": "^5.16.1",
     "typescript": "^5",
     "vitest": "^3.0.7",
     "wrangler": "^4.51.0"

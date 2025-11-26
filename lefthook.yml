@@ -1,0 +1,5 @@
+pre-push:
+  commands:
+    deploy:
+      root: tools/tt
+      run: npm run deploy:all

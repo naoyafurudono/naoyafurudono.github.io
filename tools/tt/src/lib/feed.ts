@@ -1,8 +1,8 @@
 import { Feed } from "feed";
 import { baseUrl, siteTitle } from "./config";
-import type { ArticleMeta } from "./gateway";
+import type { Article } from "./gateway";
 
-export function generateFeed(articles: ArticleMeta[]) {
+export function generateFeed(articles: Article[]) {
   const feed = new Feed({
     title: siteTitle,
     description: "これは日記です",

@@ -6,25 +6,23 @@ import { render } from "./render";
 import { type Brand, hash, lexOrder } from "./util";
 
 export type ArticleID = Brand<string, "article">;
-export type On = Brand<string, "publish on">;
-export type Draft = Brand<boolean, "draft">;
-export type ArticleMeta = {
+export type PublishedDate = Brand<string, "published date">;
+
+export type Article = {
   id: ArticleID;
   path: string;
-  date: On;
+  date: PublishedDate;
   title: string;
-  draft: Draft;
+  draft: boolean;
   desc: string;
   unchecked: ListItem[];
   rawBody: string;
   toc: List | undefined;
-};
-export type Article = {
   before?: ArticleID;
   after?: ArticleID;
-} & ArticleMeta;
+};
 
-export function isDraft(a: ArticleMeta): boolean {
+export function isDraft(a: Article): boolean {
   return !!a.draft;
 }
 

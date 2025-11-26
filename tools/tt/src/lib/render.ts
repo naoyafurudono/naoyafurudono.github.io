@@ -10,7 +10,7 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import * as yaml from "yaml";
-import type { Draft, On } from "./gateway";
+import type { PublishedDate } from "./gateway";
 import genTOC, {
   addHeadingIds,
   ignoreNewLine,
@@ -21,12 +21,11 @@ import genTOC, {
 
 export type RenderResult = {
   rawBody: string; // HTML形式での記事の内容
-  date: On; // 日付
+  date: PublishedDate; // 日付
   title: string; // タイトル
-  draft: Draft; // 下書きかどうか
+  draft: boolean; // 下書きかどうか
   desc: string; // 概要
   unchecked: ListItem[]; // チェックリストのマークダウン表現
-  // about: AboutSections;
   toc: List | undefined; // 目次
 };
 
@@ -64,9 +63,9 @@ export async function render({ content }: { content: Buffer }): Promise<RenderRe
     rawBody: result.toString(),
 
     // frontmatter
-    date: frontmater.date as string as On,
-    title: frontmater.title as string,
-    draft: frontmater.draft as boolean as Draft,
+    date: frontmater.date as PublishedDate,
+    title: frontmater.title,
+    draft: !!frontmater.draft,
 
     // by rehypeExtractExcerpt
     desc: result.data.excerpt as string,

@@ -10,7 +10,7 @@
     "check:write": "biome check --write .",
     "deploy:diary": "npm run build:diary && wrangler pages deploy out --commit-dirty=true --project-name diary-nfurudono",
     "deploy:dev": "npm run build:dev && wrangler pages deploy out --commit-dirty=true --project-name dev-nfurudono",
-    "deploy:all": "npm run build:diary && mv out out-diary && npm run build:dev && mv out out-dev && wrangler pages deploy out-diary --commit-dirty=true --project-name diary-nfurudono & wrangler pages deploy out-dev --commit-dirty=true --project-name dev-nfurudono & wait",
+    "deploy:all": "npm run build:diary && mv out out-diary && npm run build:dev && mv out out-dev && (wrangler pages deploy out-diary --commit-dirty=true --project-name diary-nfurudono & wrangler pages deploy out-dev --commit-dirty=true --project-name dev-nfurudono & wait) && rm -rf out-diary out-dev",
     "dev": "astro dev",
     "fix": "npm run lint:fix && npm run format:write && npm run check:write",
     "format": "biome format .",

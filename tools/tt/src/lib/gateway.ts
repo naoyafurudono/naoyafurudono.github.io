@@ -20,7 +20,6 @@ export type ArticleMeta = {
   toc: List | undefined;
 };
 export type Article = {
-  content: Buffer;
   before?: ArticleID;
   after?: ArticleID;
 } & ArticleMeta;
@@ -56,7 +55,6 @@ export async function listArticles(directoryPaths: string[]): Promise<Article[]>
           path: fpath,
           title: r.title,
           date: r.date,
-          content: content,
           draft: r.draft,
           desc: r.desc,
           unchecked: r.unchecked,
@@ -84,14 +82,8 @@ export async function findArticle({
   articleId: ArticleID;
   directoryPaths: string[];
 }): Promise<Article | null> {
-  const m = await listArticles(directoryPaths).then((as) =>
-    as.find((v) => {
-      return v.id === articleId;
-    })
+  const article = await listArticles(directoryPaths).then((as) =>
+    as.find((v) => v.id === articleId)
   );
-  if (!m) {
-    return null;
-  }
-  const content = fs.readFileSync(m.path);
-  return { ...m, content };
+  return article ?? null;
 }

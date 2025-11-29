@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: file-server
+    runtime: go
+    rootDir: tools/st
+    buildCommand: go build -o server main.go
+    startCommand: ./server
+    envVars:
+      - key: FILES_DIR
+        value: ./files
+    # Health check path
+    healthCheckPath: /health

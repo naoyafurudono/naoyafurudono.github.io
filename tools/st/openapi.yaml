@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: Simple file serving API
 paths:
-  /files/{filename}:
+  /posts/{filename}:
     get:
       operationId: getFile
       summary: Get a file by filename
@@ -25,6 +25,42 @@ paths:
                 format: binary
         '404':
           description: File not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      operationId: uploadFile
+      summary: Upload a file
+      parameters:
+        - name: filename
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Name of the file to upload
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '201':
+          description: File uploaded successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadResponse'
+        '400':
+          description: Bad request
           content:
             application/json:
               schema:
@@ -58,4 +94,17 @@ components:
         message:
           type: string
       required:
+        - message
+    UploadResponse:
+      type: object
+      properties:
+        filename:
+          type: string
+        size:
+          type: integer
+        message:
+          type: string
+      required:
+        - filename
+        - size
         - message

@@ -79,3 +79,69 @@ func decodeGetFileParams(args [1]string, argsEscaped bool, r *http.Request) (par
 	}
 	return params, nil
 }
+
+// UploadFileParams is parameters of uploadFile operation.
+type UploadFileParams struct {
+	// Name of the file to upload.
+	Filename string
+}
+
+func unpackUploadFileParams(packed middleware.Parameters) (params UploadFileParams) {
+	{
+		key := middleware.ParameterKey{
+			Name: "filename",
+			In:   "path",
+		}
+		params.Filename = packed[key].(string)
+	}
+	return params
+}
+
+func decodeUploadFileParams(args [1]string, argsEscaped bool, r *http.Request) (params UploadFileParams, _ error) {
+	// Decode path: filename.
+	if err := func() error {
+		param := args[0]
+		if argsEscaped {
+			unescaped, err := url.PathUnescape(args[0])
+			if err != nil {
+				return errors.Wrap(err, "unescape path")
+			}
+			param = unescaped
+		}
+		if len(param) > 0 {
+			d := uri.NewPathDecoder(uri.PathDecoderConfig{
+				Param:   "filename",
+				Value:   param,
+				Style:   uri.PathStyleSimple,
+				Explode: false,
+			})
+
+			if err := func() error {
+				val, err := d.DecodeValue()
+				if err != nil {
+					return err
+				}
+
+				c, err := conv.ToString(val)
+				if err != nil {
+					return err
+				}
+
+				params.Filename = c
+				return nil
+			}(); err != nil {
+				return err
+			}
+		} else {
+			return validate.ErrFieldRequired
+		}
+		return nil
+	}(); err != nil {
+		return params, &ogenerrors.DecodeParamError{
+			Name: "filename",
+			In:   "path",
+			Err:  err,
+		}
+	}
+	return params, nil
+}

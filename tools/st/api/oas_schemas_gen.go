@@ -104,3 +104,64 @@ func (o OptString) Or(d string) string {
 	}
 	return d
 }
+
+type UploadFileBadRequest Error
+
+func (*UploadFileBadRequest) uploadFileRes() {}
+
+type UploadFileInternalServerError Error
+
+func (*UploadFileInternalServerError) uploadFileRes() {}
+
+type UploadFileReq struct {
+	Data io.Reader
+}
+
+// Read reads data from the Data reader.
+//
+// Kept to satisfy the io.Reader interface.
+func (s UploadFileReq) Read(p []byte) (n int, err error) {
+	if s.Data == nil {
+		return 0, io.EOF
+	}
+	return s.Data.Read(p)
+}
+
+// Ref: #/components/schemas/UploadResponse
+type UploadResponse struct {
+	Filename string `json:"filename"`
+	Size     int    `json:"size"`
+	Message  string `json:"message"`
+}
+
+// GetFilename returns the value of Filename.
+func (s *UploadResponse) GetFilename() string {
+	return s.Filename
+}
+
+// GetSize returns the value of Size.
+func (s *UploadResponse) GetSize() int {
+	return s.Size
+}
+
+// GetMessage returns the value of Message.
+func (s *UploadResponse) GetMessage() string {
+	return s.Message
+}
+
+// SetFilename sets the value of Filename.
+func (s *UploadResponse) SetFilename(val string) {
+	s.Filename = val
+}
+
+// SetSize sets the value of Size.
+func (s *UploadResponse) SetSize(val int) {
+	s.Size = val
+}
+
+// SetMessage sets the value of Message.
+func (s *UploadResponse) SetMessage(val string) {
+	s.Message = val
+}
+
+func (*UploadResponse) uploadFileRes() {}

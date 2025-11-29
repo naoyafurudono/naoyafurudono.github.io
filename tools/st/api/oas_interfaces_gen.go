@@ -4,3 +4,7 @@ package api
 type GetFileRes interface {
 	getFileRes()
 }
+
+type UploadFileRes interface {
+	uploadFileRes()
+}

@@ -12,7 +12,7 @@ type Handler interface {
 	//
 	// Get a file by filename.
 	//
-	// GET /files/{filename}
+	// GET /posts/{filename}
 	GetFile(ctx context.Context, params GetFileParams) (GetFileRes, error)
 	// Health implements health operation.
 	//
@@ -20,6 +20,12 @@ type Handler interface {
 	//
 	// GET /health
 	Health(ctx context.Context) (*HealthOK, error)
+	// UploadFile implements uploadFile operation.
+	//
+	// Upload a file.
+	//
+	// POST /posts/{filename}
+	UploadFile(ctx context.Context, req UploadFileReq, params UploadFileParams) (UploadFileRes, error)
 }
 
 // Server implements http server based on OpenAPI v3 specification and

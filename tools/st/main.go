@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -64,6 +65,64 @@ func (s *FileServer) GetFile(ctx context.Context, params api.GetFileParams) (api
 	return &api.GetFileOK{Data: bytes.NewReader(data)}, nil
 }
 
+// UploadFile implements the uploadFile operation.
+func (s *FileServer) UploadFile(ctx context.Context, req api.UploadFileReq, params api.UploadFileParams) (api.UploadFileRes, error) {
+	filename := params.Filename
+
+	// Security: prevent directory traversal
+	if filepath.IsAbs(filename) || filepath.Clean(filename) != filename {
+		return &api.UploadFileBadRequest{
+			Message: "Invalid filename",
+		}, nil
+	}
+
+	filePath := filepath.Join(s.filesDir, filename)
+
+	// Security: prevent directory traversal
+	absPath, err := filepath.Abs(filePath)
+	if err != nil {
+		return &api.UploadFileInternalServerError{
+			Message: "Internal server error",
+		}, nil
+	}
+
+	absFilesDir, err := filepath.Abs(s.filesDir)
+	if err != nil {
+		return &api.UploadFileInternalServerError{
+			Message: "Internal server error",
+		}, nil
+	}
+
+	// Check if the resolved path is within the files directory
+	relPath, err := filepath.Rel(absFilesDir, absPath)
+	if err != nil || len(relPath) > 0 && relPath[0] == '.' {
+		return &api.UploadFileBadRequest{
+			Message: "Invalid filename",
+		}, nil
+	}
+
+	// Read data from request
+	data, err := io.ReadAll(req.Data)
+	if err != nil {
+		return &api.UploadFileInternalServerError{
+			Message: "Failed to read request body",
+		}, nil
+	}
+
+	// Write file
+	if err := os.WriteFile(absPath, data, 0644); err != nil {
+		return &api.UploadFileInternalServerError{
+			Message: "Failed to write file",
+		}, nil
+	}
+
+	return &api.UploadResponse{
+		Filename: filename,
+		Size:     len(data),
+		Message:  "File uploaded successfully",
+	}, nil
+}
+
 // Health implements the health check operation.
 func (s *FileServer) Health(ctx context.Context) (*api.HealthOK, error) {
 	return &api.HealthOK{Status: api.NewOptString("ok")}, nil
@@ -76,19 +135,19 @@ func main() {
 		port = "8080"
 	}
 
-	// Files directory
-	filesDir := os.Getenv("FILES_DIR")
-	if filesDir == "" {
-		filesDir = "./files"
+	// Posts directory
+	postsDir := os.Getenv("POSTS_DIR")
+	if postsDir == "" {
+		postsDir = "./posts"
 	}
 
-	// Ensure files directory exists
-	if err := os.MkdirAll(filesDir, 0755); err != nil {
-		log.Fatalf("Failed to create files directory: %v", err)
+	// Ensure posts directory exists
+	if err := os.MkdirAll(postsDir, 0755); err != nil {
+		log.Fatalf("Failed to create posts directory: %v", err)
 	}
 
 	// Create server
-	fileServer := NewFileServer(filesDir)
+	fileServer := NewFileServer(postsDir)
 	srv, err := api.NewServer(fileServer)
 	if err != nil {
 		log.Fatalf("Failed to create server: %v", err)
@@ -96,7 +155,7 @@ func main() {
 
 	// Start HTTP server
 	addr := fmt.Sprintf(":%s", port)
-	log.Printf("Starting server on %s, serving files from %s", addr, filesDir)
+	log.Printf("Starting server on %s, serving posts from %s", addr, postsDir)
 	if err := http.ListenAndServe(addr, srv); err != nil {
 		log.Fatalf("Server error: %v", err)
 	}

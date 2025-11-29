@@ -31,7 +31,7 @@ type Invoker interface {
 	//
 	// Get a file by filename.
 	//
-	// GET /files/{filename}
+	// GET /posts/{filename}
 	GetFile(ctx context.Context, params GetFileParams) (GetFileRes, error)
 	// Health invokes health operation.
 	//
@@ -39,6 +39,12 @@ type Invoker interface {
 	//
 	// GET /health
 	Health(ctx context.Context) (*HealthOK, error)
+	// UploadFile invokes uploadFile operation.
+	//
+	// Upload a file.
+	//
+	// POST /posts/{filename}
+	UploadFile(ctx context.Context, request UploadFileReq, params UploadFileParams) (UploadFileRes, error)
 }
 
 // Client implements OAS client.
@@ -88,7 +94,7 @@ func (c *Client) requestURL(ctx context.Context) *url.URL {
 //
 // Get a file by filename.
 //
-// GET /files/{filename}
+// GET /posts/{filename}
 func (c *Client) GetFile(ctx context.Context, params GetFileParams) (GetFileRes, error) {
 	res, err := c.sendGetFile(ctx, params)
 	return res, err
@@ -98,7 +104,7 @@ func (c *Client) sendGetFile(ctx context.Context, params GetFileParams) (res Get
 	otelAttrs := []attribute.KeyValue{
 		otelogen.OperationID("getFile"),
 		semconv.HTTPRequestMethodKey.String("GET"),
-		semconv.URLTemplateKey.String("/files/{filename}"),
+		semconv.URLTemplateKey.String("/posts/{filename}"),
 	}
 	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
 
@@ -132,7 +138,7 @@ func (c *Client) sendGetFile(ctx context.Context, params GetFileParams) (res Get
 	stage = "BuildURL"
 	u := uri.Clone(c.requestURL(ctx))
 	var pathParts [2]string
-	pathParts[0] = "/files/"
+	pathParts[0] = "/posts/"
 	{
 		// Encode "filename" parameter.
 		e := uri.NewPathEncoder(uri.PathEncoderConfig{
@@ -241,6 +247,100 @@ func (c *Client) sendHealth(ctx context.Context) (res *HealthOK, err error) {
 
 	stage = "DecodeResponse"
 	result, err := decodeHealthResponse(resp)
+	if err != nil {
+		return res, errors.Wrap(err, "decode response")
+	}
+
+	return result, nil
+}
+
+// UploadFile invokes uploadFile operation.
+//
+// Upload a file.
+//
+// POST /posts/{filename}
+func (c *Client) UploadFile(ctx context.Context, request UploadFileReq, params UploadFileParams) (UploadFileRes, error) {
+	res, err := c.sendUploadFile(ctx, request, params)
+	return res, err
+}
+
+func (c *Client) sendUploadFile(ctx context.Context, request UploadFileReq, params UploadFileParams) (res UploadFileRes, err error) {
+	otelAttrs := []attribute.KeyValue{
+		otelogen.OperationID("uploadFile"),
+		semconv.HTTPRequestMethodKey.String("POST"),
+		semconv.URLTemplateKey.String("/posts/{filename}"),
+	}
+	otelAttrs = append(otelAttrs, c.cfg.Attributes...)
+
+	// Run stopwatch.
+	startTime := time.Now()
+	defer func() {
+		// Use floating point division here for higher precision (instead of Millisecond method).
+		elapsedDuration := time.Since(startTime)
+		c.duration.Record(ctx, float64(elapsedDuration)/float64(time.Millisecond), metric.WithAttributes(otelAttrs...))
+	}()
+
+	// Increment request counter.
+	c.requests.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
+
+	// Start a span for this request.
+	ctx, span := c.cfg.Tracer.Start(ctx, UploadFileOperation,
+		trace.WithAttributes(otelAttrs...),
+		clientSpanKind,
+	)
+	// Track stage for error reporting.
+	var stage string
+	defer func() {
+		if err != nil {
+			span.RecordError(err)
+			span.SetStatus(codes.Error, stage)
+			c.errors.Add(ctx, 1, metric.WithAttributes(otelAttrs...))
+		}
+		span.End()
+	}()
+
+	stage = "BuildURL"
+	u := uri.Clone(c.requestURL(ctx))
+	var pathParts [2]string
+	pathParts[0] = "/posts/"
+	{
+		// Encode "filename" parameter.
+		e := uri.NewPathEncoder(uri.PathEncoderConfig{
+			Param:   "filename",
+			Style:   uri.PathStyleSimple,
+			Explode: false,
+		})
+		if err := func() error {
+			return e.EncodeValue(conv.StringToString(params.Filename))
+		}(); err != nil {
+			return res, errors.Wrap(err, "encode path")
+		}
+		encoded, err := e.Result()
+		if err != nil {
+			return res, errors.Wrap(err, "encode path")
+		}
+		pathParts[1] = encoded
+	}
+	uri.AddPathParts(u, pathParts[:]...)
+
+	stage = "EncodeRequest"
+	r, err := ht.NewRequest(ctx, "POST", u)
+	if err != nil {
+		return res, errors.Wrap(err, "create request")
+	}
+	if err := encodeUploadFileRequest(request, r); err != nil {
+		return res, errors.Wrap(err, "encode request")
+	}
+
+	stage = "SendRequest"
+	resp, err := c.cfg.Client.Do(r)
+	if err != nil {
+		return res, errors.Wrap(err, "do request")
+	}
+	defer resp.Body.Close()
+
+	stage = "DecodeResponse"
+	result, err := decodeUploadFileResponse(resp)
 	if err != nil {
 		return res, errors.Wrap(err, "decode response")
 	}

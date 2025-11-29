@@ -17,7 +17,7 @@ var _ Handler = UnimplementedHandler{}
 //
 // Get a file by filename.
 //
-// GET /files/{filename}
+// GET /posts/{filename}
 func (UnimplementedHandler) GetFile(ctx context.Context, params GetFileParams) (r GetFileRes, _ error) {
 	return r, ht.ErrNotImplemented
 }
@@ -28,5 +28,14 @@ func (UnimplementedHandler) GetFile(ctx context.Context, params GetFileParams) (
 //
 // GET /health
 func (UnimplementedHandler) Health(ctx context.Context) (r *HealthOK, _ error) {
+	return r, ht.ErrNotImplemented
+}
+
+// UploadFile implements uploadFile operation.
+//
+// Upload a file.
+//
+// POST /posts/{filename}
+func (UnimplementedHandler) UploadFile(ctx context.Context, req UploadFileReq, params UploadFileParams) (r UploadFileRes, _ error) {
 	return r, ht.ErrNotImplemented
 }

@@ -4,11 +4,11 @@ services:
     name: file-server
     runtime: go
     rootDir: tools/st
-    buildCommand: go build -o server main.go
+    buildCommand: make build
     plan: free
     startCommand: ./server
     envVars:
-      - key: FILES_DIR
-        value: ./files
+      - key: POSTS_DIR
+        value: ./posts
     # Health check path
     healthCheckPath: /health

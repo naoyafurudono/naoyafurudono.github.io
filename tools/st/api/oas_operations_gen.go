@@ -6,6 +6,7 @@ package api
 type OperationName = string
 
 const (
-	GetFileOperation OperationName = "GetFile"
-	HealthOperation  OperationName = "Health"
+	GetFileOperation    OperationName = "GetFile"
+	HealthOperation     OperationName = "Health"
+	UploadFileOperation OperationName = "UploadFile"
 )

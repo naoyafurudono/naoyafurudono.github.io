@@ -61,9 +61,29 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 				break
 			}
 			switch elem[0] {
-			case 'f': // Prefix: "files/"
+			case 'h': // Prefix: "health"
 
-				if l := len("files/"); len(elem) >= l && elem[0:l] == "files/" {
+				if l := len("health"); len(elem) >= l && elem[0:l] == "health" {
+					elem = elem[l:]
+				} else {
+					break
+				}
+
+				if len(elem) == 0 {
+					// Leaf node.
+					switch r.Method {
+					case "GET":
+						s.handleHealthRequest([0]string{}, elemIsEscaped, w, r)
+					default:
+						s.notAllowed(w, r, "GET")
+					}
+
+					return
+				}
+
+			case 'p': // Prefix: "posts/"
+
+				if l := len("posts/"); len(elem) >= l && elem[0:l] == "posts/" {
 					elem = elem[l:]
 				} else {
 					break
@@ -85,28 +105,12 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 						s.handleGetFileRequest([1]string{
 							args[0],
 						}, elemIsEscaped, w, r)
+					case "POST":
+						s.handleUploadFileRequest([1]string{
+							args[0],
+						}, elemIsEscaped, w, r)
 					default:
-						s.notAllowed(w, r, "GET")
-					}
-
-					return
-				}
-
-			case 'h': // Prefix: "health"
-
-				if l := len("health"); len(elem) >= l && elem[0:l] == "health" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch r.Method {
-					case "GET":
-						s.handleHealthRequest([0]string{}, elemIsEscaped, w, r)
-					default:
-						s.notAllowed(w, r, "GET")
+						s.notAllowed(w, r, "GET,POST")
 					}
 
 					return
@@ -212,9 +216,34 @@ func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
 				break
 			}
 			switch elem[0] {
-			case 'f': // Prefix: "files/"
+			case 'h': // Prefix: "health"
 
-				if l := len("files/"); len(elem) >= l && elem[0:l] == "files/" {
+				if l := len("health"); len(elem) >= l && elem[0:l] == "health" {
+					elem = elem[l:]
+				} else {
+					break
+				}
+
+				if len(elem) == 0 {
+					// Leaf node.
+					switch method {
+					case "GET":
+						r.name = HealthOperation
+						r.summary = "Health check endpoint"
+						r.operationID = "health"
+						r.operationGroup = ""
+						r.pathPattern = "/health"
+						r.args = args
+						r.count = 0
+						return r, true
+					default:
+						return
+					}
+				}
+
+			case 'p': // Prefix: "posts/"
+
+				if l := len("posts/"); len(elem) >= l && elem[0:l] == "posts/" {
 					elem = elem[l:]
 				} else {
 					break
@@ -237,34 +266,18 @@ func (s *Server) FindPath(method string, u *url.URL) (r Route, _ bool) {
 						r.summary = "Get a file by filename"
 						r.operationID = "getFile"
 						r.operationGroup = ""
-						r.pathPattern = "/files/{filename}"
+						r.pathPattern = "/posts/{filename}"
 						r.args = args
 						r.count = 1
 						return r, true
-					default:
-						return
-					}
-				}
-
-			case 'h': // Prefix: "health"
-
-				if l := len("health"); len(elem) >= l && elem[0:l] == "health" {
-					elem = elem[l:]
-				} else {
-					break
-				}
-
-				if len(elem) == 0 {
-					// Leaf node.
-					switch method {
-					case "GET":
-						r.name = HealthOperation
-						r.summary = "Health check endpoint"
-						r.operationID = "health"
+					case "POST":
+						r.name = UploadFileOperation
+						r.summary = "Upload a file"
+						r.operationID = "uploadFile"
 						r.operationGroup = ""
-						r.pathPattern = "/health"
+						r.pathPattern = "/posts/{filename}"
 						r.args = args
-						r.count = 0
+						r.count = 1
 						return r, true
 					default:
 						return

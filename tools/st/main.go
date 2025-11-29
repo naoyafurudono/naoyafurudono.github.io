@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"fmt"
 	"log"
@@ -60,22 +61,12 @@ func (s *FileServer) GetFile(ctx context.Context, params api.GetFileParams) (api
 		}, nil
 	}
 
-	return &api.GetFileOK{Data: api.NewOptGetFileOKData(data)}, nil
+	return &api.GetFileOK{Data: bytes.NewReader(data)}, nil
 }
 
 // Health implements the health check operation.
 func (s *FileServer) Health(ctx context.Context) (*api.HealthOK, error) {
-	return &api.HealthOK{Status: "ok"}, nil
-}
-
-// NewError creates a new error response.
-func (s *FileServer) NewError(ctx context.Context, err error) *api.ErrorStatusCode {
-	return &api.ErrorStatusCode{
-		StatusCode: http.StatusInternalServerError,
-		Response: api.Error{
-			Message: err.Error(),
-		},
-	}
+	return &api.HealthOK{Status: api.NewOptString("ok")}, nil
 }
 
 func main() {

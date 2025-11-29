@@ -4,7 +4,7 @@ services:
     runtime: go
     rootDir: tools/st
     buildCommand: go build -o server main.go
-    plan: starter  # Hobby plan (free tier)
+    plan: free
     startCommand: ./server
     envVars:
       - key: FILES_DIR

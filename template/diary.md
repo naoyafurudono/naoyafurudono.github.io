@@ -5,9 +5,9 @@ created: "{{ .Timestamp }}"
 author: "Naoya Furudono"
 draft: true
 tags:
+  - daily
   - book
   - cock
-  - daily
   - food
   - home
   - idea

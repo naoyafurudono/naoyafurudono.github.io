@@ -2,10 +2,9 @@ pre-push:
   piped: true
   commands:
     check:
-      root: tools/tt
-      run: npm run check
+      run: (cd tools/tt; npm run check)
       priority: 1
     deploy:
       root: tools/tt
-      run: npm run deploy:all
+      run: (cd tools/tt; npm run deploy:all)
       priority: 2

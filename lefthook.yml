@@ -1,4 +1,0 @@
-pre-push:
-  commands:
-    check:
-      run: (cd tools/tt && npm run check && npm run deploy:all)

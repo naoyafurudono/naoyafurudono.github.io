@@ -6,7 +6,7 @@ draft: true
 tags:
   - alcohol
   - book
-  - cock
+  - cooking
   - daily
   - food
   - home

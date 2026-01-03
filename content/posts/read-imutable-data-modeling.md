@@ -13,7 +13,7 @@ tags:
     - "idea"
     - "python"
     - "tool"
-    - "cock"
+    - "cooking"
 ---
 
 # WebDB Pressのデータモデリングの記事を読んだ

@@ -7,7 +7,7 @@ draft: true
 tags:
   - daily
   - book
-  - cock
+  - cooking
   - food
   - home
   - idea

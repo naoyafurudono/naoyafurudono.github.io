@@ -60,3 +60,17 @@ tools/
 - **Environment-driven builds**: Same codebase builds different sites via `ARTICLE_DIRECTORY_PATHS` and `SITE_TITLE` env vars
 - **Branded types**: TypeScript branded types (`ArticleID`, `PublishedDate`) for type safety in `lib/`
 - **Unified/Remark pipeline**: Custom markdown processing with TOC generation and heading ID extraction
+
+## Creating Articles
+
+Always use the `diary` CLI to create new article files from templates. Do not create markdown files directly.
+
+```bash
+# Create daily entry (uses default template)
+diary
+
+# Create technical post
+diary post
+```
+
+The CLI generates files with proper frontmatter from templates defined in `diary.yaml`. After generation, edit the file to add content.

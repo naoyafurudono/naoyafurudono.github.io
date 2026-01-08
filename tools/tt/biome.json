@@ -6,19 +6,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": [
-      "**",
-      "!**/node_modules",
-      "!**/.next",
-      "!**/.astro",
-      "!**/.claude",
-      "!**/out",
-      "!**/dist",
-      "!**/build",
-      "!**/.wrangler",
-      "!**/.git",
-      "!**/*.astro"
-    ]
+    "includes": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.json", "**/*.css", "!.astro", "!.claude"]
   },
   "formatter": {
     "enabled": true,

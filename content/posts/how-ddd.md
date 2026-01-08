@@ -6,7 +6,7 @@ author: "Naoya Furudono"
 draft: true
 tags:
   - book
-  - cock
+  - cooking
   - daily
   - food
   - home

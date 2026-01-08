@@ -6,7 +6,7 @@ draft: false
 tags:
   - "daily"
   - "idea"
-  - "cock"
+  - "cooking"
 ---
 
 この記事は僕と生成AIとの対話です。

@@ -13,7 +13,7 @@ tags:
   - "idea"
   - "python"
   - "tool"
-  - "cock"
+  - "cooking"
 ---
 
 ここでは僕の専門性を説明します。

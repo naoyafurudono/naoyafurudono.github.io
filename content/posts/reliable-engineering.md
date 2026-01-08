@@ -13,7 +13,7 @@ tags:
     - "idea"
     - "python"
     - "tool"
-    - "cock"
+    - "cooking"
 ---
 
 信頼できるソフトウェア開発を僕の軸にしたい。

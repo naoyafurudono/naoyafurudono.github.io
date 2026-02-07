@@ -16,6 +16,7 @@ import genTOC, {
   ignoreNewLine,
   putIDOnTODOItem,
   rehypeReferredElement,
+  remarkLinkCard,
   unchecked,
 } from "./plugin";
 
@@ -42,6 +43,7 @@ export async function render({ content }: { content: Buffer }): Promise<RenderRe
     .use(remarkFrontmatter, [{ type: "yaml", marker: "-", anywhere: false }])
     .use(remarkExtractFrontmatter, { yaml: yaml.parse, name: "frontmatter" })
     .use(remarkGfm)
+    .use(remarkLinkCard)
     .use(ignoreNewLine)
     .use(addHeadingIds)
     .use(genTOC)

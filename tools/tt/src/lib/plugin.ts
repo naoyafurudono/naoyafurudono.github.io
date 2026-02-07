@@ -1,12 +1,13 @@
 import * as crypto from "node:crypto";
 import type { Element } from "hast";
-import type { Heading, ListItem, PhrasingContent, Root } from "mdast";
+import type { Heading, Html, Link, ListItem, Paragraph, PhrasingContent, Root } from "mdast";
 import { findAndReplace } from "mdast-util-find-and-replace";
 import { type Result, toc } from "mdast-util-toc";
 import slugify from "slugify";
-import type { Node } from "unist";
+import type { Node, Parent } from "unist";
 import { visit } from "unist-util-visit";
 import type { VFile } from "vfile";
+import { fetchOGP } from "./ogp";
 
 export const ignoreNewLine = () => {
   return (tree: Root, _file: VFile) => {
@@ -142,3 +143,80 @@ export const addHeadingIds = () => {
     });
   };
 };
+
+// 段落内の単独リンクをOGPカードに変換するプラグイン
+export const remarkLinkCard = () => {
+  return async (tree: Root, _file: VFile) => {
+    // 変換対象のノードを収集
+    const replacements: { parent: Parent; index: number; url: string }[] = [];
+
+    visit(tree, "paragraph", (node: Paragraph, index, parent) => {
+      if (parent === null || index === undefined) return;
+
+      // childrenが1つだけで、それがlinkノードの場合のみ処理
+      if (node.children.length === 1 && node.children[0].type === "link") {
+        const linkNode = node.children[0] as Link;
+        // リンクのテキストがURLそのものか、空の場合のみカード化
+        // （テキスト付きリンクは通常のリンクとして扱う）
+        const linkText = linkNode.children
+          .filter((c) => c.type === "text")
+          .map((c) => c.value)
+          .join("");
+
+        if (linkText === linkNode.url || linkText === "") {
+          replacements.push({
+            parent: parent as Parent,
+            index,
+            url: linkNode.url,
+          });
+        }
+      }
+    });
+
+    // 並列でOGP情報を取得
+    const ogpResults = await Promise.all(
+      replacements.map(async ({ url }) => {
+        const ogp = await fetchOGP(url);
+        return { url, ogp };
+      })
+    );
+
+    // ノードを置換（後ろから処理してインデックスのずれを防ぐ）
+    for (let i = replacements.length - 1; i >= 0; i--) {
+      const { parent, index, url } = replacements[i];
+      const { ogp } = ogpResults[i];
+
+      if (ogp) {
+        const imageHtml = ogp.image
+          ? `<div class="ogp-card-image"><img src="${escapeHtml(ogp.image)}" alt="" loading="lazy" /></div>`
+          : "";
+
+        const htmlContent = `<a href="${escapeHtml(url)}" class="ogp-card" target="_blank" rel="noopener">
+  ${imageHtml}
+  <div class="ogp-card-content">
+    <div class="ogp-card-title">${escapeHtml(ogp.title)}</div>
+    <div class="ogp-card-description">${escapeHtml(ogp.description)}</div>
+    <div class="ogp-card-url">${escapeHtml(url)}</div>
+  </div>
+</a>`;
+
+        const htmlNode: Html = {
+          type: "html",
+          value: htmlContent,
+        };
+
+        parent.children.splice(index, 1, htmlNode);
+      }
+      // OGP取得に失敗した場合は元のリンクのまま
+    }
+  };
+};
+
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}

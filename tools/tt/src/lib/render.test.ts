@@ -1,5 +1,6 @@
 import type { ListItem } from "mdast";
-import { expect, test } from "vitest";
+import { afterEach, beforeEach, expect, test, vi } from "vitest";
+import { clearOGPCache } from "./ogp";
 import { render } from "./render";
 
 test("改行は取り除かれる", async () => {
@@ -172,4 +173,88 @@ date: "2024-08-15"
   expect(r.rawBody).include(`href="https://example.com"`);
   // スキーマが必要
   expect(r.rawBody).not.include(`href="badlink.com"`);
+});
+
+// OGPカードのテスト
+const originalFetch = global.fetch;
+
+beforeEach(() => {
+  clearOGPCache();
+});
+
+afterEach(() => {
+  global.fetch = originalFetch;
+  vi.restoreAllMocks();
+});
+
+test("単独URLはOGPカードに変換される", async () => {
+  const mockHtml = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta property="og:title" content="Example Title" />
+      <meta property="og:description" content="Example Description" />
+      <meta property="og:image" content="https://example.com/image.png" />
+    </head>
+    <body></body>
+    </html>
+  `;
+
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    text: () => Promise.resolve(mockHtml),
+  });
+
+  const content = `\
+---
+title: Test
+date: "2024-01-01"
+---
+
+https://example.com
+`;
+  const r = await render({ content: Buffer.from(content) });
+  expect(r.rawBody).toContain('class="ogp-card"');
+  expect(r.rawBody).toContain('class="ogp-card-title"');
+  expect(r.rawBody).toContain("Example Title");
+  expect(r.rawBody).toContain("Example Description");
+});
+
+test("テキストと混在するリンクはカード化されない", async () => {
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    text: () => Promise.resolve("<html><head></head><body></body></html>"),
+  });
+
+  const content = `\
+---
+title: Test
+date: "2024-01-01"
+---
+
+詳細は https://example.com を参照してください。
+`;
+  const r = await render({ content: Buffer.from(content) });
+  expect(r.rawBody).not.toContain('class="ogp-card"');
+  expect(r.rawBody).toContain('href="https://example.com"');
+});
+
+test("テキスト付きリンクはカード化されない", async () => {
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    text: () => Promise.resolve("<html><head></head><body></body></html>"),
+  });
+
+  const content = `\
+---
+title: Test
+date: "2024-01-01"
+---
+
+[こちらを参照](https://example.com)
+`;
+  const r = await render({ content: Buffer.from(content) });
+  expect(r.rawBody).not.toContain('class="ogp-card"');
+  expect(r.rawBody).toContain('href="https://example.com"');
+  expect(r.rawBody).toContain("こちらを参照");
 });

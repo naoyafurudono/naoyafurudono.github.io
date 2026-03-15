@@ -150,13 +150,14 @@ func TestGenerateFilePath(t *testing.T) {
 		config   Config
 		date     Date
 		title    string
+		dir      bool
 		wantPath string
 		wantErr  bool
 	}{
 		{
 			name: "simple filename template",
 			config: map[string]TemplateConfig{
-				"default": TemplateConfig{
+				"default": {
 					Outdir:   "/tmp/diary",
 					Filename: "{{.Date}}.md",
 				},
@@ -164,12 +165,11 @@ func TestGenerateFilePath(t *testing.T) {
 			date:     Date{Year: 2025, Month: 10, Day: 5},
 			title:    "2025-10-05",
 			wantPath: "/tmp/diary/2025-10-05.md",
-			wantErr:  false,
 		},
 		{
 			name: "filename with title",
 			config: map[string]TemplateConfig{
-				"default": TemplateConfig{
+				"default": {
 					Outdir:   "/var/logs",
 					Filename: "{{.Title}}_entry.txt",
 				},
@@ -177,12 +177,11 @@ func TestGenerateFilePath(t *testing.T) {
 			date:     Date{Year: 2024, Month: 1, Day: 1},
 			title:    "My Title",
 			wantPath: "/var/logs/My Title_entry.txt",
-			wantErr:  false,
 		},
 		{
 			name: "filename with date and title",
 			config: map[string]TemplateConfig{
-				"default": TemplateConfig{
+				"default": {
 					Outdir:   "/tmp",
 					Filename: "{{.Date}}-{{.Title}}.md",
 				},
@@ -190,14 +189,39 @@ func TestGenerateFilePath(t *testing.T) {
 			date:     Date{Year: 2024, Month: 5, Day: 15},
 			title:    "Test Post",
 			wantPath: "/tmp/2024-05-15-Test Post.md",
-			wantErr:  false,
+		},
+		{
+			name: "dir flag creates directory with index.md",
+			config: map[string]TemplateConfig{
+				"default": {
+					Outdir:   "/tmp/posts",
+					Filename: "{{.Title}}.md",
+				},
+			},
+			date:     Date{Year: 2025, Month: 3, Day: 16},
+			title:    "my-post",
+			dir:      true,
+			wantPath: "/tmp/posts/my-post/index.md",
+		},
+		{
+			name: "dir flag with date filename",
+			config: map[string]TemplateConfig{
+				"default": {
+					Outdir:   "/tmp/diary",
+					Filename: "{{.Date}}.md",
+				},
+			},
+			date:     Date{Year: 2025, Month: 10, Day: 5},
+			title:    "2025-10-05",
+			dir:      true,
+			wantPath: "/tmp/diary/2025-10-05/index.md",
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			temp := tt.config["default"]
-			gotPath, err := temp.generateFilePath(tt.date, tt.title, time.Now())
+			gotPath, err := temp.generateFilePath(tt.date, tt.title, time.Now(), tt.dir)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("generateFilePath() error = %v, wantErr %v", err, tt.wantErr)
 				return

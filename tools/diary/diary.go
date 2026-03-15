@@ -28,8 +28,9 @@ type Article struct {
 }
 
 var (
-	title string
-	date  string
+	title  string
+	date   string
+	useDir bool
 )
 
 func main() {
@@ -48,6 +49,7 @@ func main() {
 
 	rootCmd.Flags().StringVarP(&title, "title", "t", "", "Title of the diary entry. If not provided, the date value will be used.")
 	rootCmd.Flags().StringVarP(&date, "date", "d", "", "Date of the diary entry (YYYY-MM-DD format). If not provided, the current date will be used.")
+	rootCmd.Flags().BoolVar(&useDir, "dir", false, "Create a directory with index.md instead of a flat file.")
 
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)
@@ -97,7 +99,7 @@ func run(cmd *cobra.Command, args []string) error {
 	}
 
 	// ファイルパスの生成
-	filePath, err := c.generateFilePath(targetDate, articleTitle, timestamp)
+	filePath, err := c.generateFilePath(targetDate, articleTitle, timestamp, useDir)
 	if err != nil {
 		return fmt.Errorf("error generating file path: %w", err)
 	}
@@ -191,7 +193,7 @@ func getTemplateNames() []string {
 	return names
 }
 
-func (c *TemplateConfig) generateFilePath(date Date, title string, timestamp time.Time) (string, error) {
+func (c *TemplateConfig) generateFilePath(date Date, title string, timestamp time.Time, dir bool) (string, error) {
 	dateStr := date.Format()
 
 	// filenameテンプレートの処理
@@ -209,7 +211,15 @@ func (c *TemplateConfig) generateFilePath(date Date, title string, timestamp tim
 		return "", fmt.Errorf("failed to execute filename template: %w", err)
 	}
 
-	return filepath.Join(c.Outdir, filenameBuf.String()), nil
+	filename := filenameBuf.String()
+	if dir {
+		// "title.md" -> "title/index.md"
+		ext := filepath.Ext(filename)
+		stem := strings.TrimSuffix(filename, ext)
+		filename = filepath.Join(stem, "index"+ext)
+	}
+
+	return filepath.Join(c.Outdir, filename), nil
 }
 
 func (c *TemplateConfig) createFromTemplate(filePath string, date Date, title string, timestamp time.Time) error {

@@ -26,6 +26,65 @@ export function isDraft(a: Article): boolean {
   return !!a.draft;
 }
 
+type ArticleSource = { id: string; fpath: string };
+
+function collectArticleSources(directoryPath: string): ArticleSource[] {
+  const entries = fs.readdirSync(directoryPath, { withFileTypes: true });
+  const sources: ArticleSource[] = [];
+  const seenIds = new Set<string>();
+
+  for (const de of entries) {
+    if (de.isFile() && de.name.endsWith(".md")) {
+      const id = path.parse(de.name).name;
+      addSource(seenIds, sources, id, path.join(directoryPath, de.name), directoryPath);
+    } else if (de.isDirectory()) {
+      const indexPath = path.join(directoryPath, de.name, "index.md");
+      if (fs.existsSync(indexPath)) {
+        addSource(seenIds, sources, de.name, indexPath, directoryPath);
+      }
+    }
+  }
+
+  return sources;
+}
+
+function addSource(
+  seenIds: Set<string>,
+  sources: ArticleSource[],
+  id: string,
+  fpath: string,
+  directoryPath: string
+): void {
+  if (seenIds.has(id)) {
+    throw new Error(
+      `Duplicate article ID "${id}": both flat file and directory exist in ${directoryPath}`
+    );
+  }
+  seenIds.add(id);
+  sources.push({ id, fpath });
+}
+
+async function loadArticle({ id, fpath }: ArticleSource): Promise<Article> {
+  let content: Buffer = Buffer.from("");
+  try {
+    content = fs.readFileSync(fpath);
+  } catch (_e) {
+    console.error(`failed to do op: ${fpath}`);
+  }
+  const r = await render({ content });
+  return {
+    id: id as ArticleID,
+    path: fpath,
+    title: r.title,
+    date: r.date,
+    draft: r.draft,
+    desc: r.desc,
+    unchecked: r.unchecked,
+    rawBody: r.rawBody,
+    toc: r.toc,
+  };
+}
+
 const memo: Map<string, Article[]> = new Map();
 export async function listArticles(directoryPaths: string[]): Promise<Article[]> {
   const memoKey = hash(directoryPaths);
@@ -33,35 +92,8 @@ export async function listArticles(directoryPaths: string[]): Promise<Article[]>
   if (m) {
     return m;
   }
-  const a = directoryPaths.flatMap((directoryPath) => {
-    return fs
-      .readdirSync(directoryPath, { withFileTypes: true })
-      .filter((de) => de.isFile() && de.name.endsWith(".md"))
-      .map((de) => de.name)
-      .map(async (filename) => {
-        const fpath = path.join(directoryPath, filename);
-        const name = path.parse(filename).name;
-        let content: Buffer = Buffer.from("");
-        try {
-          content = fs.readFileSync(fpath);
-        } catch (_e) {
-          console.error(`failed to do op: ${fpath}`);
-        }
-        const r = await render({ content });
-        return {
-          id: name as ArticleID,
-          path: fpath,
-          title: r.title,
-          date: r.date,
-          draft: r.draft,
-          desc: r.desc,
-          unchecked: r.unchecked,
-          rawBody: r.rawBody,
-          toc: r.toc,
-        };
-      });
-  });
-  const res: Article[] = (await Promise.all(a)).filter((a) => !isDraft(a));
+  const promises = directoryPaths.flatMap((dp) => collectArticleSources(dp).map(loadArticle));
+  const res: Article[] = (await Promise.all(promises)).filter((a) => !isDraft(a));
   res.sort((a, b) => -lexOrder(a.date, b.date));
   for (let i = 0; i < res.length; i++) {
     const a = res[i];

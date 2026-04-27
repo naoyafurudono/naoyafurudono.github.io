@@ -50,10 +50,10 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.5",
-    "@astrojs/node": "^10.0.0",
+    "@astrojs/node": "^10.0.5",
     "@biomejs/biome": "^2.0.4",
     "@types/node": "^20",
-    "astro": "^5.18.1",
+    "astro": "^6.1.9",
     "typescript": "^5",
     "vitest": "^3.0.7",
     "wrangler": "^4.81.1"
